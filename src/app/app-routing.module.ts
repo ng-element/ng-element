@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'icon',
     loadChildren: () => import('./icon/icon.module').then(m => m.IconModule)
   },
+  {
+    path: 'alert',
+    loadChildren: () => import('./alert/alert.module').then(m => m.AlertModule)
+  }
 ];
 
 @NgModule({
