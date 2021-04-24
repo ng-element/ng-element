@@ -34,6 +34,7 @@
               "src/assets"
             ],
             "styles": [
+              "projects/ng-element-ui/ng-element-ui.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -132,8 +133,8 @@
     "ng-element-ui": {
       "projectType": "library",
       "root": "projects/ng-element-ui",
-      "sourceRoot": "projects/ng-element-ui/src",
-      "prefix": "lib",
+      "sourceRoot": "projects/ng-element-ui",
+      "prefix": "nel",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -150,7 +151,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-element-ui/src/test.ts",
+            "main": "projects/ng-element-ui/test.ts",
             "tsConfig": "projects/ng-element-ui/tsconfig.spec.json",
             "karmaConfig": "projects/ng-element-ui/karma.conf.js"
           }
