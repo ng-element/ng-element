@@ -1,6 +1,16 @@
 {
   "name": "ng-element-ui",
   "version": "0.0.1",
+  "private": false,
+  "description": "An enterprise-class UI components based on Element UI and Angular.",
+  "homepage": "https://llkui.github.io/ng-element",
+  "repository": "https://github.com/llkui/ng-element",
+  "author": "llkui",
+  "keywords": [
+    "angular",
+    "element ui"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^11.2.11",
     "@angular/core": "^11.2.11"

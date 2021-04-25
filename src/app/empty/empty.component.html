@@ -1,0 +1,52 @@
+<nel-empty [nelDescription]="'描述文字'"></nel-empty>
+<nel-empty [nelImage]="'https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png'">
+</nel-empty>
+<nel-empty [nelImageSize]="200"></nel-empty>
+<nel-empty [nelFooter]="footerTpl">
+  <ng-template #footerTpl>
+    底部内容
+  </ng-template>
+</nel-empty>
+
+<p>Attributes</p>
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>说明</th>
+      <th>类型</th>
+      <th>可选值</th>
+      <th>默认值</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>nelImage</td>
+      <td>图片地址</td>
+      <td>string</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>nelImageSize</td>
+      <td>图片大小（宽度）</td>
+      <td>number</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>nelDescription</td>
+      <td>文本描述</td>
+      <td>string</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>nelFooter</td>
+      <td>底部内容</td>
+      <td>ElementRef</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>

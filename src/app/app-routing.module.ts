@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'alert',
     loadChildren: () => import('./alert/alert.module').then(m => m.AlertModule)
+  },
+  {
+    path: 'empty',
+    loadChildren: () => import('./empty/empty.module').then(m => m.EmptyModule)
   }
 ];
 

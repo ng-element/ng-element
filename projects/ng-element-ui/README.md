@@ -1,24 +1,28 @@
-# NgElementUi
+<h1 align="center">
+Ng-Element-UI
+</h1>
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
+<div align="center">
 
-## Code scaffolding
+An enterprise-class UI components based on Element UI and Angular.
 
-Run `ng generate component component-name --project ng-element-ui` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-element-ui`.
-> Note: Don't forget to add `--project ng-element-ui` or else it will be added to the default project in your `angular.json` file. 
+</div>
 
-## Build
+## Components completion status
 
-Run `ng build ng-element-ui` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [x] icon
+- [x] alert
+- [x] empty
 
-## Publishing
+##  Development
 
-After building your library with `ng build ng-element-ui`, go to the dist folder `cd dist/ng-element-ui` and run `npm publish`.
+```bash
+$ git clone https://github.com/llkui/ng-element.git
+$ cd ng-element
+$ npm install
+$ ng serve
+```
 
-## Running unit tests
+## License
 
-Run `ng test ng-element-ui` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+MIT

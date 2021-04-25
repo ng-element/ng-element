@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-element';
+  componentList = [
+    { name: 'icon' },
+    { name: 'alert' },
+    { name: 'empty' },
+  ];
 }

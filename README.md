@@ -8,6 +8,12 @@ An enterprise-class UI components based on Element UI and Angular.
 
 </div>
 
+## Components completion status
+
+- [x] icon
+- [x] alert
+- [x] empty
+
 ##  Development
 
 ```bash
@@ -16,10 +22,6 @@ $ cd ng-element
 $ npm install
 $ ng serve
 ```
-
-## Components completion status
-
-- [x] icon
 
 ## License
 

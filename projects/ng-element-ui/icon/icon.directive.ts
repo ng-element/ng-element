@@ -15,7 +15,7 @@ export class IconDirective implements OnChanges {
   constructor(
     private elementRef: ElementRef,
     private renderer: Renderer2,
-    private nsUpdateHostClassService: NelUpdateHostClassService
+    private updateHostClassService: NelUpdateHostClassService
   ) { }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -25,7 +25,7 @@ export class IconDirective implements OnChanges {
   }
 
   setClassMap(): void {
-    this.nsUpdateHostClassService.updateHostClass(this.el, {
+    this.updateHostClassService.updateHostClass(this.el, {
       [`el-icon-${this.type}`]: this.type
     });
   }
