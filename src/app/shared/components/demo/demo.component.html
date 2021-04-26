@@ -1,0 +1,25 @@
+<div [class]="classes" [class.hover]="hovering" (mouseenter)="hovering = true" (mouseleave)="hovering = false">
+  <div class="source" *ngIf="code">
+    <ng-content select="[demo]"></ng-content>
+  </div>
+  <div class="meta" [@expand]="isExpanded" style="height: 0;">
+    <div class="description" *ngIf="notes">
+      <ng-container>
+        <div [innerHTML]="safeNotes"></div>
+      </ng-container>
+    </div>
+
+    <ng-container *ngIf="code">
+      <div class="highlight">
+        <pre>
+          <code class="hljs" [innerHTML]="code | highlightAuto"></code>
+        </pre>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="demo-block-control" (click)="showCode()">
+    <i [class]="'el-icon-caret-' + (isExpanded ? 'top' : 'bottom')" [class.hovering]="hovering"></i>
+    <span [@state]="hovering">显示代码</span>
+  </div>
+</div>

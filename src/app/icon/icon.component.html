@@ -1,1 +1,19 @@
-<i nel-icon *ngFor="let type of iconList" [nelType]="type.type"></i>
+<h2>Icon 图标</h2>
+<p>提供了一套常用的图标集合。</p>
+
+<h3>使用方法</h3>
+<p>直接通过设置类名为 <code>el-icon-iconName</code> 来使用即可。例如：</p>
+
+<app-demo [code]="'敬请期待...'" notes="你也可以使用 <code> nel-icon </code> 指令达到一样的效果。">
+  <nel-demo-icon-basic demo></nel-demo-icon-basic>
+</app-demo>
+
+<h3>图标集合</h3>
+<ul class="icon-list">
+  <li *ngFor="let name of icons">
+    <span>
+      <i nel-icon [nelType]="name.type"></i>
+      {{'el-icon-' + name.type}}
+    </span>
+  </li>
+</ul>

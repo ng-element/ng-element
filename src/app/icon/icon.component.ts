@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-icon',
   templateUrl: './icon.component.html',
-  styleUrls: ['./icon.component.scss']
+  styleUrls: ['./icon.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 
 export class IconComponent {
-  iconList = [
+  icons = [
     { type: 'platform-eleme' },
     { type: 'eleme' },
     { type: 'delete-solid' },
