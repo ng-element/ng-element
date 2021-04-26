@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "gulp buildDemoCmp && ng build --prod --base-href /ng-element/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -21,6 +21,8 @@
     "@angular/platform-browser-dynamic": "~11.2.11",
     "@angular/router": "~11.2.11",
     "element-theme-chalk": "^2.15.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-watch": "^5.0.1",
     "highlight.js": "^10.7.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
