@@ -10,5 +10,6 @@ export class AppComponent {
     { name: 'icon' },
     { name: 'alert' },
     { name: 'empty' },
+    { name: 'button' },
   ];
 }

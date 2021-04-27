@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'empty',
     loadChildren: () => import('./empty/empty.module').then(m => m.EmptyModule)
+  },
+  {
+    path: 'button',
+    loadChildren: () => import('./button/button.module').then(m => m.ButtonModule)
   }
 ];
 
