@@ -5,7 +5,9 @@ import { Component, Input } from '@angular/core';
   template: `
     <i *ngIf="nelIcon" nel-icon [nelType]="nelIcon"></i>
     <i *ngIf="nelLoading" nel-icon [nelType]="'loading'"></i>
-    <ng-content></ng-content>
+    <span>
+      <ng-content></ng-content>
+    </span>
   `,
   host: {
     '[class.el-button]': `true`,

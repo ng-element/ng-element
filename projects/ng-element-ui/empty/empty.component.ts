@@ -1,4 +1,4 @@
-import { Component, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Component, Input, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'nel-empty',
@@ -9,5 +9,5 @@ export class EmptyComponent {
   @Input() nelDescription = '暂无数据';
   @Input() nelImage = '';
   @Input() nelImageSize = 0;
-  @Input() nelFooter?: TemplateRef<void>;
+  @Input() nelFooter?: string | TemplateRef<void>;
 }

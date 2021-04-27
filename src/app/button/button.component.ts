@@ -10,13 +10,13 @@ import { AppService } from './../app.service';
 })
 
 export class ButtonComponent implements OnInit {
-  codeBasic = '';
-  codeDisabled = '';
-  codeText = '';
-  codeIcon = '';
-  codeGroup = '';
-  codeLoading = '';
-  codeSize = '';
+  codeBasic = '.';
+  codeDisabled = '.';
+  codeText = '.';
+  codeIcon = '.';
+  codeGroup = '.';
+  codeLoading = '.';
+  codeSize = '.';
 
   constructor(
     private appService: AppService

@@ -10,10 +10,10 @@ import { AppService } from './../app.service';
 })
 
 export class EmptyComponent implements OnInit {
-  codeBasic = '';
-  codeImage = '';
-  codeImageSize = '';
-  codeFooter = '';
+  codeBasic = '.';
+  codeImage = '.';
+  codeImageSize = '.';
+  codeFooter = '.';
 
   constructor(
     private appService: AppService

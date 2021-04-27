@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'link',
     loadChildren: () => import('./link/link.module').then(m => m.LinkModule)
+  },
+  {
+    path: 'container',
+    loadChildren: () => import('./container/container.module').then(m => m.ContainerModule)
   }
 ];
 

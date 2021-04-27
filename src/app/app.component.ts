@@ -12,5 +12,6 @@ export class AppComponent {
     { name: 'empty' },
     { name: 'button' },
     { name: 'link' },
+    { name: 'container' },
   ];
 }

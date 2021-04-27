@@ -12,7 +12,7 @@ import { AppService } from '../app.service';
 })
 
 export class IconComponent implements OnInit {
-  code = '';
+  code = '.';
   icons = [
     { type: 'platform-eleme' },
     { type: 'eleme' },

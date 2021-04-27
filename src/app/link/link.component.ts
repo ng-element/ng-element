@@ -10,10 +10,10 @@ import { AppService } from './../app.service';
 })
 
 export class LinkComponent implements OnInit {
-  codeBasic = '';
-  codeDisabled = '';
-  codeUnderline = '';
-  codeIcon = '';
+  codeBasic = '.';
+  codeDisabled = '.';
+  codeUnderline = '.';
+  codeIcon = '.';
 
   constructor(
     private appService: AppService
