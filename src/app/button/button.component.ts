@@ -3,7 +3,10 @@ import { AppService } from './../app.service';
 
 @Component({
   selector: 'app-button',
-  templateUrl: './button.component.html'
+  templateUrl: './button.component.html',
+  host: {
+    '[class.article]': 'true'
+  }
 })
 
 export class ButtonComponent implements OnInit {

@@ -6,6 +6,9 @@ import { AppService } from '../app.service';
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  host: {
+    '[class.article]': 'true'
+  }
 })
 
 export class IconComponent implements OnInit {

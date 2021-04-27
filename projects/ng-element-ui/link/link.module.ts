@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NelIconModule } from 'ng-element-ui/icon';
-import { ButtonComponent } from './button.component';
-import { ButtonGroupComponent } from './button-group.component';
+import { LinkComponent } from './link.component';
 
 @NgModule({
   declarations: [
-    ButtonComponent,
-    ButtonGroupComponent
+    LinkComponent
   ],
   exports: [
-    ButtonComponent,
-    ButtonGroupComponent
+    LinkComponent
   ],
   imports: [
     CommonModule,
@@ -19,6 +16,4 @@ import { ButtonGroupComponent } from './button-group.component';
   ]
 })
 
-export class NelButtonModule {
-
-}
+export class NelLinkModule { }

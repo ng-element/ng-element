@@ -1,0 +1,74 @@
+<h2>Link 文字链接</h2>
+<p>文字超链接</p>
+
+<h3>基础用法</h3>
+<p>基础的按钮用法。</p>
+
+<app-demo [code]="codeBasic">
+  <nel-demo-link-basic demo></nel-demo-link-basic>
+</app-demo>
+
+<h3>禁用状态</h3>
+<p>文字链接不可用状态。</p>
+
+<app-demo [code]="codeDisabled">
+  <nel-demo-link-disabled demo></nel-demo-link-disabled>
+</app-demo>
+
+<h3>下划线</h3>
+<p>文字链接下划线。</p>
+
+<app-demo [code]="codeUnderline">
+  <nel-demo-link-underline demo></nel-demo-link-underline>
+</app-demo>
+
+<h3>图标</h3>
+<p>带图标的文字链接可增强辨识度。</p>
+
+<app-demo [code]="codeIcon">
+  <nel-demo-link-icon demo></nel-demo-link-icon>
+</app-demo>
+
+<p>Attributes</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>说明</th>
+      <th>类型</th>
+      <th>可选值</th>
+      <th>默认值</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>nelType</td>
+      <td>类型</td>
+      <td>string</td>
+      <td>primary / success / warning / danger / info</td>
+      <td>default</td>
+    </tr>
+    <tr>
+      <td>nelUnderline</td>
+      <td>是否下划线</td>
+      <td>boolean</td>
+      <td>—</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>nelDisabled</td>
+      <td>是否禁用状态</td>
+      <td>boolean</td>
+      <td>—</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>nelIcon</td>
+      <td>图标类名</td>
+      <td>string</td>
+      <td>—</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>

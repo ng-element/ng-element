@@ -1,12 +1,32 @@
-<nel-empty [nelDescription]="'描述文字'"></nel-empty>
-<nel-empty [nelImage]="'https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png'">
-</nel-empty>
-<nel-empty [nelImageSize]="200"></nel-empty>
-<nel-empty [nelFooter]="footerTpl">
-  <ng-template #footerTpl>
-    底部内容
-  </ng-template>
-</nel-empty>
+<h2>Empty 空状态</h2>
+<p>空状态时的占位提示。</p>
+
+<h3>基础用法</h3>
+
+<app-demo [code]="codeBasic">
+  <nel-demo-empty-basic demo></nel-demo-empty-basic>
+</app-demo>
+
+<h3>自定义图片</h3>
+<p>通过设置 nelImage 属性传入图片 URL。</p>
+
+<app-demo [code]="codeImage">
+  <nel-demo-empty-image demo></nel-demo-empty-image>
+</app-demo>
+
+<h3>图片尺寸</h3>
+<p>通过设置 nelImageSize 属性来控制图片大小。</p>
+
+<app-demo [code]="codeImageSize">
+  <nel-demo-empty-image-size demo></nel-demo-empty-image-size>
+</app-demo>
+
+<h3>底部内容</h3>
+<p>使用 nelFooter 可在底部插入内容。</p>
+
+<app-demo [code]="codeFooter">
+  <nel-demo-empty-footer demo></nel-demo-empty-footer>
+</app-demo>
 
 <p>Attributes</p>
 <table>
