@@ -5,7 +5,7 @@ import { AppService } from './../app.service';
   selector: 'app-container',
   templateUrl: './container.component.html',
   host: {
-    '[class.article]': 'true'
+    'class': 'article'
   }
 })
 

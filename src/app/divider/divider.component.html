@@ -1,0 +1,52 @@
+<h2>Divider 分割线</h2>
+<p>区隔内容的分割线。</p>
+
+<h3>基础用法</h3>
+<p>对不同章节的文本段落进行分割。</p>
+
+<app-demo [code]="codeBasic">
+  <nel-demo-divider-basic demo></nel-demo-divider-basic>
+</app-demo>
+
+<h3>设置文案</h3>
+<p>可以在分割线上自定义文案内容。</p>
+
+<app-demo [code]="codeContent">
+  <nel-demo-divider-content demo></nel-demo-divider-content>
+</app-demo>
+
+<h3>垂直分割</h3>
+
+<app-demo [code]="codeDirection">
+  <nel-demo-divider-direction demo></nel-demo-divider-direction>
+</app-demo>
+
+<p>Attributes</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>说明</th>
+      <th>类型</th>
+      <th>可选值</th>
+      <th>默认值</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>nelDirection</td>
+      <td>设置分割线方向</td>
+      <td>string</td>
+      <td>horizontal / vertical</td>
+      <td>horizontal</td>
+    </tr>
+    <tr>
+      <td>nelContentPosition</td>
+      <td>设置分割线文案的位置</td>
+      <td>string</td>
+      <td>left / right / center</td>
+      <td>center</td>
+    </tr>
+  </tbody>
+</table>

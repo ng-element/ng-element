@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'container',
     loadChildren: () => import('./container/container.module').then(m => m.ContainerModule)
+  },
+  {
+    path: 'divider',
+    loadChildren: () => import('./divider/divider.module').then(m => m.DividerModule)
   }
 ];
 

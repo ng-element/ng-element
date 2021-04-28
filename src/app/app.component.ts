@@ -13,5 +13,6 @@ export class AppComponent {
     { name: 'button' },
     { name: 'link' },
     { name: 'container' },
+    { name: 'divider' },
   ];
 }

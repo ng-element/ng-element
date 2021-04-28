@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { NelLinkModule } from 'ng-element-ui/link';
 import { NelDemoLinkModule } from './../../../projects/ng-element-ui/link/demo/link-demo.module';
 import { ShareModule } from './../shared/shared.module';
 import { LinkRoutingModule } from './link-routing.module';
@@ -13,7 +12,6 @@ import { LinkComponent } from './link.component';
     LinkComponent
   ],
   imports: [
-    NelLinkModule,
     NelDemoLinkModule,
     ShareModule,
     LinkRoutingModule

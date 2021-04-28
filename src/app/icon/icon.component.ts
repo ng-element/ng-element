@@ -7,7 +7,7 @@ import { AppService } from '../app.service';
   styleUrls: ['./icon.component.scss'],
   encapsulation: ViewEncapsulation.None,
   host: {
-    '[class.article]': 'true'
+    'class': 'article'
   }
 })
 
