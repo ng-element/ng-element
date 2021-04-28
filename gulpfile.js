@@ -27,7 +27,7 @@ function copyfont() {
     .pipe(dest('./dist/ng-element-ui/fonts'));
 }
 
-exports.buildDemoCmp = series(clearDemoComponent, demoComponentPath);
+exports.buildDemoCmp = series(clearDemoComponent, clearDoc, demoComponentPath, docPath);
 exports.build = series(compile, copyfont);
 
 // 编译demo到assets
@@ -37,7 +37,16 @@ const clean = require('gulp-clean');
 
 function clearDemoComponent() {
   return src(['./src/assets/codes/'], {
-      read: false
+      read: false,
+      allowEmpty: true
+    })
+    .pipe(clean());
+}
+
+function clearDoc() {
+  return src(['./src/assets/docs/'], {
+      read: false,
+      allowEmpty: true
     })
     .pipe(clean());
 }
@@ -54,16 +63,35 @@ function demoComponentPath() {
     .pipe(dest('./src/assets/codes/'));
 }
 
-function monitorDemoComponent() {
-  return watch(['./projects/ng-element-ui/*/demo/*.component.ts'], function (file) {
+function docPath() {
+  return src(['./projects/ng-element-ui/*/doc/*.md'])
+    .pipe(rename(function (path) {
+      const name = path.dirname.slice(0, path.dirname.indexOf('\\'));
+      return {
+        dirname: '',
+        basename: name,
+        extname: ''
+      };
+    }))
+    .pipe(dest('./src/assets/docs/'));
+}
+
+function monitorAssets() {
+  return watch(['./projects/ng-element-ui/*/demo/*.component.ts', './projects/ng-element-ui/*/doc/*.md'], function (file) {
     const source = file.history[0];
-    const path = source.slice(source.lastIndexOf('\\') + 1);
-    copyDemoComponent(source, path);
+    if (source.indexOf('demo') > -1) {
+      const path = source.slice(source.lastIndexOf('\\') + 1);
+      const name = path.slice(0, path.lastIndexOf('.'));
+      copyDemoComponent(source, name);
+    } else {
+      let name = source.slice(source.indexOf('ng-element-ui') + 14);
+      name = name.slice(0, name.indexOf('\\'));
+      copyDoc(source, name);
+    }
   });
 }
 
-function copyDemoComponent(source, path) {
-  const name = path.slice(0, path.lastIndexOf('.'));
+function copyDemoComponent(source, name) {
   return src(source, {
       allowEmpty: true
     })
@@ -71,4 +99,12 @@ function copyDemoComponent(source, path) {
     .pipe(dest('./src/assets/codes/'));
 }
 
-exports.serve = series(clearDemoComponent, demoComponentPath, monitorDemoComponent);
+function copyDoc(source, name) {
+  return src(source, {
+      allowEmpty: true
+    })
+    .pipe(rename(name))
+    .pipe(dest('./src/assets/docs/'));
+}
+
+exports.serve = series(clearDemoComponent, clearDoc, demoComponentPath, docPath, monitorAssets);

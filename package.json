@@ -20,10 +20,12 @@
     "@angular/platform-browser": "~11.2.11",
     "@angular/platform-browser-dynamic": "~11.2.11",
     "@angular/router": "~11.2.11",
+    "@types/marked": "^2.0.2",
     "element-theme-chalk": "^2.15.1",
     "gulp-clean": "^0.4.0",
     "gulp-watch": "^5.0.1",
     "highlight.js": "^10.7.2",
+    "marked": "^2.0.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
