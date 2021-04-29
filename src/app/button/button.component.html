@@ -4,7 +4,7 @@
 <h3>基础用法</h3>
 <p>基础的按钮用法。</p>
 
-<app-demo [code]="codeBasic"
+<app-demo [codeUrl]="'components-button-demo-basic.component'"
   notes="使用 <code> nelType </code>、<code> nelPlain </code>、<code> nelRound </code>和<code> nelCircle </code> 属性来定义 Button 的样式">
   <nel-demo-button-basic demo></nel-demo-button-basic>
 </app-demo>
@@ -12,21 +12,22 @@
 <h3>禁用状态</h3>
 <p>按钮不可用状态。</p>
 
-<app-demo [code]="codeDisabled" notes="你可以使用 <code> disabled </code> 属性来定义按钮是否可用，它接受一个 Button 值。">
+<app-demo [codeUrl]="'components-button-demo-disabled.component'"
+  notes="你可以使用 <code> disabled </code> 属性来定义按钮是否可用，它接受一个 Button 值。">
   <nel-demo-button-disabled demo></nel-demo-button-disabled>
 </app-demo>
 
 <h3>文字按钮</h3>
 <p>没有边框和背景色的按钮。</p>
 
-<app-demo [code]="codeText">
+<app-demo [codeUrl]="'components-button-demo-text.component'">
   <nel-demo-button-text demo></nel-demo-button-text>
 </app-demo>
 
 <h3>图标按钮</h3>
 <p>带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。</p>
 
-<app-demo [code]="codeIcon"
+<app-demo [codeUrl]="'components-button-demo-icon.component'"
   notes="设置 <code> nelIcon </code> 属性即可，icon 的列表可以参考 Element Plus 的 icon 组件，也可以设置在文字右边的 icon ，只要使用i标签即可，可以使用自定义图标。">
   <nel-demo-button-icon demo></nel-demo-button-icon>
 </app-demo>
@@ -34,21 +35,21 @@
 <h3>按钮组</h3>
 <p>以按钮组的方式出现，常用于多项类似操作。</p>
 
-<app-demo [code]="codeGroup" notes="使用 <\nel-button-group\> 标签来嵌套你的按钮。">
+<app-demo [codeUrl]="'components-button-demo-group.component'" notes="使用 <\nel-button-group\> 标签来嵌套你的按钮。">
   <nel-demo-button-group demo></nel-demo-button-group>
 </app-demo>
 
 <h3>加载中</h3>
 <p>点击按钮后进行数据加载操作，在按钮上显示加载状态。</p>
 
-<app-demo [code]="codeLoading" notes="要设置为 loading 状态，只要设置loading属性为true即可。">
+<app-demo [codeUrl]="'components-button-demo-loading.component'" notes="要设置为 loading 状态，只要设置loading属性为true即可。">
   <nel-demo-button-loading demo></nel-demo-button-loading>
 </app-demo>
 
 <h3>不同尺寸</h3>
 <p>Button 组件提供除了默认值以外的三种尺寸，可以在不同场景下选择合适的按钮尺寸。</p>
 
-<app-demo [code]="codeSize" notes="额外的尺寸：medium、small、mini，通过设置size属性来配置它们。">
+<app-demo [codeUrl]="'components-button-demo-size.component'" notes="额外的尺寸：medium、small、mini，通过设置size属性来配置它们。">
   <nel-demo-button-size demo></nel-demo-button-size>
 </app-demo>
 

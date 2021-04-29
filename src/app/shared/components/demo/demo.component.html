@@ -1,5 +1,5 @@
 <div [class]="classes" [class.hover]="hovering" (mouseenter)="hovering = true" (mouseleave)="hovering = false">
-  <div class="source" *ngIf="code">
+  <div class="source" *ngIf="codeUrl">
     <ng-content select="[demo]"></ng-content>
   </div>
   <div class="meta" [@expand]="isExpanded" style="height: 0;">
@@ -9,7 +9,7 @@
       </ng-container>
     </div>
 
-    <ng-container *ngIf="code">
+    <ng-container *ngIf="codeUrl">
       <div class="highlight">
         <pre>
           <code class="hljs" [innerHTML]="code | highlightAuto"></code>

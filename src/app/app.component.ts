@@ -14,5 +14,6 @@ export class AppComponent {
     { name: 'link' },
     { name: 'container' },
     { name: 'divider' },
+    { name: 'layout' },
   ];
 }

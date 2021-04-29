@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { AppService } from './../app.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-container',
@@ -9,16 +8,4 @@ import { AppService } from './../app.service';
   }
 })
 
-export class ContainerComponent implements OnInit {
-  codeBasic = '.';
-
-  constructor(
-    private appService: AppService
-  ) { }
-
-  ngOnInit(): void {
-    this.appService.getCode('components-container-demo-basic.component').subscribe((data) => {
-      this.codeBasic = data;
-    });
-  }
-}
+export class ContainerComponent { }

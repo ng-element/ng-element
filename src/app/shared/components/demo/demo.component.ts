@@ -3,6 +3,7 @@ import { Location } from '@angular/common';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 import { HighLightPipe } from '../../pipe';
+import { AppService } from './../../../app.service';
 
 @Component({
   selector: 'app-demo',
@@ -34,9 +35,10 @@ import { HighLightPipe } from '../../pipe';
   encapsulation: ViewEncapsulation.None,
 })
 export class DemoComponent implements OnInit {
+  @Input() codeUrl?: string;
   @Input() notes = '';
-  @Input() code?: string;
   @Input('class') parentClass: new ([key]?: any) => {} = class { };
+  code = '';
   classes = 'demo-block demo-box demo-zh-CN';
   hovering = false;
   isExpanded = false;
@@ -44,7 +46,8 @@ export class DemoComponent implements OnInit {
 
   constructor(
     private location: Location,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private appService: AppService
   ) { }
 
   showCode(): void {
@@ -59,6 +62,12 @@ export class DemoComponent implements OnInit {
     const url = this.location.path();
     const path = url.slice(url.lastIndexOf('/') + 1);
     this.classes += ` demo-${path}`;
+
+    if (this.codeUrl) {
+      this.appService.getCode(this.codeUrl).subscribe((data) => {
+        this.code = data;
+      });
+    }
     // this.code = this.el.nativeElement.querySelector('.source').innerHTML
     // this.code = this.code.replace(/=""/g, '')
     //   .replace(/<!---->/g, '')

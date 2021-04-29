@@ -1,5 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
-import { AppService } from '../app.service';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-icon',
@@ -11,7 +10,7 @@ import { AppService } from '../app.service';
   }
 })
 
-export class IconComponent implements OnInit {
+export class IconComponent {
   code = '.';
   icons = [
     { type: 'platform-eleme' },
@@ -296,13 +295,5 @@ export class IconComponent implements OnInit {
     { type: 'ice-cream-round' },
   ];
 
-  constructor(
-    private appService: AppService
-  ) { }
-
-  ngOnInit(): void {
-    this.appService.getCode('components-icon-demo-basic.component').subscribe((data) => {
-      this.code = data;
-    });
-  }
+  constructor() { }
 }

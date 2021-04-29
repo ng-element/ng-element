@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'divider',
     loadChildren: () => import('./divider/divider.module').then(m => m.DividerModule)
+  },
+  {
+    path: 'layout',
+    loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule)
   }
 ];
 

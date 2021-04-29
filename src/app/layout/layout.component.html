@@ -1,0 +1,49 @@
+<h2>Layout 布局</h2>
+<p>通过基础的 24 分栏，迅速简便地创建布局。</p>
+
+<h3>基础布局</h3>
+<p>使用单一分栏创建基础的栅格布局。</p>
+
+<app-demo [codeUrl]="'components-layout-demo-basic.component'"
+  notes="通过 nel-row 和 nel-col 指令，并通过 nel-col 指令的 nelSpan 属性我们就可以自由地组合布局。">
+  <nel-demo-layout-basic demo></nel-demo-layout-basic>
+</app-demo>
+
+<h3>分栏间隔</h3>
+<p>分栏之间存在间隔。</p>
+
+<app-demo [codeUrl]="'components-layout-demo-gutter.component'" notes="nel-row 组件 提供 nelGutter 属性来指定每一栏之间的间隔，默认间隔为 0。">
+  <nel-demo-layout-gutter demo></nel-demo-layout-gutter>
+</app-demo>
+
+<h3>混合布局</h3>
+<p>通过基础的 1/24 分栏任意扩展组合形成较为复杂的混合布局。</p>
+
+<app-demo [codeUrl]="'components-layout-demo-blend.component'">
+  <nel-demo-layout-blend demo></nel-demo-layout-blend>
+</app-demo>
+
+<h3>分栏偏移</h3>
+<p>支持偏移指定的栏数。</p>
+
+<app-demo [codeUrl]="'components-layout-demo-offset.component'" notes="通过制定 nel-col 组件的 nelOffset 属性可以指定分栏偏移的栏数。">
+  <nel-demo-layout-offset demo></nel-demo-layout-offset>
+</app-demo>
+
+<h3>对齐方式</h3>
+<p>通过 flex 布局来对分栏进行灵活的对齐。</p>
+
+<app-demo [codeUrl]="'components-layout-demo-type.component'"
+  notes="将 nelType 属性赋值为 'flex'，可以启用 flex 布局，并可通过 nelJustify 属性来指定 start, center, end, space-between, space-around 其中的值来定义子元素的排版方式。">
+  <nel-demo-layout-type demo></nel-demo-layout-type>
+</app-demo>
+
+<h3>响应式布局</h3>
+<p>参照了 Bootstrap 的 响应式设计，预设了五个响应尺寸：xs、sm、md、lg 和 xl。</p>
+
+<app-demo [codeUrl]="'components-layout-demo-reactive.component'"
+  notes="将 nelType 属性赋值为 'flex'，可以启用 flex 布局，并可通过 nelJustify 属性来指定 start, center, end, space-between, space-around 其中的值来定义子元素的排版方式。">
+  <nel-demo-layout-reactive demo></nel-demo-layout-reactive>
+</app-demo>
+
+<app-doc [docUrl]="'components-layout'"></app-doc>
