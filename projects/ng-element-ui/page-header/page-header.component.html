@@ -1,0 +1,13 @@
+<div class="el-page-header">
+  <div class="el-page-header__left" (click)="goBack()">
+    <div class="el-page-header__icon">
+      <i nel-icon [nelType]="nelIcon"></i>
+    </div>
+    <div class="el-page-header__title">
+      <ng-container *stringTemplate="nelTitle"></ng-container>
+    </div>
+  </div>
+  <div class="el-page-header__content" *ngIf="nelContent">
+    <ng-container *stringTemplate="nelContent"></ng-container>
+  </div>
+</div>

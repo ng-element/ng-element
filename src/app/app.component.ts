@@ -15,5 +15,6 @@ export class AppComponent {
     { name: 'container' },
     { name: 'divider' },
     { name: 'layout' },
+    { name: 'page-header' },
   ];
 }

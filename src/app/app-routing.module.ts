@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'layout',
     loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule)
+  },
+  {
+    path: 'page-header',
+    loadChildren: () => import('./page-header/page-header.module').then(m => m.PageHeaderModule)
   }
 ];
 
