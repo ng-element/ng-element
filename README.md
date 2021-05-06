@@ -18,6 +18,8 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] container
 - [x] divider
 - [x] layout
+- [x] page-header
+- [x] dialog
 
 ##  Development
 

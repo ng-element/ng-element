@@ -16,5 +16,6 @@ export class AppComponent {
     { name: 'divider' },
     { name: 'layout' },
     { name: 'page-header' },
+    { name: 'dialog' },
   ];
 }

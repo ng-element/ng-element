@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'page-header',
     loadChildren: () => import('./page-header/page-header.module').then(m => m.PageHeaderModule)
+  },
+  {
+    path: 'dialog',
+    loadChildren: () => import('./dialog/dialog.module').then(m => m.DialogModule)
   }
 ];
 
