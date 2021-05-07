@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { NelAlertModule } from 'ng-element-ui/alert';
+import { NelDemoAlertModule } from './../../../projects/ng-element-ui/alert/demo/alert-demo.module';
 import { ShareModule } from './../shared/shared.module';
-import { AlertRoutingModule } from '../../../src/app/alert/alert-routing.module';
+import { AlertRoutingModule } from './alert-routing.module';
 import { AlertComponent } from './alert.component';
 
 @NgModule({
@@ -12,7 +12,7 @@ import { AlertComponent } from './alert.component';
     AlertComponent
   ],
   imports: [
-    NelAlertModule,
+    NelDemoAlertModule,
     ShareModule,
     AlertRoutingModule
   ],

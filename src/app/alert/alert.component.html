@@ -1,43 +1,55 @@
-<nel-alert [nelTitle]="'成功提示的文案'" [nelType]="'success'"></nel-alert>
-<nel-alert [nelTitle]="'消息提示的文案'" [nelType]="'info'"></nel-alert>
-<nel-alert [nelTitle]="'警告提示的文案'" [nelType]="'warning'"></nel-alert>
-<nel-alert [nelTitle]="'错误提示的文案'" [nelType]="'error'"></nel-alert>
+<h2>Alert 警告</h2>
+<p>用于页面中展示重要的提示信息。</p>
 
-<nel-alert [nelTitle]="'成功提示的文案'" [nelType]="'success'" [nelEffect]="'dark'"></nel-alert>
-<nel-alert [nelTitle]="'消息提示的文案'" [nelType]="'info'" [nelEffect]="'dark'"></nel-alert>
-<nel-alert [nelTitle]="'警告提示的文案'" [nelType]="'warning'" [nelEffect]="'dark'"></nel-alert>
-<nel-alert [nelTitle]="'错误提示的文案'" [nelType]="'error'" [nelEffect]="'dark'"></nel-alert>
+<h3>基本用法</h3>
+<p>页面中的非浮层元素，不会自动消失。</p>
 
-<nel-alert [nelTitle]="'不可关闭的 alert'" [nelType]="'success'" [nelClosable]="false">
-</nel-alert>
-<nel-alert [nelTitle]="'自定义 close-text'" [nelType]="'info'" [nelCloseText]="'知道了'">
-</nel-alert>
-<nel-alert [nelTitle]="'设置了回调的 alert'" [nelType]="'warning'" (nelOnClose)="hello()">
-</nel-alert>
+<app-demo [codeUrl]="'components-alert-demo-basic.component'" notes="Alert 组件提供四种主题，由nelType属性指定，默认值为info。">
+  <nel-demo-alert-basic demo></nel-demo-alert-basic>
+</app-demo>
 
-<nel-alert [nelTitle]="'成功提示的文案'" [nelType]="'success'" [nelShowIcon]="true" [nelCenter]="true">
-</nel-alert>
-<nel-alert [nelTitle]="'消息提示的文案'" [nelType]="'info'" [nelShowIcon]="true" [nelCenter]="true">
-</nel-alert>
-<nel-alert [nelTitle]="'警告提示的文案'" [nelType]="'warning'" [nelShowIcon]="true" [nelCenter]="true">
-</nel-alert>
-<nel-alert [nelTitle]="'错误提示的文案'" [nelType]="'error'" [nelShowIcon]="true" [nelCenter]="true">
-</nel-alert>
+<h3>主题</h3>
+<p>Alert 组件提供了两个不同的主题：light和dark。</p>
 
-<nel-alert [nelTitle]="'带辅助性文字介绍'" [nelType]="'success'"
-  [nelDescription]="'这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰挥发化为灰……'">
-</nel-alert>
+<app-demo [codeUrl]="'components-alert-demo-effect.component'" notes="通过设置nelEffect属性来改变主题，默认为light。">
+  <nel-demo-alert-effect demo></nel-demo-alert-effect>
+</app-demo>
 
-<nel-alert [nelTitle]="'成功提示的文案'" [nelType]="'success'" [nelDescription]="'文字说明文字说明文字说明文字说明文字说明文字说明'"
-  [nelShowIcon]="true">
-</nel-alert>
-<nel-alert [nelTitle]="'消息提示的文案'" [nelType]="'info'" [nelDescription]="'文字说明文字说明文字说明文字说明文字说明文字说明'" [nelShowIcon]="true">
-</nel-alert>
-<nel-alert [nelTitle]="'警告提示的文案'" [nelType]="'warning'" [nelDescription]="'文字说明文字说明文字说明文字说明文字说明文字说明'"
-  [nelShowIcon]="true">
-</nel-alert>
-<nel-alert [nelTitle]="'错误提示的文案'" [nelType]="'error'" [nelDescription]="'文字说明文字说明文字说明文字说明文字说明文字说明'"
-  [nelShowIcon]="true">
-</nel-alert>
+<h3>自定义关闭按钮</h3>
+<p>自定义关闭按钮为文字或其他符号。</p>
+
+<app-demo [codeUrl]="'components-alert-demo-close.component'"
+  notes="在 Alert 组件中，你可以设置是否可关闭，关闭按钮的文本以及关闭时的回调函数。nelClosable属性决定是否可关闭，接受boolean，默认为true。你可以设置nelCloseText属性来代替右侧的关闭图标，注意：nelCloseText必须为文本。设置nelOnClose事件来设置关闭时的回调。">
+  <nel-demo-alert-close demo></nel-demo-alert-close>
+</app-demo>
+
+<h3>带有 icon</h3>
+<p>表示某种状态时提升可读性。</p>
+
+<app-demo [codeUrl]="'components-alert-demo-icon.component'"
+  notes="通过设置nelShowIcon属性来显示 Alert 的 icon，这能更有效地向用户展示你的显示意图。">
+  <nel-demo-alert-icon demo></nel-demo-alert-icon>
+</app-demo>
+
+<h3>文字居中</h3>
+<p>使用 nelCenter 属性让文字水平居中。</p>
+
+<app-demo [codeUrl]="'components-alert-demo-center.component'">
+  <nel-demo-alert-center demo></nel-demo-alert-center>
+</app-demo>
+
+<h3>带有辅助性文字介绍</h3>
+<p>包含标题和内容，解释更详细的警告。</p>
+
+<app-demo [codeUrl]="'components-alert-demo-description.component'"
+  notes="除了必填的nelTitle属性外，你可以设置nelDescription属性来帮助你更好地介绍，我们称之为辅助性文字。辅助性文字只能存放单行文本，会自动换行显示。">
+  <nel-demo-alert-description demo></nel-demo-alert-description>
+</app-demo>
+
+<h3>带有 icon 和辅助性文字介绍</h3>
+
+<app-demo [codeUrl]="'components-alert-demo-icon-description.component'" notes="最后，这是一个同时具有 icon 和辅助性文字的样例。">
+  <nel-demo-alert-icon-description demo></nel-demo-alert-icon-description>
+</app-demo>
 
 <app-doc [docUrl]="'components-alert'"></app-doc>
