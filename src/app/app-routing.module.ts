@@ -46,6 +46,10 @@ const routes: Routes = [
   {
     path: 'dialog',
     loadChildren: () => import('./dialog/dialog.module').then(m => m.DialogModule)
+  },
+  {
+    path: 'card',
+    loadChildren: () => import('./card/card.module').then(m => m.CardModule)
   }
 ];
 

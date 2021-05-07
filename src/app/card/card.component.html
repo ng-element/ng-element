@@ -1,0 +1,33 @@
+<h2>Card 卡片</h2>
+<p>将信息聚合在卡片容器中展示。</p>
+
+<h3>基础用法</h3>
+<p>包含标题，内容和操作。</p>
+
+<app-demo [codeUrl]="'components-card-demo-basic.component'"
+  notes="Card 组件包括header和body部分，header部分通过nelHeader，同时也是可选的。">
+  <nel-demo-card-basic demo></nel-demo-card-basic>
+</app-demo>
+
+<h3>简单卡片</h3>
+<p>卡片可以只有内容区域。</p>
+
+<app-demo [codeUrl]="'components-card-demo-simple.component'">
+  <nel-demo-card-simple demo></nel-demo-card-simple>
+</app-demo>
+
+<h3>带图片</h3>
+<p>可配置定义更丰富的内容展示。</p>
+
+<app-demo [codeUrl]="'components-card-demo-image.component'">
+  <nel-demo-card-image demo></nel-demo-card-image>
+</app-demo>
+
+<h3>卡片阴影</h3>
+<p>可对阴影的显示进行配置。</p>
+
+<app-demo [codeUrl]="'components-card-demo-shadow.component'" notes="通过nelShadow属性设置卡片阴影出现的时机：always、hover或never。">
+  <nel-demo-card-shadow demo></nel-demo-card-shadow>
+</app-demo>
+
+<app-doc [docUrl]="'components-card'"></app-doc>

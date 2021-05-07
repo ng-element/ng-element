@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { LayoutModule } from 'ng-element-ui/layout';
+import { NelLayoutModule } from 'ng-element-ui/layout';
 import { DemoLayoutBasicComponent } from './layout-demo-basic.component';
 import { DemoLayoutGutterComponent } from './layout-demo-gutter.component';
 import { DemoLayoutBlendComponent } from './layout-demo-blend.component';
@@ -25,7 +25,7 @@ import { DemoLayoutReactiveComponent } from './layout-demo-reactive.component';
     DemoLayoutReactiveComponent
   ],
   imports: [
-    LayoutModule
+    NelLayoutModule
   ]
 })
 

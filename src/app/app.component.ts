@@ -17,5 +17,6 @@ export class AppComponent {
     { name: 'layout' },
     { name: 'page-header' },
     { name: 'dialog' },
+    { name: 'card' },
   ];
 }

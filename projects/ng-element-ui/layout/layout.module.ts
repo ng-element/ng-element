@@ -13,4 +13,4 @@ import { ColDirective } from './col.directive';
   ],
 })
 
-export class LayoutModule { }
+export class NelLayoutModule { }
