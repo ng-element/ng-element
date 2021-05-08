@@ -37,7 +37,7 @@ export class DialogConfirmComponent implements OnInit {
     }
   }
 
-  clickDialog($event: Event) {
+  clickDialog($event: Event): void {
     $event.stopPropagation();
   }
 }

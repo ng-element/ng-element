@@ -1,6 +1,6 @@
 import { Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
-import { Component, EventEmitter, Input, Output, TemplateRef, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, EventEmitter, Input, Output, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   templateUrl: './dialog.component.html'
 })
 
-export class DialogComponent implements OnInit {
+export class DialogComponent {
   @Input() set nelVisible(value: boolean) {
     if (value) {
       if (this.dialogTpl) {
@@ -33,10 +33,7 @@ export class DialogComponent implements OnInit {
     private viewContainerRef: ViewContainerRef
   ) { }
 
-  ngOnInit(): void {
-  }
-
-  openWithTemplate(tpl: TemplateRef<any>) {
+  openWithTemplate(tpl: TemplateRef<any>): void {
     const configs = new OverlayConfig({
       hasBackdrop: true,
     });
@@ -70,7 +67,7 @@ export class DialogComponent implements OnInit {
     this.nelOnClose.emit();
   }
 
-  clickDialog($event: Event) {
+  clickDialog($event: Event): void {
     $event.stopPropagation();
   }
 }

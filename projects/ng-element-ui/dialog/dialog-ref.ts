@@ -1,10 +1,9 @@
 import { OverlayRef } from '@angular/cdk/overlay';
 import { Subject } from 'rxjs';
-import { DialogConfig } from './dialog-config';
 
 export interface OverlayCloseEvent<R> {
   type: 'backdropClick' | 'close';
-  data: R | null
+  data: R | null;
 }
 
 export class DialogRef<R = any> {
@@ -20,11 +19,11 @@ export class DialogRef<R = any> {
     overlay.backdropClick().subscribe(() => this._close('backdropClick', null));
   }
 
-  close(data: R | null) {
+  close(data: R | null): void {
     this._close('close', data);
   }
 
-  private _close(type: 'backdropClick' | 'close', data: R | null) {
+  private _close(type: 'backdropClick' | 'close', data: R | null): void {
     this.overlay.dispose();
     this.afterClosed$.next({
       type,

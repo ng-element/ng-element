@@ -16,8 +16,13 @@
 @import 'element-theme-chalk/src/dialog.scss';
 @import 'element-theme-chalk/src/message-box.scss';
 @import 'element-theme-chalk/src/card.scss';
+@import 'element-theme-chalk/src/popper.scss';
 
 nel-alert,
 nel-card {
   display: block;
+}
+
+.el-popper {
+  position: relative;
 }

@@ -11,6 +11,6 @@ export const dialogAnimations: {
       animate('{{ fadeOut }}ms', style({ opacity: 0 }))
     )
   ])
-}
+};
 
 export type DialogAnimationState = 'default' | 'closing';

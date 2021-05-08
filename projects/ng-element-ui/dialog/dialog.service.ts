@@ -19,8 +19,6 @@ export class DialogService {
   ): DialogRef<R> {
     const configs = new OverlayConfig({
       hasBackdrop: true,
-      panelClass: ['modal', 'is-active'],
-      backdropClass: 'modal-background'
     });
 
     const overlayRef = this.overlay.create(configs);
@@ -32,7 +30,7 @@ export class DialogService {
     return dialogRef;
   }
 
-  createInjector(ref: DialogRef, inj: Injector) {
+  createInjector(ref: DialogRef, inj: Injector): PortalInjector {
     const injectorTokens = new WeakMap([[DialogRef, ref]]);
     return new PortalInjector(inj, injectorTokens);
   }

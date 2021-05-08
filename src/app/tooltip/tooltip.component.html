@@ -1,0 +1,32 @@
+<h2>Tooltip 文字提示</h2>
+<p>常用于展示鼠标 hover 时的提示信息。</p>
+
+<h3>基础用法</h3>
+<p>在这里我们提供 9 种不同方向的展示方式，可以通过以下完整示例来理解，选择你要的效果。</p>
+
+<app-demo [codeUrl]="'components-tooltip-demo-basic.component'">
+  <nel-demo-tooltip-basic demo></nel-demo-tooltip-basic>
+</app-demo>
+
+<h3>主题</h3>
+<p>Tooltip 组件提供了两个不同的主题：dark和light。</p>
+
+<app-demo [codeUrl]="'components-tooltip-demo-effect.component'" notes="通过设置nelEffect属性来改变主题，默认为dark。">
+  <nel-demo-tooltip-effect demo></nel-demo-tooltip-effect>
+</app-demo>
+
+<h3>更多 Content</h3>
+<p>展示多行文本或者是设置文本内容的格式</p>
+
+<app-demo [codeUrl]="'components-tooltip-demo-content.component'">
+  <nel-demo-tooltip-content demo></nel-demo-tooltip-content>
+</app-demo>
+
+<h3>高级扩展</h3>
+<p>如果需要关闭 tooltip 功能，nelDisabled 属性可以满足这个需求，它接受一个Boolean，设置为true即可。</p>
+
+<app-demo [codeUrl]="'components-tooltip-demo-disabled.component'">
+  <nel-demo-tooltip-disabled demo></nel-demo-tooltip-disabled>
+</app-demo>
+
+<app-doc [docUrl]="'components-tooltip'"></app-doc>

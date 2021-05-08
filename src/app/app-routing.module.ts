@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'card',
     loadChildren: () => import('./card/card.module').then(m => m.CardModule)
+  },
+  {
+    path: 'tooltip',
+    loadChildren: () => import('./tooltip/tooltip.module').then(m => m.TooltipModule)
   }
 ];
 

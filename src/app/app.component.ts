@@ -18,5 +18,6 @@ export class AppComponent {
     { name: 'page-header' },
     { name: 'dialog' },
     { name: 'card' },
+    { name: 'tooltip' },
   ];
 }

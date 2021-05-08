@@ -23,8 +23,5 @@ export class CardComponent {
     private elementRef: ElementRef
   ) {
     this.elementRef.nativeElement.classList.add('el-card');
-    setTimeout(() => {
-      console.log(this.nelBodyStyle);
-    }, 3000);
   }
 }
