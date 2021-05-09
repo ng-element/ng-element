@@ -19,5 +19,6 @@ export class AppComponent {
     { name: 'dialog' },
     { name: 'card' },
     { name: 'tooltip' },
+    { name: 'backtop' },
   ];
 }

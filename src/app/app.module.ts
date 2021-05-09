@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { NelBacktopModule } from 'ng-element-ui/backtop';
 
 import { AppService } from './app.service';
 
@@ -17,6 +18,7 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
+    NelBacktopModule,
     AppRoutingModule
   ],
   providers: [

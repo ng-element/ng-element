@@ -54,6 +54,10 @@ const routes: Routes = [
   {
     path: 'tooltip',
     loadChildren: () => import('./tooltip/tooltip.module').then(m => m.TooltipModule)
+  },
+  {
+    path: 'backtop',
+    loadChildren: () => import('./backtop/backtop.module').then(m => m.BacktopModule)
   }
 ];
 

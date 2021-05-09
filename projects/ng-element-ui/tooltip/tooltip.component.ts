@@ -1,21 +1,11 @@
 import { ChangeDetectionStrategy, Component, TemplateRef } from '@angular/core';
-import { animate, style, transition, trigger } from '@angular/animations';
+import { fadeMotion } from 'ng-element-ui/core/animation';
 
 @Component({
   selector: 'nel-tooltip',
   templateUrl: './tooltip.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [
-    trigger('tooltip', [
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate(300, style({ opacity: 1 })),
-      ]),
-      transition(':leave', [
-        animate(300, style({ opacity: 0 })),
-      ]),
-    ]),
-  ],
+  animations: [fadeMotion],
 })
 
 export class TooltipComponent {
