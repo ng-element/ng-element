@@ -23,6 +23,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] card
 - [x] tooltip
 - [x] backtop
+- [x] collapse
 
 ##  Development
 

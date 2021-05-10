@@ -20,5 +20,6 @@ export class AppComponent {
     { name: 'card' },
     { name: 'tooltip' },
     { name: 'backtop' },
+    { name: 'collapse' },
   ];
 }

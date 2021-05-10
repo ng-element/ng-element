@@ -18,6 +18,8 @@
 @import 'element-theme-chalk/src/card.scss';
 @import 'element-theme-chalk/src/popper.scss';
 @import 'element-theme-chalk/src/backtop.scss';
+@import 'element-theme-chalk/src/collapse.scss';
+@import 'element-theme-chalk/src/collapse-item.scss';
 
 nel-alert,
 nel-card {
@@ -26,4 +28,13 @@ nel-card {
 
 .el-popper {
   position: relative;
+}
+
+.el-collapse-item:last-child {
+  margin-bottom: 0;
+}
+
+nel-collapse-item:last-child {
+  display: block;
+  margin-bottom: -1px;
 }

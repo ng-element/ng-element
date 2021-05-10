@@ -58,6 +58,10 @@ const routes: Routes = [
   {
     path: 'backtop',
     loadChildren: () => import('./backtop/backtop.module').then(m => m.BacktopModule)
+  },
+  {
+    path: 'collapse',
+    loadChildren: () => import('./collapse/collapse.module').then(m => m.CollapseModule)
   }
 ];
 

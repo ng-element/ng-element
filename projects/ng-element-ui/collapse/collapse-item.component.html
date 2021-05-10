@@ -1,0 +1,13 @@
+<div class="el-collapse-item" [class.is-disabled]="nelDisabled">
+  <div role="tab" (click)="change()">
+    <div class="el-collapse-item__header" role="button" tabindex="0" [class.is-active]="expanded">
+      <ng-container *stringTemplate="nelTitle"></ng-container>
+      <i nel-icon [nelType]="'arrow-right'" class="el-collapse-item__arrow" [class.is-active]="expanded"></i>
+    </div>
+  </div>
+  <div class="el-collapse-item__wrap" role="tabpanel" [@collapseMotion]="expanded ? 'expanded' : 'collapsed'">
+    <div class="el-collapse-item__content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

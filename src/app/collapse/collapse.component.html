@@ -1,0 +1,26 @@
+<h2>Collapse 折叠面板</h2>
+<p>通过折叠面板收纳内容区域</p>
+
+<h3>基础用法</h3>
+<p>可同时展开多个面板，面板之间不影响</p>
+
+<app-demo [codeUrl]="'components-collapse-demo-basic.component'">
+  <nel-demo-collapse-basic demo></nel-demo-collapse-basic>
+</app-demo>
+
+<h3>手风琴效果</h3>
+<p>每次只能展开一个面板</p>
+
+<app-demo [codeUrl]="'components-collapse-demo-accordion.component'" notes="通过 nelAccordion 属性来设置是否以手风琴模式显示。">
+  <nel-demo-collapse-accordion demo></nel-demo-collapse-accordion>
+</app-demo>
+
+
+<h3>自定义面板标题</h3>
+<p>通过 nelTitle 属性来实现自定义面板的标题内容，以实现增加图标等效果。</p>
+
+<app-demo [codeUrl]="'components-collapse-demo-title.component'">
+  <nel-demo-collapse-title demo></nel-demo-collapse-title>
+</app-demo>
+
+<app-doc [docUrl]="'components-collapse'"></app-doc>

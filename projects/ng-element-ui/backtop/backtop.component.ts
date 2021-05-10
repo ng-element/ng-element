@@ -1,4 +1,7 @@
-import { Component, OnInit, OnDestroy, Input, OnChanges, SimpleChanges, Inject, TemplateRef, Output, EventEmitter, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import {
+  Component, OnInit, OnDestroy, Input, OnChanges, SimpleChanges, Inject, TemplateRef, Output, EventEmitter,
+  ChangeDetectionStrategy, ChangeDetectorRef
+} from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { fromEvent, Subscription } from 'rxjs';
 import { fadeMotion } from 'ng-element-ui/core/animation';
@@ -69,7 +72,7 @@ export class BacktopComponent implements OnInit, OnDestroy, OnChanges {
     this.cdr.detectChanges();
   }
 
-  backTop() {
+  backTop(): void {
     this.scrollTop();
     this.nelClick.emit();
   }
