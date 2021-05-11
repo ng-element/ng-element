@@ -13,6 +13,7 @@ export class ScrollbarComponent implements AfterViewInit, OnDestroy {
   @Input() nelMaxHeight?: string;
   @Output() nelOnScroll: EventEmitter<any> = new EventEmitter<any>();
   @ViewChild('scrollbarWrap', { static: false }) scrollbarWrap!: ElementRef;
+  @ViewChild('scrollbarView', { static: false }) scrollbarView!: ElementRef;
   @ViewChild('verticalThumb', { static: false }) verticalThumb!: ElementRef;
   @ViewChild('horizontalThumb', { static: false }) horizontalThumb!: ElementRef;
   // 纵向滚动
@@ -53,7 +54,8 @@ export class ScrollbarComponent implements AfterViewInit, OnDestroy {
   horizontalMouseup!: Subscription;
   status = 'leave';
   inThumb = false;
-  ro: any;
+  roWrap?: ResizeObserver;
+  roView?: ResizeObserver;
 
   ngOnDestroy(): void {
     if (this.verticalMousemove) {
@@ -62,16 +64,20 @@ export class ScrollbarComponent implements AfterViewInit, OnDestroy {
     if (this.verticalMouseup) {
       this.verticalMouseup.unsubscribe();
     }
-    if (this.ro) {
-      this.ro.unobserve(this.scrollbarWrap.nativeElement);
+    if (this.roWrap) {
+      this.roWrap.unobserve(this.scrollbarWrap.nativeElement);
+    }
+    if (this.roView) {
+      this.roView.unobserve(this.scrollbarView.nativeElement);
     }
   }
 
   ngAfterViewInit(): void {
     if (!this.nelNoresize) {
-      this.ro = new ResizeObserver((entries: any, observer: any) => {
+      // 监听wrap
+      this.roWrap = new ResizeObserver((entries: any, observer: any) => {
         for (const entry of entries) {
-          const { left, top, width, height } = entry.contentRect;
+          const { width, height } = entry.contentRect;
           // 高度是否变化
           if (height !== this.vertical.wrapHeight) {
             this.initVertical();
@@ -83,7 +89,24 @@ export class ScrollbarComponent implements AfterViewInit, OnDestroy {
         }
       });
 
-      this.ro.observe(this.scrollbarWrap.nativeElement);
+      this.roWrap.observe(this.scrollbarWrap.nativeElement);
+
+      // 监听scroll
+      this.roView = new ResizeObserver((entries: any, observer: any) => {
+        for (const entry of entries) {
+          const { width, height } = entry.contentRect;
+          // 高度是否变化
+          if (height !== this.vertical.scrollHeight) {
+            this.initVertical();
+          }
+          // 宽度是否变化
+          if (width !== this.horizontal.scrollWidth) {
+            this.initHorizontal();
+          }
+        }
+      });
+
+      this.roView.observe(this.scrollbarView.nativeElement);
     }
 
     this.initVertical();
@@ -182,8 +205,8 @@ export class ScrollbarComponent implements AfterViewInit, OnDestroy {
 
     // 打开移动事件
     this.verticalMousemove = fromEvent(document, 'mousemove')
-      .subscribe(($event) => {
-        this.verticalThumbMove($event as MouseEvent);
+      .subscribe((event) => {
+        this.verticalThumbMove(event as MouseEvent);
       });
     this.verticalMouseup = fromEvent(document, 'mouseup')
       .subscribe(() => {
@@ -213,8 +236,8 @@ export class ScrollbarComponent implements AfterViewInit, OnDestroy {
 
     // 打开移动事件
     this.horizontalMousemove = fromEvent(document, 'mousemove')
-      .subscribe(($event) => {
-        this.horizontalThumbMove($event as MouseEvent);
+      .subscribe((event) => {
+        this.horizontalThumbMove(event as MouseEvent);
       });
     this.horizontalMouseup = fromEvent(document, 'mouseup')
       .subscribe(() => {

@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
     <button nel-button (click)="add()">添加元素</button>
     <button nel-button (click)="delete()">删除元素</button>
     <nel-scrollbar [nelMaxHeight]="'400px'">
-      <p class="item" *ngFor="let item of list">{{ item }}</p>
+      <p class="item" *ngFor="let item of list; let index=index">{{ index+1 }}</p>
     </nel-scrollbar>
   `,
   styles: [
     `
+    .el-button {
+      margin-bottom: 20px;
+    }
     :host ::ng-deep .item {
       display: flex;
       align-items: center;
