@@ -62,6 +62,10 @@ const routes: Routes = [
   {
     path: 'collapse',
     loadChildren: () => import('./collapse/collapse.module').then(m => m.CollapseModule)
+  },
+  {
+    path: 'scrollbar',
+    loadChildren: () => import('./scrollbar/scrollbar.module').then(m => m.ScrollbarModule)
   }
 ];
 

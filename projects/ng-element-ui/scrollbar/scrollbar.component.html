@@ -1,0 +1,15 @@
+<div class="el-scrollbar" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()">
+  <div #scrollbarWrap class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default" [style.height]="nelHeight"
+    [style.max-height]="nelMaxHeight">
+    <div class="el-scrollbar__view">
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <div class="el-scrollbar__bar is-horizontal"
+    [style.display]="!horizontal.canScroll || status == 'leave' ? 'none' : ''">
+    <div #horizontalThumb class="el-scrollbar__thumb" (mousedown)="horizontalThumbDown($event)"></div>
+  </div>
+  <div class="el-scrollbar__bar is-vertical" [style.display]="!vertical.canScroll || status == 'leave' ? 'none' : ''">
+    <div #verticalThumb class="el-scrollbar__thumb" (mousedown)="verticalThumbDown($event)"></div>
+  </div>
+</div>

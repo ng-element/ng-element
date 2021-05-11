@@ -21,5 +21,6 @@ export class AppComponent {
     { name: 'tooltip' },
     { name: 'backtop' },
     { name: 'collapse' },
+    { name: 'scrollbar' },
   ];
 }
