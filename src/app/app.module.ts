@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { NelBacktopModule } from 'ng-element-ui/backtop';
+import { NelScrollbarModule } from 'ng-element-ui/scrollbar';
 
 import { AppService } from './app.service';
 
@@ -19,6 +20,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpClientModule,
     NelBacktopModule,
+    NelScrollbarModule,
     AppRoutingModule
   ],
   providers: [

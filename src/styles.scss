@@ -1,6 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'highlight.js/styles/github.css';
 
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  padding-top: 80px;
+  height: calc(100% - 80px);
+  overflow: hidden;
+}
+
+
 .article {
   width: 100%;
 }
