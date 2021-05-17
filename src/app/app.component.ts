@@ -98,7 +98,7 @@ export class AppComponent {
         // { link: 'calendar', name: 'Calendar 日历' },
         // { link: 'image', name: 'Image 图片' },
         { link: 'backtop', name: 'Backtop 回到顶部' },
-        // { link: 'infiniteScroll', name: 'InfiniteScroll 无限滚动' },
+        { link: 'infinite-scroll', name: 'InfiniteScroll 无限滚动' },
         // { link: 'drawer', name: 'Drawer 抽屉' },
       ]
     },

@@ -66,6 +66,10 @@ const routes: Routes = [
   {
     path: 'scrollbar',
     loadChildren: () => import('./scrollbar/scrollbar.module').then(m => m.ScrollbarModule)
+  },
+  {
+    path: 'infinite-scroll',
+    loadChildren: () => import('./infinite-scroll/infinite-scroll.module').then(m => m.InfiniteScrollModule)
   }
 ];
 
