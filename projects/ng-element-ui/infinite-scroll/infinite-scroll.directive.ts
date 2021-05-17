@@ -1,5 +1,5 @@
 import { Directive, AfterViewInit, ElementRef, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
-import { getScrollContainer } from 'ng-element-ui/core/utils/dom';
+import { getScrollContainer } from 'ng-element-ui/core/utils';
 import { Subscription, Subject, fromEvent } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, Optional, TemplateRef, OnInit, ChangeDetectorRef } from '@angular/core';
-import { collapseMotion } from 'ng-element-ui/core/animation/collapse';
+import { collapseMotion } from 'ng-element-ui/core/animation';
 import { CollapseComponent } from './collapse.component';
 
 @Component({
