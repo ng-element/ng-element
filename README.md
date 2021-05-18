@@ -26,6 +26,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] collapse
 - [x] scrollbar
 - [x] infinite-scroll
+- [x] radio
 
 ##  Development
 

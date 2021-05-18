@@ -70,6 +70,10 @@ const routes: Routes = [
   {
     path: 'infinite-scroll',
     loadChildren: () => import('./infinite-scroll/infinite-scroll.module').then(m => m.InfiniteScrollModule)
+  },
+  {
+    path: 'radio',
+    loadChildren: () => import('./radio/radio.module').then(m => m.RadioModule)
   }
 ];
 
