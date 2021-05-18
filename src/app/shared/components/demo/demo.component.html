@@ -1,4 +1,5 @@
-<div [class]="classes" [class.hover]="hovering" (mouseenter)="hovering = true" (mouseleave)="hovering = false">
+<div class="demo-block demo-box demo-zh-CN" [class]="classes" [class.hover]="hovering" (mouseenter)="hovering = true"
+  (mouseleave)="hovering = false">
   <div class="source" *ngIf="codeUrl">
     <ng-content select="[demo]"></ng-content>
   </div>
@@ -20,6 +21,17 @@
 
   <div class="demo-block-control" (click)="showCode()">
     <i [class]="'el-icon-caret-' + (isExpanded ? 'top' : 'bottom')" [class.hovering]="hovering"></i>
-    <span [@state]="hovering">显示代码</span>
+    <span [@state]="hovering">
+      {{isExpanded ? '隐藏代码' : '显示代码'}}
+    </span>
+    <div class="control-button-container" [@state]="hovering">
+      <button (click)="copy($event)" [cdkCopyToClipboard]="code"
+        class="el-button el-button--text el-button--small control-button copy-button" type="button">
+        <span>复制代码片段</span>
+      </button>
+      <!-- <button class="el-button el-button--text el-button--small control-button run-online-button" type="button">
+        <span>在线运行</span>
+      </button> -->
+    </div>
   </div>
 </div>

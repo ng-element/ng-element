@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 import { DemoComponent } from './components/demo/demo.component';
 import { DocComponent } from './components/doc/doc.component';
 import { HighLightPipe, MarkedPipe } from './pipe';
@@ -18,7 +19,8 @@ import { HighLightPipe, MarkedPipe } from './pipe';
     MarkedPipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ClipboardModule
   ]
 })
 

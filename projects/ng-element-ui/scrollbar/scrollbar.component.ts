@@ -153,6 +153,7 @@ export class ScrollbarComponent implements AfterViewInit, OnDestroy {
   }
 
   @HostListener('wheel', ['$event']) wheelScroll($event: WheelEvent): void {
+    $event.stopPropagation();
     this.verticalThumb.nativeElement.style.transition = '.3s';
     const wheelDirection = ($event as any).wheelDelta || -$event.deltaY;
     if (wheelDirection > 0) {

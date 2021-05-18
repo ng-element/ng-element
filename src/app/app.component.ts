@@ -1,4 +1,7 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, ViewChild } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { ScrollbarComponent } from 'ng-element-ui/scrollbar';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +9,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   groupList = [
     {
       title: 'Basic 10',
@@ -103,4 +106,18 @@ export class AppComponent {
       ]
     },
   ];
+  @ViewChild('scrollbar', { static: false }) scrollbar!: ScrollbarComponent;
+
+  constructor(
+    private router: Router
+  ) { }
+
+  ngOnInit(): void {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event) => {
+        this.scrollbar.vertical.scrollTop = 0;
+        this.scrollbar.verticalScrollHandle(true);
+      });
+  }
 }

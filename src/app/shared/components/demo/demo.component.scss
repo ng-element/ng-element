@@ -85,7 +85,7 @@
 
   .demo-block-control {
     border-top: solid 1px #eaeefb;
-    height: 36px;
+    height: 44px;
     box-sizing: border-box;
     background-color: #fff;
     border-bottom-left-radius: 4px;
@@ -99,7 +99,7 @@
 
     i {
       font-size: 12px;
-      line-height: 36px;
+      line-height: 44px;
       transition: .35s;
 
       &.hovering {
@@ -107,14 +107,23 @@
       }
     }
 
-    span {
+    &>span {
       position: absolute;
       transform: translateX(-30px);
       font-size: 14px;
-      line-height: 36px;
+      line-height: 44px;
       transition: .35s;
       overflow: hidden;
       display: inline-block;
+    }
+
+    .control-button-container {
+      line-height: 40px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-left: 5px;
+      padding-right: 25px;
     }
 
     &:hover {

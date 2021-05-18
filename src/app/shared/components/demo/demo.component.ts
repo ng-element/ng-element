@@ -20,7 +20,7 @@ import { AppService } from './../../../app.service';
         opacity: 1,
         display: 'inline-block',
       })),
-      transition('* => *', animate(`300ms ease-in-out`)),
+      transition('false <=> true', animate(`300ms ease-in-out`)),
     ]),
     trigger('expand', [
       state('false', style({
@@ -39,7 +39,7 @@ export class DemoComponent implements OnInit {
   @Input() notes = '';
   @Input('class') parentClass: new ([key]?: any) => {} = class { };
   code = '';
-  classes = 'demo-block demo-box demo-zh-CN';
+  classes = '';
   hovering = false;
   isExpanded = false;
   safeNotes?: SafeHtml;
@@ -71,5 +71,9 @@ export class DemoComponent implements OnInit {
     // this.code = this.el.nativeElement.querySelector('.source').innerHTML
     // this.code = this.code.replace(/=""/g, '')
     //   .replace(/<!---->/g, '')
+  }
+
+  copy(event: MouseEvent): void {
+    event.stopPropagation();
   }
 }
