@@ -1,0 +1,32 @@
+<div tabindex="-1" class="el-image-viewer__wrapper" style="z-index: 2000;">
+  <div class="el-image-viewer__mask"></div>
+  <span class="el-image-viewer__btn el-image-viewer__close" (click)="close()">
+    <i class="el-icon-close"></i>
+  </span>
+  <span class="el-image-viewer__btn el-image-viewer__prev" (click)="prev()">
+    <i class="el-icon-arrow-left"></i>
+  </span>
+  <span class="el-image-viewer__btn el-image-viewer__next" (click)="next()">
+    <i class="el-icon-arrow-right"></i>
+  </span>
+  <div class="el-image-viewer__btn el-image-viewer__actions">
+    <div class="el-image-viewer__actions__inner">
+      <i class="el-icon-zoom-out" (click)="scaleImage(-0.2)"></i>
+      <i class="el-icon-zoom-in" (click)="scaleImage(0.2)"></i>
+      <i class="el-image-viewer__actions__divider"></i>
+      <i *ngIf="!isOriginal" class="el-icon-full-screen" (click)="changeType()"></i>
+      <i *ngIf="isOriginal" class="el-icon-c-scale-to-original" (click)="changeType()"></i>
+      <i class="el-image-viewer__actions__divider"></i>
+      <i class="el-icon-refresh-left" (click)="rotateImage(-1)"></i>
+      <i class="el-icon-refresh-right" (click)="rotateImage(1)"></i>
+    </div>
+  </div>
+  <div cdkDrag (cdkDragStarted)="dragStarted()" class="el-image-viewer__canvas">
+    <img cdkDragHandle #imgEle *ngFor="let url of nelUrlList; let index=index" [src]="url"
+      [style.display]="index != nelInitialIndex ? 'none' : ''"
+      [ngStyle]="{'max-height': isOriginal ? '' : '100%', 'max-width': isOriginal ? '' : '100%'}"
+      class="el-image-viewer__img">
+    <div>
+    </div>
+  </div>
+</div>

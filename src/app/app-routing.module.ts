@@ -74,6 +74,10 @@ const routes: Routes = [
   {
     path: 'radio',
     loadChildren: () => import('./radio/radio.module').then(m => m.RadioModule)
+  },
+  {
+    path: 'image',
+    loadChildren: () => import('./image/image.module').then(m => m.ImageModule)
   }
 ];
 
