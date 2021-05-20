@@ -26,9 +26,12 @@
 @import 'element-theme-chalk/src/radio-button.scss';
 @import 'element-theme-chalk/src/image.scss';
 @import 'element-theme-chalk/src/image-viewer.scss';
+@import 'element-theme-chalk/src/timeline.scss';
+@import 'element-theme-chalk/src/timeline-item.scss';
 
 nel-alert,
-nel-card {
+nel-card,
+nel-timeline-item {
   display: block;
 }
 

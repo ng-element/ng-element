@@ -96,7 +96,7 @@ export class AppComponent implements OnInit {
         { link: 'card', name: 'Card 卡片' },
         // { link: 'carousel', name: 'Carousel 走马灯' },
         { link: 'collapse', name: 'Collapse 折叠面板' },
-        // { link: 'timeline', name: 'Timeline 时间线' },
+        { link: 'timeline', name: 'Timeline 时间线' },
         { link: 'divider', name: 'Divider 分割线' },
         // { link: 'calendar', name: 'Calendar 日历' },
         { link: 'image', name: 'Image 图片' },

@@ -1,0 +1,20 @@
+<div class="el-timeline-item__tail"></div>
+<div class="el-timeline-item__node el-timeline-item__node--"
+  [class.el-timeline-item__node--normal]="nelSize == 'normal'"
+  [class.el-timeline-item__node--large]="nelSize != 'normal'"
+  [class.el-timeline-item__node--primary]="nelType == 'primary'"
+  [class.el-timeline-item__node--success]="nelType == 'success'"
+  [class.el-timeline-item__node--warning]="nelType == 'warning'"
+  [class.el-timeline-item__node--danger]="nelType == 'danger'" [class.el-timeline-item__node--info]="nelType == 'info'"
+  [style.backgroundColor]="nelColor">
+  <i *ngIf="nelIcon" nel-icon [nelType]="nelIcon" class="el-timeline-item__icon"></i>
+</div>
+<div class="el-timeline-item__wrapper">
+  <div *ngIf="!nelHideTimestamp && nelPlacement == 'top'" class="el-timeline-item__timestamp is-top">{{nelTimestamp}}
+  </div>
+  <div class="el-timeline-item__content">
+    <ng-content></ng-content>
+  </div>
+  <div *ngIf="!nelHideTimestamp && nelPlacement == 'bottom'" class="el-timeline-item__timestamp is-bottom">
+    {{nelTimestamp}}</div>
+</div>

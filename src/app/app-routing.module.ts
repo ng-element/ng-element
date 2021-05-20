@@ -78,6 +78,10 @@ const routes: Routes = [
   {
     path: 'image',
     loadChildren: () => import('./image/image.module').then(m => m.ImageModule)
+  },
+  {
+    path: 'timeline',
+    loadChildren: () => import('./timeline/timeline.module').then(m => m.TimelineModule)
   }
 ];
 
