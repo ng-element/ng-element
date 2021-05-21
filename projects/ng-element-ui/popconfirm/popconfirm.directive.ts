@@ -1,67 +1,59 @@
-import { ComponentPortal } from '@angular/cdk/portal';
-import { ConnectedPosition, Overlay, OverlayPositionBuilder, OverlayRef } from '@angular/cdk/overlay';
-import { Directive, ElementRef, Input, TemplateRef, HostListener, OnInit, ComponentRef } from '@angular/core';
-import { TooltipComponent } from './tooltip.component';
+import {
+  Directive, HostListener, Input, ElementRef, ViewContainerRef, ComponentFactory, ComponentFactoryResolver, Output
+  , EventEmitter
+} from '@angular/core';
+import { ConnectionPositionPair } from '@angular/cdk/overlay';
+import { NelPopconfirmComponent } from './popconfirm.component';
 
 export type PlacementType = 'top' | 'top-start' | 'top-end' | 'bottom' | 'bottom-start' | 'bottom-end' | 'left'
   | 'left-start' | 'left-end' | 'right' | 'right-start' | 'right-end';
-export type EffectType = 'dark' | 'light';
 
 @Directive({
-  selector: '[nel-tooltip]',
+  selector: '[nel-popconfirm]'
 })
 
-export class TooltipDirective implements OnInit {
-  @Input() nelContent?: string | TemplateRef<void>;
+export class NelPopconfirmDirective {
+  @Input() nelPopconfirmTitle?: string;
   @Input() nelPlacement: PlacementType = 'bottom';
-  @Input() nelEffect: EffectType = 'dark';
-  @Input() set nelDisabled(value: boolean) {
-    this.disabled = value;
-    if (value) {
-      this.hide();
-    }
-  }
-  private overlayRef?: OverlayRef;
-  disabled = false;
+  @Input() nelConfirmButtonText = '确认';
+  @Input() nelCancelButtonText = '取消';
+  @Input() nelConfirmButtonType = 'primary';
+  @Input() nelCancelButtonType = 'text';
+  @Input() nelIcon = 'question';
+  @Input() nelIconColor = '#f90';
+  @Input() nelHideIcon = false;
+  @Output() nelOnCancel: EventEmitter<void> = new EventEmitter<void>();
+  @Output() nelOnConfirm: EventEmitter<void> = new EventEmitter<void>();
+  protected componentFactory!: ComponentFactory<NelPopconfirmComponent>;
 
   constructor(
-    private overlay: Overlay,
-    private overlayPositionBuilder: OverlayPositionBuilder,
-    private elementRef: ElementRef
-  ) { }
-
-  ngOnInit(): void {
-    // if (this.nelPlacement === 'bottom') {
-    //   this.show();
-    // }
+    protected hostView: ViewContainerRef,
+    private elementRef: ElementRef,
+    private resolver: ComponentFactoryResolver
+  ) {
+    this.componentFactory = this.resolver.resolveComponentFactory(NelPopconfirmComponent);
   }
 
-  @HostListener('mouseenter', ['$event.target'])
-  onMouseenter(): void {
-    if (!this.disabled) {
-      this.show();
-    }
-  }
-
-  @HostListener('mouseleave', ['$event.target'])
-  onMouseleave(): void {
-    this.hide();
+  @HostListener('click', ['$event.target'])
+  onClick(): void {
+    this.show();
   }
 
   show(): void {
-    const position: ConnectedPosition = {
+    const position: ConnectionPositionPair = {
       originX: 'start',
       originY: 'top',
       overlayX: 'start',
       overlayY: 'bottom',
       offsetX: 0,
-      offsetY: 0
+      offsetY: 0,
     };
     let arrowLeft = '';
     let arrowRight = '';
     let arrowTop = '';
     let arrowBottom = '';
     let transform = '';
+
     switch (this.nelPlacement) {
       case 'top-start':
         position.originX = 'start';
@@ -181,26 +173,27 @@ export class TooltipDirective implements OnInit {
         transform = 'translate(-5px, -15px)';
         break;
     }
-    const positionStrategy = this.overlayPositionBuilder
-      .flexibleConnectedTo(this.elementRef)
-      .withPositions([position]);
-    this.overlayRef = this.overlay.create({ positionStrategy });
-    if (this.overlayRef) {
-      const tooltipRef: ComponentRef<TooltipComponent>
-        = this.overlayRef.attach(new ComponentPortal(TooltipComponent));
-      if (this.nelContent) {
-        tooltipRef.instance.content = this.nelContent;
-        tooltipRef.instance.effect = this.nelEffect;
-        tooltipRef.instance.arrowLeft = arrowLeft;
-        tooltipRef.instance.arrowRight = arrowRight;
-        tooltipRef.instance.arrowTop = arrowTop;
-        tooltipRef.instance.arrowBottom = arrowBottom;
-        tooltipRef.instance.transform = transform;
-      }
-    }
-  }
 
-  hide(): void {
-    this.overlayRef?.detach();
+    const popconfirmRef = this.hostView.createComponent(this.componentFactory);
+    if (popconfirmRef) {
+      popconfirmRef.instance.title = this.nelPopconfirmTitle;
+      popconfirmRef.instance.onCancel = this.nelOnCancel;
+      popconfirmRef.instance.onConfirm = this.nelOnConfirm;
+      popconfirmRef.instance.confirmButtonText = this.nelConfirmButtonText;
+      popconfirmRef.instance.cancelButtonText = this.nelCancelButtonText;
+      popconfirmRef.instance.confirmButtonType = this.nelConfirmButtonType;
+      popconfirmRef.instance.cancelButtonType = this.nelCancelButtonType;
+      popconfirmRef.instance.icon = this.nelIcon;
+      popconfirmRef.instance.iconColor = this.nelIconColor;
+      popconfirmRef.instance.hideIcon = this.nelHideIcon;
+      popconfirmRef.instance.trigger = { elementRef: this.elementRef };
+      popconfirmRef.instance.isOpen = true;
+      popconfirmRef.instance.positionStrategy = [position];
+      popconfirmRef.instance.arrowLeft = arrowLeft;
+      popconfirmRef.instance.arrowRight = arrowRight;
+      popconfirmRef.instance.arrowTop = arrowTop;
+      popconfirmRef.instance.arrowBottom = arrowBottom;
+      popconfirmRef.instance.transform = transform;
+    }
   }
 }

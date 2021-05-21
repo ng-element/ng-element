@@ -1,0 +1,21 @@
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen"
+  [cdkConnectedOverlayPositions]="positionStrategy" (overlayOutsideClick)="close()">
+  <div class="el-popover el-popper is-light">
+    <div class="el-popconfirm">
+      <p class="el-popconfirm__main">
+        <i *ngIf="!hideIcon" nel-icon [nelType]="icon" class="el-popconfirm__icon" [style.color]="iconColor"></i>
+        {{title}}
+      </p>
+      <div class="el-popconfirm__action">
+        <button nel-button [nelType]="cancelButtonType" [nelSize]="'mini'" (click)="cancel()">
+          {{cancelButtonText}}
+        </button>
+        <button nel-button [nelType]="confirmButtonType" [nelSize]="'mini'" (click)="confirm()">
+          {{confirmButtonText}}
+        </button>
+      </div>
+    </div>
+    <div class="el-popper__arrow" [style.left]="arrowLeft" [style.right]="arrowRight" [style.top]="arrowTop"
+      [style.bottom]="arrowBottom" [style.transform]="transform"></div>
+  </div>
+</ng-template>

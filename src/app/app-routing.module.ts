@@ -82,6 +82,10 @@ const routes: Routes = [
   {
     path: 'timeline',
     loadChildren: () => import('./timeline/timeline.module').then(m => m.TimelineModule)
+  },
+  {
+    path: 'popconfirm',
+    loadChildren: () => import('./popconfirm/popconfirm.module').then(m => m.PopconfirmModule)
   }
 ];
 
