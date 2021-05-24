@@ -86,6 +86,10 @@ const routes: Routes = [
   {
     path: 'popconfirm',
     loadChildren: () => import('./popconfirm/popconfirm.module').then(m => m.PopconfirmModule)
+  },
+  {
+    path: 'popover',
+    loadChildren: () => import('./popover/popover.module').then(m => m.PopoverModule)
   }
 ];
 

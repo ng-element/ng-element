@@ -91,7 +91,7 @@ export class AppComponent implements OnInit {
       menuList: [
         { link: 'dialog', name: 'Dialog 对话框' },
         { link: 'tooltip', name: 'Tooltip 文字提示' },
-        // { link: 'popover', name: 'Popover 弹出框' },
+        { link: 'popover', name: 'Popover 弹出框' },
         { link: 'popconfirm', name: 'Popconfirm 气泡确认框' },
         { link: 'card', name: 'Card 卡片' },
         // { link: 'carousel', name: 'Carousel 走马灯' },

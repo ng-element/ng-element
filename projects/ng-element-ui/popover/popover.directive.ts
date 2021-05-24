@@ -1,32 +1,38 @@
 import {
-  Directive, HostListener, Input, ElementRef, ViewContainerRef, ComponentFactory, ComponentFactoryResolver, Output
-  , EventEmitter,
-  Renderer2
+  Directive, ComponentFactory, ViewContainerRef, ElementRef, ComponentFactoryResolver
+  , Input, Renderer2, OnDestroy, TemplateRef, OnInit, Output, EventEmitter
 } from '@angular/core';
 import { ConnectionPositionPair } from '@angular/cdk/overlay';
-import { NelPopconfirmComponent } from './popconfirm.component';
+import { NelPopoverComponent } from './popover.component';
 
 export type PlacementType = 'top' | 'top-start' | 'top-end' | 'bottom' | 'bottom-start' | 'bottom-end' | 'left'
   | 'left-start' | 'left-end' | 'right' | 'right-start' | 'right-end';
+export type TriggerType = 'click' | 'focus' | 'hover' | 'manual';
+
 
 @Directive({
-  selector: '[nel-popconfirm]'
+  selector: '[nel-popover]',
 })
 
-export class NelPopconfirmDirective {
-  @Input() nelPopconfirmTitle?: string;
-  @Input() nelPlacement: PlacementType = 'bottom';
-  @Input() nelConfirmButtonText = '确认';
-  @Input() nelCancelButtonText = '取消';
-  @Input() nelConfirmButtonType = 'primary';
-  @Input() nelCancelButtonType = 'text';
-  @Input() nelIcon = 'question';
-  @Input() nelIconColor = '#f90';
-  @Input() nelHideIcon = false;
-  @Output() nelOnCancel: EventEmitter<void> = new EventEmitter<void>();
-  @Output() nelOnConfirm: EventEmitter<void> = new EventEmitter<void>();
-  protected componentFactory!: ComponentFactory<NelPopconfirmComponent>;
-  component?: NelPopconfirmComponent;
+export class NelPopoverDirective implements OnInit, OnDestroy {
+  @Input() nelPopoverTitle?: string;
+  @Input() nelPopoverContent?: string | TemplateRef<void>;
+  @Input() nelPopoverWidth?: number;
+  @Input() nelPopoverTrigger: TriggerType = 'click';
+  @Input() nelPopoverPlacement: PlacementType = 'bottom';
+  @Input() set nelPopoverVisible(val: boolean) {
+    if (val) {
+      if (this.component) {
+        this.show();
+      }
+    } else {
+      this.hide();
+    }
+  }
+  @Output() nelPopoverVisibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  protected componentFactory!: ComponentFactory<NelPopoverComponent>;
+  component?: NelPopoverComponent;
+  protected readonly triggerDisposables: Array<() => void> = [];
 
   constructor(
     protected hostView: ViewContainerRef,
@@ -34,15 +40,35 @@ export class NelPopconfirmDirective {
     private resolver: ComponentFactoryResolver,
     private renderer: Renderer2
   ) {
-    this.componentFactory = this.resolver.resolveComponentFactory(NelPopconfirmComponent);
+    this.componentFactory = this.resolver.resolveComponentFactory(NelPopoverComponent);
     const componentRef = this.hostView.createComponent(this.componentFactory);
-    this.component = componentRef.instance as NelPopconfirmComponent;
+    this.component = componentRef.instance as NelPopoverComponent;
     this.renderer.removeChild(this.renderer.parentNode(this.elementRef.nativeElement), componentRef.location.nativeElement);
   }
 
-  @HostListener('click', ['$event.target'])
-  onClick(): void {
-    this.show();
+  ngOnDestroy(): void {
+    this.removeTriggerListeners();
+  }
+
+  ngOnInit(): void {
+    this.trigger();
+  }
+
+  trigger(): void {
+    if (this.nelPopoverTrigger === 'click') {
+      this.triggerDisposables.push(this.renderer.listen(this.elementRef.nativeElement, 'click', () => this.show()));
+    } else if (this.nelPopoverTrigger === 'focus') {
+      this.triggerDisposables.push(this.renderer.listen(this.elementRef.nativeElement, 'focus', () => this.show()));
+      this.triggerDisposables.push(this.renderer.listen(this.elementRef.nativeElement, 'blur', () => this.hide()));
+    } else if (this.nelPopoverTrigger === 'hover') {
+      this.triggerDisposables.push(this.renderer.listen(this.elementRef.nativeElement, 'mouseenter', () => this.show()));
+      this.triggerDisposables.push(this.renderer.listen(this.elementRef.nativeElement, 'mouseleave', () => this.hide()));
+    }
+  }
+
+  private removeTriggerListeners(): void {
+    this.triggerDisposables.forEach(dispose => dispose());
+    this.triggerDisposables.length = 0;
   }
 
   show(): void {
@@ -60,7 +86,7 @@ export class NelPopconfirmDirective {
     let arrowBottom = '';
     let transform = '';
 
-    switch (this.nelPlacement) {
+    switch (this.nelPopoverPlacement) {
       case 'top-start':
         position.originX = 'start';
         position.originY = 'top';
@@ -181,17 +207,12 @@ export class NelPopconfirmDirective {
     }
 
     if (this.component) {
-      this.component.title = this.nelPopconfirmTitle;
-      this.component.onCancel = this.nelOnCancel;
-      this.component.onConfirm = this.nelOnConfirm;
-      this.component.confirmButtonText = this.nelConfirmButtonText;
-      this.component.cancelButtonText = this.nelCancelButtonText;
-      this.component.confirmButtonType = this.nelConfirmButtonType;
-      this.component.cancelButtonType = this.nelCancelButtonType;
-      this.component.icon = this.nelIcon;
-      this.component.iconColor = this.nelIconColor;
-      this.component.hideIcon = this.nelHideIcon;
-      this.component.trigger = { elementRef: this.elementRef };
+      this.component.title = this.nelPopoverTitle;
+      this.component.content = this.nelPopoverContent;
+      this.component.width = this.nelPopoverWidth;
+      this.component.trigger = this.nelPopoverTrigger;
+      this.component.visibleChange = this.nelPopoverVisibleChange;
+      this.component.origin = { elementRef: this.elementRef };
       this.component.isOpen = true;
       this.component.positionStrategy = [position];
       this.component.arrowLeft = arrowLeft;
@@ -199,6 +220,11 @@ export class NelPopconfirmDirective {
       this.component.arrowTop = arrowTop;
       this.component.arrowBottom = arrowBottom;
       this.component.transform = transform;
+      this.nelPopoverVisibleChange.emit(true);
     }
+  }
+
+  hide(): void {
+    this.component?.close();
   }
 }

@@ -1,0 +1,11 @@
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="origin" [cdkConnectedOverlayOpen]="isOpen"
+  [cdkConnectedOverlayPositions]="positionStrategy" [cdkConnectedOverlayMinWidth]="150"
+  [cdkConnectedOverlayWidth]="width!" (overlayOutsideClick)="onClickOutside($event)">
+  <div class="el-popover--plain el-popover el-popper is-light" role="tooltip"
+    [style.width]="width ? (width! + 'px') : ''">
+    <div *ngIf="title" class="el-popover__title" role="title">{{title}}</div>
+    <ng-container *stringTemplate="content!"></ng-container>
+    <div class="el-popper__arrow" [style.left]="arrowLeft" [style.right]="arrowRight" [style.top]="arrowTop"
+      [style.bottom]="arrowBottom" [style.transform]="transform"></div>
+  </div>
+</ng-template>
