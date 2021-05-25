@@ -31,6 +31,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] timeline
 - [x] popconfirm
 - [x] popover
+- [x] avatar
 
 ##  Development
 

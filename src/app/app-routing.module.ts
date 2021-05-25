@@ -90,6 +90,10 @@ const routes: Routes = [
   {
     path: 'popover',
     loadChildren: () => import('./popover/popover.module').then(m => m.PopoverModule)
+  },
+  {
+    path: 'avatar',
+    loadChildren: () => import('./avatar/avatar.module').then(m => m.AvatarModule)
   }
 ];
 
