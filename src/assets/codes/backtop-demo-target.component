@@ -39,6 +39,6 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   ]
 })
 
-export class DemoBacktopTargetComponent {
+export class NelDemoBacktopTargetComponent {
   @ViewChild('scrollSection', { static: false }) scrollSection!: ElementRef;
 }

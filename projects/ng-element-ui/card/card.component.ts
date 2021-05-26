@@ -14,7 +14,7 @@ export type ShadowType = 'always' | 'hover' | 'never';
   }
 })
 
-export class CardComponent {
+export class NelCardComponent {
   @Input() nelHeader?: string | TemplateRef<any>;
   @Input() nelBodyStyle: object = { padding: '20px' };
   @Input() nelShadow: ShadowType = 'always';

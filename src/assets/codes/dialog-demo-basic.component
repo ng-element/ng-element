@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DialogService } from 'ng-element-ui/dialog';
+import { NelDialogService } from 'ng-element-ui/dialog';
 import { Observable, Observer } from 'rxjs';
 
 @Component({
@@ -26,11 +26,11 @@ import { Observable, Observer } from 'rxjs';
   `
 })
 
-export class DemoDialogBasicComponent {
+export class NelDemoDialogBasicComponent {
   dialogVisible = false;
 
   constructor(
-    private dialogService: DialogService
+    private dialogService: NelDialogService
   ) { }
 
   beforeClose = (): Observable<boolean> => {

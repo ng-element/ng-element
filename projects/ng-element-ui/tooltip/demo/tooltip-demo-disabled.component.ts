@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoTooltipDisabledComponent {
+export class NelDemoTooltipDisabledComponent {
   disabled = false;
 }

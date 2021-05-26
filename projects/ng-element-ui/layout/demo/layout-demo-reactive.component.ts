@@ -30,4 +30,4 @@ import { Component } from '@angular/core';
   `]
 })
 
-export class DemoLayoutReactiveComponent { }
+export class NelDemoLayoutReactiveComponent { }

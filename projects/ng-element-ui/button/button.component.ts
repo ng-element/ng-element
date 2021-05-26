@@ -28,7 +28,7 @@ import { Component, Input } from '@angular/core';
   }
 })
 
-export class ButtonComponent {
+export class NelButtonComponent {
   @Input() nelType = '';
   @Input() nelPlain = false;
   @Input() nelRound = false;

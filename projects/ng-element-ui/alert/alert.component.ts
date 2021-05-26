@@ -8,7 +8,7 @@ export type EffectType = 'light' | 'dark';
   templateUrl: './alert.component.html'
 })
 
-export class AlertComponent {
+export class NelAlertComponent {
   @Input() nelTitle = '';
   @Input() nelType: AlertType = 'info';
   @Input() nelEffect: EffectType = 'light';

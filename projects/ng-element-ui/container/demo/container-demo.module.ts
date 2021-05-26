@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { NelContainerModule } from 'ng-element-ui/container';
-import { DemoContainerBasicComponent } from './container-demo-basic.component';
+import { NelDemoContainerBasicComponent } from './container-demo-basic.component';
 
 @NgModule({
   declarations: [
-    DemoContainerBasicComponent
+    NelDemoContainerBasicComponent
   ],
   exports: [
-    DemoContainerBasicComponent
+    NelDemoContainerBasicComponent
   ],
   imports: [
     NelContainerModule

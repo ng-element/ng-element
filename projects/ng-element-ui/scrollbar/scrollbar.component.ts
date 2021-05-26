@@ -7,7 +7,7 @@ import ResizeObserver from 'resize-observer-polyfill';
   templateUrl: './scrollbar.component.html'
 })
 
-export class ScrollbarComponent implements AfterViewInit, OnDestroy {
+export class NelScrollbarComponent implements AfterViewInit, OnDestroy {
   @Input() nelHeight?: string;
   @Input() nelNoresize = false;
   @Input() nelMaxHeight?: string;

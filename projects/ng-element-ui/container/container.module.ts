@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
-import { ContainerComponent } from './container.component';
-import { HeaderComponent } from './header.component';
-import { AsideComponent } from './aside.component';
-import { MainComponent } from './main.component';
-import { FooterComponent } from './footer.component';
+import { NelContainerComponent } from './container.component';
+import { NelHeaderComponent } from './header.component';
+import { NelAsideComponent } from './aside.component';
+import { NelMainComponent } from './main.component';
+import { NelFooterComponent } from './footer.component';
 
 @NgModule({
   declarations: [
-    ContainerComponent,
-    HeaderComponent,
-    AsideComponent,
-    MainComponent,
-    FooterComponent
+    NelContainerComponent,
+    NelHeaderComponent,
+    NelAsideComponent,
+    NelMainComponent,
+    NelFooterComponent
   ],
   exports: [
-    ContainerComponent,
-    HeaderComponent,
-    AsideComponent,
-    MainComponent,
-    FooterComponent
+    NelContainerComponent,
+    NelHeaderComponent,
+    NelAsideComponent,
+    NelMainComponent,
+    NelFooterComponent
   ]
 })
 

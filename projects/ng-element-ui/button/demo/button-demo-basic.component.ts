@@ -38,4 +38,4 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoButtonBasicComponent { }
+export class NelDemoButtonBasicComponent { }

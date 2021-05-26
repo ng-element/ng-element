@@ -63,4 +63,4 @@ import { Component } from '@angular/core';
   ]
 })
 
-export class DemoPopconfirmBasicComponent { }
+export class NelDemoPopconfirmBasicComponent { }

@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
-import { IconDirective } from './icon.directive';
+import { NelIconDirective } from './icon.directive';
 
 @NgModule({
   declarations: [
-    IconDirective
-  ],
-  imports: [
+    NelIconDirective
   ],
   exports: [
-    IconDirective
-  ],
-  providers: [
+    NelIconDirective
   ]
 })
 

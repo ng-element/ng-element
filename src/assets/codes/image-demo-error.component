@@ -69,4 +69,4 @@ import { Component } from '@angular/core';
   ]
 })
 
-export class DemoImageErrorComponent { }
+export class NelDemoImageErrorComponent { }

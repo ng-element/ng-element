@@ -11,6 +11,6 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoRadioGroupComponent {
+export class NelDemoRadioGroupComponent {
   radioValue = 3;
 }

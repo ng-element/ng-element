@@ -3,18 +3,18 @@ import { CommonModule } from '@angular/common';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NelOutletModule } from 'ng-element-ui/core/outlet';
-import { ImageComponent } from './image.component';
-import { ImageViewerComponent } from './image-viewer.component';
+import { NelImageComponent } from './image.component';
+import { NelImageViewerComponent } from './image-viewer.component';
 import { NelImageService } from './image.service';
 
 @NgModule({
   declarations: [
-    ImageComponent,
-    ImageViewerComponent
+    NelImageComponent,
+    NelImageViewerComponent
   ],
   exports: [
-    ImageComponent,
-    ImageViewerComponent
+    NelImageComponent,
+    NelImageViewerComponent
   ],
   imports: [
     CommonModule,

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   templateUrl: './dialog.component.html'
 })
 
-export class DialogComponent {
+export class NelDialogComponent {
   @Input() set nelVisible(value: boolean) {
     if (value) {
       if (this.dialogTpl) {

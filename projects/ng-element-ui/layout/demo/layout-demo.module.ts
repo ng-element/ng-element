@@ -1,28 +1,28 @@
 import { NgModule } from '@angular/core';
 import { NelLayoutModule } from 'ng-element-ui/layout';
-import { DemoLayoutBasicComponent } from './layout-demo-basic.component';
-import { DemoLayoutGutterComponent } from './layout-demo-gutter.component';
-import { DemoLayoutBlendComponent } from './layout-demo-blend.component';
-import { DemoLayoutOffsetComponent } from './layout-demo-offset.component';
-import { DemoLayoutTypeComponent } from './layout-demo-type.component';
-import { DemoLayoutReactiveComponent } from './layout-demo-reactive.component';
+import { NelDemoLayoutBasicComponent } from './layout-demo-basic.component';
+import { NelDemoLayoutGutterComponent } from './layout-demo-gutter.component';
+import { NelDemoLayoutBlendComponent } from './layout-demo-blend.component';
+import { NelDemoLayoutOffsetComponent } from './layout-demo-offset.component';
+import { NelDemoLayoutTypeComponent } from './layout-demo-type.component';
+import { NelDemoLayoutReactiveComponent } from './layout-demo-reactive.component';
 
 @NgModule({
   declarations: [
-    DemoLayoutBasicComponent,
-    DemoLayoutGutterComponent,
-    DemoLayoutBlendComponent,
-    DemoLayoutOffsetComponent,
-    DemoLayoutTypeComponent,
-    DemoLayoutReactiveComponent
+    NelDemoLayoutBasicComponent,
+    NelDemoLayoutGutterComponent,
+    NelDemoLayoutBlendComponent,
+    NelDemoLayoutOffsetComponent,
+    NelDemoLayoutTypeComponent,
+    NelDemoLayoutReactiveComponent
   ],
   exports: [
-    DemoLayoutBasicComponent,
-    DemoLayoutGutterComponent,
-    DemoLayoutBlendComponent,
-    DemoLayoutOffsetComponent,
-    DemoLayoutTypeComponent,
-    DemoLayoutReactiveComponent
+    NelDemoLayoutBasicComponent,
+    NelDemoLayoutGutterComponent,
+    NelDemoLayoutBlendComponent,
+    NelDemoLayoutOffsetComponent,
+    NelDemoLayoutTypeComponent,
+    NelDemoLayoutReactiveComponent
   ],
   imports: [
     NelLayoutModule

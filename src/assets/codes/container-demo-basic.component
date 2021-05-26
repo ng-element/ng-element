@@ -101,4 +101,4 @@ import { Component } from '@angular/core';
   ]
 })
 
-export class DemoContainerBasicComponent { }
+export class NelDemoContainerBasicComponent { }

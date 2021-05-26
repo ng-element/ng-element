@@ -4,18 +4,18 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { NelOutletModule } from 'ng-element-ui/core/outlet';
 import { NelIconModule } from 'ng-element-ui/icon';
 import { NelButtonModule } from 'ng-element-ui/button';
-import { DialogComponent } from './dialog.component';
-import { DialogConfirmComponent } from './dialog-confirm.component';
-import { DialogService } from './dialog.service';
+import { NelDialogComponent } from './dialog.component';
+import { NelDialogConfirmComponent } from './dialog-confirm.component';
+import { NelDialogService } from './dialog.service';
 
 @NgModule({
   declarations: [
-    DialogComponent,
-    DialogConfirmComponent
+    NelDialogComponent,
+    NelDialogConfirmComponent
   ],
   exports: [
-    DialogComponent,
-    DialogConfirmComponent
+    NelDialogComponent,
+    NelDialogConfirmComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +25,7 @@ import { DialogService } from './dialog.service';
     NelButtonModule
   ],
   providers: [
-    DialogService
+    NelDialogService
   ]
 })
 

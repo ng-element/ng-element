@@ -59,4 +59,4 @@ import { Component } from '@angular/core';
   `]
 })
 
-export class DemoLayoutTypeComponent { }
+export class NelDemoLayoutTypeComponent { }

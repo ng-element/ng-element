@@ -38,6 +38,6 @@ import { Component } from '@angular/core';
   ]
 })
 
-export class DemoCardBasicComponent {
+export class NelDemoCardBasicComponent {
   list = [0, 1, 2, 1];
 }

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { DividerComponent } from './divider.component';
+import { NelDividerComponent } from './divider.component';
 
 @NgModule({
   declarations: [
-    DividerComponent
+    NelDividerComponent
   ],
   exports: [
-    DividerComponent
+    NelDividerComponent
   ]
 })
 

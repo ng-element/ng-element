@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { NelDividerModule } from 'ng-element-ui/divider';
 import { NelIconModule } from 'ng-element-ui/icon';
-import { DemoDividerBasicComponent } from './divider-demo-basic.component';
-import { DemoDividerContentComponent } from './divider-demo-content.component';
-import { DemoDividerDirectionComponent } from './divider-demo-direction.component';
+import { NelDemoDividerBasicComponent } from './divider-demo-basic.component';
+import { NelDemoDividerContentComponent } from './divider-demo-content.component';
+import { NelDemoDividerDirectionComponent } from './divider-demo-direction.component';
 
 @NgModule({
   declarations: [
-    DemoDividerBasicComponent,
-    DemoDividerContentComponent,
-    DemoDividerDirectionComponent
+    NelDemoDividerBasicComponent,
+    NelDemoDividerContentComponent,
+    NelDemoDividerDirectionComponent
   ],
   exports: [
-    DemoDividerBasicComponent,
-    DemoDividerContentComponent,
-    DemoDividerDirectionComponent
+    NelDemoDividerBasicComponent,
+    NelDemoDividerContentComponent,
+    NelDemoDividerDirectionComponent
   ],
   imports: [
     NelDividerModule,

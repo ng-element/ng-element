@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoRadioDisabledComponent {
+export class NelDemoRadioDisabledComponent {
   radio = '选中且禁用';
 }

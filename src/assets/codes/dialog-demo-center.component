@@ -24,6 +24,6 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoDialogCenterComponent {
+export class NelDemoDialogCenterComponent {
   dialogVisible = false;
 }

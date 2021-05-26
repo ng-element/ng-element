@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NelOutletModule } from 'ng-element-ui/core/outlet';
-import { CardComponent } from './card.component';
+import { NelCardComponent } from './card.component';
 
 @NgModule({
   declarations: [
-    CardComponent
+    NelCardComponent
   ],
   exports: [
-    CardComponent
+    NelCardComponent
   ],
   imports: [
     CommonModule,

@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { NelIconModule } from 'ng-element-ui/icon';
 import { NelOutletModule } from 'ng-element-ui/core/outlet';
-import { CollapseComponent } from './collapse.component';
-import { CollapseItemComponent } from './collapse-item.component';
+import { NelCollapseComponent } from './collapse.component';
+import { NelCollapseItemComponent } from './collapse-item.component';
 
 @NgModule({
   declarations: [
-    CollapseComponent,
-    CollapseItemComponent
+    NelCollapseComponent,
+    NelCollapseItemComponent
   ],
   exports: [
-    CollapseComponent,
-    CollapseItemComponent
+    NelCollapseComponent,
+    NelCollapseItemComponent
   ],
   imports: [
     NelIconModule,

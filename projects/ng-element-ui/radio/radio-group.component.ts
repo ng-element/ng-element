@@ -1,32 +1,32 @@
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import { ChangeDetectionStrategy, Component, forwardRef, QueryList, ContentChildren, Input } from '@angular/core';
-import { RadioComponent, SizeType } from './radio.component';
-import { NzRadioService } from './radio.service';
-import { RadioButtonComponent } from './radio-button.component';
+import { NelRadioComponent, SizeType } from './radio.component';
+import { NelRadioService } from './radio.service';
+import { NelRadioButtonComponent } from './radio-button.component';
 
 @Component({
   selector: 'nel-radio-group',
   templateUrl: './radio-group.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
-    NzRadioService,
+    NelRadioService,
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => RadioGroupComponent),
+      useExisting: forwardRef(() => NelRadioGroupComponent),
       multi: true
     }]
 })
 
-export class RadioGroupComponent implements ControlValueAccessor {
+export class NelRadioGroupComponent implements ControlValueAccessor {
   @Input() nelDisabled = false;
   @Input() nelSize: SizeType | undefined;
-  @ContentChildren(RadioComponent, { descendants: false }) radioList!: QueryList<RadioComponent>;
-  @ContentChildren(RadioButtonComponent, { descendants: false }) radioButtonList!: QueryList<RadioButtonComponent>;
+  @ContentChildren(NelRadioComponent, { descendants: false }) radioList!: QueryList<NelRadioComponent>;
+  @ContentChildren(NelRadioButtonComponent, { descendants: false }) radioButtonList!: QueryList<NelRadioButtonComponent>;
   data: any;
   change = (value: any) => { };
 
   constructor(
-    private radioS: NzRadioService
+    private radioS: NelRadioService
   ) {
     this.radioS.selected$.subscribe(val => {
       this.data = val;

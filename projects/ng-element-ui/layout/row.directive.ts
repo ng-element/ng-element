@@ -1,6 +1,6 @@
 import { ContentChildren, Directive, Input, QueryList, AfterContentInit } from '@angular/core';
 import { SafeStyle, DomSanitizer } from '@angular/platform-browser';
-import { ColDirective } from './col.directive';
+import { NelColDirective } from './col.directive';
 
 export type RowType = 'flex' | undefined;
 export type RowJustify = 'start' | 'end' | 'center' | 'space-around' | 'space-between';
@@ -18,11 +18,11 @@ export type RowJustify = 'start' | 'end' | 'center' | 'space-around' | 'space-be
   }
 })
 
-export class RowDirective implements AfterContentInit {
+export class NelRowDirective implements AfterContentInit {
   @Input() nelGutter = 0;
   @Input() nelType: RowType = undefined;
   @Input() nelJustify: RowJustify = 'start';
-  @ContentChildren(ColDirective, { descendants: false }) colList!: QueryList<ColDirective>;
+  @ContentChildren(NelColDirective, { descendants: false }) colList!: QueryList<NelColDirective>;
 
   constructor(
     private sanitizer: DomSanitizer
@@ -30,7 +30,7 @@ export class RowDirective implements AfterContentInit {
 
   ngAfterContentInit(): void {
     if (this.nelGutter > 0) {
-      this.colList.forEach((item: ColDirective) => {
+      this.colList.forEach((item: NelColDirective) => {
         item.parentGutter = this.nelGutter;
       });
     }

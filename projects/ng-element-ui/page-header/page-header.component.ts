@@ -5,7 +5,7 @@ import { Component, Input, Output, TemplateRef, EventEmitter } from '@angular/co
   templateUrl: './page-header.component.html'
 })
 
-export class PageHeaderComponent {
+export class NelPageHeaderComponent {
   @Input() nelIcon = 'back';
   @Input() nelTitle: string | TemplateRef<void> = '返回';
   @Input() nelContent?: string | TemplateRef<void>;

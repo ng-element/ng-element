@@ -10,4 +10,4 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoLinkUnderlineComponent { }
+export class NelDemoLinkUnderlineComponent { }

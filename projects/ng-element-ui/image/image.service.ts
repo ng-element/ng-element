@@ -3,7 +3,7 @@ import { Injectable, Injector } from '@angular/core';
 import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
 import { ImageConfig } from './image-config';
 import { ImageRef } from './image-ref';
-import { ImageViewerComponent } from './image-viewer.component';
+import { NelImageViewerComponent } from './image-viewer.component';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +22,7 @@ export class NelImageService {
       config.nelUrlList, config.nelInitialIndex, config.nelInfinite, config.nelOnClose, config.nelOnSwitch);
 
     const injector = this.createInjector(imageRef, this.injector);
-    overlayRef.attach(new ComponentPortal(ImageViewerComponent, null, injector));
+    overlayRef.attach(new ComponentPortal(NelImageViewerComponent, null, injector));
 
     return imageRef;
   }

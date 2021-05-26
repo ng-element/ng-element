@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation, OnInit, ViewChild } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { ScrollbarComponent } from 'ng-element-ui/scrollbar';
+import { NelScrollbarComponent } from 'ng-element-ui/scrollbar';
 import { filter } from 'rxjs/operators';
 
 @Component({
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
       title: 'Data 11',
       menuList: [
         // { link: 'table', name: 'Table 表格' },
-        // { link: 'tag', name: 'Tag 标签' },
+        { link: 'tag', name: 'Tag 标签' },
         // { link: 'progress', name: 'Progress 进度条' },
         // { link: 'tree', name: 'Tree 树形控件' },
         // { link: 'pagination', name: 'Pagination 分页' },
@@ -106,7 +106,7 @@ export class AppComponent implements OnInit {
       ]
     },
   ];
-  @ViewChild('scrollbar', { static: false }) scrollbar!: ScrollbarComponent;
+  @ViewChild('scrollbar', { static: false }) scrollbar!: NelScrollbarComponent;
 
   constructor(
     private router: Router

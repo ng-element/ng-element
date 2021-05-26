@@ -29,7 +29,7 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 
-export class DemoScrollbarMaxheightComponent implements OnInit {
+export class NelDemoScrollbarMaxheightComponent implements OnInit {
   count = 3;
   list: any[] = [];
 

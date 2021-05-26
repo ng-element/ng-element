@@ -20,4 +20,4 @@ import { Component } from '@angular/core';
   ]
 })
 
-export class DemoAlertIconComponent { }
+export class NelDemoAlertIconComponent { }

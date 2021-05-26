@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { NelDialogModule } from 'ng-element-ui/dialog';
 import { NelButtonModule } from 'ng-element-ui/button';
-import { DemoDialogBasicComponent } from './dialog-demo-basic.component';
-import { DemoDialogCenterComponent } from './dialog-demo-center.component';
+import { NelDemoDialogBasicComponent } from './dialog-demo-basic.component';
+import { NelDemoDialogCenterComponent } from './dialog-demo-center.component';
 
 @NgModule({
   declarations: [
-    DemoDialogBasicComponent,
-    DemoDialogCenterComponent
+    NelDemoDialogBasicComponent,
+    NelDemoDialogCenterComponent
   ],
   exports: [
-    DemoDialogBasicComponent,
-    DemoDialogCenterComponent
+    NelDemoDialogBasicComponent,
+    NelDemoDialogCenterComponent
   ],
   imports: [
     NelDialogModule,

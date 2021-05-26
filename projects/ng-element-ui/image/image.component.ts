@@ -16,7 +16,7 @@ import { debounceTime } from 'rxjs/operators';
   }
 })
 
-export class ImageComponent implements AfterViewInit, OnDestroy {
+export class NelImageComponent implements AfterViewInit, OnDestroy {
   loading = true;
   hasLoadError = false;
   src?: string;

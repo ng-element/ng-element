@@ -22,4 +22,4 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoButtonDisabledComponent { }
+export class NelDemoButtonDisabledComponent { }

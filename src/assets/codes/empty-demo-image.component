@@ -7,4 +7,4 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoEmptyImageComponent { }
+export class NelDemoEmptyImageComponent { }

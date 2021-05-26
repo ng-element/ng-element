@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { StringTemplateDirective } from './string-template.directive';
+import { NelStringTemplateDirective } from './string-template.directive';
 
 @NgModule({
   declarations: [
-    StringTemplateDirective
+    NelStringTemplateDirective
   ],
   exports: [
-    StringTemplateDirective
+    NelStringTemplateDirective
   ],
   imports: [
     CommonModule

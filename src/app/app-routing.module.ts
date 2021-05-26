@@ -94,6 +94,10 @@ const routes: Routes = [
   {
     path: 'avatar',
     loadChildren: () => import('./avatar/avatar.module').then(m => m.AvatarModule)
+  },
+  {
+    path: 'tag',
+    loadChildren: () => import('./tag/tag.module').then(m => m.TagModule)
   }
 ];
 

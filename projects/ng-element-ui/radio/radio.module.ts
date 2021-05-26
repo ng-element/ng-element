@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
-import { RadioComponent } from './radio.component';
-import { RadioButtonComponent } from './radio-button.component';
-import { RadioGroupComponent } from './radio-group.component';
+import { NelRadioComponent } from './radio.component';
+import { NelRadioButtonComponent } from './radio-button.component';
+import { NelRadioGroupComponent } from './radio-group.component';
 
 @NgModule({
   declarations: [
-    RadioComponent,
-    RadioGroupComponent,
-    RadioButtonComponent
+    NelRadioComponent,
+    NelRadioGroupComponent,
+    NelRadioButtonComponent
   ],
   exports: [
-    RadioComponent,
-    RadioGroupComponent,
-    RadioButtonComponent
+    NelRadioComponent,
+    NelRadioGroupComponent,
+    NelRadioButtonComponent
   ],
   providers: [
   ]

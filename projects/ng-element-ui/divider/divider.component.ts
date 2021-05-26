@@ -8,7 +8,7 @@ export type DirectionType = 'horizontal' | 'vertical';
   templateUrl: './divider.component.html'
 })
 
-export class DividerComponent {
+export class NelDividerComponent {
   @Input() nelContentPosition: PositionType = 'center';
   @Input() nelDirection: DirectionType = 'horizontal';
 }

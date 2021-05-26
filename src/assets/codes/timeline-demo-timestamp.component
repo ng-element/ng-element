@@ -28,4 +28,4 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoTimelineTimestampComponent { }
+export class NelDemoTimelineTimestampComponent { }

@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoTimelineBasicComponent {
+export class NelDemoTimelineBasicComponent {
   activities = [{
     content: '活动按期开始',
     timestamp: '2018-04-15'

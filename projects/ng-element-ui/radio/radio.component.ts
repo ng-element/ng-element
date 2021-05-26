@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, forwardRef, Input, Optional } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
-import { NzRadioService } from './radio.service';
+import { NelRadioService } from './radio.service';
 
 export type SizeType = 'medium' | 'small' | 'mini';
 
@@ -10,7 +10,7 @@ export type SizeType = 'medium' | 'small' | 'mini';
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [{
     provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => RadioComponent),
+    useExisting: forwardRef(() => NelRadioComponent),
     multi: true
   }],
   host: {
@@ -25,7 +25,7 @@ export type SizeType = 'medium' | 'small' | 'mini';
   }
 })
 
-export class RadioComponent implements ControlValueAccessor {
+export class NelRadioComponent implements ControlValueAccessor {
   isChecked = false;
   @Input() nelValue: any;
   @Input() nelDisabled = false;
@@ -35,7 +35,7 @@ export class RadioComponent implements ControlValueAccessor {
   change = (value: any) => { };
 
   constructor(
-    @Optional() private radioS: NzRadioService,
+    @Optional() private radioS: NelRadioService,
     private cdr: ChangeDetectorRef
   ) { }
 

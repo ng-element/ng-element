@@ -5,7 +5,7 @@ import { Component, Input, TemplateRef } from '@angular/core';
   templateUrl: './empty.component.html'
 })
 
-export class EmptyComponent {
+export class NelEmptyComponent {
   @Input() nelDescription = '暂无数据';
   @Input() nelImage = '';
   @Input() nelImageSize = 0;

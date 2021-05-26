@@ -49,4 +49,4 @@ import { Component } from '@angular/core';
   `]
 })
 
-export class DemoLayoutBlendComponent { }
+export class NelDemoLayoutBlendComponent { }

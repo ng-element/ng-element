@@ -5,7 +5,7 @@ import { NelUpdateHostClassService } from 'ng-element-ui/core/services';
   selector: '[nel-icon]'
 })
 
-export class IconDirective implements OnChanges {
+export class NelIconDirective implements OnChanges {
   readonly el: HTMLElement = this.elementRef.nativeElement;
   type = '';
   @Input() set nelType(value: string) {

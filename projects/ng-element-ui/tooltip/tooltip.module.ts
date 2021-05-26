@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { NelOutletModule } from 'ng-element-ui/core/outlet';
-import { TooltipDirective } from './tooltip.directive';
-import { TooltipComponent } from './tooltip.component';
+import { NelTooltipDirective } from './tooltip.directive';
+import { NelTooltipComponent } from './tooltip.component';
 
 @NgModule({
   declarations: [
-    TooltipComponent,
-    TooltipDirective,
+    NelTooltipComponent,
+    NelTooltipDirective
   ],
   exports: [
-    TooltipComponent,
-    TooltipDirective,
+    NelTooltipComponent,
+    NelTooltipDirective
   ],
   entryComponents: [
-    TooltipComponent
+    NelTooltipComponent
   ],
   imports: [
     OverlayModule,

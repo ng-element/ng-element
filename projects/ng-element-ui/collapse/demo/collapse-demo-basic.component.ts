@@ -25,7 +25,7 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoCollapseBasicComponent {
+export class NelDemoCollapseBasicComponent {
   accordion = null;
 
   changeAccordion($event: any): void {

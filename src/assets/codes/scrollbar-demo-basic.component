@@ -26,7 +26,7 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 
-export class DemoScrollbarBasicComponent implements OnInit {
+export class NelDemoScrollbarBasicComponent implements OnInit {
   list: any[] = [];
 
   ngOnInit(): void {

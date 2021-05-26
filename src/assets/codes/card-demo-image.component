@@ -46,6 +46,6 @@ import { Component } from '@angular/core';
   ]
 })
 
-export class DemoCardImageComponent {
+export class NelDemoCardImageComponent {
   cardList = [0, 1];
 }

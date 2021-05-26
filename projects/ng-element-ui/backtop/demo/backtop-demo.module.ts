@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { NelBacktopModule } from 'ng-element-ui/backtop';
-import { DemoBacktopBasicComponent } from './backtop-demo-basic.component';
-import { DemoBacktopTargetComponent } from './backtop-demo-target.component';
+import { NelDemoBacktopBasicComponent } from './backtop-demo-basic.component';
+import { NelDemoBacktopTargetComponent } from './backtop-demo-target.component';
 
 @NgModule({
   declarations: [
-    DemoBacktopBasicComponent,
-    DemoBacktopTargetComponent
+    NelDemoBacktopBasicComponent,
+    NelDemoBacktopTargetComponent
   ],
   exports: [
-    DemoBacktopBasicComponent,
-    DemoBacktopTargetComponent
+    NelDemoBacktopBasicComponent,
+    NelDemoBacktopTargetComponent
   ],
   imports: [
     NelBacktopModule

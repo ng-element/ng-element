@@ -8,7 +8,7 @@ import { NelImageService } from 'ng-element-ui/image';
   `
 })
 
-export class DemoImageServiceComponent {
+export class NelDemoImageServiceComponent {
   constructor(
     private imageS: NelImageService
   ) { }

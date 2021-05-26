@@ -32,7 +32,7 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 
-export class DemoScrollbarHorizontalComponent implements OnInit {
+export class NelDemoScrollbarHorizontalComponent implements OnInit {
   list: any[] = [];
 
   ngOnInit(): void {

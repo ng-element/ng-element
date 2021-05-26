@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { NelPageHeaderModule } from 'ng-element-ui/page-header';
-import { DemoPageHeaderBasicComponent } from './page-header-demo-basic.component';
-import { DemoPageHeaderIconComponent } from './page-header-demo-icon.component';
+import { NelDemoPageHeaderBasicComponent } from './page-header-demo-basic.component';
+import { NelDemoPageHeaderIconComponent } from './page-header-demo-icon.component';
 
 @NgModule({
   declarations: [
-    DemoPageHeaderBasicComponent,
-    DemoPageHeaderIconComponent
+    NelDemoPageHeaderBasicComponent,
+    NelDemoPageHeaderIconComponent
   ],
   exports: [
-    DemoPageHeaderBasicComponent,
-    DemoPageHeaderIconComponent
+    NelDemoPageHeaderBasicComponent,
+    NelDemoPageHeaderIconComponent
   ],
   imports: [
     NelPageHeaderModule

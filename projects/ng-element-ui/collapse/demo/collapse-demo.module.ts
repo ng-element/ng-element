@@ -2,20 +2,20 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NelCollapseModule } from 'ng-element-ui/collapse';
 import { NelIconModule } from 'ng-element-ui/icon';
-import { DemoCollapseBasicComponent } from './collapse-demo-basic.component';
-import { DemoCollapseTitleComponent } from './collapse-demo-title.component';
-import { DemoCollapseAccordionComponent } from './collapse-demo-accordion.component';
+import { NelDemoCollapseBasicComponent } from './collapse-demo-basic.component';
+import { NelDemoCollapseTitleComponent } from './collapse-demo-title.component';
+import { NelDemoCollapseAccordionComponent } from './collapse-demo-accordion.component';
 
 @NgModule({
   declarations: [
-    DemoCollapseBasicComponent,
-    DemoCollapseTitleComponent,
-    DemoCollapseAccordionComponent
+    NelDemoCollapseBasicComponent,
+    NelDemoCollapseTitleComponent,
+    NelDemoCollapseAccordionComponent
   ],
   exports: [
-    DemoCollapseBasicComponent,
-    DemoCollapseTitleComponent,
-    DemoCollapseAccordionComponent
+    NelDemoCollapseBasicComponent,
+    NelDemoCollapseTitleComponent,
+    NelDemoCollapseAccordionComponent
   ],
   imports: [
     FormsModule,

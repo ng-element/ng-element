@@ -38,7 +38,7 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoRadioButtonComponent {
+export class NelDemoRadioButtonComponent {
   radio1 = '上海';
   radio2 = '上海';
   radio3 = '上海';

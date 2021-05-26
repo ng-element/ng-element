@@ -35,4 +35,4 @@ import { Component } from '@angular/core';
   ]
 })
 
-export class DemoCollapseTitleComponent { }
+export class NelDemoCollapseTitleComponent { }

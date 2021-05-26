@@ -22,7 +22,7 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoRadioBorderComponent {
+export class NelDemoRadioBorderComponent {
   radio1 = '1';
   radio2 = '1';
   radio3 = '1';

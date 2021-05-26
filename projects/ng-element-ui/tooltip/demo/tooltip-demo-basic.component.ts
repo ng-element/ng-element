@@ -63,4 +63,4 @@ import { Component } from '@angular/core';
   ]
 })
 
-export class DemoTooltipBasicComponent { }
+export class NelDemoTooltipBasicComponent { }

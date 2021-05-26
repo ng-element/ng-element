@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
   ]
 })
 
-export class DemoAlertCloseComponent {
+export class NelDemoAlertCloseComponent {
   hello(): void {
     alert('Hello World!');
   }

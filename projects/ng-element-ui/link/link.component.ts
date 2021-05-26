@@ -21,7 +21,7 @@ import { Component, Input } from '@angular/core';
   }
 })
 
-export class LinkComponent {
+export class NelLinkComponent {
   @Input() nelType = '';
   @Input() nelUnderline = true;
   @Input() nelDisabled = false;

@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoTimelineNodeComponent {
+export class NelDemoTimelineNodeComponent {
   activities = [{
     content: '支持使用图标',
     timestamp: '2018-04-12 20:46',

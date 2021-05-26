@@ -3,23 +3,23 @@ import { CommonModule } from '@angular/common';
 import { NelCardModule } from 'ng-element-ui/card';
 import { NelButtonModule } from 'ng-element-ui/button';
 import { NelLayoutModule } from 'ng-element-ui/layout';
-import { DemoCardBasicComponent } from './card-demo-basic.component';
-import { DemoCardSimpleComponent } from './card-demo-simple.component';
-import { DemoCardImageComponent } from './card-demo-image.component';
-import { DemoCardShadowComponent } from './card-demo-shadow.component';
+import { NelDemoCardBasicComponent } from './card-demo-basic.component';
+import { NelDemoCardSimpleComponent } from './card-demo-simple.component';
+import { NelDemoCardImageComponent } from './card-demo-image.component';
+import { NelDemoCardShadowComponent } from './card-demo-shadow.component';
 
 @NgModule({
   declarations: [
-    DemoCardBasicComponent,
-    DemoCardSimpleComponent,
-    DemoCardImageComponent,
-    DemoCardShadowComponent
+    NelDemoCardBasicComponent,
+    NelDemoCardSimpleComponent,
+    NelDemoCardImageComponent,
+    NelDemoCardShadowComponent
   ],
   exports: [
-    DemoCardBasicComponent,
-    DemoCardSimpleComponent,
-    DemoCardImageComponent,
-    DemoCardShadowComponent
+    NelDemoCardBasicComponent,
+    NelDemoCardSimpleComponent,
+    NelDemoCardImageComponent,
+    NelDemoCardShadowComponent
   ],
   imports: [
     CommonModule,

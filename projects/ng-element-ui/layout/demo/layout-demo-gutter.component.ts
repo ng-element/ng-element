@@ -48,4 +48,4 @@ import { Component } from '@angular/core';
   `]
 })
 
-export class DemoLayoutGutterComponent { }
+export class NelDemoLayoutGutterComponent { }

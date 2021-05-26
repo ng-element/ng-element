@@ -1,6 +1,6 @@
-import { AfterContentInit, Component, ContentChild, ContentChildren, QueryList } from '@angular/core';
-import { HeaderComponent } from './header.component';
-import { FooterComponent } from './footer.component';
+import { AfterContentInit, Component, ContentChildren, QueryList } from '@angular/core';
+import { NelHeaderComponent } from './header.component';
+import { NelFooterComponent } from './footer.component';
 
 @Component({
   selector: 'nel-container',
@@ -11,9 +11,9 @@ import { FooterComponent } from './footer.component';
   }
 })
 
-export class ContainerComponent implements AfterContentInit {
-  @ContentChildren(HeaderComponent, { descendants: false }) headerList!: QueryList<HeaderComponent>;
-  @ContentChildren(FooterComponent, { descendants: false }) footerList!: QueryList<FooterComponent>;
+export class NelContainerComponent implements AfterContentInit {
+  @ContentChildren(NelHeaderComponent, { descendants: false }) headerList!: QueryList<NelHeaderComponent>;
+  @ContentChildren(NelFooterComponent, { descendants: false }) footerList!: QueryList<NelFooterComponent>;
   vertical = false;
 
   ngAfterContentInit(): void {

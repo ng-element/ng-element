@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoPageHeaderBasicComponent {
+export class NelDemoPageHeaderBasicComponent {
   goBack(): void {
     console.log('go back');
   }

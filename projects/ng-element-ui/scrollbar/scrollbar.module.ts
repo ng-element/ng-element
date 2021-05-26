@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { ScrollbarComponent } from './scrollbar.component';
+import { NelScrollbarComponent } from './scrollbar.component';
 
 @NgModule({
   declarations: [
-    ScrollbarComponent
+    NelScrollbarComponent
   ],
   exports: [
-    ScrollbarComponent
+    NelScrollbarComponent
   ],
   imports: [
     ScrollingModule

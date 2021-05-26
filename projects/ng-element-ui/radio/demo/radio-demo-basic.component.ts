@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoRadioBasicComponent {
+export class NelDemoRadioBasicComponent {
   radio = '1';
 }

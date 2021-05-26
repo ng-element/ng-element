@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { NelEmptyModule } from 'ng-element-ui/empty';
-import { DemoEmptyBasicComponent } from './empty-demo-basic.component';
-import { DemoEmptyImageComponent } from './empty-demo-image.component';
-import { DemoEmptyImageSizeComponent } from './empty-demo-image-size.component';
-import { DemoEmptyFooterComponent } from './empty-demo-footer.component';
+import { NelDemoEmptyBasicComponent } from './empty-demo-basic.component';
+import { NelDemoEmptyImageComponent } from './empty-demo-image.component';
+import { NelDemoEmptyImageSizeComponent } from './empty-demo-image-size.component';
+import { NelDemoEmptyFooterComponent } from './empty-demo-footer.component';
 
 @NgModule({
   declarations: [
-    DemoEmptyBasicComponent,
-    DemoEmptyImageComponent,
-    DemoEmptyImageSizeComponent,
-    DemoEmptyFooterComponent
+    NelDemoEmptyBasicComponent,
+    NelDemoEmptyImageComponent,
+    NelDemoEmptyImageSizeComponent,
+    NelDemoEmptyFooterComponent
   ],
   exports: [
-    DemoEmptyBasicComponent,
-    DemoEmptyImageComponent,
-    DemoEmptyImageSizeComponent,
-    DemoEmptyFooterComponent
+    NelDemoEmptyBasicComponent,
+    NelDemoEmptyImageComponent,
+    NelDemoEmptyImageSizeComponent,
+    NelDemoEmptyFooterComponent
   ],
   imports: [
     NelEmptyModule

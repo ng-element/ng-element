@@ -27,4 +27,4 @@ import { Component } from '@angular/core';
   ]
 })
 
-export class DemoAlertIconDescriptionComponent { }
+export class NelDemoAlertIconDescriptionComponent { }

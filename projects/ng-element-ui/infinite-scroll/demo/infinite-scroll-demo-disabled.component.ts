@@ -45,7 +45,7 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 
-export class DemoInfiniteScrollDisabledComponent implements OnInit {
+export class NelDemoInfiniteScrollDisabledComponent implements OnInit {
   list: number[] = [];
   loading = false;
 

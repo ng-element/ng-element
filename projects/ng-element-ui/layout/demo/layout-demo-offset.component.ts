@@ -45,4 +45,4 @@ import { Component } from '@angular/core';
   `]
 })
 
-export class DemoLayoutOffsetComponent { }
+export class NelDemoLayoutOffsetComponent { }

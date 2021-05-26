@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NelIconModule } from 'ng-element-ui/icon';
-import { LinkComponent } from './link.component';
+import { NelLinkComponent } from './link.component';
 
 @NgModule({
   declarations: [
-    LinkComponent
+    NelLinkComponent
   ],
   exports: [
-    LinkComponent
+    NelLinkComponent
   ],
   imports: [
     CommonModule,

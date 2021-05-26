@@ -8,7 +8,7 @@ import { fadeMotion } from 'ng-element-ui/core/animation';
   animations: [fadeMotion],
 })
 
-export class TooltipComponent {
+export class NelTooltipComponent {
   content!: string | TemplateRef<void>;
   arrowLeft = '';
   arrowRight = '';

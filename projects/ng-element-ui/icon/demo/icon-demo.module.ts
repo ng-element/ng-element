@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { NelIconModule } from 'ng-element-ui/icon';
-import { DemoIconBasicComponent } from './icon-demo-basic.component';
+import { NelDemoIconBasicComponent } from './icon-demo-basic.component';
 
 @NgModule({
   declarations: [
-    DemoIconBasicComponent
+    NelDemoIconBasicComponent
   ],
   exports: [
-    DemoIconBasicComponent
+    NelDemoIconBasicComponent
   ],
   imports: [
     NelIconModule

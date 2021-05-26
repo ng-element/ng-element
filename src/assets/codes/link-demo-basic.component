@@ -14,4 +14,4 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoLinkBasicComponent { }
+export class NelDemoLinkBasicComponent { }

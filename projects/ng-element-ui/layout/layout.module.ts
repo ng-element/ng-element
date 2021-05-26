@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
-import { RowDirective } from './row.directive';
-import { ColDirective } from './col.directive';
+import { NelRowDirective } from './row.directive';
+import { NelColDirective } from './col.directive';
 
 @NgModule({
   declarations: [
-    RowDirective,
-    ColDirective
+    NelRowDirective,
+    NelColDirective
   ],
   exports: [
-    RowDirective,
-    ColDirective
+    NelRowDirective,
+    NelColDirective
   ],
 })
 

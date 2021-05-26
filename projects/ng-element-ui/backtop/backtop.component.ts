@@ -13,7 +13,7 @@ import { fadeMotion } from 'ng-element-ui/core/animation';
   animations: [fadeMotion]
 })
 
-export class BacktopComponent implements OnInit, OnDestroy, OnChanges {
+export class NelBacktopComponent implements OnInit, OnDestroy, OnChanges {
   doc: Document;
   subscribeScoll!: Subscription;
   visible = false;

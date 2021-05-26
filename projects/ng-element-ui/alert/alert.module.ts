@@ -1,18 +1,18 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { NelIconModule } from 'ng-element-ui/icon';
-import { AlertComponent } from './alert.component';
+import { NelAlertComponent } from './alert.component';
 
 @NgModule({
   declarations: [
-    AlertComponent
+    NelAlertComponent
+  ],
+  exports: [
+    NelAlertComponent
   ],
   imports: [
     CommonModule,
     NelIconModule
-  ],
-  exports: [
-    AlertComponent
   ]
 })
 export class NelAlertModule { }

@@ -29,7 +29,7 @@ import { Component } from '@angular/core';
   ]
 })
 
-export class DemoInfiniteScrollBasicComponent {
+export class NelDemoInfiniteScrollBasicComponent {
   list: number[] = [];
 
   add(): void {

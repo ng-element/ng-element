@@ -92,4 +92,4 @@ import { Component } from '@angular/core';
   `]
 })
 
-export class DemoLayoutBasicComponent { }
+export class NelDemoLayoutBasicComponent { }

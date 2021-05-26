@@ -3,17 +3,23 @@
   overflow-y: hidden;
 }
 
-.toolbar {
+.header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 80px;
+  background-color: #ffffff;
+  color: #409eff;
+  font-weight: 600;
+}
+
+.toolbar {
+  height: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dcdfe6;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
-  color: white;
-  font-weight: 600;
 }
 
 .toolbar img {

@@ -11,7 +11,7 @@ export type ColReactive = { span: number, offset: number };
   }
 })
 
-export class ColDirective {
+export class NelColDirective {
   @Input() nelSpan = 24;
   @Input() nelOffset = 0;
   @Input() nelXs: number | ColReactive = 0;

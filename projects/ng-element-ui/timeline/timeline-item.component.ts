@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
   }
 })
 
-export class TimelineItemComponent {
+export class NelTimelineItemComponent {
   @Input() nelTimestamp!: string;
   @Input() nelSize?: string = 'normal';
   @Input() nelColor?: 'hsl' | 'hsv' | 'hex' | 'rgb' | string;

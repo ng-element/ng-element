@@ -9,4 +9,4 @@ import { Component } from '@angular/core';
   `
 })
 
-export class ButtonGroupComponent { }
+export class NelButtonGroupComponent { }

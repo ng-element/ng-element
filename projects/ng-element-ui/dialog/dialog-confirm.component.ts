@@ -6,7 +6,7 @@ import { DialogRef } from './dialog-ref';
   templateUrl: './dialog-confirm.component.html'
 })
 
-export class DialogConfirmComponent implements OnInit {
+export class NelDialogConfirmComponent implements OnInit {
   nelTitle?: string;
   nelContent?: string;
   nelOnCancel?: any;

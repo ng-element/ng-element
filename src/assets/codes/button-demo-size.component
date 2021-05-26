@@ -18,4 +18,4 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoButtonSizeComponent { }
+export class NelDemoButtonSizeComponent { }

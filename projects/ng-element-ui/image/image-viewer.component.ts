@@ -10,7 +10,7 @@ import { ImageRef } from './image-ref';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
-export class ImageViewerComponent implements OnInit, AfterViewInit {
+export class NelImageViewerComponent implements OnInit, AfterViewInit {
   nelUrlList!: string[];
   nelInitialIndex!: number;
   nelInfinite = true;

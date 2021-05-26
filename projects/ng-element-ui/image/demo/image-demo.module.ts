@@ -2,29 +2,29 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NelImageModule } from 'ng-element-ui/image';
 import { NelButtonModule } from 'ng-element-ui/button';
-import { DemoImageBasicComponent } from './image-demo-basic.component';
-import { DemoImagePlaceholderComponent } from './image-demo-placeholder.component';
-import { DemoImageErrorComponent } from './image-demo-error.component';
-import { DemoImageLazyComponent } from './image-demo-lazy.component';
-import { DemoImageViewerComponent } from './image-demo-viewer.component';
-import { DemoImageServiceComponent } from './image-demo-service.component';
+import { NelDemoImageBasicComponent } from './image-demo-basic.component';
+import { NelDemoImagePlaceholderComponent } from './image-demo-placeholder.component';
+import { NelDemoImageErrorComponent } from './image-demo-error.component';
+import { NelDemoImageLazyComponent } from './image-demo-lazy.component';
+import { NelDemoImageViewerComponent } from './image-demo-viewer.component';
+import { NelDemoImageServiceComponent } from './image-demo-service.component';
 
 @NgModule({
   declarations: [
-    DemoImageBasicComponent,
-    DemoImagePlaceholderComponent,
-    DemoImageErrorComponent,
-    DemoImageLazyComponent,
-    DemoImageViewerComponent,
-    DemoImageServiceComponent
+    NelDemoImageBasicComponent,
+    NelDemoImagePlaceholderComponent,
+    NelDemoImageErrorComponent,
+    NelDemoImageLazyComponent,
+    NelDemoImageViewerComponent,
+    NelDemoImageServiceComponent
   ],
   exports: [
-    DemoImageBasicComponent,
-    DemoImagePlaceholderComponent,
-    DemoImageErrorComponent,
-    DemoImageLazyComponent,
-    DemoImageViewerComponent,
-    DemoImageServiceComponent
+    NelDemoImageBasicComponent,
+    NelDemoImagePlaceholderComponent,
+    NelDemoImageErrorComponent,
+    NelDemoImageLazyComponent,
+    NelDemoImageViewerComponent,
+    NelDemoImageServiceComponent
   ],
   imports: [
     CommonModule,

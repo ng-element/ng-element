@@ -7,7 +7,7 @@ import { debounceTime } from 'rxjs/operators';
   selector: '[nel-infinite-scroll]'
 })
 
-export class InfiniteScrollDirective implements AfterViewInit, OnDestroy {
+export class NelInfiniteScrollDirective implements AfterViewInit, OnDestroy {
   subscribeScoll!: Subscription;
   subscribeReachBottom!: Subscription;
   reachBottom$ = new Subject<any>();

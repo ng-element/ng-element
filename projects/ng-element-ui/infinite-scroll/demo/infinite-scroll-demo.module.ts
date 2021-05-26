@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NelInfiniteScrollModule } from 'ng-element-ui/infinite-scroll';
-import { DemoInfiniteScrollBasicComponent } from './infinite-scroll-demo-basic.component';
-import { DemoInfiniteScrollDisabledComponent } from './infinite-scroll-demo-disabled.component';
+import { NelDemoInfiniteScrollBasicComponent } from './infinite-scroll-demo-basic.component';
+import { NelDemoInfiniteScrollDisabledComponent } from './infinite-scroll-demo-disabled.component';
 
 @NgModule({
   declarations: [
-    DemoInfiniteScrollBasicComponent,
-    DemoInfiniteScrollDisabledComponent
+    NelDemoInfiniteScrollBasicComponent,
+    NelDemoInfiniteScrollDisabledComponent
   ],
   exports: [
-    DemoInfiniteScrollBasicComponent,
-    DemoInfiniteScrollDisabledComponent
+    NelDemoInfiniteScrollBasicComponent,
+    NelDemoInfiniteScrollDisabledComponent
   ],
   imports: [
     CommonModule,

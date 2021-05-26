@@ -1,7 +1,7 @@
 import { ComponentPortal } from '@angular/cdk/portal';
 import { ConnectedPosition, Overlay, OverlayPositionBuilder, OverlayRef } from '@angular/cdk/overlay';
 import { Directive, ElementRef, Input, TemplateRef, HostListener, OnInit, ComponentRef } from '@angular/core';
-import { TooltipComponent } from './tooltip.component';
+import { NelTooltipComponent } from './tooltip.component';
 
 export type PlacementType = 'top' | 'top-start' | 'top-end' | 'bottom' | 'bottom-start' | 'bottom-end' | 'left'
   | 'left-start' | 'left-end' | 'right' | 'right-start' | 'right-end';
@@ -11,7 +11,7 @@ export type EffectType = 'dark' | 'light';
   selector: '[nel-tooltip]',
 })
 
-export class TooltipDirective implements OnInit {
+export class NelTooltipDirective implements OnInit {
   @Input() nelContent?: string | TemplateRef<void>;
   @Input() nelPlacement: PlacementType = 'bottom';
   @Input() nelEffect: EffectType = 'dark';
@@ -186,8 +186,8 @@ export class TooltipDirective implements OnInit {
       .withPositions([position]);
     this.overlayRef = this.overlay.create({ positionStrategy });
     if (this.overlayRef) {
-      const tooltipRef: ComponentRef<TooltipComponent>
-        = this.overlayRef.attach(new ComponentPortal(TooltipComponent));
+      const tooltipRef: ComponentRef<NelTooltipComponent>
+        = this.overlayRef.attach(new ComponentPortal(NelTooltipComponent));
       if (this.nelContent) {
         tooltipRef.instance.content = this.nelContent;
         tooltipRef.instance.effect = this.nelEffect;

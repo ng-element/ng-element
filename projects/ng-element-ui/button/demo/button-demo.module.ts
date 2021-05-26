@@ -1,31 +1,31 @@
 import { NgModule } from '@angular/core';
 import { NelButtonModule } from 'ng-element-ui/button';
-import { DemoButtonBasicComponent } from './button-demo-basic.component';
-import { DemoButtonDisabledComponent } from './button-demo-disabled.component';
-import { DemoButtonTextComponent } from './button-demo-text.component';
-import { DemoButtonIconComponent } from './button-demo-icon.component';
-import { DemoButtonGroupComponent } from './button-demo-group.component';
-import { DemoButtonLoadingComponent } from './button-demo-loading.component';
-import { DemoButtonSizeComponent } from './button-demo-size.component';
+import { NelDemoButtonBasicComponent } from './button-demo-basic.component';
+import { NelDemoButtonDisabledComponent } from './button-demo-disabled.component';
+import { NelDemoButtonTextComponent } from './button-demo-text.component';
+import { NelDemoButtonIconComponent } from './button-demo-icon.component';
+import { NelDemoButtonGroupComponent } from './button-demo-group.component';
+import { NelDemoButtonLoadingComponent } from './button-demo-loading.component';
+import { NelDemoButtonSizeComponent } from './button-demo-size.component';
 
 @NgModule({
   declarations: [
-    DemoButtonBasicComponent,
-    DemoButtonDisabledComponent,
-    DemoButtonTextComponent,
-    DemoButtonIconComponent,
-    DemoButtonGroupComponent,
-    DemoButtonLoadingComponent,
-    DemoButtonSizeComponent
+    NelDemoButtonBasicComponent,
+    NelDemoButtonDisabledComponent,
+    NelDemoButtonTextComponent,
+    NelDemoButtonIconComponent,
+    NelDemoButtonGroupComponent,
+    NelDemoButtonLoadingComponent,
+    NelDemoButtonSizeComponent
   ],
   exports: [
-    DemoButtonBasicComponent,
-    DemoButtonDisabledComponent,
-    DemoButtonTextComponent,
-    DemoButtonIconComponent,
-    DemoButtonGroupComponent,
-    DemoButtonLoadingComponent,
-    DemoButtonSizeComponent
+    NelDemoButtonBasicComponent,
+    NelDemoButtonDisabledComponent,
+    NelDemoButtonTextComponent,
+    NelDemoButtonIconComponent,
+    NelDemoButtonGroupComponent,
+    NelDemoButtonLoadingComponent,
+    NelDemoButtonSizeComponent
   ],
   imports: [
     NelButtonModule

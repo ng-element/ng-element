@@ -3,7 +3,7 @@ import { Directive, TemplateRef, Renderer2, ViewContainerRef, Input, OnDestroy }
 @Directive({
   selector: '[stringTemplate]',
 })
-export class StringTemplateDirective implements OnDestroy {
+export class NelStringTemplateDirective implements OnDestroy {
   @Input()
   set stringTemplate(value: string | TemplateRef<any>) {
     this.updateView(value);

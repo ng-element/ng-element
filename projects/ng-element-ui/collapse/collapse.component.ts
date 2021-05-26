@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, forwardRef, Input, AfterContentInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { CollapseItemComponent } from './collapse-item.component';
+import { NelCollapseItemComponent } from './collapse-item.component';
 
 @Component({
   selector: 'nel-collapse',
@@ -8,14 +8,14 @@ import { CollapseItemComponent } from './collapse-item.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [{
     provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => CollapseComponent),
+    useExisting: forwardRef(() => NelCollapseComponent),
     multi: true
   }]
 })
 
-export class CollapseComponent implements ControlValueAccessor, AfterContentInit {
+export class NelCollapseComponent implements ControlValueAccessor, AfterContentInit {
   @Input() nelAccordion = false;
-  itemList: Map<string | number, CollapseItemComponent> = new Map();
+  itemList: Map<string | number, NelCollapseItemComponent> = new Map();
   data!: string | Array<string> | null;
   change = (value: any) => { };
 

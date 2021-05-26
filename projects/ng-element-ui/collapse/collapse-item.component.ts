@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input, Optional, TemplateRef, OnInit, ChangeDetectorRef } from '@angular/core';
 import { collapseMotion } from 'ng-element-ui/core/animation';
-import { CollapseComponent } from './collapse.component';
+import { NelCollapseComponent } from './collapse.component';
 
 @Component({
   selector: 'nel-collapse-item',
@@ -9,14 +9,14 @@ import { CollapseComponent } from './collapse.component';
   animations: [collapseMotion]
 })
 
-export class CollapseItemComponent implements OnInit {
+export class NelCollapseItemComponent implements OnInit {
   @Input() nelTitle!: string | TemplateRef<void>;
   @Input() nelDisabled = false;
   @Input() nelName: string | number = Math.random().toString(16).substr(2, 8);
   expanded = false;
 
   constructor(
-    @Optional() private root: CollapseComponent,
+    @Optional() private root: NelCollapseComponent,
     private cdr: ChangeDetectorRef
   ) { }
 

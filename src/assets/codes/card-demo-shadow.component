@@ -23,4 +23,4 @@ import { Component } from '@angular/core';
   `
 })
 
-export class DemoCardShadowComponent { }
+export class NelDemoCardShadowComponent { }
