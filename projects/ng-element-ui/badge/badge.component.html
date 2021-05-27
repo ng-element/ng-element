@@ -1,0 +1,5 @@
+<ng-content></ng-content>
+<sup *ngIf="!nelHidden" class="el-badge__content is-fixed" [class.el-badge__content--primary]="nelType == 'primary'"
+  [class.el-badge__content--success]="nelType == 'success'" [class.el-badge__content--warning]="nelType == 'warning'"
+  [class.el-badge__content--danger]="nelType == 'danger'" [class.el-badge__content--info]="nelType == 'info'"
+  [class.is-dot]="nelIsDot">{{value}}</sup>

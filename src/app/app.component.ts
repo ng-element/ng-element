@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
         // { link: 'progress', name: 'Progress 进度条' },
         // { link: 'tree', name: 'Tree 树形控件' },
         // { link: 'pagination', name: 'Pagination 分页' },
-        // { link: 'badge', name: 'Badge 标记' },
+        { link: 'badge', name: 'Badge 标记' },
         { link: 'avatar', name: 'Avatar 头像' },
         // { link: 'skeleton', name: 'Skeleton 骨架屏' },
         { link: 'empty', name: 'Empty 空状态' },

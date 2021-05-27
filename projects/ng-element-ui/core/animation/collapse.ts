@@ -12,5 +12,5 @@ export const collapseMotion: AnimationTriggerMetadata = trigger('collapseMotion'
   })),
   transition('expanded <=> collapsed', [
     style({ display: 'block' }),
-    animate('300ms ease')])
+    animate('300ms')])
 ]);

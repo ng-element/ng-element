@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NelDemoPageHeaderModule } from './../../../projects/ng-element-ui/page-header/demo/page-header-demo.module';
-import { ShareModule } from './../shared/shared.module';
+import { SharedModule } from './../shared/shared.module';
 import { PageHeaderRoutingModule } from './page-header-routing.module';
 import { PageHeaderComponent } from './page-header.component';
 
@@ -13,7 +13,7 @@ import { PageHeaderComponent } from './page-header.component';
   ],
   imports: [
     NelDemoPageHeaderModule,
-    ShareModule,
+    SharedModule,
     PageHeaderRoutingModule
   ]
 })

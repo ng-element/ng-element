@@ -33,6 +33,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] popover
 - [x] avatar
 - [x] tag
+- [x] badge
 
 ##  Development
 

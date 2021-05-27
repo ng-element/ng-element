@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NelDemoDividerModule } from './../../../projects/ng-element-ui/divider/demo/divider-demo.module';
-import { ShareModule } from './../shared/shared.module';
+import { SharedModule } from './../shared/shared.module';
 import { DividerRoutingModule } from './divider-routing.module';
 import { DividerComponent } from './divider.component';
 
@@ -13,7 +13,7 @@ import { DividerComponent } from './divider.component';
   ],
   imports: [
     NelDemoDividerModule,
-    ShareModule,
+    SharedModule,
     DividerRoutingModule
   ]
 })

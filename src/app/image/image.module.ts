@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NelDemoImageModule } from './../../../projects/ng-element-ui/image/demo/image-demo.module';
-import { ShareModule } from './../shared/shared.module';
+import { SharedModule } from './../shared/shared.module';
 import { ImageRoutingModule } from './image-routing.module';
 import { ImageComponent } from './image.component';
 
@@ -13,7 +13,7 @@ import { ImageComponent } from './image.component';
   ],
   imports: [
     NelDemoImageModule,
-    ShareModule,
+    SharedModule,
     ImageRoutingModule
   ]
 })

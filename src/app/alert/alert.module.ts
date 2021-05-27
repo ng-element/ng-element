@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NelDemoAlertModule } from './../../../projects/ng-element-ui/alert/demo/alert-demo.module';
-import { ShareModule } from './../shared/shared.module';
+import { SharedModule } from './../shared/shared.module';
 import { AlertRoutingModule } from './alert-routing.module';
 import { AlertComponent } from './alert.component';
 
@@ -13,7 +13,7 @@ import { AlertComponent } from './alert.component';
   ],
   imports: [
     NelDemoAlertModule,
-    ShareModule,
+    SharedModule,
     AlertRoutingModule
   ],
 })

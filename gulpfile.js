@@ -52,7 +52,7 @@ function clearDoc() {
 }
 
 function demoComponentPath() {
-  return src(['./projects/ng-element-ui/*/demo/*.component.ts'])
+  return src(['./projects/ng-element-ui/**/demo/*.component.ts'])
     .pipe(rename(function (path) {
       return {
         dirname: '',
@@ -77,7 +77,7 @@ function docPath() {
 }
 
 function monitorAssets() {
-  return watch(['./projects/ng-element-ui/*/demo/*.component.ts', './projects/ng-element-ui/*/doc/*.md'], function (file) {
+  return watch(['./projects/ng-element-ui/**/demo/*.component.ts', './projects/ng-element-ui/*/doc/*.md'], function (file) {
     const source = file.history[0];
     if (source.indexOf('demo') > -1) {
       const path = source.slice(source.lastIndexOf('\\') + 1);

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NelDemoCardModule } from './../../../projects/ng-element-ui/card/demo/card-demo.module';
-import { ShareModule } from './../shared/shared.module';
+import { SharedModule } from './../shared/shared.module';
 import { CardRoutingModule } from './card-routing.module';
 import { CardComponent } from './card.component';
 
@@ -13,7 +13,7 @@ import { CardComponent } from './card.component';
   ],
   imports: [
     NelDemoCardModule,
-    ShareModule,
+    SharedModule,
     CardRoutingModule
   ]
 })

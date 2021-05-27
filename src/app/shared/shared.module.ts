@@ -24,4 +24,4 @@ import { HighLightPipe, MarkedPipe } from './pipe';
   ]
 })
 
-export class ShareModule { }
+export class SharedModule { }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NelDemoTagModule } from './../../../projects/ng-element-ui/tag/demo/tag-demo.module';
-import { ShareModule } from './../shared/shared.module';
+import { SharedModule } from './../shared/shared.module';
 import { TagRoutingModule } from './tag-routing.module';
 import { TagComponent } from './tag.component';
 
@@ -13,7 +13,7 @@ import { TagComponent } from './tag.component';
   ],
   imports: [
     NelDemoTagModule,
-    ShareModule,
+    SharedModule,
     TagRoutingModule
   ]
 })

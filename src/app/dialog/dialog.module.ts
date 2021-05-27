@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NelDemoDialogModule } from './../../../projects/ng-element-ui/dialog/demo/dialog-demo.module';
-import { ShareModule } from './../shared/shared.module';
+import { SharedModule } from './../shared/shared.module';
 import { DialogRoutingModule } from './dialog-routing.module';
 import { DialogComponent } from './dialog.component';
 
@@ -13,7 +13,7 @@ import { DialogComponent } from './dialog.component';
   ],
   imports: [
     NelDemoDialogModule,
-    ShareModule,
+    SharedModule,
     DialogRoutingModule
   ]
 })

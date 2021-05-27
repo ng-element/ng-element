@@ -98,6 +98,14 @@ const routes: Routes = [
   {
     path: 'tag',
     loadChildren: () => import('./tag/tag.module').then(m => m.TagModule)
+  },
+  {
+    path: 'transition',
+    loadChildren: () => import('./transition/transition.module').then(m => m.TransitionModule)
+  },
+  {
+    path: 'badge',
+    loadChildren: () => import('./badge/badge.module').then(m => m.BadgeModule)
   }
 ];
 
