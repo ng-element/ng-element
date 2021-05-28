@@ -45,6 +45,7 @@ export class NelRadioGroupComponent implements ControlValueAccessor {
           item.changeView();
         }
       });
+      this.change(this.data);
     });
   }
 
@@ -76,7 +77,6 @@ export class NelRadioGroupComponent implements ControlValueAccessor {
         // size
         if (this.nelSize) {
           item.size = this.nelSize;
-          console.log(item.size);
         }
         item.changeView();
       });

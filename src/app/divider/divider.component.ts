@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-divider',
   templateUrl: './divider.component.html',
   host: {
-    'class': 'article'
+    class: 'article'
   }
 })
 

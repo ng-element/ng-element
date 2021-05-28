@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
         { link: 'icon', name: 'Icon 图标' },
         { link: 'button', name: 'Button 按钮' },
         { link: 'link', name: 'Link 文字链接' },
-        // { link: 'space', name: 'Space 间距' },
+        { link: 'space', name: 'Space 间距' },
         { link: 'scrollbar', name: 'Scrollbar 滚动条' },
       ]
     },

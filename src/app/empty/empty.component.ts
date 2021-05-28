@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-empty',
   templateUrl: './empty.component.html',
   host: {
-    'class': 'article'
+    class: 'article'
   }
 })
 

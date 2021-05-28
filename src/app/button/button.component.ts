@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-button',
   templateUrl: './button.component.html',
   host: {
-    'class': 'article'
+    class: 'article'
   }
 })
 

@@ -1,0 +1,57 @@
+<h2>Space 间距</h2>
+<p>虽然我们拥有 Divider 组件, 但很多时候我们需要不是一个被 Divider 组件 分割开的页面结构, 因此我们会重复的使用很多的 Divider 组件, 这在我们的开发效率上造成了一定的困扰,
+  间距组件就是为了解决这种困扰应运而生的.</p>
+<app-code code="import { NelSpaceModule } from 'ng-element-ui/space';"></app-code>
+
+<h3>基础用法</h3>
+<p>最基础的用法, 通过这个组件来给组件之间提供统一的间距</p>
+
+<app-demo [codeUrl]="'components-space-demo-basic.component'">
+  <nel-demo-space-basic demo></nel-demo-space-basic>
+</app-demo>
+
+<h3>垂直布局</h3>
+<p>使用 direction 来控制布局的方式, 背后实际上是利用了 flex-direction 来控制.</p>
+
+<app-demo [codeUrl]="'components-space-demo-direction.component'">
+  <nel-demo-space-direction demo></nel-demo-space-direction>
+</app-demo>
+
+<h3>控制间距的大小</h3>
+<p>通过调整 size 的值来控制间距的大小</p>
+<p>可供选择的内建的值有 mini, small, medium, large, 分别对应 4px, 8px, 12px, 16px. 默认的间距大小为 small 也就是 8px</p>
+<p>您也可以通过自定义的 size 来控制大小，详见下一部分</p>
+
+<app-demo [codeUrl]="'components-space-demo-size.component'">
+  <nel-demo-space-size demo></nel-demo-space-size>
+</app-demo>
+
+<h3>自定义 Size</h3>
+<p>很多时候, 内建的大小不满足设计师的要求, 我们可以通过传入自己定义的大小 (数字类型) 来设置</p>
+
+<app-demo [codeUrl]="'components-space-demo-size-number.component'">
+  <nel-demo-space-size-number demo></nel-demo-space-size-number>
+</app-demo>
+
+<h3>自动换行</h3>
+<p>在水平 (horizontal) 模式下,通过控制 wrap (布尔类型) 来控制是否自动换行</p>
+
+<app-demo [codeUrl]="'components-space-demo-wrap.component'">
+  <nel-demo-space-wrap demo></nel-demo-space-wrap>
+</app-demo>
+
+<h3>行间分隔符</h3>
+<p>有时候, 仅仅在行间加空白, 并不能满足我们的日常需求, 此时分隔符 (spacer) 就可以发挥非常好的作用了.</p>
+
+<app-demo [codeUrl]="'components-space-demo-spacer.component'">
+  <nel-demo-space-spacer demo></nel-demo-space-spacer>
+</app-demo>
+
+<h3>对齐方式</h3>
+<p>设置该值可以调整所有子节点在容器内的对齐方式, 可设置的值与 align-items 一致</p>
+
+<app-demo [codeUrl]="'components-space-demo-alignment.component'">
+  <nel-demo-space-alignment demo></nel-demo-space-alignment>
+</app-demo>
+
+<app-doc [docUrl]="'components-space'"></app-doc>

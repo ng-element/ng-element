@@ -6,7 +6,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./icon.component.scss'],
   encapsulation: ViewEncapsulation.None,
   host: {
-    'class': 'article'
+    class: 'article'
   }
 })
 

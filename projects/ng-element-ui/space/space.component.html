@@ -1,0 +1,9 @@
+<ng-content></ng-content>
+<ng-container *ngFor="let item of items; let last=last">
+  <div class="el-space__item" [style.padding-bottom]="nelSpacer ? '' : size" [style.margin-right]="size">
+    <ng-container *ngTemplateOutlet="item"></ng-container>
+  </div>
+  <span *ngIf="nelSpacer && !last" style="padding-bottom: 0px;" [style.margin-right]="size">
+    <ng-container *stringTemplate="nelSpacer"></ng-container>
+  </span>
+</ng-container>

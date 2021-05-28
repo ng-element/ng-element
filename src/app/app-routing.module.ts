@@ -110,6 +110,10 @@ const routes: Routes = [
   {
     path: 'affix',
     loadChildren: () => import('./affix/affix.module').then(m => m.AffixModule)
+  },
+  {
+    path: 'space',
+    loadChildren: () => import('./space/space.module').then(m => m.SpaceModule)
   }
 ];
 

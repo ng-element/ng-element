@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
   host: {
-    'class': 'article'
+    class: 'article'
   }
 })
 

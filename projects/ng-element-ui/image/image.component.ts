@@ -12,7 +12,7 @@ import { debounceTime } from 'rxjs/operators';
   templateUrl: './image.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'el-image'
+    class: 'el-image'
   }
 })
 

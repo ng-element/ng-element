@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'nel-timeline-item',
   templateUrl: './timeline-item.component.html',
   host: {
-    'class': 'el-timeline-item'
+    class: 'el-timeline-item'
   }
 })
 
