@@ -12,6 +12,7 @@
   background-color: #ffffff;
   color: #409eff;
   font-weight: 600;
+  z-index: 2000;
 }
 
 .toolbar {
@@ -79,13 +80,6 @@
     h5 {
       font-weight: 400;
       color: #1f2f3d;
-    }
-
-    code {
-      background-color: #f9fafc;
-      padding: 0 4px;
-      border: 1px solid #eaeefb;
-      border-radius: 4px;
     }
   }
 

@@ -1,0 +1,26 @@
+<h2>Affix 固钉</h2>
+<p>将页面元素固定在特定可视区域。</p>
+<app-code code="import { NelAffixModule } from 'ng-element-ui/affix';"></app-code>
+
+<h3>基本用法</h3>
+<p>固钉默认固定在页面顶部。</p>
+
+<app-demo [codeUrl]="'components-affix-demo-basic.component'">
+  <nel-demo-affix-basic demo></nel-demo-affix-basic>
+</app-demo>
+
+<h3>指定容器</h3>
+<p>通过设置 nelTarget 属性，让固钉始终保持在容器内，超过范围则隐藏。</p>
+
+<app-demo [codeUrl]="'components-affix-demo-target.component'">
+  <nel-demo-affix-target demo></nel-demo-affix-target>
+</app-demo>
+
+<h3>固定位置</h3>
+<p>Affix 组件提供了两个固定位置：top 和 bottom。</p>
+
+<app-demo [codeUrl]="'components-affix-demo-position.component'">
+  <nel-demo-affix-position demo></nel-demo-affix-position>
+</app-demo>
+
+<app-doc [docUrl]="'components-affix'"></app-doc>

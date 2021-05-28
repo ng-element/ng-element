@@ -34,10 +34,12 @@
 @import 'element-theme-chalk/src/tag.scss';
 @import 'element-theme-chalk/src/check-tag.scss';
 @import 'element-theme-chalk/src/badge.scss';
+@import 'element-theme-chalk/src/affix.scss';
 
 nel-alert,
 nel-card,
-nel-timeline-item {
+nel-timeline-item,
+nel-affix {
   display: block;
 }
 

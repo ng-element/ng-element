@@ -34,6 +34,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] avatar
 - [x] tag
 - [x] badge
+- [x] affix
 
 ##  Development
 

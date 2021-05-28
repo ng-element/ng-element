@@ -77,7 +77,7 @@ export class AppComponent implements OnInit {
     {
       title: 'Navigation 7',
       menuList: [
-        // { link: 'affix', name: 'Affix 固钉' },
+        { link: 'affix', name: 'Affix 固钉' },
         // { link: 'menu', name: 'NavMenu 导航菜单' },
         // { link: 'tabs', name: 'Tabs 标签页' },
         // { link: 'breadcrumb', name: 'Breadcrumb 面包屑' },

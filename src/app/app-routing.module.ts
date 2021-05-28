@@ -106,6 +106,10 @@ const routes: Routes = [
   {
     path: 'badge',
     loadChildren: () => import('./badge/badge.module').then(m => m.BadgeModule)
+  },
+  {
+    path: 'affix',
+    loadChildren: () => import('./affix/affix.module').then(m => m.AffixModule)
   }
 ];
 
