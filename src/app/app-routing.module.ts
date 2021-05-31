@@ -114,6 +114,10 @@ const routes: Routes = [
   {
     path: 'space',
     loadChildren: () => import('./space/space.module').then(m => m.SpaceModule)
+  },
+  {
+    path: 'breadcrumb',
+    loadChildren: () => import('./breadcrumb/breadcrumb.module').then(m => m.BreadcrumbModule)
   }
 ];
 

@@ -80,7 +80,7 @@ export class AppComponent implements OnInit {
         { link: 'affix', name: 'Affix 固钉' },
         // { link: 'menu', name: 'NavMenu 导航菜单' },
         // { link: 'tabs', name: 'Tabs 标签页' },
-        // { link: 'breadcrumb', name: 'Breadcrumb 面包屑' },
+        { link: 'breadcrumb', name: 'Breadcrumb 面包屑' },
         { link: 'page-header', name: 'PageHeader 页头' },
         // { link: 'dropdown', name: 'Dropdown 下拉菜单' },
         // { link: 'steps', name: 'Steps 步骤条' },
