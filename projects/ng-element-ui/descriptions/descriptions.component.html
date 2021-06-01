@@ -1,0 +1,71 @@
+<div class="el-descriptions__header">
+  <div class="el-descriptions__title">{{nelTitle}}</div>
+  <div class="el-descriptions__extra">
+    <ng-container *ngIf="nelExtra">
+      <ng-container *stringTemplate="nelExtra"></ng-container>
+    </ng-container>
+  </div>
+</div>
+<div class="el-descriptions__body">
+  <table [class.is-bordered]="nelBorder" [class.el-descriptions--medium]="nelSize == 'medium'"
+    [class.el-descriptions--small]="nelSize == 'small'" [class.el-descriptions--mini]="nelSize == 'mini'">
+    <tbody>
+      <ng-container *ngFor="let trItem of itemList">
+        <ng-container *ngIf="nelDirection == 'horizontal'">
+          <tr *ngIf="nelBorder; else trTpl">
+            <ng-container *ngFor="let item of trItem">
+              <td *ngIf="item.type == 'label'; else tdTpl" [attr.colspan]="item.colspan"
+                class="el-descriptions__label is-bordered-label">
+                <ng-container *ngIf="item.label">
+                  <ng-container *stringTemplate="item.label"></ng-container>
+                </ng-container>
+                <span class="el-descriptions__content">
+                  <ng-container *ngTemplateOutlet="item.content"></ng-container>
+                </span>
+              </td>
+              <ng-template #tdTpl>
+                <td [attr.colspan]="item.colspan" class="el-descriptions__content">
+                  <ng-container *ngTemplateOutlet="item.content"></ng-container>
+                </td>
+              </ng-template>
+            </ng-container>
+          </tr>
+          <ng-template #trTpl>
+            <tr>
+              <td [attr.colspan]="item.colspan" *ngFor="let item of trItem">
+                <span class="el-descriptions__label" [class.is-bordered-label]="nelBorder">
+                  <ng-container *ngIf="item.label">
+                    <ng-container *stringTemplate="item.label"></ng-container>
+                  </ng-container>
+                </span>
+                <span class="el-descriptions__content">
+                  <ng-container *ngTemplateOutlet="item.content"></ng-container>
+                </span>
+              </td>
+            </tr>
+          </ng-template>
+        </ng-container>
+        <ng-container *ngIf="nelDirection == 'vertical'">
+          <tr>
+            <ng-container *ngFor="let item of trItem">
+              <td *ngIf="item.type == 'label'; else tdTpl" [attr.colspan]="item.colspan" class="el-descriptions__label"
+                [class.is-bordered-label]="nelBorder">
+                <ng-container *ngIf="item.label">
+                  <ng-container *stringTemplate="item.label"></ng-container>
+                </ng-container>
+                <span class="el-descriptions__content">
+                  <ng-container *ngTemplateOutlet="item.content"></ng-container>
+                </span>
+              </td>
+              <ng-template #tdTpl>
+                <td [attr.colspan]="item.colspan" class="el-descriptions__content">
+                  <ng-container *ngTemplateOutlet="item.content"></ng-container>
+                </td>
+              </ng-template>
+            </ng-container>
+          </tr>
+        </ng-container>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

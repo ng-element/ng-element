@@ -118,6 +118,10 @@ const routes: Routes = [
   {
     path: 'breadcrumb',
     loadChildren: () => import('./breadcrumb/breadcrumb.module').then(m => m.BreadcrumbModule)
+  },
+  {
+    path: 'descriptions',
+    loadChildren: () => import('./descriptions/descriptions.module').then(m => m.DescriptionsModule)
   }
 ];
 

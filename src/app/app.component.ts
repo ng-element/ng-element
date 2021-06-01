@@ -60,7 +60,7 @@ export class AppComponent implements OnInit {
         { link: 'avatar', name: 'Avatar 头像' },
         // { link: 'skeleton', name: 'Skeleton 骨架屏' },
         { link: 'empty', name: 'Empty 空状态' },
-        // { link: 'descriptions', name: 'Descriptions 描述列表' },
+        { link: 'descriptions', name: 'Descriptions 描述列表' },
         // { link: 'result', name: 'Result 结果' },
       ]
     },

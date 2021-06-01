@@ -37,6 +37,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] affix
 - [x] space
 - [x] breadcrumb
+- [x] descriptions
 
 ##  Development
 

@@ -38,11 +38,14 @@
 @import 'element-theme-chalk/src/space.scss';
 @import 'element-theme-chalk/src/breadcrumb.scss';
 @import 'element-theme-chalk/src/breadcrumb-item.scss';
+@import 'element-theme-chalk/src/descriptions.scss';
+@import 'element-theme-chalk/src/descriptions-item.scss';
 
 nel-alert,
 nel-card,
 nel-timeline-item,
-nel-affix {
+nel-affix,
+nel-descriptions {
   display: block;
 }
 
