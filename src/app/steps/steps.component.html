@@ -1,0 +1,54 @@
+<h2>Steps 步骤条</h2>
+<p>引导用户按照流程完成任务的分步导航条，可根据实际应用场景设定步骤，步骤不得少于 2 步。</p>
+<app-code code="import { NelStepsModule } from 'ng-element-ui/steps';"></app-code>
+
+<h3>基础用法</h3>
+<p>简单的步骤条。</p>
+
+<app-demo [codeUrl]="'components-steps-demo-basic.component'">
+  <nel-demo-steps-basic demo></nel-demo-steps-basic>
+</app-demo>
+
+<h3>含状态步骤条</h3>
+<p>每一步骤显示出该步骤的状态。</p>
+
+<app-demo [codeUrl]="'components-steps-demo-title.component'">
+  <nel-demo-steps-title demo></nel-demo-steps-title>
+</app-demo>
+
+<h3>有描述的步骤条</h3>
+<p>每个步骤有其对应的步骤状态描述。</p>
+
+<app-demo [codeUrl]="'components-steps-demo-description.component'">
+  <nel-demo-steps-description demo></nel-demo-steps-description>
+</app-demo>
+
+<h3>居中的步骤条</h3>
+<p>标题和描述都将居中。</p>
+
+<app-demo [codeUrl]="'components-steps-demo-align-center.component'">
+  <nel-demo-steps-align-center demo></nel-demo-steps-align-center>
+</app-demo>
+
+<h3>带图标的步骤条</h3>
+<p>步骤条内可以启用各种自定义的图标。</p>
+
+<app-demo [codeUrl]="'components-steps-demo-icon.component'">
+  <nel-demo-steps-icon demo></nel-demo-steps-icon>
+</app-demo>
+
+<h3>竖式步骤条</h3>
+<p>竖直方向的步骤条。</p>
+
+<app-demo [codeUrl]="'components-steps-demo-direction.component'">
+  <nel-demo-steps-direction demo></nel-demo-steps-direction>
+</app-demo>
+
+<h3>简洁风格的步骤条</h3>
+<p>设置 simple 可应用简洁风格，该条件下 align-center / description / direction / space 都将失效。</p>
+
+<app-demo [codeUrl]="'components-steps-demo-simple.component'">
+  <nel-demo-steps-simple demo></nel-demo-steps-simple>
+</app-demo>
+
+<app-doc [docUrl]="'components-steps'"></app-doc>

@@ -122,6 +122,10 @@ const routes: Routes = [
   {
     path: 'descriptions',
     loadChildren: () => import('./descriptions/descriptions.module').then(m => m.DescriptionsModule)
+  },
+  {
+    path: 'steps',
+    loadChildren: () => import('./steps/steps.module').then(m => m.StepsModule)
   }
 ];
 

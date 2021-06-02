@@ -1,0 +1,7 @@
+{
+  "ngPcakge": {
+    "lib": {
+      "entryFile": "public-api.ts"
+    }
+  }
+}

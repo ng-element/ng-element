@@ -83,7 +83,7 @@ export class AppComponent implements OnInit {
         { link: 'breadcrumb', name: 'Breadcrumb 面包屑' },
         { link: 'page-header', name: 'PageHeader 页头' },
         // { link: 'dropdown', name: 'Dropdown 下拉菜单' },
-        // { link: 'steps', name: 'Steps 步骤条' },
+        { link: 'steps', name: 'Steps 步骤条' },
       ]
     },
     {
