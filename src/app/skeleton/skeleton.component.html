@@ -1,0 +1,46 @@
+<h2>Skeleton 骨架屏</h2>
+<p>在需要等待加载内容的位置设置一个骨架屏，某些场景下比 Loading 的视觉效果更好。</p>
+<app-code code="import { NelSkeletonModule } from 'ng-element-ui/skeleton';"></app-code>
+
+<h3>基础用法</h3>
+<p>基础的骨架效果。</p>
+
+<app-demo [codeUrl]="'components-skeleton-demo-basic.component'">
+  <nel-demo-skeleton-basic demo></nel-demo-skeleton-basic>
+</app-demo>
+
+<h3>更多参数</h3>
+<p>可以配置骨架屏段落数量，以便更接近真实渲染效果。显示的数量会比传入的数量多 1，首行会被渲染一个长度 33% 的段首。</p>
+
+<app-demo [codeUrl]="'components-skeleton-demo-rows.component'">
+  <nel-demo-skeleton-rows demo></nel-demo-skeleton-rows>
+</app-demo>
+
+<h3>动画效果</h3>
+<p>显示动画效果。</p>
+
+<app-demo [codeUrl]="'components-skeleton-demo-animated.component'">
+  <nel-demo-skeleton-animated demo></nel-demo-skeleton-animated>
+</app-demo>
+
+<h3>自定义样式</h3>
+
+<app-demo [codeUrl]="'components-skeleton-demo-template.component'">
+  <nel-demo-skeleton-template demo></nel-demo-skeleton-template>
+</app-demo>
+
+<h3>Loading 状态</h3>
+<p>当 Loading 结束之后，我们往往需要显示真实的 UI，可以通过 loading 的值来控制是否显示真实的 DOM。</p>
+
+<app-demo [codeUrl]="'components-skeleton-demo-loading.component'">
+  <nel-demo-skeleton-loading demo></nel-demo-skeleton-loading>
+</app-demo>
+
+<h3>防止渲染抖动</h3>
+<p>有的时候，API 的请求回来的特别快，往往骨架占位刚刚被渲染，真实的数据就已经回来了，用户的界面会突然一闪，此时为了避免这种情况，就需要通过 throttle 属性来避免这个问题。</p>
+
+<app-demo [codeUrl]="'components-skeleton-demo-throttle.component'">
+  <nel-demo-skeleton-throttle demo></nel-demo-skeleton-throttle>
+</app-demo>
+
+<app-doc [docUrl]="'components-skeleton'"></app-doc>

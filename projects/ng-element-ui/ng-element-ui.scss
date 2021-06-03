@@ -42,12 +42,15 @@
 @import 'element-theme-chalk/src/descriptions-item.scss';
 @import 'element-theme-chalk/src/steps.scss';
 @import 'element-theme-chalk/src/step.scss';
+@import 'element-theme-chalk/src/skeleton.scss';
+@import 'element-theme-chalk/src/skeleton-item.scss';
 
 nel-alert,
 nel-card,
 nel-timeline-item,
 nel-affix,
-nel-descriptions {
+nel-descriptions,
+nel-skeleton {
   display: block;
 }
 

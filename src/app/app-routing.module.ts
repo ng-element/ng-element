@@ -126,6 +126,10 @@ const routes: Routes = [
   {
     path: 'steps',
     loadChildren: () => import('./steps/steps.module').then(m => m.StepsModule)
+  },
+  {
+    path: 'skeleton',
+    loadChildren: () => import('./skeleton/skeleton.module').then(m => m.SkeletonModule)
   }
 ];
 

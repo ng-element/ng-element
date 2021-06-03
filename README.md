@@ -39,6 +39,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] breadcrumb
 - [x] descriptions
 - [x] steps
+- [x] skeleton
 
 ##  Development
 
