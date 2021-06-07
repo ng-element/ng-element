@@ -98,7 +98,7 @@ export class AppComponent implements OnInit {
         { link: 'collapse', name: 'Collapse 折叠面板' },
         { link: 'timeline', name: 'Timeline 时间线' },
         { link: 'divider', name: 'Divider 分割线' },
-        // { link: 'calendar', name: 'Calendar 日历' },
+        { link: 'calendar', name: 'Calendar 日历' },
         { link: 'image', name: 'Image 图片' },
         { link: 'backtop', name: 'Backtop 回到顶部' },
         { link: 'infinite-scroll', name: 'InfiniteScroll 无限滚动' },

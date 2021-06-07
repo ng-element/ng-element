@@ -130,6 +130,10 @@ const routes: Routes = [
   {
     path: 'skeleton',
     loadChildren: () => import('./skeleton/skeleton.module').then(m => m.SkeletonModule)
+  },
+  {
+    path: 'calendar',
+    loadChildren: () => import('./calendar/calendar.module').then(m => m.CalendarModule)
   }
 ];
 

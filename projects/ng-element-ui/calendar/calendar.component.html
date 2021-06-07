@@ -1,0 +1,47 @@
+<div class="el-calendar">
+  <div class="el-calendar__header">
+    <div class="el-calendar__title">{{current.year}} 年 {{current.month}} 月</div>
+    <div *ngIf="showButton" class="el-calendar__button-group">
+      <div class="el-button-group">
+        <button (click)="prevMonth()" class="el-button el-button--default el-button--mini" type="button">
+          <span>上个月</span>
+        </button>
+        <button (click)="currentMonth()" class="el-button el-button--default el-button--mini" type="button">
+          <span>今天</span>
+        </button>
+        <button (click)="nextMonth()" class="el-button el-button--default el-button--mini" type="button">
+          <span>下个月</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="el-calendar__body">
+    <table class="el-calendar-table" cellspacing="0" cellpadding="0">
+      <thead>
+        <th>周一</th>
+        <th>周二</th>
+        <th>周三</th>
+        <th>周四</th>
+        <th>周五</th>
+        <th>周六</th>
+        <th>周日</th>
+      </thead>
+      <tbody>
+        <tr class="el-calendar-table__row" *ngFor="let weekItem of calendarList">
+          <td class="{{dayItem.type}}" *ngFor="let dayItem of weekItem" [class.is-today]="dayItem.isToday"
+            [class.is-selected]="dayItem.isSelected" (click)="selectDay(dayItem)">
+            <div class="el-calendar-day">
+              <ng-container *ngIf="nzDateCellChild; else spanTpl">
+                <ng-container *ngTemplateOutlet="$any(nzDateCellChild); context: { $implicit: dayItem }">
+                </ng-container>
+              </ng-container>
+              <ng-template #spanTpl>
+                <span>{{dayItem.text}}</span>
+              </ng-template>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

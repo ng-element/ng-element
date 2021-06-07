@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~11.2.11",
     "@angular/router": "~11.2.11",
     "@types/marked": "^2.0.2",
+    "date-fns": "^2.22.1",
     "element-theme-chalk": "^2.15.1",
     "gulp-clean": "^0.4.0",
     "gulp-watch": "^5.0.1",

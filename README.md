@@ -40,6 +40,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] descriptions
 - [x] steps
 - [x] skeleton
+- [x] calendar
 
 ##  Development
 
