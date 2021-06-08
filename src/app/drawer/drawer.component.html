@@ -1,0 +1,33 @@
+<h2>Drawer 抽屉</h2>
+<p>有些时候, Dialog 组件并不满足我们的需求, 比如你的表单很长, 亦或是你需要临时展示一些文档, Drawer 拥有和 Dialog 几乎相同的 API, 在 UI 上带来不一样的体验.</p>
+<app-code code="import { NelDrawerModule } from 'ng-element-ui/drawer';"></app-code>
+
+<h3>基本用法</h3>
+<p>呼出一个临时的侧边栏, 可以从多个方向呼出</p>
+
+<app-demo [codeUrl]="'components-drawer-demo-basic.component'">
+  <nel-demo-drawer-basic demo></nel-demo-drawer-basic>
+</app-demo>
+
+<h3>不添加 Title</h3>
+<p>当你不需要标题到时候, 你还可以去掉标题</p>
+
+<app-demo [codeUrl]="'components-drawer-demo-header.component'">
+  <nel-demo-drawer-header demo></nel-demo-drawer-header>
+</app-demo>
+
+<h3>自定义内容</h3>
+<p>和 Dialog 组件一样, Drawer 同样可以在其内部嵌套各种丰富的操作</p>
+
+<app-demo [codeUrl]="'components-drawer-demo-content.component'">
+  <nel-demo-drawer-content demo></nel-demo-drawer-content>
+</app-demo>
+
+<h3>多层嵌套</h3>
+<p>Drawer 组件也拥有多层嵌套的方法</p>
+
+<app-demo [codeUrl]="'components-drawer-demo-multi.component'">
+  <nel-demo-drawer-multi demo></nel-demo-drawer-multi>
+</app-demo>
+
+<app-doc [docUrl]="'components-drawer'"></app-doc>

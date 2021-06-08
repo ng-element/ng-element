@@ -1,0 +1,19 @@
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen">
+  <div class="el-overlay" (click)="handleClose()" @drawerMotion>
+    <div class="el-drawer {{nelDirection}}" role="dialog" (click)="clickDrawer($event)"
+      [style.width]="nelDirection=='ltr' || nelDirection=='rtl' ? width : ''"
+      [style.height]="nelDirection=='ttb' || nelDirection=='btt' ? height : ''" [@drawerDialogMotion]="nelDirection">
+      <header *ngIf="nelWithHeader" class="el-drawer__header">
+        <span *ngIf="nelTitle" role="heading">
+          <ng-container *stringTemplate="nelTitle"></ng-container>
+        </span>
+        <button *ngIf="nelShowClose" (click)="handleClose()" class="el-drawer__close-btn" type="button">
+          <i class="el-drawer__close el-icon el-icon-close"></i>
+        </button>
+      </header>
+      <section class="el-drawer__body">
+        <ng-content></ng-content>
+      </section>
+    </div>
+  </div>
+</ng-template>

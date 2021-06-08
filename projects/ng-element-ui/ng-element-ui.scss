@@ -44,6 +44,7 @@
 @import 'element-theme-chalk/src/skeleton.scss';
 @import 'element-theme-chalk/src/skeleton-item.scss';
 @import 'element-theme-chalk/src/calendar.scss';
+@import 'element-theme-chalk/src/drawer.scss';
 @import 'element-theme-chalk/src/button.scss';
 
 nel-alert,
@@ -66,4 +67,8 @@ nel-skeleton {
 nel-collapse-item:last-child {
   display: block;
   margin-bottom: -1px;
+}
+
+.el-drawer__body {
+  padding: 20px;
 }

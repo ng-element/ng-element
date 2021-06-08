@@ -12,7 +12,6 @@ import { Observable, Observer } from 'rxjs';
       [nelTitle]="'提示'"
       [(nelVisible)]="dialogVisible"
       width="30%"
-      :before-close="handleClose"
       [nelFooter]="footer"
       [nelBeforeClose]="beforeClose">
       <span>这是一段信息</span>

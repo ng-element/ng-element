@@ -102,7 +102,7 @@ export class AppComponent implements OnInit {
         { link: 'image', name: 'Image 图片' },
         { link: 'backtop', name: 'Backtop 回到顶部' },
         { link: 'infinite-scroll', name: 'InfiniteScroll 无限滚动' },
-        // { link: 'drawer', name: 'Drawer 抽屉' },
+        { link: 'drawer', name: 'Drawer 抽屉' },
       ]
     },
   ];

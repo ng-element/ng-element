@@ -41,6 +41,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] steps
 - [x] skeleton
 - [x] calendar
+- [x] drawer
 
 ##  Development
 

@@ -134,6 +134,10 @@ const routes: Routes = [
   {
     path: 'calendar',
     loadChildren: () => import('./calendar/calendar.module').then(m => m.CalendarModule)
+  },
+  {
+    path: 'drawer',
+    loadChildren: () => import('./drawer/drawer.module').then(m => m.DrawerModule)
   }
 ];
 
