@@ -1,4 +1,4 @@
-import { CdkOverlayOrigin, ConnectionPositionPair } from '@angular/cdk/overlay';
+import { CdkOverlayOrigin } from '@angular/cdk/overlay';
 import { Component, ElementRef, Input, Output, ViewContainerRef, EventEmitter, TemplateRef } from '@angular/core';
 import { drawerMotion, drawerDialogMotion } from 'ng-element-ui/core/animation';
 import { Observable } from 'rxjs';

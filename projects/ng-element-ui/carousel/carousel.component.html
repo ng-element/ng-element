@@ -1,0 +1,28 @@
+<div class="el-carousel el-carousel--{{nelDirection}}" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()">
+  <div #containerEle class="el-carousel__container" [style.height]="nelHeight">
+    <button *ngIf="nelDirection === 'horizontal' && nelArrow !== 'never'" (click)="prev()" type="button"
+      class="el-carousel__arrow el-carousel__arrow--left"
+      [style.display]="nelArrow === 'always' || hover ? '' : 'none'">
+      <i class="el-icon-arrow-left"></i>
+    </button>
+    <button *ngIf="nelDirection === 'horizontal' && nelArrow !== 'never'" (click)="next()" type="button"
+      class="el-carousel__arrow el-carousel__arrow--right"
+      [style.display]="nelArrow === 'always' || hover ? '' : 'none'">
+      <i class="el-icon-arrow-right"></i>
+    </button>
+    <div class="el-carousel__item__wrapper">
+      <div #itemContainerEle class="el-carousel__item__container"
+        [style.flex-direction]="nelDirection == 'vertical' ? 'column' : ''">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+  <ul class="el-carousel__indicators el-carousel__indicators--{{nelDirection}}"
+    [class.el-carousel__indicators--outside]="nelIndicatorPosition == 'outside'">
+    <li #indicatorEle (mouseenter)="indicatorSelect(index)" (click)="selectItem(index)"
+      *ngFor="let item of items; let index=index;"
+      class="el-carousel__indicator el-carousel__indicator--{{nelDirection}}" [class.is-active]="index == active">
+      <button class="el-carousel__button"></button>
+    </li>
+  </ul>
+</div>

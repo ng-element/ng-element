@@ -1,0 +1,40 @@
+<h2>Carousel 走马灯</h2>
+<p>在有限空间内，循环播放同一类型的图片、文字等内容</p>
+<app-code code="import { NelCarouselModule } from 'ng-element-ui/carousel';"></app-code>
+
+<h3>基础用法</h3>
+<p>适用广泛的基础用法</p>
+
+<app-demo [codeUrl]="'components-carousel-demo-basic.component'">
+  <nel-demo-carousel-basic demo></nel-demo-carousel-basic>
+</app-demo>
+
+<h3>指示器</h3>
+<p>可以将指示器的显示位置设置在容器外部</p>
+
+<app-demo [codeUrl]="'components-carousel-demo-indicator.component'">
+  <nel-demo-carousel-indicator demo></nel-demo-carousel-indicator>
+</app-demo>
+
+<h3>切换箭头</h3>
+<p>可以设置切换箭头的显示时机</p>
+
+<app-demo [codeUrl]="'components-carousel-demo-arrow.component'">
+  <nel-demo-carousel-arrow demo></nel-demo-carousel-arrow>
+</app-demo>
+
+<!-- <h3>卡片化</h3>
+<p>当页面宽度方向空间空余，但高度方向空间匮乏时，可使用卡片风格</p>
+
+<app-demo [codeUrl]="'components-carousel-demo-card.component'">
+  <nel-demo-carousel-card demo></nel-demo-carousel-card>
+</app-demo> -->
+
+<h3>方向</h3>
+<p>默认情况下，direction 为 horizontal。通过设置 direction 为 vertical 来让走马灯在垂直方向上显示。</p>
+
+<app-demo [codeUrl]="'components-carousel-demo-direction.component'">
+  <nel-demo-carousel-direction demo></nel-demo-carousel-direction>
+</app-demo>
+
+<app-doc [docUrl]="'components-carousel'"></app-doc>

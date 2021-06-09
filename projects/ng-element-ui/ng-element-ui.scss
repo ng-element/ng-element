@@ -45,6 +45,8 @@
 @import 'element-theme-chalk/src/skeleton-item.scss';
 @import 'element-theme-chalk/src/calendar.scss';
 @import 'element-theme-chalk/src/drawer.scss';
+@import 'element-theme-chalk/src/carousel.scss';
+@import 'element-theme-chalk/src/carousel-item.scss';
 @import 'element-theme-chalk/src/button.scss';
 
 nel-alert,
@@ -71,4 +73,19 @@ nel-collapse-item:last-child {
 
 .el-drawer__body {
   padding: 20px;
+}
+
+.el-carousel__item__wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.el-carousel__item__container {
+  display: flex;
+}
+
+.el-carousel__item {
+  flex: 1;
+  position: relative;
 }

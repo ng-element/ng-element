@@ -1,7 +1,7 @@
 <ng-template #tpl>
   <div class="el-overlay" (click)="handleClose()">
     <div class="el-dialog" [class.el-dialog--center]="nelCenter" role="dialog" style="margin-top: 15vh; width: 30%"
-      (click)="clickDialog($event)">
+      (click)="clickDialog($event)" @modalMotion>
       <div class="el-dialog__header">
         <span class="el-dialog__title" *ngIf="nelTitle">
           <ng-container *stringTemplate="nelTitle"></ng-container>

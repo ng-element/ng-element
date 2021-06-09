@@ -94,7 +94,7 @@ export class AppComponent implements OnInit {
         { link: 'popover', name: 'Popover 弹出框' },
         { link: 'popconfirm', name: 'Popconfirm 气泡确认框' },
         { link: 'card', name: 'Card 卡片' },
-        // { link: 'carousel', name: 'Carousel 走马灯' },
+        { link: 'carousel', name: 'Carousel 走马灯' },
         { link: 'collapse', name: 'Collapse 折叠面板' },
         { link: 'timeline', name: 'Timeline 时间线' },
         { link: 'divider', name: 'Divider 分割线' },

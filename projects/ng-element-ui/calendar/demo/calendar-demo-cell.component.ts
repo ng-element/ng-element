@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
       <p *nelDateCell="let date" [class.is-selected]="date.isSelected">
         {{ date.day.split('-').slice(1).join('-') }}{{ date.isSelected ? '✔️' : '' }}
       </p>
+      <!-- 等效于 -->
+      <!-- <ng-template nelDateCell let-date>
+        <p [class.is-selected]="date.isSelected">
+          {{ date.day.split('-').slice(1).join('-') }}{{ date.isSelected ? '✔️' : '' }}
+        </p>
+      </ng-template> -->
     </nel-calendar>
   `,
   styles: [

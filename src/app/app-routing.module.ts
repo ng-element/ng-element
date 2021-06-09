@@ -138,6 +138,10 @@ const routes: Routes = [
   {
     path: 'drawer',
     loadChildren: () => import('./drawer/drawer.module').then(m => m.DrawerModule)
+  },
+  {
+    path: 'carousel',
+    loadChildren: () => import('./carousel/carousel.module').then(m => m.CarouselModule)
   }
 ];
 

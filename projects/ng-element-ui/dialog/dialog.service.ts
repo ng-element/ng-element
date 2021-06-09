@@ -17,11 +17,7 @@ export class NelDialogService {
   confirm<R = any>(
     content: DialogConfig
   ): DialogRef<R> {
-    const configs = new OverlayConfig({
-      hasBackdrop: true,
-    });
-
-    const overlayRef = this.overlay.create(configs);
+    const overlayRef = this.overlay.create();
     const dialogRef = new DialogRef<R>(overlayRef, content.nelTitle, content.nelContent, content.nelOnCancel, content.nelOnOk);
 
     const injector = this.createInjector(dialogRef, this.injector);

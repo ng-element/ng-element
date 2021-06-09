@@ -1,11 +1,13 @@
 import { Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
 import { Component, EventEmitter, Input, Output, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { modalMotion } from 'ng-element-ui/core/animation';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'nel-dialog',
-  templateUrl: './dialog.component.html'
+  templateUrl: './dialog.component.html',
+  animations: [modalMotion]
 })
 
 export class NelDialogComponent {
@@ -34,11 +36,7 @@ export class NelDialogComponent {
   ) { }
 
   openWithTemplate(tpl: TemplateRef<any>): void {
-    const configs = new OverlayConfig({
-      hasBackdrop: true,
-    });
-
-    this.overlayRef = this.overlay.create(configs);
+    this.overlayRef = this.overlay.create();
     this.overlayRef.attach(new TemplatePortal(tpl, this.viewContainerRef));
   }
 
