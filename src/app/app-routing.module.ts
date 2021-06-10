@@ -142,6 +142,10 @@ const routes: Routes = [
   {
     path: 'carousel',
     loadChildren: () => import('./carousel/carousel.module').then(m => m.CarouselModule)
+  },
+  {
+    path: 'message',
+    loadChildren: () => import('./message/message.module').then(m => m.MessageModule)
   }
 ];
 

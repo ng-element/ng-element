@@ -1,0 +1,9 @@
+<div #messageEle class="el-message el-message--{{type}}" [class.is-center]="center" role="alert"
+  [style.top]="top + 'px'" [@messageMotion]="state" (@messageMotion.start)="onAnimationStart($event)"
+  (@messageMotion.done)="onAnimationDone($event)" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+  <i class="el-message__icon el-icon-{{type}}"></i>
+  <p class="el-message__content">
+    <ng-container *stringTemplate="content"></ng-container>
+  </p>
+  <div *ngIf="showClose" (click)="close()" class="el-message__closeBtn el-icon-close"></div>
+</div>

@@ -1,5 +1,5 @@
-import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
-import { ComponentPortal, PortalInjector } from '@angular/cdk/portal';
+import { Overlay } from '@angular/cdk/overlay';
+import { ComponentPortal } from '@angular/cdk/portal';
 import { Injectable, Injector } from '@angular/core';
 import { DialogRef } from './dialog-ref';
 import { DialogConfig } from './dialog-config';
@@ -26,8 +26,10 @@ export class NelDialogService {
     return dialogRef;
   }
 
-  createInjector(ref: DialogRef, inj: Injector): PortalInjector {
-    const injectorTokens = new WeakMap([[DialogRef, ref]]);
-    return new PortalInjector(inj, injectorTokens);
+  createInjector(ref: DialogRef, inj: Injector): Injector {
+    return Injector.create({
+      parent: inj,
+      providers: [{ provide: DialogRef, useValue: ref }]
+    });
   }
 }

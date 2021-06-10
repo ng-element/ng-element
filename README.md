@@ -43,6 +43,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] calendar
 - [x] drawer
 - [x] carousel
+- [x] message
 
 ##  Development
 

@@ -1,0 +1,33 @@
+<h2>Message 消息提示</h2>
+<p>常用于主动操作后的反馈提示。与 Notification 的区别是后者更多用于系统级通知的被动提醒。</p>
+<app-code code="import { NelMessageModule } from 'ng-element-ui/message';"></app-code>
+
+<h3>基础用法</h3>
+<p>从顶部出现，3 秒后自动消失。</p>
+
+<app-demo [codeUrl]="'components-message-demo-basic.component'">
+  <nel-demo-message-basic demo></nel-demo-message-basic>
+</app-demo>
+
+<h3>不同状态</h3>
+<p>用来显示「成功、警告、消息、错误」类的操作反馈。</p>
+
+<app-demo [codeUrl]="'components-message-demo-type.component'">
+  <nel-demo-message-type demo></nel-demo-message-type>
+</app-demo>
+
+<h3>可关闭</h3>
+<p>可以添加关闭按钮。</p>
+
+<app-demo [codeUrl]="'components-message-demo-close.component'">
+  <nel-demo-message-close demo></nel-demo-message-close>
+</app-demo>
+
+<h3>文字居中</h3>
+<p>使用 center 属性让文字水平居中。</p>
+
+<app-demo [codeUrl]="'components-message-demo-center.component'">
+  <nel-demo-message-center demo></nel-demo-message-center>
+</app-demo>
+
+<app-doc [docUrl]="'components-message'"></app-doc>
