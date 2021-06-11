@@ -25,7 +25,7 @@
       {{isExpanded ? '隐藏代码' : '显示代码'}}
     </span>
     <div class="control-button-container" [@state]="hovering">
-      <button (click)="copy($event)" [cdkCopyToClipboard]="code"
+      <button (click)="$event.stopPropagation()" (cdkCopyToClipboardCopied)="copy($event)" [cdkCopyToClipboard]="code"
         class="el-button el-button--text el-button--small control-button copy-button" type="button">
         <span>复制代码片段</span>
       </button>

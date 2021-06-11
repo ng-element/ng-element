@@ -2,6 +2,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Location } from '@angular/common';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
+import { NelMessageService } from 'ng-element-ui/message';
 import { HighLightPipe } from '../../pipe';
 import { AppService } from './../../../app.service';
 
@@ -47,6 +48,7 @@ export class DemoComponent implements OnInit {
   constructor(
     private location: Location,
     private sanitizer: DomSanitizer,
+    private messageS: NelMessageService,
     private appService: AppService
   ) { }
 
@@ -73,7 +75,11 @@ export class DemoComponent implements OnInit {
     //   .replace(/<!---->/g, '')
   }
 
-  copy(event: MouseEvent): void {
-    event.stopPropagation();
+  copy(event: boolean): void {
+    if (event) {
+      this.messageS.success('复制成功');
+    } else {
+      this.messageS.error('复制失败');
+    }
   }
 }
