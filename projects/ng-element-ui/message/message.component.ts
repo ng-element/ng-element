@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy, ViewChild, ElementRef, AfterViewInit, TemplateRef } from '@angular/core';
+import { OverlayRef } from '@angular/cdk/overlay';
 import { AnimationEvent } from '@angular/animations';
 import { messageMotion } from 'ng-element-ui/core/animation';
 import { MessageRef } from './message-ref';
-import { OverlayRef } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'nel-message',

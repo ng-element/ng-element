@@ -1,0 +1,40 @@
+<h2>Notification 通知</h2>
+<p>悬浮出现在页面角落，显示全局的通知提醒消息。</p>
+<app-code code="import { NelNotificationModule } from 'ng-element-ui/notification';"></app-code>
+
+<h3>基本用法</h3>
+<p>适用性广泛的通知栏</p>
+
+<app-demo [codeUrl]="'components-notification-demo-basic.component'">
+  <nel-demo-notification-basic demo></nel-demo-notification-basic>
+</app-demo>
+
+<h3>带有倾向性</h3>
+<p>带有 icon，常用来显示「成功、警告、消息、错误」类的系统消息</p>
+
+<app-demo [codeUrl]="'components-notification-demo-type.component'">
+  <nel-demo-notification-type demo></nel-demo-notification-type>
+</app-demo>
+
+<h3>自定义弹出位置</h3>
+<p>可以让 Notification 从屏幕四角中的任意一角弹出</p>
+
+<app-demo [codeUrl]="'components-notification-demo-position.component'">
+  <nel-demo-notification-position demo></nel-demo-notification-position>
+</app-demo>
+
+<h3>带有偏移</h3>
+<p>让 Notification 偏移一些位置</p>
+
+<app-demo [codeUrl]="'components-notification-demo-offset.component'">
+  <nel-demo-notification-offset demo></nel-demo-notification-offset>
+</app-demo>
+
+<h3>隐藏关闭按钮</h3>
+<p>可以不显示关闭按钮</p>
+
+<app-demo [codeUrl]="'components-notification-demo-close.component'">
+  <nel-demo-notification-close demo></nel-demo-notification-close>
+</app-demo>
+
+<app-doc [docUrl]="'components-notification'"></app-doc>

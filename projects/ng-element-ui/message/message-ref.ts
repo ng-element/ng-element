@@ -19,8 +19,4 @@ export class MessageRef<R = any> {
   close(): void {
     (this.componentInstance as any).state = 'done';
   }
-
-  private _close(): void {
-    this.overlay.dispose();
-  }
 }

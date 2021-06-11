@@ -65,17 +65,17 @@ export class NelMessageService {
     const overlayRef = this.overlay.create();
     const messageRef = new MessageRef<R>(type, this.messageId, this.leave, overlayRef, content, options);
 
+    const injector = this.createInjector(messageRef, this.injector);
+    const componentRef = overlayRef.attach(new ComponentPortal(NelMessageComponent, null, injector));
+
     // 根据message列表，获取下一个message的top
     let top = 36;
     this.messageRefList.forEach(item => {
       top += item.height + 16;
     });
-    messageRef.top = top;
-
-    const injector = this.createInjector(messageRef, this.injector);
-    const componentRef = overlayRef.attach(new ComponentPortal(NelMessageComponent, null, injector));
 
     this.messageRefList.push(messageRef);
+    messageRef.top = top;
     messageRef.componentInstance = componentRef.instance as unknown as R;
     return messageRef;
   }
@@ -98,7 +98,6 @@ export class NelMessageService {
           }
         }
         this.messageRefList.splice(componentIndex, 1);
-
       }
     });
   }

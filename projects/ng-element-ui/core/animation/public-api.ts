@@ -4,3 +4,4 @@ export * from './zoom';
 export * from './drawer';
 export * from './modal';
 export * from './message';
+export * from './notification';

@@ -1,0 +1,16 @@
+<div #notificationEle class="el-notification" [class.right]="position == 'topRight' || position == 'bottomRight'"
+  [class.left]="position == 'topLeft' || position == 'bottomLeft'" role="alert" style="top: 16px"
+  [style.top]="top ? top + 'px' : ''" [style.bottom]="bottom ? bottom + 'px' : ''" [@notificationMotion]="state"
+  (@notificationMotion.start)="onAnimationStart($event)" (@notificationMotion.done)="onAnimationDone($event)"
+  (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+  <i *ngIf="type != 'blank'" class="el-notification__icon el-icon-{{type}}"></i>
+  <div class="el-notification__group">
+    <h2 class="el-notification__title">
+      <ng-container *stringTemplate="title"></ng-container>
+    </h2>
+    <div class="el-notification__content">
+      <ng-container *stringTemplate="content"></ng-container>
+    </div>
+    <div *ngIf="showClose" (click)="close()" class="el-notification__closeBtn el-icon-close"></div>
+  </div>
+</div>
