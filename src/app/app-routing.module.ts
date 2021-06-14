@@ -150,6 +150,10 @@ const routes: Routes = [
   {
     path: 'notification',
     loadChildren: () => import('./notification/notification.module').then(m => m.NotificationModule)
+  },
+  {
+    path: 'message-box',
+    loadChildren: () => import('./message-box/message-box.module').then(m => m.MessageBoxModule)
   }
 ];
 

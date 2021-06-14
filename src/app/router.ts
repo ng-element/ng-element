@@ -58,7 +58,7 @@ export const RouterList: any[] = [
       { link: 'alert', name: 'Alert 警告' },
       // { link: 'loading', name: 'Loading 加载' },
       { link: 'message', name: 'Message 消息提示' },
-      // { link: 'message-box', name: 'MessageBox 弹框' },
+      { link: 'message-box', name: 'MessageBox 弹框' },
       { link: 'notification', name: 'Notification 通知' },
     ]
   },

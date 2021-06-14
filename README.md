@@ -45,6 +45,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] carousel
 - [x] message
 - [x] notification
+- [x] message-box
 
 ##  Development
 

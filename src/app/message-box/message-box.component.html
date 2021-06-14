@@ -1,0 +1,44 @@
+<h2>MessageBox 弹框</h2>
+<p>模拟系统的消息提示框而实现的一套模态对话框组件，用于消息提示、确认消息和提交内容。</p>
+<app-code code="import { NelMessageBoxModule } from 'ng-element-ui/message-box';"></app-code>
+
+<div class="tip">
+  <p>从场景上说，MessageBox 的作用是美化系统自带的 alert、confirm 和 prompt，因此适合展示较为简单的内容。如果需要弹出较为复杂的内容，请使用 Dialog。</p>
+</div>
+
+<h3>消息提示</h3>
+<p>当用户进行操作时会被触发，该对话框中断用户操作，直到用户确认知晓后才可关闭。</p>
+
+<app-demo [codeUrl]="'components-message-box-demo-basic.component'">
+  <nel-demo-message-box-basic demo></nel-demo-message-box-basic>
+</app-demo>
+
+<h3>确认消息</h3>
+<p>提示用户确认其已经触发的动作，并询问是否进行此操作时会用到此对话框。</p>
+
+<app-demo [codeUrl]="'components-message-box-demo-confirm.component'">
+  <nel-demo-message-box-confirm demo></nel-demo-message-box-confirm>
+</app-demo>
+
+<h3>提交内容</h3>
+<p>当用户进行操作时会被触发，中断用户操作，提示用户进行输入的对话框。</p>
+
+<app-demo [codeUrl]="'components-message-box-demo-blank.component'">
+  <nel-demo-message-box-blank demo></nel-demo-message-box-blank>
+</app-demo>
+
+<h3>区分取消与关闭</h3>
+<p>有些场景下，点击取消按钮与点击关闭按钮有着不同的含义。</p>
+
+<app-demo [codeUrl]="'components-message-box-demo-button.component'">
+  <nel-demo-message-box-button demo></nel-demo-message-box-button>
+</app-demo>
+
+<h3>居中布局</h3>
+<p>内容支持居中布局</p>
+
+<app-demo [codeUrl]="'components-message-box-demo-center.component'">
+  <nel-demo-message-box-center demo></nel-demo-message-box-center>
+</app-demo>
+
+<app-doc [docUrl]="'components-message-box'"></app-doc>
