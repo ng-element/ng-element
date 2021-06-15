@@ -42,7 +42,7 @@ export class NelRadioButtonComponent implements ControlValueAccessor {
   change = (value: any) => { };
 
   constructor(
-    @Optional() private radioS: NelRadioService,
+    @Optional() private radio: NelRadioService,
     private cdr: ChangeDetectorRef
   ) { }
 
@@ -54,8 +54,8 @@ export class NelRadioButtonComponent implements ControlValueAccessor {
       this.isChecked = this.data === this.nelValue;
       this.inputEle.nativeElement.checked = 'checked';
       this.change(this.nelValue);
-      if (this.radioS) {
-        this.radioS.select(this.nelValue);
+      if (this.radio) {
+        this.radio.select(this.nelValue);
       }
     }
   }

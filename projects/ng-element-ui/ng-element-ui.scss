@@ -50,6 +50,7 @@
 @import 'element-theme-chalk/src/message.scss';
 @import 'element-theme-chalk/src/message-box.scss';
 @import 'element-theme-chalk/src/notification.scss';
+@import 'element-theme-chalk/src/loading.scss';
 @import 'element-theme-chalk/src/button.scss';
 
 nel-alert,
@@ -57,7 +58,9 @@ nel-card,
 nel-timeline-item,
 nel-affix,
 nel-descriptions,
-nel-skeleton {
+nel-skeleton,
+nel-loading,
+nel-loading-fullscreen {
   display: block;
 }
 
@@ -91,4 +94,8 @@ nel-collapse-item:last-child {
 .el-carousel__item {
   flex: 1;
   position: relative;
+}
+
+.el-loading-mask {
+  z-index: inherit;
 }

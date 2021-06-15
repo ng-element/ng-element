@@ -154,6 +154,10 @@ const routes: Routes = [
   {
     path: 'message-box',
     loadChildren: () => import('./message-box/message-box.module').then(m => m.MessageBoxModule)
+  },
+  {
+    path: 'loading',
+    loadChildren: () => import('./loading/loading.module').then(m => m.LoadingModule)
   }
 ];
 

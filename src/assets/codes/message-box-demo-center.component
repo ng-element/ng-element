@@ -11,12 +11,12 @@ import { NelMessageService } from 'ng-element-ui/message';
 
 export class NelDemoMessageBoxCenterComponent {
   constructor(
-    private messageBoxS: NelMessageBoxService,
+    private messageBox: NelMessageBoxService,
     private message: NelMessageService
   ) { }
 
   open(): void {
-    this.messageBoxS.confirm('提示', '此操作将永久删除该文件, 是否继续?', {
+    this.messageBox.confirm('提示', '此操作将永久删除该文件, 是否继续?', {
       type: 'warning',
       center: true,
       cancel: () => {

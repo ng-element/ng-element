@@ -21,12 +21,12 @@ export class NelDemoMessageBoxBlankComponent {
   num = 0;
 
   constructor(
-    private messageBoxS: NelMessageBoxService,
+    private messageBox: NelMessageBoxService,
     private message: NelMessageService
   ) { }
 
   open(): void {
-    this.messageBoxS.blank('提示', this.contentTpl, {
+    this.messageBox.blank('提示', this.contentTpl, {
       cancel: () => {
         this.message.info('action: cancel');
       },

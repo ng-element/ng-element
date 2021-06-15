@@ -26,9 +26,9 @@ export class NelRadioGroupComponent implements ControlValueAccessor {
   change = (value: any) => { };
 
   constructor(
-    private radioS: NelRadioService
+    private radio: NelRadioService
   ) {
-    this.radioS.selected$.subscribe(val => {
+    this.radio.selected$.subscribe(val => {
       this.data = val;
       this.radioList.forEach(item => {
         if (item.nelValue !== this.data) {

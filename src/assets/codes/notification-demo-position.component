@@ -13,29 +13,29 @@ import { NelNotificationService } from 'ng-element-ui/notification';
 
 export class NelDemoNotificationPositionComponent {
   constructor(
-    private notificationS: NelNotificationService
+    private notification: NelNotificationService
   ) { }
 
   open1(): void {
-    this.notificationS.blank('自定义位置', '右上角弹出的消息', {
+    this.notification.blank('自定义位置', '右上角弹出的消息', {
       position: 'top-right'
     });
   }
 
   open2(): void {
-    this.notificationS.blank('自定义位置', '右下角弹出的消息', {
+    this.notification.blank('自定义位置', '右下角弹出的消息', {
       position: 'bottom-right'
     });
   }
 
   open3(): void {
-    this.notificationS.blank('自定义位置', '左下角弹出的消息', {
+    this.notification.blank('自定义位置', '左下角弹出的消息', {
       position: 'bottom-left'
     });
   }
 
   open4(): void {
-    this.notificationS.blank('自定义位置', '左上角弹出的消息', {
+    this.notification.blank('自定义位置', '左上角弹出的消息', {
       position: 'top-left'
     });
   }

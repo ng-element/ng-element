@@ -10,11 +10,11 @@ import { NelMessageService } from 'ng-element-ui/message';
 
 export class NelDemoMessageCenterComponent {
   constructor(
-    private messageS: NelMessageService
+    private message: NelMessageService
   ) { }
 
   openCenter(): void {
-    const messageRef = this.messageS.info('居中的文字', {
+    const messageRef = this.message.info('居中的文字', {
       center: true,
       duration: 0
     });

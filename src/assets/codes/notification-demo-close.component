@@ -10,11 +10,11 @@ import { NelNotificationService } from 'ng-element-ui/notification';
 
 export class NelDemoNotificationCloseComponent {
   constructor(
-    private notificationS: NelNotificationService
+    private notification: NelNotificationService
   ) { }
 
   open(): void {
-    this.notificationS.success('偏移', '这是一条没有关闭按钮的消息', {
+    this.notification.success('偏移', '这是一条没有关闭按钮的消息', {
       showClose: false
     });
   }

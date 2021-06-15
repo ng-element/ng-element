@@ -16,15 +16,15 @@ export class NelDemoNotificationBasicComponent {
   @ViewChild('contentTpl', { static: false }) contentTpl!: TemplateRef<void>;
 
   constructor(
-    private notificationS: NelNotificationService
+    private notification: NelNotificationService
   ) { }
 
   open1(): void {
-    this.notificationS.blank('标题名称', this.contentTpl);
+    this.notification.blank('标题名称', this.contentTpl);
   }
 
   open2(): void {
-    this.notificationS.blank('标题名称', '这是一条不会自动关闭的消息', {
+    this.notification.blank('标题名称', '这是一条不会自动关闭的消息', {
       duration: 0
     });
   }

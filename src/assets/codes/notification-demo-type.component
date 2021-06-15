@@ -13,22 +13,22 @@ import { NelNotificationService } from 'ng-element-ui/notification';
 
 export class NelDemoNotificationTypeComponent {
   constructor(
-    private notificationS: NelNotificationService
+    private notification: NelNotificationService
   ) { }
 
   open1(): void {
-    this.notificationS.success('成功', '这是一条成功的提示消息');
+    this.notification.success('成功', '这是一条成功的提示消息');
   }
 
   open2(): void {
-    this.notificationS.warning('警告', '这是一条警告的提示消息');
+    this.notification.warning('警告', '这是一条警告的提示消息');
   }
 
   open3(): void {
-    this.notificationS.info('消息', '这是一条消息的提示消息');
+    this.notification.info('消息', '这是一条消息的提示消息');
   }
 
   open4(): void {
-    this.notificationS.error('错误', '这是一条错误的提示消息');
+    this.notification.error('错误', '这是一条错误的提示消息');
   }
 }

@@ -17,14 +17,14 @@ export class NelDemoMessageBasicComponent {
   @ViewChild('tpl', { static: false }) tpl!: TemplateRef<void>;
 
   constructor(
-    private messageS: NelMessageService
+    private message: NelMessageService
   ) { }
 
   open(): void {
-    this.messageS.info('只是一条消息提示');
+    this.message.info('只是一条消息提示');
   }
 
   openVn(): void {
-    this.messageS.info(this.tpl);
+    this.message.info(this.tpl);
   }
 }

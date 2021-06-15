@@ -11,12 +11,12 @@ import { NelMessageService } from 'ng-element-ui/message';
 
 export class NelDemoMessageBoxBasicComponent {
   constructor(
-    private messageBoxS: NelMessageBoxService,
+    private messageBox: NelMessageBoxService,
     private message: NelMessageService
   ) { }
 
   open(): void {
-    this.messageBoxS.alert('标题名称', '这是一段内容', {
+    this.messageBox.alert('标题名称', '这是一段内容', {
       cancel: () => {
         this.message.info('action: cancel');
       },

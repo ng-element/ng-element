@@ -11,14 +11,14 @@ export class CodeComponent {
   @Input() code?: string;
 
   constructor(
-    private messageS: NelMessageService
+    private message: NelMessageService
   ) { }
 
   copy(event: boolean): void {
     if (event) {
-      this.messageS.success('复制成功');
+      this.message.success('复制成功');
     } else {
-      this.messageS.error('复制失败');
+      this.message.error('复制失败');
     }
   }
 }

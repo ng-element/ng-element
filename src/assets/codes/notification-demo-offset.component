@@ -10,11 +10,11 @@ import { NelNotificationService } from 'ng-element-ui/notification';
 
 export class NelDemoNotificationOffsetComponent {
   constructor(
-    private notificationS: NelNotificationService
+    private notification: NelNotificationService
   ) { }
 
   open(): void {
-    this.notificationS.blank('偏移', '这是一条带有偏移的提示消息', {
+    this.notification.blank('偏移', '这是一条带有偏移的提示消息', {
       offset: 100
     });
   }

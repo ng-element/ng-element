@@ -6,3 +6,4 @@ export * from './modal';
 export * from './message';
 export * from './notification';
 export * from './message-box';
+export * from './loading';

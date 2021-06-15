@@ -11,20 +11,20 @@ import { NelMessageService } from 'ng-element-ui/message';
 
 export class NelDemoMessageBoxConfirmComponent {
   constructor(
-    private messageBoxS: NelMessageBoxService,
-    private messageS: NelMessageService
+    private messageBox: NelMessageBoxService,
+    private message: NelMessageService
   ) { }
 
   open(): void {
-    this.messageBoxS.confirm('提示', '此操作将永久删除该文件, 是否继续?', {
+    this.messageBox.confirm('提示', '此操作将永久删除该文件, 是否继续?', {
       cancelButtonText: '取消',
       confirmButtonText: '确定',
       type: 'warning',
       cancel: () => {
-        this.messageS.info('已取消删除');
+        this.message.info('已取消删除');
       },
       confirm: () => {
-        this.messageS.success('删除成功!');
+        this.message.success('删除成功!');
       }
     });
   }

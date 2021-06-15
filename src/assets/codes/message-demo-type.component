@@ -13,22 +13,22 @@ import { NelMessageService } from 'ng-element-ui/message';
 
 export class NelDemoMessageTypeComponent {
   constructor(
-    private messageS: NelMessageService
+    private message: NelMessageService
   ) { }
 
   open1(): void {
-    this.messageS.success('恭喜你，这是一条成功消息');
+    this.message.success('恭喜你，这是一条成功消息');
   }
 
   open2(): void {
-    this.messageS.warning('恭喜你，这是一条成功消息');
+    this.message.warning('恭喜你，这是一条成功消息');
   }
 
   open3(): void {
-    this.messageS.info('恭喜你，这是一条成功消息');
+    this.message.info('恭喜你，这是一条成功消息');
   }
 
   open4(): void {
-    this.messageS.error('恭喜你，这是一条成功消息');
+    this.message.error('恭喜你，这是一条成功消息');
   }
 }

@@ -35,7 +35,7 @@ export class NelImageComponent implements AfterViewInit, OnDestroy {
   constructor(
     private elementRef: ElementRef,
     private cdr: ChangeDetectorRef,
-    private imageS: NelImageService
+    private image: NelImageService
   ) { }
 
   ngOnDestroy(): void {
@@ -120,7 +120,7 @@ export class NelImageComponent implements AfterViewInit, OnDestroy {
 
   preview(): void {
     if (this.nelPreviewSrcList && this.nelPreviewSrcList.length > 0) {
-      this.imageS.preview({
+      this.image.preview({
         nelUrlList: this.nelPreviewSrcList,
         nelInitialIndex: 0
       });
