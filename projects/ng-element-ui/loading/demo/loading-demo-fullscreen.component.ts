@@ -4,7 +4,7 @@ import { NelLoadingService } from 'ng-element-ui/loading';
 @Component({
   selector: 'nel-demo-loading-fullscreen',
   template: `
-    <nel-loading [nelLoading]="fullscreenLoading" [nelFullscreen]="true">
+    <nel-loading [nelLoading]="fullscreenLoading" nelFullscreen>
       <button nel-button
         [nelType]="'primary'"
         (click)="openFullScreen1()"

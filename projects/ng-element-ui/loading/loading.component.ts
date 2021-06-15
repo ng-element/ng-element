@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { BooleanInput } from '@angular/cdk/coercion';
 import { loadingMotion } from 'ng-element-ui/core/animation';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 
 @Component({
   selector: 'nel-loading',
@@ -11,9 +13,11 @@ import { loadingMotion } from 'ng-element-ui/core/animation';
 })
 
 export class NelLoadingComponent {
+  static ngAcceptInputType_nelFullscreen: BooleanInput;
+
   @Input() nelLoading = true;
   @Input() nelText?: string;
   @Input() nelSpinner?: string;
   @Input() nelBackground?: string;
-  @Input() nelFullscreen = false;
+  @Input() @InputBoolean() nelFullscreen = false;
 }

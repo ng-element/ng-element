@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { BooleanInput } from '@angular/cdk/coercion';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 
 @Component({
   selector: 'a[nel-link]',
@@ -22,8 +24,10 @@ import { Component, Input } from '@angular/core';
 })
 
 export class NelLinkComponent {
+  static ngAcceptInputType_nelDisabled: BooleanInput;
+
   @Input() nelType = '';
   @Input() nelUnderline = true;
-  @Input() nelDisabled = false;
+  @Input() @InputBoolean() nelDisabled = false;
   @Input() nelIcon = '';
 }

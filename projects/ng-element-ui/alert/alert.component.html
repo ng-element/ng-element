@@ -5,7 +5,7 @@
     <span class="el-alert__title {{nelDescription ? 'is-bold' : ''}}">
       {{nelTitle}}
     </span>
-    <p class="el-alert__description">{{nelDescription}}</p>
+    <p *ngIf="nelDescription" class="el-alert__description">{{nelDescription}}</p>
     <ng-container *ngIf="nelClosable">
       <i *ngIf="!nelCloseText; else closeTextTpl" nel-icon [nelType]="'close'" class="el-alert__closebtn"
         (click)="close()"></i>

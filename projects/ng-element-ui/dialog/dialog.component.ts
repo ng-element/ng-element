@@ -1,7 +1,9 @@
+import { Component, EventEmitter, Input, Output, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
-import { Component, EventEmitter, Input, Output, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { BooleanInput } from '@angular/cdk/coercion';
 import { modalMotion } from 'ng-element-ui/core/animation';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -11,6 +13,8 @@ import { Observable } from 'rxjs';
 })
 
 export class NelDialogComponent {
+  static ngAcceptInputType_nelCenter: BooleanInput;
+
   @Input() set nelVisible(value: boolean) {
     if (value) {
       if (this.dialogTpl) {
@@ -26,7 +30,7 @@ export class NelDialogComponent {
   @Output() nelVisibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() nelOnClose: EventEmitter<void> = new EventEmitter<void>();
   @Input() nelBeforeClose?: () => boolean | Observable<boolean>;
-  @Input() nelCenter = false;
+  @Input() @InputBoolean() nelCenter = false;
   @ViewChild('tpl', { static: false }) dialogTpl?: TemplateRef<any>;
   overlayRef?: OverlayRef;
 

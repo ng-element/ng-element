@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
     <nel-dialog
       [nelTitle]="'提示'"
       [(nelVisible)]="dialogVisible"
-      [nelCenter]="true"
+      nelCenter
       width="30%"
       :before-close="handleClose"
       [nelFooter]="footer">

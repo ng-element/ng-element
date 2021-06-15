@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, forwardRef, Input, AfterContentInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { BooleanInput } from '@angular/cdk/coercion';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 import { NelCollapseItemComponent } from './collapse-item.component';
 
 @Component({
@@ -14,7 +16,9 @@ import { NelCollapseItemComponent } from './collapse-item.component';
 })
 
 export class NelCollapseComponent implements ControlValueAccessor, AfterContentInit {
-  @Input() nelAccordion = false;
+  static ngAcceptInputType_nelAccordion: BooleanInput;
+
+  @Input() @InputBoolean() nelAccordion = false;
   itemList: Map<string | number, NelCollapseItemComponent> = new Map();
   data!: string | Array<string> | null;
   change = (value: any) => { };

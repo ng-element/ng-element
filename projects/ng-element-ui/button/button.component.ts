@@ -1,13 +1,13 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
+import { BooleanInput } from '@angular/cdk/coercion';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 
 @Component({
   selector: 'button[nel-button]',
   template: `
     <i *ngIf="nelIcon" nel-icon [nelType]="nelIcon"></i>
     <i *ngIf="nelLoading" nel-icon [nelType]="'loading'"></i>
-    <span>
-      <ng-content></ng-content>
-    </span>
+    <ng-content></ng-content>
   `,
   host: {
     '[class.el-button]': `true`,
@@ -28,20 +28,43 @@ import { Component, Input } from '@angular/core';
   }
 })
 
-export class NelButtonComponent {
+export class NelButtonComponent implements AfterViewInit {
+  static ngAcceptInputType_nelPlain: BooleanInput;
+  static ngAcceptInputType_nelRound: BooleanInput;
+  static ngAcceptInputType_nelCircle: BooleanInput;
+  static ngAcceptInputType_nelLoading: BooleanInput;
+
   @Input() nelType = '';
-  @Input() nelPlain = false;
-  @Input() nelRound = false;
+  @Input() @InputBoolean() nelPlain = false;
+  @Input() @InputBoolean() nelRound = false;
   @Input() nelIcon = '';
-  @Input() nelCircle = false;
+  @Input() @InputBoolean() nelCircle = false;
   nelDisabled = false;
   @Input() set disabled(value: any) {
     if (value === '' || value) {
       this.nelDisabled = true;
     }
   }
-  @Input() nelLoading = false;
+  @Input() @InputBoolean() nelLoading = false;
   @Input() nelSize = '';
 
-  constructor() { }
+  constructor(
+    private elementRef: ElementRef,
+    private renderer: Renderer2
+  ) { }
+
+  ngAfterViewInit(): void {
+    this.insertSpan(this.elementRef.nativeElement.childNodes, this.renderer);
+  }
+
+  insertSpan(nodes: NodeList, renderer: Renderer2): void {
+    nodes.forEach(node => {
+      if (node.nodeName === '#text') {
+        const span = renderer.createElement('span');
+        const parent = renderer.parentNode(node);
+        renderer.insertBefore(parent, span, node);
+        renderer.appendChild(span, node);
+      }
+    });
+  }
 }

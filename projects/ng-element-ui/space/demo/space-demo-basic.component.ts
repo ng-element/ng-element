@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'nel-demo-space-basic',
   template: `
-    <nel-space [nelWrap]="true">
+    <nel-space nelWrap>
       <ng-container *ngFor="let i of list">
         <nel-card *nelSpaceItem class="box-card" style="width: 250px" [nelHeader]="header">
           <ng-template #header>

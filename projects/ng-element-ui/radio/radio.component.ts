@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, forwardRef, Input, Optional } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { BooleanInput } from '@angular/cdk/coercion';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 import { NelRadioService } from './radio.service';
 
 export type SizeType = 'medium' | 'small' | 'mini';
@@ -26,10 +28,13 @@ export type SizeType = 'medium' | 'small' | 'mini';
 })
 
 export class NelRadioComponent implements ControlValueAccessor {
+  static ngAcceptInputType_nelBorder: BooleanInput;
+  static ngAcceptInputType_nelDisabled: BooleanInput;
+
   isChecked = false;
   @Input() nelValue: any;
-  @Input() nelDisabled = false;
-  @Input() nelBorder = false;
+  @Input() @InputBoolean() nelDisabled = false;
+  @Input() @InputBoolean() nelBorder = false;
   @Input() nelSize: SizeType | undefined;
   data: any;
   change = (value: any) => { };

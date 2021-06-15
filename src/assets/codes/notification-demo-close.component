@@ -4,7 +4,7 @@ import { NelNotificationService } from 'ng-element-ui/notification';
 @Component({
   selector: 'nel-demo-notification-close',
   template: `
-    <button nel-button [nelPlain]="true" (click)="open()">隐藏关闭按钮</button>
+    <button nel-button nelPlain (click)="open()">隐藏关闭按钮</button>
   `
 })
 

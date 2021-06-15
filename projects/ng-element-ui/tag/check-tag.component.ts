@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { BooleanInput } from '@angular/cdk/coercion';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 
 @Component({
   selector: 'nel-check-tag',
@@ -10,5 +12,7 @@ import { Component, Input } from '@angular/core';
 })
 
 export class NelCheckTagComponent {
-  @Input() nelChecked = false;
+  static ngAcceptInputType_nelChecked: BooleanInput;
+
+  @Input() @InputBoolean() nelChecked = false;
 }

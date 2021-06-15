@@ -1,8 +1,10 @@
-import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import { ChangeDetectionStrategy, Component, forwardRef, QueryList, ContentChildren, Input } from '@angular/core';
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { BooleanInput } from '@angular/cdk/coercion';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 import { NelRadioComponent, SizeType } from './radio.component';
-import { NelRadioService } from './radio.service';
 import { NelRadioButtonComponent } from './radio-button.component';
+import { NelRadioService } from './radio.service';
 
 @Component({
   selector: 'nel-radio-group',
@@ -18,7 +20,9 @@ import { NelRadioButtonComponent } from './radio-button.component';
 })
 
 export class NelRadioGroupComponent implements ControlValueAccessor {
-  @Input() nelDisabled = false;
+  static ngAcceptInputType_nelDisabled: BooleanInput;
+
+  @Input() @InputBoolean() nelDisabled = false;
   @Input() nelSize: SizeType | undefined;
   @ContentChildren(NelRadioComponent, { descendants: false }) radioList!: QueryList<NelRadioComponent>;
   @ContentChildren(NelRadioButtonComponent, { descendants: false }) radioButtonList!: QueryList<NelRadioButtonComponent>;

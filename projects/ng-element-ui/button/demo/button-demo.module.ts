@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NelButtonModule } from 'ng-element-ui/button';
+import { NelLayoutModule } from 'ng-element-ui/layout';
 import { NelDemoButtonBasicComponent } from './button-demo-basic.component';
 import { NelDemoButtonDisabledComponent } from './button-demo-disabled.component';
 import { NelDemoButtonTextComponent } from './button-demo-text.component';
@@ -28,7 +29,8 @@ import { NelDemoButtonSizeComponent } from './button-demo-size.component';
     NelDemoButtonSizeComponent
   ],
   imports: [
-    NelButtonModule
+    NelButtonModule,
+    NelLayoutModule
   ]
 })
 

@@ -4,8 +4,8 @@ import { NelNotificationService } from 'ng-element-ui/notification';
 @Component({
   selector: 'nel-demo-notification-basic',
   template: `
-    <button nel-button [nelPlain]="true" (click)="open1()">可自动关闭</button>
-    <button nel-button [nelPlain]="true" (click)="open2()">不会自动关闭</button>
+    <button nel-button nelPlain (click)="open1()">可自动关闭</button>
+    <button nel-button nelPlain (click)="open2()">不会自动关闭</button>
     <ng-template #contentTpl>
       <i style="color: teal;">这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案</i>
     <ng-template>

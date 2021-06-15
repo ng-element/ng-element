@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <label nel-radio [nelValue]="'mini'">超小</label>
     </nel-radio-group>
 
-    <nel-descriptions class="margin-top" [nelTitle]="'带边框列表'" [nelColumn]="3" [nelSize]="size" [nelBorder]="true" [nelExtra]="extra">
+    <nel-descriptions class="margin-top" [nelTitle]="'带边框列表'" [nelColumn]="3" [nelSize]="size" nelBorder [nelExtra]="extra">
       <ng-template #extra>
         <button nel-button [nelType]="'primary'" [nelSize]="'small'">操作</button>
       </ng-template>

@@ -1,5 +1,6 @@
-import { formatCurrency } from '@angular/common';
 import { Component, ContentChildren, Input, QueryList, AfterContentInit, TemplateRef } from '@angular/core';
+import { BooleanInput } from '@angular/cdk/coercion';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 import { NelDescriptionsItemComponent } from './descriptions-item.component';
 
 export type ItemType = {
@@ -18,8 +19,10 @@ export type ItemType = {
 })
 
 export class NelDescriptionsComponent implements AfterContentInit {
+  static ngAcceptInputType_nelBorder: BooleanInput;
+
   @Input() nelTitle?: string;
-  @Input() nelBorder = false;
+  @Input() @InputBoolean() nelBorder = false;
   @Input() nelExtra?: string | TemplateRef<void>;
   @Input() nelSize?: 'medium' | 'small' | 'mini' | string;
   @Input() nelColumn = 3;

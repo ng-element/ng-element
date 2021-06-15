@@ -4,8 +4,8 @@ import { NelMessageService } from 'ng-element-ui/message';
 @Component({
   selector: 'nel-demo-message-basic',
   template: `
-    <button nel-button [nelPlain]="true" (click)="open()">打开消息提示</button>
-    <button nel-button [nelPlain]="true" (click)="openVn()">TemplateRef消息</button>
+    <button nel-button nelPlain (click)="open()">打开消息提示</button>
+    <button nel-button nelPlain (click)="openVn()">TemplateRef消息</button>
     <ng-template #tpl>
       <p>{{content}}</p>
     </ng-template>

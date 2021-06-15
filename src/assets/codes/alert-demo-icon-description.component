@@ -4,15 +4,15 @@ import { Component } from '@angular/core';
   selector: 'nel-demo-alert-icon-description',
   template: `
     <nel-alert [nelTitle]="'成功提示的文案'" [nelType]="'success'" [nelDescription]="'文字说明文字说明文字说明文字说明文字说明文字说明'"
-      [nelShowIcon]="true">
+      nelShowIcon>
     </nel-alert>
-    <nel-alert [nelTitle]="'消息提示的文案'" [nelType]="'info'" [nelDescription]="'文字说明文字说明文字说明文字说明文字说明文字说明'" [nelShowIcon]="true">
+    <nel-alert [nelTitle]="'消息提示的文案'" [nelType]="'info'" [nelDescription]="'文字说明文字说明文字说明文字说明文字说明文字说明'" nelShowIcon>
     </nel-alert>
     <nel-alert [nelTitle]="'警告提示的文案'" [nelType]="'warning'" [nelDescription]="'文字说明文字说明文字说明文字说明文字说明文字说明'"
-      [nelShowIcon]="true">
+      nelShowIcon>
     </nel-alert>
     <nel-alert [nelTitle]="'错误提示的文案'" [nelType]="'error'" [nelDescription]="'文字说明文字说明文字说明文字说明文字说明文字说明'"
-      [nelShowIcon]="true">
+      nelShowIcon>
     </nel-alert>
   `,
   styles: [

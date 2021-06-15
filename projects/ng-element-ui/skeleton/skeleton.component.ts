@@ -1,4 +1,6 @@
 import { Component, Input, TemplateRef, OnDestroy } from '@angular/core';
+import { BooleanInput } from '@angular/cdk/coercion';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 import { Subject, Subscription } from 'rxjs';
 
 @Component({
@@ -11,6 +13,8 @@ import { Subject, Subscription } from 'rxjs';
 })
 
 export class NelSkeletonComponent implements OnDestroy {
+  static ngAcceptInputType_nelAnimated: BooleanInput;
+
   rowList = [0, 1, 2, 3];
   @Input() set nelRows(val: number) {
     const rowList = [];
@@ -19,7 +23,7 @@ export class NelSkeletonComponent implements OnDestroy {
     }
     this.rowList = rowList;
   }
-  @Input() nelAnimated = false;
+  @Input() @InputBoolean() nelAnimated = false;
   @Input() nelTemplate?: string | TemplateRef<void>;
   @Input() set nelLoading(val: boolean) {
     if (val) {

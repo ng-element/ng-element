@@ -4,7 +4,7 @@ import { NelNotificationService } from 'ng-element-ui/notification';
 @Component({
   selector: 'nel-demo-notification-offset',
   template: `
-    <button nel-button [nelPlain]="true" (click)="open()">偏移的消息</button>
+    <button nel-button nelPlain (click)="open()">偏移的消息</button>
   `
 })
 

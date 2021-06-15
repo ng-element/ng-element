@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'nel-demo-space-wrap',
   template: `
-    <nel-space [nelWrap]="true">
+    <nel-space nelWrap>
       <ng-container *ngFor="let i of list">
         <div *nelSpaceItem>
           <button nel-button [nelType]="'text'">

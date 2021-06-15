@@ -12,7 +12,14 @@ import { Component } from '@angular/core';
     <button nel-button [nelType]="'primary'" [nelIcon]="'share'"></button>
     <button nel-button [nelType]="'primary'" [nelIcon]="'delete'"></button>
   </nel-button-group>
-  `
+  `,
+  styles: [
+    `
+      .el-button-group+.el-button-group {
+        margin-left: 10px;
+      }
+    `
+  ]
 })
 
 export class NelDemoButtonGroupComponent { }

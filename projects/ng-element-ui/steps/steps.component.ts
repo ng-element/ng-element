@@ -1,4 +1,6 @@
 import { AfterContentInit, Component, ContentChildren, Input, QueryList } from '@angular/core';
+import { BooleanInput } from '@angular/cdk/coercion';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 import { NelStepComponent } from './step.component';
 
 export type StatusType = 'wait' | 'process' | 'finish' | 'error' | 'success';
@@ -15,13 +17,16 @@ export type StatusType = 'wait' | 'process' | 'finish' | 'error' | 'success';
 })
 
 export class NelStepsComponent implements AfterContentInit {
+  static ngAcceptInputType_nelAlignCenter: BooleanInput;
+  static ngAcceptInputType_nelSimple: BooleanInput;
+
   initStatus = false;
   active = 0;
   @Input() nelSpace?: number | string;
   @Input() nelFinishStatus: StatusType = 'finish';
-  @Input() nelAlignCenter = false;
+  @Input() @InputBoolean() nelAlignCenter = false;
   @Input() nelDirection: 'vertical' | 'horizontal' = 'horizontal';
-  @Input() nelSimple = false;
+  @Input() @InputBoolean() nelSimple = false;
   @Input() set nelActive(val: number) {
     this.active = val;
     if (this.initStatus) {

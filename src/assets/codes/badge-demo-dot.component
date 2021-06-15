@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'nel-demo-badge-dot',
   template: `
-    <nel-badge [nelIsDot]="true" class="item">数据查询</nel-badge>
-    <nel-badge [nelIsDot]="true" class="item">
+    <nel-badge nelIsDot class="item">数据查询</nel-badge>
+    <nel-badge nelIsDot class="item">
       <button nel-button class="share-button" [nelIcon]="'share'" [nelType]="'primary'"></button>
     </nel-badge>
   `,

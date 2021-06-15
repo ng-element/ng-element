@@ -1,4 +1,6 @@
 import { Component, TemplateRef, QueryList, ChangeDetectionStrategy, ContentChildren, Input } from '@angular/core';
+import { BooleanInput } from '@angular/cdk/coercion';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 import { NelSpaceItemDirective } from './space.directive';
 
 @Component({
@@ -16,6 +18,8 @@ import { NelSpaceItemDirective } from './space.directive';
 })
 
 export class NelSpaceComponent {
+  static ngAcceptInputType_nelWrap: BooleanInput;
+
   size = '8px';
   @ContentChildren(NelSpaceItemDirective, { read: TemplateRef }) items!: QueryList<TemplateRef<any>>;
   @Input() nelDirection: 'vertical' | 'horizontal' = 'horizontal';
@@ -47,6 +51,6 @@ export class NelSpaceComponent {
     this.size = size + 'px';
   }
   @Input() nelAlignment = 'center';
-  @Input() nelWrap = false;
+  @Input() @InputBoolean() nelWrap = false;
   @Input() nelSpacer?: string | TemplateRef<void>;
 }

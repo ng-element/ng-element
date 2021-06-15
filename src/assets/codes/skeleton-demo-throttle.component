@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
       <div (click)="loading = !loading">
         <label style="margin-right: 16px;">切换 Loading {{loading}}</label>
       </div>
-      <nel-skeleton style="width: 240px" [nelLoading]="loading" [nelAnimated]="true" [nelTemplate]="template" [nelThrottle]="500">
+      <nel-skeleton style="width: 240px" [nelLoading]="loading" nelAnimated [nelTemplate]="template" [nelThrottle]="500">
         <ng-template #template>
           <nel-skeleton-item
           [nelVariant]="'image'"

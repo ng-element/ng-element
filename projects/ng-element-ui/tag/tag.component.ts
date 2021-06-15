@@ -1,4 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { BooleanInput } from '@angular/cdk/coercion';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 
 @Component({
   selector: 'nel-tag',
@@ -19,8 +21,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class NelTagComponent {
+  static ngAcceptInputType_nelClosable: BooleanInput;
+
   @Input() nelType?: 'success' | 'info' | 'warning' | 'danger' | string;
-  @Input() nelClosable = false;
+  @Input() @InputBoolean() nelClosable = false;
   @Input() nelSize?: 'medium' | 'small' | 'mini';
   @Input() nelEffect: 'dark' | 'light' | 'plain' = 'light';
   @Output() nelOnClose: EventEmitter<void> = new EventEmitter<void>();

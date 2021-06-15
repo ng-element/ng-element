@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
       {{size}}
       <button (click)="increase()" nel-button>递增</button>
     </div>
-    <nel-space [nelWrap]="true" [nelSize]="size">
+    <nel-space nelWrap [nelSize]="size">
       <ng-container *ngFor="let i of list">
         <nel-card *nelSpaceItem class="box-card" style="width: 250px" [nelHeader]="header">
           <ng-template #header>

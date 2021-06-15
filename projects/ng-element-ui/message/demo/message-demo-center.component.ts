@@ -4,7 +4,7 @@ import { NelMessageService } from 'ng-element-ui/message';
 @Component({
   selector: 'nel-demo-message-center',
   template: `
-    <button nel-button [nelPlain]="true" (click)="openCenter()">文字居中</button>
+    <button nel-button nelPlain (click)="openCenter()">文字居中</button>
   `
 })
 

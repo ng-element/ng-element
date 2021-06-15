@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
         </nel-radio-group>
       </div>
 
-      <nel-space *nelSpaceItem [nelWrap]="true" [nelSize]="size">
+      <nel-space *nelSpaceItem nelWrap [nelSize]="size">
         <ng-container *ngFor="let i of list">
           <nel-card *nelSpaceItem class="box-card" style="width: 250px" [nelHeader]="header">
             <ng-template #header>

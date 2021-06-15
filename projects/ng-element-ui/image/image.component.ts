@@ -2,10 +2,11 @@ import {
   Component, Input, TemplateRef, AfterViewInit, ElementRef, OnDestroy, ChangeDetectionStrategy,
   ChangeDetectorRef, Output, EventEmitter
 } from '@angular/core';
+import { BooleanInput } from '@angular/cdk/coercion';
+import { getScrollContainer, InputBoolean } from 'ng-element-ui/core/utils';
 import { fromEvent, Subscription } from 'rxjs';
-import { getScrollContainer } from 'ng-element-ui/core/utils';
-import { NelImageService } from './image.service';
 import { debounceTime } from 'rxjs/operators';
+import { NelImageService } from './image.service';
 
 @Component({
   selector: 'nel-image',
@@ -17,6 +18,8 @@ import { debounceTime } from 'rxjs/operators';
 })
 
 export class NelImageComponent implements AfterViewInit, OnDestroy {
+  static ngAcceptInputType_nelLazy: BooleanInput;
+
   loading = true;
   hasLoadError = false;
   src?: string;
@@ -25,7 +28,7 @@ export class NelImageComponent implements AfterViewInit, OnDestroy {
   @Input() nelAlt?: string;
   @Input() nelPlaceholder?: string | TemplateRef<void>;
   @Input() nelError?: string | TemplateRef<void>;
-  @Input() nelLazy = false;
+  @Input() @InputBoolean() nelLazy = false;
   @Input() nelPreviewSrcList?: string[];
   @Output() nelOnLoad: EventEmitter<Event> = new EventEmitter<Event>();
   @Output() nelOnError: EventEmitter<Error> = new EventEmitter<Error>();

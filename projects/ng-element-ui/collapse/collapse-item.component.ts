@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, Optional, TemplateRef, OnInit, ChangeDetectorRef } from '@angular/core';
+import { BooleanInput } from '@angular/cdk/coercion';
 import { collapseMotion } from 'ng-element-ui/core/animation';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 import { NelCollapseComponent } from './collapse.component';
 
 @Component({
@@ -10,8 +12,10 @@ import { NelCollapseComponent } from './collapse.component';
 })
 
 export class NelCollapseItemComponent implements OnInit {
+  static ngAcceptInputType_nelDisabled: BooleanInput;
+
   @Input() nelTitle!: string | TemplateRef<void>;
-  @Input() nelDisabled = false;
+  @Input() @InputBoolean() nelDisabled = false;
   @Input() nelName: string | number = Math.random().toString(16).substr(2, 8);
   expanded = false;
 

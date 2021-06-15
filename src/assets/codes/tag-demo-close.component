@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <nel-tag
       *ngFor="let tag of dynamicTags"
-      [nelClosable]="true"
+      nelClosable
       (nelOnClose)="handleClose(tag)">
       {{tag}}
     </nel-tag>
