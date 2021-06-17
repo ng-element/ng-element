@@ -1,0 +1,15 @@
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="origin" [cdkConnectedOverlayOpen]="isOpen"
+  [cdkConnectedOverlayPositions]="positionStrategy" (overlayOutsideClick)="onClickOutside($event)">
+  <div #dropdownEle class="el-dropdown__popper el-popper is-light is-pure" [@dropdownMotion]="state">
+    <nel-scrollbar [nelMaxHeight]="maxHeight">
+      <ul class="el-dropdown__list">
+        <ul class="el-dropdown-menu" [class.el-dropdown-menu--medium]="size == 'medium'"
+          [class.el-dropdown-menu--small]="size == 'small'" [class.el-dropdown-menu--mini]="size == 'mini'">
+          <ng-content></ng-content>
+        </ul>
+      </ul>
+    </nel-scrollbar>
+    <div class="el-popper__arrow" style="left: 50%; top: -10px; transform: translate(-50%, 5px);">
+    </div>
+  </div>
+</ng-template>

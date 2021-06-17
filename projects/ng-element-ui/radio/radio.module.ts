@@ -13,8 +13,6 @@ import { NelRadioGroupComponent } from './radio-group.component';
     NelRadioComponent,
     NelRadioGroupComponent,
     NelRadioButtonComponent
-  ],
-  providers: [
   ]
 })
 

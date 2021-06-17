@@ -1,0 +1,5 @@
+<li class="el-dropdown-menu__item" [class.is-disabled]="nelDisabled"
+  [class.el-dropdown-menu__item--divided]="nelDivided" (click)="onHostClick($event)">
+  <i *ngIf="nelIcon" nel-icon [nelType]="nelIcon"></i>
+  <ng-content></ng-content>
+</li>

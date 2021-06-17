@@ -1,0 +1,40 @@
+<h2>Dropdown 下拉菜单</h2>
+<p>将动作或菜单折叠到下拉菜单中。</p>
+<app-code code="import { NelDropdownModule } from 'ng-element-ui/dropdown';"></app-code>
+
+<h3>基础用法</h3>
+<p>移动到下拉菜单上，展开更多操作。</p>
+
+<app-demo [codeUrl]="'components-dropdown-demo-basic.component'">
+  <nel-demo-dropdown-basic demo></nel-demo-dropdown-basic>
+</app-demo>
+
+<h3>触发对象</h3>
+<p>可使用按钮触发下拉菜单。</p>
+
+<app-demo [codeUrl]="'components-dropdown-demo-button.component'">
+  <nel-demo-dropdown-button demo></nel-demo-dropdown-button>
+</app-demo>
+
+<h3>触发方式</h3>
+<p>可以配置 click 激活或者 hover 激活。</p>
+
+<app-demo [codeUrl]="'components-dropdown-demo-trigger.component'">
+  <nel-demo-dropdown-trigger demo></nel-demo-dropdown-trigger>
+</app-demo>
+
+<h3>菜单隐藏方式</h3>
+<p>可以hide-on-click属性来配置。</p>
+
+<app-demo [codeUrl]="'components-dropdown-demo-hide.component'">
+  <nel-demo-dropdown-hide demo></nel-demo-dropdown-hide>
+</app-demo>
+
+<h3>不同尺寸</h3>
+<p>Dropdown 组件提供除了默认值以外的三种尺寸，可以在不同场景下选择合适的尺寸。</p>
+
+<app-demo [codeUrl]="'components-dropdown-demo-size.component'">
+  <nel-demo-dropdown-size demo></nel-demo-dropdown-size>
+</app-demo>
+
+<app-doc [docUrl]="'components-dropdown'"></app-doc>

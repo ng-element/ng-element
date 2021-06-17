@@ -158,6 +158,10 @@ const routes: Routes = [
   {
     path: 'loading',
     loadChildren: () => import('./loading/loading.module').then(m => m.LoadingModule)
+  },
+  {
+    path: 'dropdown',
+    loadChildren: () => import('./dropdown/dropdown.module').then(m => m.DropdownModule)
   }
 ];
 

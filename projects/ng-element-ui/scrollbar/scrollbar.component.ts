@@ -8,9 +8,18 @@ import ResizeObserver from 'resize-observer-polyfill';
 })
 
 export class NelScrollbarComponent implements AfterViewInit, OnDestroy {
+  maxHeight?: string;
   @Input() nelHeight?: string;
   @Input() nelNoresize = false;
-  @Input() nelMaxHeight?: string;
+  @Input() set nelMaxHeight(val: string | number | undefined) {
+    if (val) {
+      if (typeof val === 'number') {
+        this.maxHeight = val + 'px';
+      } else {
+        this.maxHeight = val;
+      }
+    }
+  }
   @Output() nelOnScroll: EventEmitter<any> = new EventEmitter<any>();
   @ViewChild('scrollbarWrap', { static: false }) scrollbarWrap!: ElementRef;
   @ViewChild('scrollbarView', { static: false }) scrollbarView!: ElementRef;
@@ -117,8 +126,8 @@ export class NelScrollbarComponent implements AfterViewInit, OnDestroy {
     // 初始化纵向滚动
     this.vertical.wrapHeight = this.scrollbarWrap.nativeElement.offsetHeight;
     this.vertical.scrollHeight = this.scrollbarWrap.nativeElement.scrollHeight;
-    if (this.nelMaxHeight) {
-      const nelMaxHeight = this.nelMaxHeight.match(/([0-9]+)px/);
+    if (this.maxHeight) {
+      const nelMaxHeight = this.maxHeight.match(/([0-9]+)px/);
       let maxHeight = 0;
       if (nelMaxHeight && nelMaxHeight.length > 0) {
         maxHeight = Number(nelMaxHeight[1]);

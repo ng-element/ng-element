@@ -28,7 +28,6 @@ export class NelPopoverComponent {
       this.isOpen = false;
       this.visibleChange.emit(false);
     }
-
   }
 
   close(): void {

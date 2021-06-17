@@ -70,7 +70,7 @@ export const RouterList: any[] = [
       // { link: 'tabs', name: 'Tabs 标签页' },
       { link: 'breadcrumb', name: 'Breadcrumb 面包屑' },
       { link: 'page-header', name: 'PageHeader 页头' },
-      // { link: 'dropdown', name: 'Dropdown 下拉菜单' },
+      { link: 'dropdown', name: 'Dropdown 下拉菜单' },
       { link: 'steps', name: 'Steps 步骤条' },
     ]
   },
