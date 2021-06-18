@@ -162,6 +162,10 @@ const routes: Routes = [
   {
     path: 'dropdown',
     loadChildren: () => import('./dropdown/dropdown.module').then(m => m.DropdownModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsModule)
   }
 ];
 

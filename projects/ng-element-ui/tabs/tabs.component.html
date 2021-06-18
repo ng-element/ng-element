@@ -1,0 +1,42 @@
+<div class="el-tabs el-tabs--{{nelTabPosition}}" [class.el-tabs--card]="nelType == 'card'"
+  [class.el-tabs--border-card]="nelType == 'border-card'">
+  <ng-container *ngIf="nelTabPosition != 'bottom'">
+    <ng-container *ngTemplateOutlet="tabsTpl"></ng-container>
+  </ng-container>
+  <div class="el-tabs__content">
+    <ng-content></ng-content>
+  </div>
+  <ng-container *ngIf="nelTabPosition == 'bottom'">
+    <ng-container *ngTemplateOutlet="tabsTpl"></ng-container>
+  </ng-container>
+</div>
+<ng-template #tabsTpl>
+  <div class="el-tabs__header is-{{nelTabPosition}}">
+    <span *ngIf="nelType == 'card' && this.nelEditable" (click)="edit()" class="el-tabs__new-tab" tabindex="0">
+      <i class="el-icon-plus"></i>
+    </span>
+    <div class="el-tabs__nav-wrap is-{{nelTabPosition}}" [class.is-scrollable]="scrollable">
+      <!-- scrollable -->
+      <ng-container *ngIf="scrollable">
+        <span class="el-tabs__nav-prev"><i class="el-icon-arrow-left"></i></span>
+        <span class="el-tabs__nav-next is-disabled"><i class="el-icon-arrow-right"></i></span>
+      </ng-container>
+      <div #navScroll class="el-tabs__nav-scroll">
+        <div class="el-tabs__nav is-{{nelTabPosition}}" style="transform: translateX(0px);">
+          <div *ngIf="!nelType" class="el-tabs__active-bar is-{{nelTabPosition}}" [style.width]="activeBar.width"
+            [style.height]="activeBar.height" [style.transform]="activeBar.transform"></div>
+          <ng-container *ngFor="let tabPane of items; let index=index">
+            <div #tabItem (click)="selecteTab(index)" class="el-tabs__item is-{{nelTabPosition}}"
+              [class.is-active]="index == nelSelectedIndex" [class.is-closable]="nelType == 'card' && this.nelEditable">
+              <ng-container *ngIf="tabPane.nelLabel">
+                <ng-container *stringTemplate="tabPane.nelLabel"></ng-container>
+              </ng-container>
+              <span *ngIf="nelType == 'card' && this.nelEditable" (click)="remove($event, index)"
+                class="el-icon-close"></span>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

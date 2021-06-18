@@ -1,0 +1,6 @@
+<ng-template>
+  <ng-content></ng-content>
+</ng-template>
+<div class="el-tab-pane" [style.display]="active ? '' : 'none'">
+  <ng-container *ngTemplateOutlet="content"></ng-container>
+</div>

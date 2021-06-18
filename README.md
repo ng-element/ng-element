@@ -48,6 +48,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] message-box
 - [x] loading
 - [x] dropdown
+- [x] tabs
 
 ##  Development
 
