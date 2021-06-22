@@ -1,0 +1,50 @@
+<h2>Progress 进度条</h2>
+<p>用于展示操作进度，告知用户当前状态和预期。</p>
+<app-code code="import { NelProgressModule } from 'ng-element-ui/progress';"></app-code>
+
+<h3>线形进度条</h3>
+
+<app-demo [codeUrl]="'components-progress-demo-basic.component'">
+  <nel-demo-progress-basic demo></nel-demo-progress-basic>
+</app-demo>
+
+<h3>百分比内显</h3>
+<p>百分比不占用额外控件，适用于文件上传等场景。</p>
+
+<app-demo [codeUrl]="'components-progress-demo-text.component'">
+  <nel-demo-progress-text demo></nel-demo-progress-text>
+</app-demo>
+
+<h3>自定义颜色</h3>
+<p>可以通过 color 设置进度条的颜色，color 可以接受颜色字符串，函数和数组。</p>
+
+<app-demo [codeUrl]="'components-progress-demo-color.component'">
+  <nel-demo-progress-color demo></nel-demo-progress-color>
+</app-demo>
+
+<h3>环形进度条</h3>
+<p>Progress 组件可通过 type 属性来指定使用环形进度条，在环形进度条中，还可以通过 width 属性来设置其大小。</p>
+
+<app-demo [codeUrl]="'components-progress-demo-circle.component'">
+  <nel-demo-progress-circle demo></nel-demo-progress-circle>
+</app-demo>
+
+<h3>仪表盘形进度条</h3>
+
+<app-demo [codeUrl]="'components-progress-demo-dashboard.component'">
+  <nel-demo-progress-dashboard demo></nel-demo-progress-dashboard>
+</app-demo>
+
+<h3>自定义内容</h3>
+
+<app-demo [codeUrl]="'components-progress-demo-format.component'">
+  <nel-demo-progress-format demo></nel-demo-progress-format>
+</app-demo>
+
+<h3>动画进度条</h3>
+
+<app-demo [codeUrl]="'components-progress-demo-indeterminate.component'">
+  <nel-demo-progress-indeterminate demo></nel-demo-progress-indeterminate>
+</app-demo>
+
+<app-doc [docUrl]="'components-progress'"></app-doc>

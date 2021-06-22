@@ -41,7 +41,7 @@ export const RouterList: any[] = [
     menuList: [
       // { link: 'table', name: 'Table 表格' },
       { link: 'tag', name: 'Tag 标签' },
-      // { link: 'progress', name: 'Progress 进度条' },
+      { link: 'progress', name: 'Progress 进度条' },
       // { link: 'tree', name: 'Tree 树形控件' },
       // { link: 'pagination', name: 'Pagination 分页' },
       { link: 'badge', name: 'Badge 标记' },

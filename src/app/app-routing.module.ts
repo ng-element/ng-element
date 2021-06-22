@@ -170,6 +170,10 @@ const routes: Routes = [
   {
     path: 'switch',
     loadChildren: () => import('./switch/switch.module').then(m => m.SwitchModule)
+  },
+  {
+    path: 'progress',
+    loadChildren: () => import('./progress/progress.module').then(m => m.ProgressModule)
   }
 ];
 

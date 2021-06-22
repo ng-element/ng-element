@@ -1,40 +1,45 @@
-import { Directive, TemplateRef, Renderer2, ViewContainerRef, Input, OnDestroy } from '@angular/core';
+import { Directive, TemplateRef, ViewContainerRef, Input, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
+
+export class StringTemplateContext {
+  public $implicit: any;
+}
 
 @Directive({
   selector: '[stringTemplate]',
 })
-export class NelStringTemplateDirective implements OnDestroy {
-  @Input()
-  set stringTemplate(value: string | TemplateRef<any>) {
-    this.updateView(value);
-  }
+export class NelStringTemplateDirective implements OnChanges, OnDestroy {
+  private context = new StringTemplateContext();
+  @Input() stringTemplate: any | TemplateRef<any> = null;
+  @Input() stringTemplateContext: any | null = null;
 
   textNode?: Text;
 
-  constructor(private vcRef: ViewContainerRef, private renderer: Renderer2) { }
+  constructor(
+    private vcRef: ViewContainerRef,
+    private templateRef: TemplateRef<any>,
+  ) { }
 
-  private updateView(value: string | TemplateRef<any>): void {
+  private updateView(): void {
     this.clear();
 
-    if (!value) {
+    if (!this.stringTemplate) {
       return;
     }
 
-    if (value instanceof TemplateRef) {
-      this.vcRef.createEmbeddedView(value);
-    } else {
-      this.textNode = this.renderer.createText(value);
-      const elem = this.vcRef.element.nativeElement;
-
-      this.renderer.insertBefore(elem.parentNode, this.textNode, elem);
-    }
+    const isTemplateRef = this.stringTemplate instanceof TemplateRef;
+    const templateRef = (isTemplateRef ? this.stringTemplate : this.templateRef) as any;
+    this.vcRef.createEmbeddedView(
+      templateRef,
+      isTemplateRef ? this.stringTemplateContext : this.context
+    );
   }
 
   private clear(): void {
     this.vcRef.clear();
-    if (this.textNode) {
-      this.renderer.removeChild(this.textNode.parentNode, this.textNode);
-    }
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.updateView();
   }
 
   ngOnDestroy(): void {
