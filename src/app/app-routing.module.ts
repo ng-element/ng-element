@@ -166,6 +166,10 @@ const routes: Routes = [
   {
     path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsModule)
+  },
+  {
+    path: 'switch',
+    loadChildren: () => import('./switch/switch.module').then(m => m.SwitchModule)
   }
 ];
 

@@ -23,7 +23,7 @@ export const RouterList: any[] = [
       // { link: 'input-number', name: 'InputNumber 计数器' },
       // { link: 'select', name: 'Select 选择器' },
       // { link: 'cascader', name: 'Cascader 级联选择器' },
-      // { link: 'switch', name: 'Switch 开关' },
+      { link: 'switch', name: 'Switch 开关' },
       // { link: 'slider', name: 'Slider 滑块' },
       // { link: 'time-picker', name: 'TimePicker 时间选择器' },
       // { link: 'time-select', name: 'TimeSelect 时间选择器' },

@@ -22,7 +22,7 @@
         <span class="el-tabs__nav-next is-disabled"><i class="el-icon-arrow-right"></i></span>
       </ng-container>
       <div #navScroll class="el-tabs__nav-scroll">
-        <div class="el-tabs__nav is-{{nelTabPosition}}" style="transform: translateX(0px);">
+        <div #navScrollPosition class="el-tabs__nav is-{{nelTabPosition}}" [style.transform]="scrollTransform">
           <div *ngIf="!nelType" class="el-tabs__active-bar is-{{nelTabPosition}}" [style.width]="activeBar.width"
             [style.height]="activeBar.height" [style.transform]="activeBar.transform"></div>
           <ng-container *ngFor="let tabPane of items; let index=index">

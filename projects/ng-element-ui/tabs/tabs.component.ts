@@ -1,7 +1,6 @@
 import {
   Component, ContentChildren, QueryList, AfterContentInit, ViewChildren, ElementRef, AfterViewInit, Input,
-  OnChanges, SimpleChanges, Output, EventEmitter, ViewContainerRef, ComponentFactory, ComponentFactoryResolver,
-  Injector, TemplateRef, ViewChild
+  OnChanges, SimpleChanges, Output, EventEmitter, ViewChild, AfterContentChecked, ChangeDetectorRef, ChangeDetectionStrategy
 } from '@angular/core';
 import { BooleanInput } from '@angular/cdk/coercion';
 import { InputBoolean } from 'ng-element-ui/core/utils';
@@ -9,12 +8,14 @@ import { NelTabPaneComponent } from './tab-pane.component';
 
 @Component({
   selector: 'nel-tabs',
-  templateUrl: './tabs.component.html'
+  templateUrl: './tabs.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class NelTabsComponent implements AfterContentInit, AfterViewInit, OnChanges {
+export class NelTabsComponent implements AfterContentInit, AfterContentChecked, AfterViewInit, OnChanges {
   static ngAcceptInputType_nelEditable: BooleanInput;
 
+  _tabLabelCount = 0;
   _tabItems: any[] = [];
   activeBar = {
     width: '',
@@ -22,6 +23,7 @@ export class NelTabsComponent implements AfterContentInit, AfterViewInit, OnChan
     transform: ''
   };
   scrollable = false;
+  scrollTransform = '';
   @Input() nelSelectedIndex = 0;
   @Input() nelType?: 'card' | 'border-card';
   @Input() nelTabPosition: 'top' | 'right' | 'left' | 'bottom' | string = 'top';
@@ -29,15 +31,26 @@ export class NelTabsComponent implements AfterContentInit, AfterViewInit, OnChan
   @ContentChildren(NelTabPaneComponent, { descendants: false }) items!: QueryList<NelTabPaneComponent>;
   @ViewChildren('tabItem') tabItems!: QueryList<ElementRef<any>>;
   @ViewChild('navScroll', { static: false }) navScroll!: ElementRef<any>;
+  @ViewChild('navScrollPosition', { static: false }) navScrollPosition!: ElementRef<any>;
   @Output() nelSelectedIndexChange = new EventEmitter<number>();
   @Output() nelOnEdit = new EventEmitter<{ index: number, action: string }>();
 
-  constructor() { }
+  constructor(
+    private cdr: ChangeDetectorRef
+  ) { }
 
   ngAfterContentInit(): void {
+    this._tabLabelCount = this.items.length;
     setTimeout(() => {
       this.changeTabPane();
     }, 0);
+  }
+
+  ngAfterContentChecked(): void {
+    if (this._tabLabelCount !== this.items.length) {
+      this.ngAfterViewInit();
+      this.ngAfterContentInit();
+    }
   }
 
   ngAfterViewInit(): void {
@@ -51,9 +64,7 @@ export class NelTabsComponent implements AfterContentInit, AfterViewInit, OnChan
         this._tabItems.push(_item);
       });
     }
-    // 判断是否显示滚动条
-    console.log(this.navScroll.nativeElement.wrapWidth);
-    console.log(this.navScroll.nativeElement.scrollWidth);
+    this.changeScroll();
     this.changeTab(true);
   }
 
@@ -134,6 +145,21 @@ export class NelTabsComponent implements AfterContentInit, AfterViewInit, OnChan
         };
       }
     }
+  }
+
+  changeScroll(): void {
+    // 判断是否显示滚动条
+    setTimeout(() => {
+      if (this.navScroll.nativeElement.offsetWidth < this.navScrollPosition.nativeElement.offsetWidth) {
+        this.scrollable = true;
+        this.scrollTransform = `translateX(${this.navScroll.nativeElement.offsetWidth - this.navScrollPosition.nativeElement.offsetWidth}px)`;
+        this.cdr.markForCheck();
+      } else {
+        this.scrollable = false;
+        this.scrollTransform = 'translateX(0px)';
+        this.cdr.markForCheck();
+      }
+    }, 0);
   }
 
   edit(): void {

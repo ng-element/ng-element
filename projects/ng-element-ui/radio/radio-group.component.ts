@@ -86,8 +86,10 @@ export class NelRadioGroupComponent implements ControlValueAccessor {
       });
     }
   }
+
   registerOnChange(fn: any): void {
     this.change = fn;
   }
+
   registerOnTouched(fn: any): void { }
 }

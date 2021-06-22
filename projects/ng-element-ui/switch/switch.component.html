@@ -1,0 +1,17 @@
+<div class="el-switch" [class.is-disabled]="nelLoading || nelDisabled" [class.is-checked]="data" role="switch"
+  aria-checked="true" (click)="changeSwitch()">
+  <input class="el-switch__input" type="checkbox" name="">
+  <span *ngIf="nelInactiveText" class="el-switch__label el-switch__label--left" [class.is-active]="!data">
+    <span aria-hidden="true">{{nelInactiveText}}</span>
+  </span>
+  <span class="el-switch__core" [style.width]="nelWidth + 'px'"
+    [style.border-color]="data ? nelActiveColor : nelInactiveColor"
+    [style.background-color]="data ? nelActiveColor : nelInactiveColor">
+    <div class="el-switch__action" [style.color]="data ? nelActiveColor : nelInactiveColor">
+      <i *ngIf="nelLoading" class="el-icon-loading"></i>
+    </div>
+  </span>
+  <span *ngIf="nelActiveText" class="el-switch__label el-switch__label--right" [class.is-active]="data">
+    <span aria-hidden="false">{{nelActiveText}}</span>
+  </span>
+</div>
