@@ -2,12 +2,12 @@
   [style.object-fit]="nelFit" [alt]="nelAlt">
 <div *ngIf="loading" class="el-image__placeholder">
   <ng-container *ngIf="nelPlaceholder">
-    <ng-container *stringTemplate="nelPlaceholder"></ng-container>
+    <ng-container *stringTemplate="nelPlaceholder">{{nelPlaceholder}}</ng-container>
   </ng-container>
 </div>
 <div *ngIf="hasLoadError" class="el-image__error">
   <ng-container *ngIf="nelError; else errorTpl">
-    <ng-container *stringTemplate="nelError"></ng-container>
+    <ng-container *stringTemplate="nelError">{{nelError}}</ng-container>
   </ng-container>
   <ng-template #errorTpl>加载失败</ng-template>
 </div>

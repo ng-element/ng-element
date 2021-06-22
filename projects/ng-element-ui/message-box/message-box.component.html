@@ -5,7 +5,7 @@
       <div class="el-message-box__title">
         <div *ngIf="center && type" class="el-message-box__status el-icon-{{type}}"></div>
         <span>
-          <ng-container *stringTemplate="title"></ng-container>
+          <ng-container *stringTemplate="title">{{title}}</ng-container>
         </span>
       </div>
       <button (click)="handleCancel('close')" type="button" class="el-message-box__headerbtn" aria-label="Close">
@@ -17,7 +17,7 @@
         <div *ngIf="!center && type" class="el-message-box__status el-icon-{{type}}"></div>
         <div class="el-message-box__message">
           <p>
-            <ng-container *stringTemplate="content"></ng-container>
+            <ng-container *stringTemplate="content">{{content}}</ng-container>
           </p>
         </div>
       </div>

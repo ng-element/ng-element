@@ -174,6 +174,10 @@ const routes: Routes = [
   {
     path: 'progress',
     loadChildren: () => import('./progress/progress.module').then(m => m.ProgressModule)
+  },
+  {
+    path: 'result',
+    loadChildren: () => import('./result/result.module').then(m => m.ResultModule)
   }
 ];
 

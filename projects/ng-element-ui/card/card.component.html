@@ -1,6 +1,6 @@
 <div class="el-card__header" *ngIf="nelHeader">
   <div class="card-header">
-    <ng-container *stringTemplate="nelHeader"></ng-container>
+    <ng-container *stringTemplate="nelHeader">{{nelHeader}}</ng-container>
   </div>
 </div>
 <div class="el-card__body" [ngStyle]="nelBodyStyle ? nelBodyStyle : null">

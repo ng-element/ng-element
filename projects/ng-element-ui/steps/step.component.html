@@ -23,7 +23,7 @@
     [class.is-finish]="finishStatus == 'finish' && index < active"
     [class.is-error]="finishStatus == 'error' && index < active">
     <ng-container *ngIf="nelTitle">
-      <ng-container *stringTemplate="nelTitle"></ng-container>
+      <ng-container *stringTemplate="nelTitle">{{nelTitle}}</ng-container>
     </ng-container>
   </div>
   <div class="el-step__description" [class.is-process]="active == index" [class.is-wait]="index > active"
@@ -31,7 +31,7 @@
     [class.is-finish]="finishStatus == 'finish' && index < active"
     [class.is-error]="finishStatus == 'error' && index < active">
     <ng-container *ngIf="nelDescription">
-      <ng-container *stringTemplate="nelDescription"></ng-container>
+      <ng-container *stringTemplate="nelDescription">{{nelDescription}}</ng-container>
     </ng-container>
   </div>
   <div *ngIf="simple" class="el-step__arrow"></div>

@@ -51,6 +51,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] tabs
 - [x] switch
 - [x] progress
+- [x] result
 
 ##  Development
 

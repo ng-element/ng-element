@@ -1,5 +1,5 @@
 <div class="el-popper is-{{effect}}">
-  <ng-container *stringTemplate="content"></ng-container>
+  <ng-container *stringTemplate="content">{{content}}</ng-container>
   <div class="el-popper__arrow" [style.left]="arrowLeft" [style.right]="arrowRight" [style.top]="arrowTop"
     [style.bottom]="arrowBottom" [style.transform]="transform"></div>
 </div>

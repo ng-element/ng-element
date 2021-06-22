@@ -4,7 +4,7 @@
       (click)="clickDialog($event)" @modalMotion>
       <div class="el-dialog__header">
         <span class="el-dialog__title" *ngIf="nelTitle">
-          <ng-container *stringTemplate="nelTitle"></ng-container>
+          <ng-container *stringTemplate="nelTitle">{{nelTitle}}</ng-container>
         </span>
         <button class="el-dialog__headerbtn" type="button" (click)="handleClose()">
           <i nel-icon [nelType]="'close'" class="el-dialog__close"></i>
@@ -14,7 +14,7 @@
         <ng-content></ng-content>
       </div>
       <div class="el-dialog__footer" *ngIf="nelFooter">
-        <ng-container *stringTemplate="nelFooter"></ng-container>
+        <ng-container *stringTemplate="nelFooter">{{nelFooter}}</ng-container>
       </div>
     </div>
   </div>

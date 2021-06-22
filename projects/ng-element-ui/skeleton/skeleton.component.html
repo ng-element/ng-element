@@ -1,7 +1,7 @@
 <ng-content *ngIf="!loading; else loadingTpl"></ng-content>
 <ng-template #loadingTpl>
   <ng-container *ngIf="nelTemplate; else defaultTpl">
-    <ng-container *stringTemplate="nelTemplate"></ng-container>
+    <ng-container *stringTemplate="nelTemplate">{{nelTemplate}}</ng-container>
   </ng-container>
   <ng-template #defaultTpl>
     <div *ngFor="let row of rowList; let first=first; let last=last;" class="el-skeleton__item el-skeleton__p"

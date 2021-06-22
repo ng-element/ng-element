@@ -4,6 +4,6 @@
     <ng-container *ngTemplateOutlet="item"></ng-container>
   </div>
   <span *ngIf="nelSpacer && !last" style="padding-bottom: 0px;" [style.margin-right]="size">
-    <ng-container *stringTemplate="nelSpacer"></ng-container>
+    <ng-container *stringTemplate="nelSpacer">{{nelSpacer}}</ng-container>
   </span>
 </ng-container>

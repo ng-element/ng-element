@@ -49,7 +49,7 @@ export const RouterList: any[] = [
       { link: 'skeleton', name: 'Skeleton 骨架屏' },
       { link: 'empty', name: 'Empty 空状态' },
       { link: 'descriptions', name: 'Descriptions 描述列表' },
-      // { link: 'result', name: 'Result 结果' },
+      { link: 'result', name: 'Result 结果' },
     ]
   },
   {

@@ -29,7 +29,7 @@
             <div #tabItem (click)="selecteTab(index)" class="el-tabs__item is-{{nelTabPosition}}"
               [class.is-active]="index == nelSelectedIndex" [class.is-closable]="nelType == 'card' && this.nelEditable">
               <ng-container *ngIf="tabPane.nelLabel">
-                <ng-container *stringTemplate="tabPane.nelLabel"></ng-container>
+                <ng-container *stringTemplate="tabPane.nelLabel">{{tabPane.nelLabel}}</ng-container>
               </ng-container>
               <span *ngIf="nelType == 'card' && this.nelEditable" (click)="remove($event, index)"
                 class="el-icon-close"></span>

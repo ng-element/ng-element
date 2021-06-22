@@ -2,7 +2,7 @@
   <div class="el-descriptions__title">{{nelTitle}}</div>
   <div class="el-descriptions__extra">
     <ng-container *ngIf="nelExtra">
-      <ng-container *stringTemplate="nelExtra"></ng-container>
+      <ng-container *stringTemplate="nelExtra">{{nelExtra}}</ng-container>
     </ng-container>
   </div>
 </div>
@@ -17,7 +17,7 @@
               <td *ngIf="item.type == 'label'; else tdTpl" [attr.colspan]="item.colspan"
                 class="el-descriptions__label is-bordered-label">
                 <ng-container *ngIf="item.label">
-                  <ng-container *stringTemplate="item.label"></ng-container>
+                  <ng-container *stringTemplate="item.label">{{item.label}}</ng-container>
                 </ng-container>
                 <span class="el-descriptions__content">
                   <ng-container *ngTemplateOutlet="item.content"></ng-container>
@@ -35,7 +35,7 @@
               <td [attr.colspan]="item.colspan" *ngFor="let item of trItem">
                 <span class="el-descriptions__label" [class.is-bordered-label]="nelBorder">
                   <ng-container *ngIf="item.label">
-                    <ng-container *stringTemplate="item.label"></ng-container>
+                    <ng-container *stringTemplate="item.label">{{item.label}}</ng-container>
                   </ng-container>
                 </span>
                 <span class="el-descriptions__content">
@@ -51,7 +51,7 @@
               <td *ngIf="item.type == 'label'; else tdTpl" [attr.colspan]="item.colspan" class="el-descriptions__label"
                 [class.is-bordered-label]="nelBorder">
                 <ng-container *ngIf="item.label">
-                  <ng-container *stringTemplate="item.label"></ng-container>
+                  <ng-container *stringTemplate="item.label">{{item.label}}</ng-container>
                 </ng-container>
                 <span class="el-descriptions__content">
                   <ng-container *ngTemplateOutlet="item.content"></ng-container>

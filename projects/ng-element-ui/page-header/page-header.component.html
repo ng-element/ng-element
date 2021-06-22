@@ -4,10 +4,10 @@
       <i nel-icon [nelType]="nelIcon"></i>
     </div>
     <div class="el-page-header__title">
-      <ng-container *stringTemplate="nelTitle"></ng-container>
+      <ng-container *stringTemplate="nelTitle">{{nelTitle}}</ng-container>
     </div>
   </div>
   <div class="el-page-header__content" *ngIf="nelContent">
-    <ng-container *stringTemplate="nelContent"></ng-container>
+    <ng-container *stringTemplate="nelContent">{{nelContent}}</ng-container>
   </div>
 </div>

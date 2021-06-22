@@ -5,7 +5,7 @@
       [style.height]="nelDirection=='ttb' || nelDirection=='btt' ? height : ''" [@drawerDialogMotion]="nelDirection">
       <header *ngIf="nelWithHeader" class="el-drawer__header">
         <span *ngIf="nelTitle" role="heading">
-          <ng-container *stringTemplate="nelTitle"></ng-container>
+          <ng-container *stringTemplate="nelTitle">{{nelTitle}}</ng-container>
         </span>
         <button *ngIf="nelShowClose" (click)="handleClose()" class="el-drawer__close-btn" type="button">
           <i class="el-drawer__close el-icon el-icon-close"></i>

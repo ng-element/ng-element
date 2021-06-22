@@ -6,10 +6,10 @@
   <i *ngIf="type != 'blank'" class="el-notification__icon el-icon-{{type}}"></i>
   <div class="el-notification__group">
     <h2 class="el-notification__title">
-      <ng-container *stringTemplate="title"></ng-container>
+      <ng-container *stringTemplate="title">{{title}}</ng-container>
     </h2>
     <div class="el-notification__content">
-      <ng-container *stringTemplate="content"></ng-container>
+      <ng-container *stringTemplate="content">{{content}}</ng-container>
     </div>
     <div *ngIf="showClose" (click)="close()" class="el-notification__closeBtn el-icon-close"></div>
   </div>
