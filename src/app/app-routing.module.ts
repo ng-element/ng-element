@@ -178,6 +178,10 @@ const routes: Routes = [
   {
     path: 'result',
     loadChildren: () => import('./result/result.module').then(m => m.ResultModule)
+  },
+  {
+    path: 'color',
+    loadChildren: () => import('./color/color.module').then(m => m.ColorModule)
   }
 ];
 

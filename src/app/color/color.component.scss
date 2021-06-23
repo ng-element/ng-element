@@ -1,0 +1,69 @@
+.demo-color-box {
+  position: relative;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 5px 0;
+  height: 114px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 14px;
+
+  .value {
+    font-size: 12px;
+    opacity: .69;
+    line-height: 24px;
+  }
+}
+
+.demo-color-box-other {
+  height: 74px;
+  margin: 10px 0 !important;
+  border-radius: 4px 4px 4px 4px !important;
+  padding: 15px 20px;
+}
+
+.demo-color-box-lite {
+  color: #303133;
+}
+
+.bg-color-sub {
+  width: 100%;
+  height: 40px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.bg-color-sub,
+.demo-color-box-group .demo-color-box:last-child {
+  border-radius: 0 0 4px 4px;
+}
+
+.bg-blue-sub-item {
+  width: 11.1111111%;
+  height: 100%;
+  display: inline-block;
+
+  &:first {
+    border-radius: 0 0 0 4px;
+  }
+}
+
+.bg-success-sub-item {
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+
+  &:first-child {
+    border-radius: 0 0 0 4px;
+  }
+}
+
+.bg-transparent {
+  border: 1px solid #fcc3c3;
+  color: #303133;
+  background: url('./../../assets/images/diagonal.svg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%, auto;
+}

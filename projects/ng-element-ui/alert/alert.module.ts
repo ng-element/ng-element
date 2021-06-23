@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NelIconModule } from 'ng-element-ui/icon';
+import { NelOutletModule } from 'ng-element-ui/core/outlet';
 import { NelAlertComponent } from './alert.component';
 
 @NgModule({
@@ -12,7 +13,8 @@ import { NelAlertComponent } from './alert.component';
   ],
   imports: [
     CommonModule,
-    NelIconModule
+    NelIconModule,
+    NelOutletModule
   ]
 })
 export class NelAlertModule { }

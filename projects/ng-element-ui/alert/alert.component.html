@@ -3,9 +3,11 @@
   <i *ngIf="nelShowIcon" nel-icon [nelType]="nelType" class="el-alert__icon {{nelDescription ? 'is-big' : ''}}"></i>
   <div class="el-alert__content">
     <span class="el-alert__title {{nelDescription ? 'is-bold' : ''}}">
-      {{nelTitle}}
+      <ng-container *stringTemplate="nelTitle">{{nelTitle}}</ng-container>
     </span>
-    <p *ngIf="nelDescription" class="el-alert__description">{{nelDescription}}</p>
+    <p *ngIf="nelDescription" class="el-alert__description">
+      <ng-container *stringTemplate="nelDescription">{{nelDescription}}</ng-container>
+    </p>
     <ng-container *ngIf="nelClosable">
       <i *ngIf="!nelCloseText; else closeTextTpl" nel-icon [nelType]="'close'" class="el-alert__closebtn"
         (click)="close()"></i>

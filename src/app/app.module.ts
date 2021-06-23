@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { NelBacktopModule } from 'ng-element-ui/backtop';
 import { NelScrollbarModule } from 'ng-element-ui/scrollbar';
+import { NelAlertModule } from 'ng-element-ui/alert';
 import { SharedModule } from './shared/shared.module';
 
 import { AppService } from './app.service';
@@ -22,6 +23,7 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     NelBacktopModule,
     NelScrollbarModule,
+    NelAlertModule,
     SharedModule,
     AppRoutingModule
   ],
