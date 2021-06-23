@@ -182,6 +182,10 @@ const routes: Routes = [
   {
     path: 'color',
     loadChildren: () => import('./color/color.module').then(m => m.ColorModule)
+  },
+  {
+    path: 'typography',
+    loadChildren: () => import('./typography/typography.module').then(m => m.TypographyModule)
   }
 ];
 

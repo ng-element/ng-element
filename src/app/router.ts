@@ -5,7 +5,7 @@ export const RouterList: any[] = [
       { link: 'layout', name: 'Layout 布局' },
       { link: 'container', name: 'Container 布局容器' },
       { link: 'color', name: 'Color 色彩' },
-      // { link: 'typography', name: 'Typography 字体' },
+      { link: 'typography', name: 'Typography 字体' },
       // { link: 'border', name: 'Border 边框' },
       { link: 'icon', name: 'Icon 图标' },
       { link: 'button', name: 'Button 按钮' },
