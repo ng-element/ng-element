@@ -1,0 +1,63 @@
+<h2>Border 边框</h2>
+<p>我们对边框进行统一规范，可用于按钮、卡片、弹窗等组件里。</p>
+
+<h3>边框</h3>
+<p>我们提供了以下几种边框样式，以供选择。</p>
+
+<table class="demo-border">
+  <tbody>
+    <tr>
+      <td class="text">名称</td>
+      <td class="text">粗细</td>
+      <td class="line">举例</td>
+    </tr>
+    <tr>
+      <td class="text">实线</td>
+      <td class="text">1px</td>
+      <td class="line">
+        <div></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="text">虚线</td>
+      <td class="text">2px</td>
+      <td class="line">
+        <div class="dashed"></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>圆角</h3>
+<p>我们提供了以下几种圆角样式，以供选择。</p>
+
+<div nel-row [nelGutter]="12">
+  <div nel-col [nelSpan]="6" [nelXs]="12">
+    <div class="title">无圆角</div>
+    <div class="value">border-radius: 0px</div>
+    <div class="radius"></div>
+  </div>
+  <div nel-col [nelSpan]="6" [nelXs]="12">
+    <div class="title">小圆角</div>
+    <div class="value">border-radius: 2px</div>
+    <div class="radius" style="border-radius: 2px;"></div>
+  </div>
+  <div nel-col [nelSpan]="6" [nelXs]="12">
+    <div class="title">大圆角</div>
+    <div class="value">border-radius: 4px</div>
+    <div class="radius" style="border-radius: 4px;"></div>
+  </div>
+  <div nel-col [nelSpan]="6" [nelXs]="12">
+    <div class="title">圆形圆角</div>
+    <div class="value">border-radius: 30px</div>
+    <div class="radius radius-30"></div>
+  </div>
+</div>
+
+<h3>投影</h3>
+<p>我们提供了以下几种投影样式，以供选择。</p>
+
+<div class="demo-shadow" style="box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px, rgba(0, 0, 0, 0.04) 0px 0px 6px;"></div>
+<span class="demo-shadow-text">基础投影 box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)</span>
+<div class="demo-shadow" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 12px 0px;"></div>
+<span class="demo-shadow-text">浅色投影 box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)</span>

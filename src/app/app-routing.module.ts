@@ -186,6 +186,10 @@ const routes: Routes = [
   {
     path: 'typography',
     loadChildren: () => import('./typography/typography.module').then(m => m.TypographyModule)
+  },
+  {
+    path: 'border',
+    loadChildren: () => import('./border/border.module').then(m => m.BorderModule)
   }
 ];
 
