@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild, ElementRef, HostListener, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
+import { AfterViewInit, Component, ViewChild, ElementRef, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
 import ResizeObserver from 'resize-observer-polyfill';
 
@@ -20,6 +20,8 @@ export class NelScrollbarComponent implements AfterViewInit, OnDestroy {
       }
     }
   }
+  @Input() nelWrapClass?: string;
+  @Input() nelViewClass?: string;
   @Output() nelOnScroll: EventEmitter<any> = new EventEmitter<any>();
   @ViewChild('scrollbarWrap', { static: false }) scrollbarWrap!: ElementRef;
   @ViewChild('scrollbarView', { static: false }) scrollbarView!: ElementRef;
@@ -161,17 +163,9 @@ export class NelScrollbarComponent implements AfterViewInit, OnDestroy {
     }
   }
 
-  @HostListener('wheel', ['$event']) wheelScroll($event: WheelEvent): void {
+  onWrapScroll($event: any): void {
     $event.stopPropagation();
-    this.verticalThumb.nativeElement.style.transition = '.3s';
-    const wheelDirection = ($event as any).wheelDelta || -$event.deltaY;
-    if (wheelDirection > 0) {
-      // 往上滚动
-      this.vertical.scrollTop -= 100;
-    } else {
-      // 往下滚动
-      this.vertical.scrollTop += 100;
-    }
+    this.vertical.scrollTop = this.scrollbarWrap.nativeElement.scrollTop;
     this.verticalScrollHandle();
   }
 
@@ -211,7 +205,6 @@ export class NelScrollbarComponent implements AfterViewInit, OnDestroy {
     this.vertical.clientY = $event.clientY;
     this.vertical.clientTop = this.vertical.scrollTop;
     this.inThumb = true;
-    this.verticalThumb.nativeElement.style.transition = '';
 
     // 打开移动事件
     this.verticalMousemove = fromEvent(document, 'mousemove')
@@ -242,7 +235,6 @@ export class NelScrollbarComponent implements AfterViewInit, OnDestroy {
     this.horizontal.clientX = $event.clientX;
     this.horizontal.clientLeft = this.horizontal.scrollLeft;
     this.inThumb = true;
-    this.horizontalThumb.nativeElement.style.transition = '';
 
     // 打开移动事件
     this.horizontalMousemove = fromEvent(document, 'mousemove')

@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'nel-demo-backtop-basic',
   template: `
     Scroll down to see the bottom-right button.
-    <nel-backtop [nelBottom]="100"></nel-backtop>
+    <nel-backtop [nelTarget]="'.mainWrap'" [nelBottom]="100"></nel-backtop>
   `
 })
 

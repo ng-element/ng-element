@@ -1,6 +1,6 @@
 import {
   Component, OnInit, OnDestroy, Input, OnChanges, SimpleChanges, Inject, TemplateRef, Output, EventEmitter,
-  ChangeDetectionStrategy, ChangeDetectorRef
+  ChangeDetectionStrategy, ChangeDetectorRef, AfterViewInit
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { fromEvent, Subscription } from 'rxjs';
@@ -13,7 +13,7 @@ import { fadeMotion } from 'ng-element-ui/core/animation';
   animations: [fadeMotion]
 })
 
-export class NelBacktopComponent implements OnInit, OnDestroy, OnChanges {
+export class NelBacktopComponent implements AfterViewInit, OnDestroy, OnChanges {
   doc: Document;
   subscribeScoll!: Subscription;
   visible = false;
@@ -36,7 +36,17 @@ export class NelBacktopComponent implements OnInit, OnDestroy, OnChanges {
     this.subscribeScoll.unsubscribe();
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    this.initTarget();
+  }
+
+  initTarget(): void {
+    if (typeof this.nelTarget === 'string') {
+      this.target = this.doc.querySelector(this.nelTarget);
+    } else {
+      this.target = this.nelTarget;
+    }
+
     this.registerScrollEvent();
   }
 
@@ -84,14 +94,8 @@ export class NelBacktopComponent implements OnInit, OnDestroy, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     const { nelTarget } = changes;
-    if (nelTarget) {
-      if (typeof this.nelTarget === 'string') {
-        this.target = this.doc.querySelector(this.nelTarget);
-      } else {
-        this.target = this.nelTarget;
-      }
-
-      this.registerScrollEvent();
+    if (nelTarget && !nelTarget.firstChange) {
+      this.initTarget();
     }
   }
 }

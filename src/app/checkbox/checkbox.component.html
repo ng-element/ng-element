@@ -1,0 +1,31 @@
+<h2>Checkbox 多选框</h2>
+<p>一组备选项中进行多选</p>
+<app-code code="import { NelCheckboxModule } from 'ng-element-ui/checkbox';"></app-code>
+
+<h3>基础用法</h3>
+<p>单独使用可以表示两种状态之间的切换，写在标签中的内容为 checkbox 按钮后的介绍。</p>
+
+<app-demo [codeUrl]="'components-checkbox-demo-basic.component'">
+  <nel-demo-checkbox-basic demo></nel-demo-checkbox-basic>
+</app-demo>
+
+<h3>禁用状态</h3>
+<p>多选框不可用状态。</p>
+
+<app-demo [codeUrl]="'components-checkbox-demo-disabled.component'">
+  <nel-demo-checkbox-disabled demo></nel-demo-checkbox-disabled>
+</app-demo>
+
+<h3>多选框组</h3>
+<p>适用于多个勾选框绑定到同一个数组的情景，通过是否勾选来表示这一组选项中选中的项。</p>
+
+<app-demo [codeUrl]="'components-checkbox-demo-group.component'">
+  <nel-demo-checkbox-group demo></nel-demo-checkbox-group>
+</app-demo>
+
+<h3>indeterminate 状态</h3>
+<p>indeterminate 属性用以表示 checkbox 的不确定状态，一般用于实现全选的效果</p>
+
+<app-demo [codeUrl]="'components-checkbox-demo-indeterminate.component'">
+  <nel-demo-checkbox-indeterminate demo></nel-demo-checkbox-indeterminate>
+</app-demo>

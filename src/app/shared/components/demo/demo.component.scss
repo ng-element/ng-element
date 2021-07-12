@@ -107,6 +107,12 @@
       }
     }
 
+
+    &.is-fixed {
+      position: sticky;
+      bottom: 0;
+    }
+
     &>span {
       position: absolute;
       transform: translateX(-30px);

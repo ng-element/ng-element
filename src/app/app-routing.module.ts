@@ -190,6 +190,10 @@ const routes: Routes = [
   {
     path: 'border',
     loadChildren: () => import('./border/border.module').then(m => m.BorderModule)
+  },
+  {
+    path: 'checkbox',
+    loadChildren: () => import('./checkbox/checkbox.module').then(m => m.CheckboxModule)
   }
 ];
 

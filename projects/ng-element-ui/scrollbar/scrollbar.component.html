@@ -1,7 +1,7 @@
 <div class="el-scrollbar" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()">
-  <div #scrollbarWrap class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default" [style.height]="nelHeight"
-    [style.max-height]="maxHeight" cdkScrollable>
-    <div #scrollbarView class="el-scrollbar__view">
+  <div #scrollbarWrap class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default {{nelWrapClass}}"
+    [style.height]="nelHeight" [style.max-height]="maxHeight" cdkScrollable (scroll)="onWrapScroll($event)">
+    <div #scrollbarView class="el-scrollbar__view {{nelViewClass}}">
       <ng-content></ng-content>
     </div>
   </div>

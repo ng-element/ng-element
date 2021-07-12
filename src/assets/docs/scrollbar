@@ -5,6 +5,8 @@
 | nelHeight    | 滚动条高度                                                           | string  | —      | —      |
 | nelMaxHeight | 滚动条最大高度                                                       | string  | —      | —      |
 | nelNoresize  | 不响应容器尺寸变化，如果容器尺寸不会发生变化，最好设置它可以优化性能 | boolean | —      | false  |
+| nelWrapClass | 包裹容器的自定义类名                                                 | string  | —      | —      |
+| nelViewClass | 视图的自定义类名                                                     | string  | —      | —      |
 
 ### Events
 
