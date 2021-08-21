@@ -1,10 +1,10 @@
 {
   "name": "ng-element-ui",
-  "version": "0.0.1",
+  "version": "0.1.0-alpha.0",
   "private": false,
   "description": "An enterprise-class UI components based on Element UI and Angular.",
-  "homepage": "https://llkui.github.io/ng-element",
-  "repository": "https://github.com/llkui/ng-element",
+  "homepage": "https://ng-element.github.io/",
+  "repository": "https://github.com/ng-element/ng-element",
   "author": "llkui",
   "keywords": [
     "angular",

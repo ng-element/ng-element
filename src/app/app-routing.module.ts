@@ -8,6 +8,18 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'changelog',
+    loadChildren: () => import('./changelog/changelog.module').then(m => m.ChangelogModule)
+  },
+  {
+    path: 'installation',
+    loadChildren: () => import('./installation/installation.module').then(m => m.InstallationModule)
+  },
+  {
+    path: 'quickstart',
+    loadChildren: () => import('./quickstart/quickstart.module').then(m => m.QuickstartModule)
+  },
+  {
     path: 'icon',
     loadChildren: () => import('./icon/icon.module').then(m => m.IconModule)
   },

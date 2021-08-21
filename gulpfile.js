@@ -1,6 +1,7 @@
 'use strict';
 
 // 编译css
+const projectName = 'ng-element-ui';
 const {
   series,
   src,
@@ -11,20 +12,20 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssmin = require('gulp-cssmin');
 
 function compile() {
-  return src('./projects/ng-element-ui/ng-element-ui.scss')
+  return src(`./projects/${projectName}/${projectName}.scss`)
     .pipe(sass.sync())
     .pipe(autoprefixer({
       browsers: ['ie > 9', 'last 2 versions'],
       cascade: false
     }))
     .pipe(cssmin())
-    .pipe(dest('./dist/ng-element-ui'));
+    .pipe(dest(`./dist/${projectName}`));
 }
 
 function copyfont() {
   return src('./node_modules/element-theme-chalk/src/fonts/**')
     .pipe(cssmin())
-    .pipe(dest('./dist/ng-element-ui/fonts'));
+    .pipe(dest(`./dist/${projectName}/fonts`));
 }
 
 exports.buildDemoCmp = series(clearDemoComponent, clearDoc, demoComponentPath, docPath);
@@ -37,22 +38,22 @@ const clean = require('gulp-clean');
 
 function clearDemoComponent() {
   return src(['./src/assets/codes/'], {
-      read: false,
-      allowEmpty: true
-    })
+    read: false,
+    allowEmpty: true
+  })
     .pipe(clean());
 }
 
 function clearDoc() {
   return src(['./src/assets/docs/'], {
-      read: false,
-      allowEmpty: true
-    })
+    read: false,
+    allowEmpty: true
+  })
     .pipe(clean());
 }
 
 function demoComponentPath() {
-  return src(['./projects/ng-element-ui/**/demo/*.component.ts'])
+  return src([`./projects/${projectName}/**/demo/*.component.ts`])
     .pipe(rename(function (path) {
       return {
         dirname: '',
@@ -64,7 +65,7 @@ function demoComponentPath() {
 }
 
 function docPath() {
-  return src(['./projects/ng-element-ui/*/doc/*.md'])
+  return src([`./projects/${projectName}/*/doc/*.md`])
     .pipe(rename(function (path) {
       const name = path.dirname.slice(0, path.dirname.indexOf('\\'));
       return {
@@ -77,14 +78,14 @@ function docPath() {
 }
 
 function monitorAssets() {
-  return watch(['./projects/ng-element-ui/**/demo/*.component.ts', './projects/ng-element-ui/*/doc/*.md'], function (file) {
+  return watch([`./projects/${projectName}/**/demo/*.component.ts`, `./projects/${projectName}/*/doc/*.md`], function (file) {
     const source = file.history[0];
     if (source.indexOf('demo') > -1) {
       const path = source.slice(source.lastIndexOf('\\') + 1);
       const name = path.slice(0, path.lastIndexOf('.'));
       copyDemoComponent(source, name);
     } else {
-      let name = source.slice(source.indexOf('ng-element-ui') + 14);
+      let name = source.slice(source.lastIndexOf(projectName) + projectName.length + 1);
       name = name.slice(0, name.indexOf('\\'));
       copyDoc(source, name);
     }
@@ -93,16 +94,16 @@ function monitorAssets() {
 
 function copyDemoComponent(source, name) {
   return src(source, {
-      allowEmpty: true
-    })
+    allowEmpty: true
+  })
     .pipe(rename(name))
     .pipe(dest('./src/assets/codes/'));
 }
 
 function copyDoc(source, name) {
   return src(source, {
-      allowEmpty: true
-    })
+    allowEmpty: true
+  })
     .pipe(rename(name))
     .pipe(dest('./src/assets/docs/'));
 }
