@@ -19,7 +19,7 @@ export const RouterList: any[] = [
     menuList: [
       { link: 'radio', name: 'Radio 单选框' },
       { link: 'checkbox', name: 'Checkbox 多选框' },
-      // { link: 'input', name: 'Input 输入框' },
+      { link: 'input', name: 'Input 输入框' },
       // { link: 'input-number', name: 'InputNumber 计数器' },
       // { link: 'select', name: 'Select 选择器' },
       // { link: 'cascader', name: 'Cascader 级联选择器' },

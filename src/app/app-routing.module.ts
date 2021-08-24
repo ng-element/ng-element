@@ -206,6 +206,10 @@ const routes: Routes = [
   {
     path: 'checkbox',
     loadChildren: () => import('./checkbox/checkbox.module').then(m => m.CheckboxModule)
+  },
+  {
+    path: 'input',
+    loadChildren: () => import('./input/input.module').then(m => m.InputModule)
   }
 ];
 

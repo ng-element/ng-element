@@ -1,0 +1,14 @@
+<input #inputEle class="el-input__inner" [type]="type" autocomplete="off" [value]="data" [placeholder]="nelPlaceHolder"
+  [disabled]="nelDisabled" (input)="onInput($event)" (blur)="handleBlur()" (focus)="handleFocus()">
+<span *ngIf="nelClearable && data?.length > 0 && (focused || hovering)" class="el-input__suffix"
+  (click)="handleClear()">
+  <span class="el-input__suffix-inner">
+    <i class="el-input__icon el-icon-circle-close el-input__clear"></i>
+  </span>
+</span>
+<span *ngIf="nelShowPassword && (data?.length > 0 || focused || hovering)" class="el-input__suffix"
+  (click)="changeType()">
+  <span class="el-input__suffix-inner">
+    <i class="el-input__icon el-icon-view el-input__clear"></i>
+  </span>
+</span>
