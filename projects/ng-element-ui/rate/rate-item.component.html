@@ -1,0 +1,5 @@
+<span class="el-rate__item" style="cursor: pointer;" (mouseover)="handleMouseover()" (mouseleave)="handleMouseleave()"
+  (click)="handleClick()">
+  <i class="el-rate__icon" [class.el-icon-star-off]="!getOn()" [class.el-icon-star-on]="getOn()"
+    [class.hover]="getHover()" [style.color]="getOn() ? 'rgb(247, 186, 42)' : 'rgb(198, 209, 222)'"></i>
+</span>

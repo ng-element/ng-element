@@ -30,7 +30,7 @@ export const RouterList: any[] = [
       // { link: 'date-picker', name: 'DatePicker 日期选择器' },
       // { link: 'datetime-picker', name: 'DateTimePicker 日期时间选择器' },
       // { link: 'upload', name: 'Upload 上传' },
-      // { link: 'rate', name: 'Rate 评分' },
+      { link: 'rate', name: 'Rate 评分' },
       // { link: 'color-picker', name: 'ColorPicker 颜色选择器' },
       // { link: 'transfer', name: 'Transfer 穿梭框' },
       // { link: 'form', name: 'Form 表单' },

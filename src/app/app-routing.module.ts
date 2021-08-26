@@ -210,6 +210,10 @@ const routes: Routes = [
   {
     path: 'input',
     loadChildren: () => import('./input/input.module').then(m => m.InputModule)
+  },
+  {
+    path: 'rate',
+    loadChildren: () => import('./rate/rate.module').then(m => m.RateModule)
   }
 ];
 

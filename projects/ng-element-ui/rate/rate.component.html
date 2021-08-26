@@ -1,0 +1,4 @@
+<div class="el-rate" role="slider" aria-valuetext="" aria-valuemin="0" aria-valuemax="5" tabindex="0" aria-valuenow="0">
+  <nel-rate-item *ngFor="let item of starArray; let index=index" [data]="index" [currentValue]="currentValue"
+    [value]="data" [colors]="nelColors" (onHover)="handleHover($event)" (onClick)="handleClick($event)"></nel-rate-item>
+</div>

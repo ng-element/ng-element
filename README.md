@@ -4,6 +4,8 @@ Ng-Element-UI
 
 <div align="center">
 
+[![npm package](https://img.shields.io/npm/v/ng-element-ui.svg?style=flat-square)](https://www.npmjs.com/package/ng-element-ui) [![npm downloads](http://img.shields.io/npm/dm/ng-element-ui.svg)](https://npmcharts.com/compare/ng-element-ui?minimal=true)
+
 An enterprise-class UI components based on Element UI and Angular.
 
 </div>
@@ -52,10 +54,12 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] switch
 - [x] progress
 - [x] result
+- [x] input
+- [x] rate
 
 ## Environment Support
 
-- Angular `^11.0.0` [![npm package](https://img.shields.io/npm/v/ng-element-ui.svg?style=flat-square)](https://www.npmjs.com/package/ng-element-ui)
+- Angular `^11.0.0`
 
 ## Installation
 

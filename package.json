@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "lib": "ng build ng-element-ui --prod && gulp build",
+    "lib": "gulp buildReadme && ng build ng-element-ui --prod && gulp build",
     "stats": "gulp buildDemoCmp && ng build --prod --stats-json",
     "report": "webpack-bundle-analyzer dist/ng-element/stats.json"
   },

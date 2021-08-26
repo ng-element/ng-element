@@ -52,6 +52,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] switch
 - [x] progress
 - [x] result
+- [x] input
 
 ## Environment Support
 
