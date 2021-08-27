@@ -56,6 +56,7 @@ An enterprise-class UI components based on Element UI and Angular.
 - [x] result
 - [x] input
 - [x] rate
+- [x] input-number
 
 ## Environment Support
 

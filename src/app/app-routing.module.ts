@@ -214,6 +214,10 @@ const routes: Routes = [
   {
     path: 'rate',
     loadChildren: () => import('./rate/rate.module').then(m => m.RateModule)
+  },
+  {
+    path: 'input-number',
+    loadChildren: () => import('./input-number/input-number.module').then(m => m.InputNumberModule)
   }
 ];
 

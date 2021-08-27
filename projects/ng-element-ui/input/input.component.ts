@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, forwardRef, Input, OnChanges, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { BooleanInput } from '@angular/cdk/coercion';
-import { InputBoolean } from 'ng-element-ui/core/utils/convert';
+import { InputBoolean } from 'ng-element-ui/core/utils';
 
 export type SizeType = 'medium' | 'small' | 'mini' | null;
 

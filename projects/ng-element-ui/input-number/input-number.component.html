@@ -1,0 +1,12 @@
+<div class="el-input-number" [class.is-disabled]="nelDisabled">
+  <span (click)="decrease()" class="el-input-number__decrease" [class.is-disabled]="decreaseDisabled" role="button">
+    <i class="el-icon-minus"></i>
+  </span>
+  <span (click)="increase()" class="el-input-number__increase" [class.is-disabled]="increaseDisabled" role="button">
+    <i class="el-icon-plus"></i>
+  </span>
+  <div class="el-input" [class.is-disabled]="nelDisabled">
+    <input #inputEle class="el-input__inner" max="10" min="1" type="text" autocomplete="off" role="spinbutton"
+      [ngModel]="displayValue" (ngModelChange)="onModelChange($event)" (blur)="blur()">
+  </div>
+</div>
