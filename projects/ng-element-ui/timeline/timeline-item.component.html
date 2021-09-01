@@ -7,7 +7,7 @@
   [class.el-timeline-item__node--warning]="nelType == 'warning'"
   [class.el-timeline-item__node--danger]="nelType == 'danger'" [class.el-timeline-item__node--info]="nelType == 'info'"
   [style.backgroundColor]="nelColor">
-  <i *ngIf="nelIcon" nel-icon [nelType]="nelIcon" class="el-timeline-item__icon"></i>
+  <i *ngIf="nelIcon" class="el-timeline-item__icon el-icon-{{nelIcon}}"></i>
 </div>
 <div class="el-timeline-item__wrapper">
   <div *ngIf="!nelHideTimestamp && nelPlacement == 'top'" class="el-timeline-item__timestamp is-top">{{nelTimestamp}}

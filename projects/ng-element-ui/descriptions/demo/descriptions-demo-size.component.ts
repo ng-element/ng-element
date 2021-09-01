@@ -16,35 +16,35 @@ import { Component } from '@angular/core';
       </ng-template>
       <nel-descriptions-item [nelLabel]="label1">
         <ng-template #label1>
-          <i nel-icon [nelType]="'user'"></i>
+          <i class="el-icon-user"></i>
           用户名
         </ng-template>
         kooriookami
       </nel-descriptions-item>
       <nel-descriptions-item [nelLabel]="label2">
         <ng-template #label2>
-          <i nel-icon [nelType]="'mobile-phone'"></i>
+          <i class="el-icon-mobile-phone"></i>
           手机号
         </ng-template>
         18100000000
       </nel-descriptions-item>
       <nel-descriptions-item [nelLabel]="label3">
         <ng-template #label3>
-          <i nel-icon [nelType]="'location-outline'"></i>
+          <i class="el-icon-location-outline"></i>
           居住地
         </ng-template>
         苏州市
       </nel-descriptions-item>
       <nel-descriptions-item [nelLabel]="label4">
         <ng-template #label4>
-          <i nel-icon [nelType]="'tickets'"></i>
+          <i class="el-icon-tickets"></i>
           备注
         </ng-template>
         <nel-tag [nelSize]="'small'">学校</nel-tag>
       </nel-descriptions-item>
       <nel-descriptions-item [nelLabel]="label5">
         <ng-template #label5>
-          <i nel-icon [nelType]="'office-building'"></i>
+          <i class="el-icon-office-building"></i>
           联系地址
         </ng-template>
         江苏省苏州市吴中区吴中大道 1188 号

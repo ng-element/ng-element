@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
   <div>
     <a nel-link [nelIcon]="'edit'">编辑</a>
-    <a nel-link>查看<i nel-icon [nelType]="'view'"></i> </a>
+    <a nel-link>查看<i class="el-icon-view"></i> </a>
   </div>
   `
 })

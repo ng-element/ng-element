@@ -1,5 +1,5 @@
 <div class="el-backtop" (click)="backTop()" *ngIf="visible" @fadeMotion [style.right]="nelRight + 'px'"
   [style.bottom]="nelBottom + 'px'">
-  <i *ngIf="!nelTemplate" nel-icon [nelType]="'caret-top'"></i>
+  <i *ngIf="!nelTemplate" class="el-icon-caret-top"></i>
   <ng-container *ngTemplateOutlet="nelTemplate"></ng-container>
 </div>

@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
       <nel-breadcrumb-item>活动详情</nel-breadcrumb-item>
     </nel-breadcrumb>
     <ng-template #separator>
-      <i nel-icon [nelType]="'arrow-right'"></i>
+      <i class="el-icon-arrow-right"></i>
     </ng-template>
   `
 })

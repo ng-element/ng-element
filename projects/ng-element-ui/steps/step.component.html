@@ -4,7 +4,7 @@
   [class.is-error]="finishStatus == 'error' && index < active">
   <div class="el-step__line"><i class="el-step__line-inner"></i></div>
   <div class="el-step__icon" [class.is-text]="!nelIcon" [class.is-icon]="nelIcon">
-    <i *ngIf="nelIcon; else noIcon" nel-icon [nelType]="nelIcon" class="el-step__icon-inner"></i>
+    <i *ngIf="nelIcon; else noIcon" class="el-step__icon-inner el-icon-{{nelIcon}}"></i>
     <ng-template #noIcon>
       <div *ngIf="index >= active; else iconTpl" class="el-step__icon-inner">
         <ng-container *ngIf="!simple">
@@ -12,7 +12,7 @@
         </ng-container>
       </div>
       <ng-template #iconTpl>
-        <i nel-icon [nelType]="'check'" class="el-step__icon-inner is-status"></i>
+        <i class="el-step__icon-inner el-icon-check is-status"></i>
       </ng-template>
     </ng-template>
   </div>

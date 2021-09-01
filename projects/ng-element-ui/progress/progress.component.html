@@ -38,9 +38,9 @@
     <ng-container
       *ngIf="(nelStatus === 'success' || nelStatus === 'exception' || nelStatus === 'warning') && !nelFormat; else formatTemplate">
       <ng-container [ngSwitch]="nelStatus">
-        <i *ngSwitchCase="'success'" nel-icon [nelType]="nelType == 'line' ? 'circle-check' : 'check'"></i>
-        <i *ngSwitchCase="'warning'" nel-icon [nelType]="'warning'"></i>
-        <i *ngSwitchCase="'exception'" nel-icon [nelType]="nelType == 'line' ? 'circle-close' : 'close'"></i>
+        <i *ngSwitchCase="'success'" class="el-icon-{{nelType == 'line' ? 'circle-check' : 'check'}}"></i>
+        <i *ngSwitchCase="'warning'" class="el-icon-warning"></i>
+        <i *ngSwitchCase="'exception'" class="el-icon-{{nelType == 'line' ? 'circle-close' : 'close'}}"></i>
       </ng-container>
     </ng-container>
   </ng-template>

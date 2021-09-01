@@ -1,7 +1,7 @@
 <div class="el-loading-mask is-fullscreen" [style.background]="background" [@loadingMotion]="state"
   (@loadingMotion.done)="onAnimationDone($event)">
   <div class="el-loading-spinner">
-    <i *ngIf="spinner; else spinnerTpl" nel-icon [nelType]="spinner"></i>
+    <i *ngIf="spinner; else spinnerTpl" class="el-icon-{{spinner}}"></i>
     <ng-template #spinnerTpl>
       <svg class="circular" viewBox="25 25 50 50">
         <circle class="path" cx="50" cy="50" r="20" fill="none"></circle>

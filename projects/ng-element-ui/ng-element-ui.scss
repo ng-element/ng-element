@@ -67,6 +67,28 @@
 @import 'element-theme-chalk/src/input-number.scss';
 @import 'element-theme-chalk/src/button.scss';
 
+// icon font与svg共存，暂用
+.el-icon {
+  --color: #000;
+  font-size: 32px;
+  --color: inherit;
+  --font-size: 14px;
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  fill: currentColor;
+  color: var(--color);
+  font-size: var(--font-size);
+}
+
+.el-icon svg {
+  height: 1em;
+  width: 1em;
+}
+
 nel-alert,
 nel-card,
 nel-timeline-item,

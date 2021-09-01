@@ -2,7 +2,7 @@
   [class.el-avatar--medium]="size == 'medium'" [class.el-avatar--small]="size == 'small'"
   [class.el-avatar--icon]="nelIcon" [style.height]="sizeNum! + 'px'" [style.width]="sizeNum! + 'px'"
   [style.line-height]="sizeNum! + 'px'">
-  <i *ngIf="nelIcon" nel-icon [nelType]="nelIcon"></i>
+  <i *ngIf="nelIcon" class="el-icon-{{nelIcon}}"></i>
   <img *ngIf="src" [src]="src" [style.object-fit]="nelFit" [alt]="nelAlt">
   <ng-container *ngIf="nelText">{{nelText}}</ng-container>
   <ng-content *ngIf="!loading"></ng-content>

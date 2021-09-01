@@ -4,9 +4,8 @@ import { Component } from '@angular/core';
   selector: 'nel-demo-icon-basic',
   template: `
     <span class="icons">
-      <i class="el-icon-edit"></i>
-      <i nel-icon [nelType]="'share'"></i>
-      <i nel-icon [nelType]="'delete'"></i>
+      <i nel-icon [nelType]="'aim'"></i>
+      <i nel-icon [nelType]="'apple'"></i>
     </span>
   `
 })

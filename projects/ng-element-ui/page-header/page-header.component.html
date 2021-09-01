@@ -1,7 +1,7 @@
 <div class="el-page-header">
   <div class="el-page-header__left" (click)="goBack()">
     <div class="el-page-header__icon">
-      <i nel-icon [nelType]="nelIcon"></i>
+      <i class="el-icon-{{nelIcon}}"></i>
     </div>
     <div class="el-page-header__title">
       <ng-container *stringTemplate="nelTitle">{{nelTitle}}</ng-container>

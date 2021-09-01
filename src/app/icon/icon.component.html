@@ -2,18 +2,34 @@
 <p>提供了一套常用的图标集合。</p>
 <app-code code="import { NelIconModule } from 'ng-element-ui/icon';"></app-code>
 
-<h3>使用方法</h3>
+<h3>SVG 图标集合</h3>
+
+<app-demo [codeUrl]="'components-icon-demo-basic.component'">
+  <nel-demo-icon-basic demo></nel-demo-icon-basic>
+</app-demo>
+
+<h3>SVG 图标集合</h3>
+<ul class="icon-list">
+  <li *ngFor="let name of svgs">
+    <span>
+      <i nel-icon [nelType]="name.type"></i>
+      {{'el-icon-' + name.type}}
+    </span>
+  </li>
+</ul>
+
+<h3>Font Icon 使用方法</h3>
 <p>直接通过设置类名为 <code>el-icon-iconName</code> 来使用即可。例如：</p>
 
-<app-demo [codeUrl]="'components-icon-demo-basic.component'" notes="你也可以使用 <code> nel-icon </code> 指令达到一样的效果。">
-  <nel-demo-icon-basic demo></nel-demo-icon-basic>
+<app-demo [codeUrl]="'components-icon-demo-font.component'">
+  <nel-demo-icon-font demo></nel-demo-icon-font>
 </app-demo>
 
 <h3>图标集合</h3>
 <ul class="icon-list">
   <li *ngFor="let name of icons">
     <span>
-      <i nel-icon [nelType]="name.type"></i>
+      <i class="el-icon-{{name.type}}"></i>
       {{'el-icon-' + name.type}}
     </span>
   </li>

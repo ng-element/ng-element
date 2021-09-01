@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { NelIconModule } from 'ng-element-ui/icon';
 import { NelDemoIconBasicComponent } from './icon-demo-basic.component';
+import { NelDemoIconFontComponent } from './icon-demo-font.component';
 
 @NgModule({
   declarations: [
-    NelDemoIconBasicComponent
+    NelDemoIconBasicComponent,
+    NelDemoIconFontComponent
   ],
   exports: [
-    NelDemoIconBasicComponent
+    NelDemoIconBasicComponent,
+    NelDemoIconFontComponent
   ],
   imports: [
     NelIconModule
