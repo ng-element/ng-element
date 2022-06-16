@@ -68,9 +68,9 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a>组件 64</a>
+                  <a>组件</a>
                   <div class="nav-group" *ngFor="let group of groupList">
-                    <div class="nav-group__title">{{group.title}}：{{group.menuList.length}}</div>
+                    <div class="nav-group__title">{{group.title}}</div>
                     <ul class="pure-menu-list" style="height: auto;">
                       <li class="nav-item" *ngFor="let item of group.menuList">
                         <a [routerLink]="'/' + item.link" routerLinkActive="active">
