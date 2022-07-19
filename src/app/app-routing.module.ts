@@ -218,6 +218,10 @@ const routes: Routes = [
   {
     path: 'input-number',
     loadChildren: () => import('./input-number/input-number.module').then(m => m.InputNumberModule)
+  },
+  {
+    path: 'slider',
+    loadChildren: () => import('./slider/slider.module').then(m => m.SliderModule)
   }
 ];
 
