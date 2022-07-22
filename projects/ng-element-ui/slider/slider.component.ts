@@ -19,6 +19,10 @@ export class NelSliderComponent implements ControlValueAccessor, AfterViewInit, 
   @Input() max = 100;
   @Input() disabled = false;
   @Input() step = 1;
+  @Input() format?: (val: any) => {};
+  @Input() showTooltip = true;
+  @Input() placement: any = 'top';
+  @Input() showStops = false;
   @ViewChild('runway', { static: false }) runwayRef!: ElementRef;
   dc: any;
   moveOb?: Subscription;
@@ -30,6 +34,7 @@ export class NelSliderComponent implements ControlValueAccessor, AfterViewInit, 
   progress = '0%';
   value = 0;
   change = (value: any) => { };
+  stops: any[] = [];
 
   constructor(
     @Optional() @Inject(DOCUMENT) document: any,
@@ -43,6 +48,7 @@ export class NelSliderComponent implements ControlValueAccessor, AfterViewInit, 
       this.value = val;
       this.progress = val + '%';
     }
+    this.changeStops();
     this.cdr.markForCheck();
   }
 
@@ -63,7 +69,6 @@ export class NelSliderComponent implements ControlValueAccessor, AfterViewInit, 
 
   ngAfterViewInit(): void {
     const client = this.runwayRef.nativeElement.getBoundingClientRect();
-    console.log(client);
     this.runway = {
       width: client.width,
       left: client.left
@@ -79,16 +84,45 @@ export class NelSliderComponent implements ControlValueAccessor, AfterViewInit, 
       } else if (moveClientX >= this.runway.width) {
         val = 100;
       } else {
-        val = Math.round(moveClientX * 100 / this.runway.width);
+        val = Math.round(moveClientX * ((this.max - this.min) / this.step) / this.runway.width) * this.step;
       }
-      this.value = val;
-      this.progress = val + '%';
-      this.change(val);
-      this.cdr.markForCheck();
+      this.changeVal(val);
     });
     this.upOb = fromEvent(this.dc, 'mouseup').subscribe((event: any) => {
       this.moveOb?.unsubscribe();
       this.upOb?.unsubscribe();
     });
+  }
+
+  runwayClick(event: MouseEvent): void {
+    const moveClientX = event.clientX - this.runway.left;
+    const val = Math.round(moveClientX * ((this.max - this.min) / this.step) / this.runway.width) * this.step;
+    this.changeVal(val);
+  }
+
+  changeVal(val: number): void {
+    this.value = val;
+    this.progress = val + '%';
+    this.change(val);
+    this.changeStops();
+    this.cdr.markForCheck();
+  }
+
+  formatVal(): string {
+    if (this.format) {
+      return this.format(this.value) + '';
+    } else {
+      return this.value + '';
+    }
+  }
+
+  changeStops() {
+    const stepLen = (this.max - this.min) / this.step;
+    const stops = [];
+    const startStep = this.value / this.step + 1;
+    for (let i = startStep; i < stepLen; i++) {
+      stops.push(i * this.step + '%');
+    }
+    this.stops = stops;
   }
 }

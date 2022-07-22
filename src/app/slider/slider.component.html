@@ -1,11 +1,26 @@
-<h2>Slider 滑块</h2>
+<h1>Slider 滑块</h1>
 <p>通过拖动滑块在一个固定区间内进行选择</p>
 <app-code code="import { NelSliderModule } from 'ng-element-ui/slider';"></app-code>
 
-<h3>基础用法</h3>
+<h2>基础用法</h2>
 <p>在拖动滑块时，显示当前值</p>
 <p>通过设置绑定值自定义滑块的初始值</p>
 
 <app-demo [codeUrl]="'components-slider-demo-basic.component'">
   <nel-demo-slider-basic demo></nel-demo-slider-basic>
+</app-demo>
+
+<h2>离散值</h2>
+<p>选项可以是离散的</p>
+<p>改变step的值可以改变步长， 通过设置 show-stops 属性可以显示间断点</p>
+
+<app-demo [codeUrl]="'components-slider-demo-show-stops.component'">
+  <nel-demo-slider-show-stops demo></nel-demo-slider-show-stops>
+</app-demo>
+
+<h2>位置</h2>
+<p>您可以自定义 Tooltip 提示的位置。</p>
+
+<app-demo [codeUrl]="'components-slider-demo-placement.component'">
+  <nel-demo-slider-placement demo></nel-demo-slider-placement>
 </app-demo>

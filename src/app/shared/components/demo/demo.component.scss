@@ -20,7 +20,7 @@
   }
 
   .meta {
-    background-color: #fafafa;
+    background-color: #f5f7fa;
     border-top: 1px solid #eaeefb;
     overflow: hidden;
     height: auto;
@@ -64,7 +64,26 @@
     }
   }
 
+  [class*=language-]:before {
+    font-family: var(--code-font-family);
+  }
+
+  [class~=language-angular]:before {
+    content: "angular";
+  }
+
+  [class*=language-]:before {
+    position: absolute;
+    top: 0.4em;
+    right: 0.8em;
+    z-index: 2;
+    opacity: var(--prism-marker-opacity);
+    font-size: var(--prism-marker-font-size);
+    color: var(--prism-marker-color);
+  }
+
   .highlight {
+    position: relative;
     display: flex;
     flex-direction: column;
 

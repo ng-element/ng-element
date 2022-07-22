@@ -1,8 +1,12 @@
 <div class="el-slider">
-  <div #runway class="el-slider__runway">
+  <div #runway class="el-slider__runway" (click)="runwayClick($event)">
     <div class="el-slider__bar" style="left: 0%;" [style.width]="progress"></div>
     <div class="el-slider__button-wrapper" role="slider" [style.left]="progress">
-      <div class="el-slider__button el-tooltip__trigger el-tooltip__trigger" (mousedown)="triggerDown()"></div>
+      <div nel-tooltip [nelContent]="formatVal()" [nelPlacement]="placement" [nelDisabled]="!showTooltip"
+        (mousedown)="triggerDown()" class="el-slider__button el-tooltip__trigger el-tooltip__trigger"></div>
+    </div>
+    <div *ngIf="showStops">
+      <div *ngFor="let stop of stops" class="el-slider__stop" [style.left]="stop"></div>
     </div>
   </div>
 </div>
