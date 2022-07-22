@@ -1,5 +1,6 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { NelSliderModule } from 'ng-element-ui/slider';
 import { NelDemoSliderBasicComponent } from './slider-demo-basic.component';
 
@@ -12,6 +13,7 @@ import { NelDemoSliderBasicComponent } from './slider-demo-basic.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     NelSliderModule
   ]
 })
