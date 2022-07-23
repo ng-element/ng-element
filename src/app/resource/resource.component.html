@@ -1,0 +1,10 @@
+<main class="page-content">
+  <nel-scrollbar #scrollbar [nelWrapClass]="'mainWrap'">
+    <div class="doc-content-wrapper">
+      <div class="doc-content-container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <nel-backtop [nelTarget]="'.mainWrap'"></nel-backtop>
+  </nel-scrollbar>
+</main>

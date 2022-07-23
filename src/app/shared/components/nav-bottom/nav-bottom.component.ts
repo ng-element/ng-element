@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { RouterList } from './../../../router';
+import { RouterList } from './../../../examples/router';
 
 @Component({
   selector: 'app-nav-bottom',
