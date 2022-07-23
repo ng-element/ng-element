@@ -222,6 +222,10 @@ const routes: Routes = [
   {
     path: 'slider',
     loadChildren: () => import('./slider/slider.module').then(m => m.SliderModule)
+  },
+  {
+    path: 'table',
+    loadChildren: () => import('./table/table.module').then(m => m.TableModule)
   }
 ];
 

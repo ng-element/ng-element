@@ -1,0 +1,11 @@
+<h1>Table 表格</h1>
+<p>用于展示多条结构类似的数据， 可对数据进行排序、筛选、对比或其他自定义操作。</p>
+<app-code code="import { NelTableModule } from 'ng-element-ui/table';"></app-code>
+
+<h2>基础表格</h2>
+<p>基础的表格展示用法。</p>
+<p>当 el-table 元素中注入 data 对象数组后，在 el-table-column 中用 prop 属性来对应对象中的键名即可填入数据，用 label 属性来定义表格的列名。 可以使用 width 属性来定义列宽。</p>
+
+<app-demo [codeUrl]="'components-table-demo-basic.component'">
+  <nel-demo-table-basic demo></nel-demo-table-basic>
+</app-demo>
