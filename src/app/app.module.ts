@@ -6,6 +6,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { NelBacktopModule } from 'ng-element-ui/backtop';
 import { NelScrollbarModule } from 'ng-element-ui/scrollbar';
 import { NelAlertModule } from 'ng-element-ui/alert';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { SharedModule } from './shared/shared.module';
 
 import { AppService } from './app.service';
@@ -24,6 +25,7 @@ import { AppComponent } from './app.component';
     NelBacktopModule,
     NelScrollbarModule,
     NelAlertModule,
+    LoadingBarRouterModule,
     SharedModule,
     AppRoutingModule
   ],

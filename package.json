@@ -23,6 +23,8 @@
     "@angular/platform-browser": "~11.2.11",
     "@angular/platform-browser-dynamic": "~11.2.11",
     "@angular/router": "~11.2.11",
+    "@ngx-loading-bar/core": "^5.1.2",
+    "@ngx-loading-bar/router": "^5.1.2",
     "@types/marked": "^2.0.2",
     "date-fns": "^2.22.1",
     "element-theme-chalk": "^2.15.1",
