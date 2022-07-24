@@ -1,0 +1,18 @@
+:root {
+  --vp-screen-max-width: 1362px;
+  --vp-sidebar-width-small: 266px;
+  --sidebar-width-sm: 16rem;
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    --vp-sidebar-width-small: 234px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  :root {
+    --vp-screen-max-width: 1482px;
+    --vp-sidebar-width-small: 290px;
+  }
+}
