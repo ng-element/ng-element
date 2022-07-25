@@ -1,0 +1,29 @@
+<div role="pagination" class="el-pagination" [class.is-background]="background" [class.el-pagination--small]="small">
+  <button type="button" class="btn-prev is-first" [disabled]="currentPage === 1 ? true : null" (click)="prevPage()">
+    <i class="el-icon">
+      <i class="el-icon-arrow-left"></i>
+    </i>
+  </button>
+  <ul class="el-pager">
+    <ng-container *ngFor="let pageIndex of pageIndexList">
+      <ng-container [ngSwitch]="pageIndex.type">
+        <li *ngSwitchCase="'number'" class="number" [class.active]="pageIndex.value === currentPage"
+          (click)="selectPage(pageIndex.value)">
+          {{pageIndex.value}}
+        </li>
+        <li *ngSwitchCase="'more-prev'" class="more btn-quickprev el-icon" (click)="prevMore()">
+          <i class="el-icon-more"></i>
+        </li>
+        <li *ngSwitchCase="'more-next'" class="more btn-quicknext el-icon" (click)="nextMore()">
+          <i class="el-icon-more"></i>
+        </li>
+      </ng-container>
+    </ng-container>
+  </ul>
+  <button type="button" class="btn-next is-last" [disabled]="currentPage === pageCount ? true : null"
+    (click)="nextPage()">
+    <i class="el-icon">
+      <i class="el-icon-arrow-right"></i>
+    </i>
+  </button>
+</div>

@@ -213,6 +213,10 @@ const routes: Routes = [
         loadChildren: () => import('./table/table.module').then(m => m.TableModule)
       },
       {
+        path: 'pagination',
+        loadChildren: () => import('./pagination/pagination.module').then(m => m.PaginationModule)
+      },
+      {
         path: '**',
         redirectTo: 'button'
       }

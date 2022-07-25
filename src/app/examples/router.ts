@@ -49,7 +49,7 @@ export const RouterList: any[] = [
       { link: 'empty', name: 'Empty 空状态' },
       { link: 'image', name: 'Image 图片' },
       { link: 'infinite-scroll', name: 'InfiniteScroll 无限滚动' },
-      { link: 'pagination', name: 'Pagination 分页 xxx' },
+      { link: 'pagination', name: 'Pagination 分页' },
       { link: 'progress', name: 'Progress 进度条' },
       { link: 'result', name: 'Result 结果' },
       { link: 'skeleton', name: 'Skeleton 骨架屏' },
