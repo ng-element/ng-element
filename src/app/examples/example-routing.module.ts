@@ -217,6 +217,10 @@ const routes: Routes = [
         loadChildren: () => import('./pagination/pagination.module').then(m => m.PaginationModule)
       },
       {
+        path: 'select',
+        loadChildren: () => import('./select/select.module').then(m => m.SelectModule)
+      },
+      {
         path: '**',
         redirectTo: 'button'
       }
