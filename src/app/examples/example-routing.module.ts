@@ -221,6 +221,10 @@ const routes: Routes = [
         loadChildren: () => import('./select/select.module').then(m => m.SelectModule)
       },
       {
+        path: 'time-select',
+        loadChildren: () => import('./time-select/time-select.module').then(m => m.TimeSelectModule)
+      },
+      {
         path: '**',
         redirectTo: 'button'
       }
