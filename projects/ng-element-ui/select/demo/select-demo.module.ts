@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { NelSelectModule } from 'ng-element-ui/select';
 import { NelDemoSelectBasicComponent } from './select-demo-basic.component';
 
@@ -10,6 +12,8 @@ import { NelDemoSelectBasicComponent } from './select-demo-basic.component';
     NelDemoSelectBasicComponent
   ],
   imports: [
+    CommonModule,
+    FormsModule,
     NelSelectModule
   ]
 })

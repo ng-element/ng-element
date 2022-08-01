@@ -15,7 +15,6 @@ export class NelDropdownDirective implements OnInit, OnDestroy {
   @Input() nelHideOnClick = true;
   @Input() nelDropdownSize?: SizeType;
   @Input() nelMaxHeight?: string | number;
-  component?: NelDropdownMenuComponent;
   protected readonly triggerDisposables: Array<() => void> = [];
 
   constructor(

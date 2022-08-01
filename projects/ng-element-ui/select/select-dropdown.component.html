@@ -1,0 +1,25 @@
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="origin" [cdkConnectedOverlayOpen]="isOpen"
+  [cdkConnectedOverlayPositions]="positionStrategy" (overlayOutsideClick)="onClickOutside($event)">
+  <div #dropdownEle class="el-popper is-pure is-light el-select__popper" tabindex="-1" aria-hidden="false"
+    data-popper-placement="top-start">
+    <div class="el-select-dropdown" style="min-width: 222px;">
+      <div class="el-scrollbar">
+        <div class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+          <ul class="el-scrollbar__view el-select-dropdown__list">
+            <li *ngFor="let option of options" (click)="selectOption(option)" class="el-select-dropdown__item"
+              [class.selected]="option.selected">
+              <span>{{option.label}}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="el-scrollbar__bar is-horizontal" style="display: none;">
+          <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+        </div>
+        <div class="el-scrollbar__bar is-vertical" style="display: none;">
+          <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+        </div>
+      </div>
+    </div>
+    <span class="el-popper__arrow" data-popper-arrow="" style="position: absolute; left: 105px;"></span>
+  </div>
+</ng-template>

@@ -27,7 +27,7 @@ export const RouterList: any[] = [
       { link: 'input-number', name: 'InputNumber 计数器' },
       { link: 'radio', name: 'Radio 单选框' },
       { link: 'rate', name: 'Rate 评分' },
-      { link: 'select', name: 'Select 选择器 xxx' },
+      { link: 'select', name: 'Select 选择器' },
       { link: 'slider', name: 'Slider 滑块' },
       { link: 'switch', name: 'Switch 开关' },
       { link: 'time-picker', name: 'TimePicker 时间选择器 xxx' },

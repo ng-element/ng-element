@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnDestroy, Renderer2, ViewChild, OnInit } from '@angular/core';
+import { Component, ElementRef, OnDestroy, Renderer2, ViewChild } from '@angular/core';
 import { CdkOverlayOrigin, ConnectionPositionPair } from '@angular/cdk/overlay';
 import { dropdownMotion } from 'ng-element-ui/core/animation';
 import { TriggerType, SizeType } from './dropdown.directive';
