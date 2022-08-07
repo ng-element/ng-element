@@ -56,7 +56,7 @@ export const RouterList: any[] = [
       { link: 'table', name: 'Table 表格' },
       { link: 'tag', name: 'Tag 标签' },
       { link: 'timeline', name: 'Timeline 时间线' },
-      { link: 'tree', name: 'Tree 树形控件 xxx' },
+      { link: 'tree', name: 'Tree 树形控件' },
     ]
   },
   {
@@ -66,7 +66,7 @@ export const RouterList: any[] = [
       { link: 'backtop', name: 'Backtop 回到顶部' },
       { link: 'breadcrumb', name: 'Breadcrumb 面包屑' },
       { link: 'dropdown', name: 'Dropdown 下拉菜单' },
-      { link: 'menu', name: 'Menu 菜单 xxx' },
+      { link: 'menu', name: 'Menu 菜单' },
       { link: 'page-header', name: 'Page Header 页头' },
       { link: 'steps', name: 'Steps 步骤条' },
       { link: 'tabs', name: 'Tabs 标签页' },

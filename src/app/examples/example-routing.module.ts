@@ -245,6 +245,14 @@ const routes: Routes = [
         loadChildren: () => import('./upload/upload.module').then(m => m.UploadModule)
       },
       {
+        path: 'tree',
+        loadChildren: () => import('./tree/tree.module').then(m => m.TreeModule)
+      },
+      {
+        path: 'menu',
+        loadChildren: () => import('./menu/menu.module').then(m => m.MenuModule)
+      },
+      {
         path: '**',
         redirectTo: 'button'
       }
