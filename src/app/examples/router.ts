@@ -17,7 +17,7 @@ export const RouterList: any[] = [
   {
     title: 'Form 表单组件',
     menuList: [
-      { link: 'cascader', name: 'Cascader 级联选择器 xxx' },
+      { link: 'cascader', name: 'Cascader 级联选择器' },
       { link: 'checkbox', name: 'Checkbox 多选框' },
       { link: 'color-picker', name: 'Color Picker 取色器' },
       { link: 'date-picker', name: 'Date Picker 日期选择器' },
@@ -33,7 +33,7 @@ export const RouterList: any[] = [
       { link: 'time-picker', name: 'Time Picker 时间选择器' },
       { link: 'time-select', name: 'Time Select 时间选择' },
       { link: 'transfer', name: 'Transfer 穿梭框 xxx' },
-      { link: 'upload', name: 'Upload 上传 xxx' },
+      { link: 'upload', name: 'Upload 上传' },
     ]
   },
   {

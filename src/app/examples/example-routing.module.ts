@@ -233,6 +233,18 @@ const routes: Routes = [
         loadChildren: () => import('./color-picker/color-picker.module').then(m => m.ColorPickerModule)
       },
       {
+        path: 'cascader',
+        loadChildren: () => import('./cascader/cascader.module').then(m => m.CascaderModule)
+      },
+      {
+        path: 'date-picker',
+        loadChildren: () => import('./date-picker/date-picker.module').then(m => m.DatePickerModule)
+      },
+      {
+        path: 'upload',
+        loadChildren: () => import('./upload/upload.module').then(m => m.UploadModule)
+      },
+      {
         path: '**',
         redirectTo: 'button'
       }
