@@ -32,7 +32,7 @@ export const RouterList: any[] = [
       { link: 'switch', name: 'Switch 开关' },
       { link: 'time-picker', name: 'Time Picker 时间选择器' },
       { link: 'time-select', name: 'Time Select 时间选择' },
-      { link: 'transfer', name: 'Transfer 穿梭框 xxx' },
+      { link: 'transfer', name: 'Transfer 穿梭框' },
       { link: 'upload', name: 'Upload 上传' },
     ]
   },

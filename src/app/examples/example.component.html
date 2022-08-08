@@ -24,7 +24,7 @@
     <div class="doc-content-wrapper">
       <div class="doc-content-container">
         <router-outlet></router-outlet>
-        <app-nav-bottom></app-nav-bottom>
+        <app-nav-bottom type="component/" [routers]="groupList"></app-nav-bottom>
       </div>
     </div>
     <nel-backtop [nelTarget]="'.mainWrap'"></nel-backtop>

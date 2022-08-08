@@ -253,6 +253,10 @@ const routes: Routes = [
         loadChildren: () => import('./menu/menu.module').then(m => m.MenuModule)
       },
       {
+        path: 'transfer',
+        loadChildren: () => import('./transfer/transfer.module').then(m => m.TransferModule)
+      },
+      {
         path: '**',
         redirectTo: 'button'
       }
