@@ -261,6 +261,10 @@ const routes: Routes = [
         loadChildren: () => import('./form/form.module').then(m => m.FormModule)
       },
       {
+        path: 'datetime-picker',
+        loadChildren: () => import('./datetime-picker/datetime-picker.module').then(m => m.DateTimePickerModule)
+      },
+      {
         path: '**',
         redirectTo: 'button'
       }
