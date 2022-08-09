@@ -257,6 +257,10 @@ const routes: Routes = [
         loadChildren: () => import('./transfer/transfer.module').then(m => m.TransferModule)
       },
       {
+        path: 'form',
+        loadChildren: () => import('./form/form.module').then(m => m.FormModule)
+      },
+      {
         path: '**',
         redirectTo: 'button'
       }

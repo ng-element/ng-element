@@ -18,4 +18,4 @@ import { NelDemoColorPickerBasicComponent } from './color-picker-demo-basic.comp
   ]
 })
 
-export class NelDemoColorPickerBasicModule { }
+export class NelDemoColorPickerModule { }

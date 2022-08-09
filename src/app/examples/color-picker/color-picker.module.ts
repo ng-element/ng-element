@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NelDemoColorPickerBasicModule } from '../../../../projects/ng-element-ui/color-picker/demo/color-picker-demo.module';
+import { NelDemoColorPickerModule } from '../../../../projects/ng-element-ui/color-picker/demo/color-picker-demo.module';
 import { SharedModule } from '../../shared/shared.module';
 import { ColorPickerRoutingModule } from './color-picker-routing.module';
 import { ColorPickerComponent } from './color-picker.component';
@@ -12,7 +12,7 @@ import { ColorPickerComponent } from './color-picker.component';
     ColorPickerComponent
   ],
   imports: [
-    NelDemoColorPickerBasicModule,
+    NelDemoColorPickerModule,
     SharedModule,
     ColorPickerRoutingModule
   ]
