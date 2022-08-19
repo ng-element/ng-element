@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { OverlayModule } from '@angular/cdk/overlay';
 import { NelColorPickerComponent } from './color-picker.component';
+import { NelColorPickerDropdownComponent } from './color-picker-dropdown.component';
 
 @NgModule({
   declarations: [
-    NelColorPickerComponent
+    NelColorPickerComponent,
+    NelColorPickerDropdownComponent
   ],
   exports: [
-    NelColorPickerComponent
+    NelColorPickerComponent,
+    NelColorPickerDropdownComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    OverlayModule
   ]
 })
 
