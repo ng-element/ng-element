@@ -1,40 +1,38 @@
 <div class="el-popper is-light el-color-picker__panel el-color-dropdown" tabindex="-1" aria-hidden="false"
   style="z-index: 2017; margin: 0px;" data-popper-placement="right">
-  <!-- Workaround bug #6378 -->
   <div>
     <div class="el-color-dropdown__main-wrapper">
-      <div class="el-color-hue-slider is-vertical hue-slider">
-        <div class="el-color-hue-slider__bar"></div>
-        <div class="el-color-hue-slider__thumb" style="left: 0px; top: 104px;"></div>
+      <div #hueSlider class="el-color-hue-slider is-vertical hue-slider">
+        <div (click)="clickHueSliderBar($event)" (mousedown)="initHueSlider()" class="el-color-hue-slider__bar">
+        </div>
+        <div #hueSliderThumb (mousedown)="initHueSlider()" class="el-color-hue-slider__thumb" style="left: 0px;"
+          [style.top]="hueSliderThumbTop"></div>
       </div>
-      <div class="el-color-svpanel" style="background-color: rgb(0, 125, 255);">
+      <div #svpanel (click)="clickSvpanel($event)" (mousedown)="initSvpanel()" class="el-color-svpanel"
+        style="background-color: rgb(0, 125, 255);">
         <div class="el-color-svpanel__white"></div>
         <div class="el-color-svpanel__black"></div>
-        <div class="el-color-svpanel__cursor" style="top: 165px; left: 46px;">
+        <div #svpanelCursor (mousedown)="initSvpanel()" class="el-color-svpanel__cursor" [style.top]="svpanelCursorTop"
+          [style.left]="svpanelCursorLeft">
           <div></div>
         </div>
       </div>
     </div>
-    <!--v-if-->
-    <!--v-if-->
-    <div class="el-color-dropdown__btns"><span class="el-color-dropdown__value">
+    <div class="el-color-dropdown__btns">
+      <span class="el-color-dropdown__value">
         <div class="el-input el-input--small">
-          <!-- input -->
-          <!-- prepend slot -->
-          <!--v-if-->
           <div class="el-input__wrapper">
-            <!-- prefix slot -->
-            <!--v-if--><input class="el-input__inner" type="text" autocomplete="off" tabindex="0" id="el-id-9846-25">
-            <!-- suffix slot -->
-            <!--v-if-->
-          </div><!-- append slot -->
-          <!--v-if-->
+            <input class="el-input__inner" type="text" autocomplete="off" tabindex="0" id="el-id-9846-25">
+          </div>
         </div>
-      </span><button class="el-button el-button--small is-text el-color-dropdown__link-btn" aria-disabled="false"
+      </span>
+      <button class="el-button el-button--small is-text el-color-dropdown__link-btn" aria-disabled="false"
         type="button">
-        <!--v-if--><span class="">Clear</span></button><button
-        class="el-button el-button--small is-plain el-color-dropdown__btn" aria-disabled="false" type="button">
-        <!--v-if--><span class="">OK</span></button></div>
+        <span class="">Clear</span>
+      </button>
+      <button class="el-button el-button--small is-plain el-color-dropdown__btn" aria-disabled="false" type="button">
+        <span class="">OK</span>
+      </button>
+    </div>
   </div>
-  <!--v-if-->
 </div>
