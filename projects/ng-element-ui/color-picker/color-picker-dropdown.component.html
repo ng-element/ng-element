@@ -9,7 +9,7 @@
           [style.top]="hueSliderThumbTop"></div>
       </div>
       <div #svpanel (click)="clickSvpanel($event)" (mousedown)="initSvpanel()" class="el-color-svpanel"
-        style="background-color: rgb(0, 125, 255);">
+        [style.background-color]="backgroundColor">
         <div class="el-color-svpanel__white"></div>
         <div class="el-color-svpanel__black"></div>
         <div #svpanelCursor (mousedown)="initSvpanel()" class="el-color-svpanel__cursor" [style.top]="svpanelCursorTop"

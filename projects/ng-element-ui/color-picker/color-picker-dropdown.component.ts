@@ -20,6 +20,7 @@ export class NelColorPickerDropdownComponent implements OnDestroy {
   svpanelCursorUp?: Subscription;
   svpanelCursorTop = '0px';
   svpanelCursorLeft = '0px';
+  backgroundColor = 'hsl(0, 100%, 50%)';
 
   ngOnDestroy(): void {
     this.hueSliderUnSubscribe();
@@ -31,6 +32,7 @@ export class NelColorPickerDropdownComponent implements OnDestroy {
     const rect = this.hueSlider.nativeElement.getBoundingClientRect();
     this.hueSliderThumbMove = fromEvent(document, 'mousemove').subscribe((event) => {
       (event as MouseEvent).preventDefault();
+      let hue = 0;
       let top = 0;
       if ((event as MouseEvent).clientY < rect.top) {
         top = 0;
@@ -39,7 +41,13 @@ export class NelColorPickerDropdownComponent implements OnDestroy {
       } else {
         top = (event as MouseEvent).clientY - rect.top;
       }
+      hue = Math.round(
+        ((top - this.hueSliderThumb.nativeElement.offsetHeight / 2) /
+          (rect.height - this.hueSliderThumb.nativeElement.offsetHeight)) *
+        360
+      );
       this.hueSliderThumbTop = top + 'px';
+      this.backgroundColor = `hsl(${hue}, 100%, 50%)`;
     });
     this.hueSliderThumbUp = fromEvent(document, 'mouseup').subscribe((event) => {
       this.hueSliderUnSubscribe();
@@ -49,7 +57,13 @@ export class NelColorPickerDropdownComponent implements OnDestroy {
   clickHueSliderBar(event: MouseEvent): void {
     const rect = this.hueSlider.nativeElement.getBoundingClientRect();
     const top = event.clientY - rect.top;
+    const hue = Math.round(
+      ((top - this.hueSliderThumb.nativeElement.offsetHeight / 2) /
+        (rect.height - this.hueSliderThumb.nativeElement.offsetHeight)) *
+      360
+    );
     this.hueSliderThumbTop = top + 'px';
+    this.backgroundColor = `hsl(${hue}, 100%, 50%)`;
   }
 
   hueSliderUnSubscribe() {
