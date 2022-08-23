@@ -22,7 +22,8 @@
       <span class="el-color-dropdown__value">
         <div class="el-input el-input--small">
           <div class="el-input__wrapper">
-            <input class="el-input__inner" type="text" autocomplete="off" tabindex="0" id="el-id-9846-25">
+            <input [(ngModel)]="displayedColor" class="el-input__inner" type="text" autocomplete="off" tabindex="0"
+              id="el-id-9846-25">
           </div>
         </div>
       </span>
@@ -30,7 +31,8 @@
         type="button">
         <span class="">Clear</span>
       </button>
-      <button class="el-button el-button--small is-plain el-color-dropdown__btn" aria-disabled="false" type="button">
+      <button (click)="confirmValue()" class="el-button el-button--small is-plain el-color-dropdown__btn"
+        aria-disabled="false" type="button">
         <span class="">OK</span>
       </button>
     </div>

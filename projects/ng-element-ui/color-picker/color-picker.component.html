@@ -2,7 +2,7 @@
   aria-description="current color is #409EFF. press enter to select a new color." tabindex="0" (click)="open()">
   <div class="el-color-picker__trigger">
     <span class="el-color-picker__color">
-      <span class="el-color-picker__color-inner" style="background-color: rgb(64, 158, 255);">
+      <span class="el-color-picker__color-inner" [style.background-color]="displayedColor">
         <i class="el-icon el-color-picker__icon is-icon-arrow-down">
           <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
             <path fill="currentColor"

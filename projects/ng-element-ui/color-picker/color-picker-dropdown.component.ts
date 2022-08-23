@@ -1,5 +1,6 @@
-import { Component, ElementRef, OnDestroy, ViewChild, ViewEncapsulation } from '@angular/core';
-import { fromEvent, Subscription } from 'rxjs';
+import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild, ViewEncapsulation } from '@angular/core';
+import { fromEvent, Subject, Subscription } from 'rxjs';
+import Color from './color';
 
 @Component({
   selector: 'nel-color-picker-dropdown',
@@ -8,7 +9,7 @@ import { fromEvent, Subscription } from 'rxjs';
   encapsulation: ViewEncapsulation.None
 })
 
-export class NelColorPickerDropdownComponent implements OnDestroy {
+export class NelColorPickerDropdownComponent implements AfterViewInit, OnDestroy {
   @ViewChild('hueSlider', { static: false }) hueSlider!: ElementRef;
   @ViewChild('hueSliderThumb', { static: false }) hueSliderThumb!: ElementRef;
   @ViewChild('svpanel', { static: false }) svpanel!: ElementRef;
@@ -21,10 +22,37 @@ export class NelColorPickerDropdownComponent implements OnDestroy {
   svpanelCursorTop = '0px';
   svpanelCursorLeft = '0px';
   backgroundColor = 'hsl(0, 100%, 50%)';
+  color!: Color;
+  changeColor$ = new Subject<Color>();
+  selectedColor$ = new Subject<Color>();
+  displayedColor = '';
 
   ngOnDestroy(): void {
     this.hueSliderUnSubscribe();
     this.svpanelUnSubscribe();
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.getThumbTop();
+      this.getSvpanel();
+    }, 0);
+  }
+
+  getThumbTop(): void {
+    const hue = this.color.get('hue');
+    this.hueSliderThumbTop = Math.round(
+      (hue * (this.hueSlider.nativeElement.offsetHeight - this.hueSliderThumb.nativeElement.offsetHeight / 2)) / 360
+    ) + 'px';
+  }
+
+  getSvpanel() {
+    const saturation = this.color.get('saturation');
+    const value = this.color.get('value');
+    const { clientWidth: width, clientHeight: height } = this.svpanel.nativeElement;
+    this.svpanelCursorLeft = (saturation * width) / 100 + 'px';
+    this.svpanelCursorTop = ((100 - value) * height) / 100 + 'px';
+    this.backgroundColor = `hsl(${this.color.get('hue')}, 100%, 50%)`;
   }
 
   initHueSlider(): void {
@@ -48,6 +76,9 @@ export class NelColorPickerDropdownComponent implements OnDestroy {
       );
       this.hueSliderThumbTop = top + 'px';
       this.backgroundColor = `hsl(${hue}, 100%, 50%)`;
+      this.color.set('hue', hue);
+      this.displayedColor = this.color.value;
+      this.changeColor$?.next(this.color);
     });
     this.hueSliderThumbUp = fromEvent(document, 'mouseup').subscribe((event) => {
       this.hueSliderUnSubscribe();
@@ -64,6 +95,9 @@ export class NelColorPickerDropdownComponent implements OnDestroy {
     );
     this.hueSliderThumbTop = top + 'px';
     this.backgroundColor = `hsl(${hue}, 100%, 50%)`;
+    this.color.set('hue', hue);
+    this.displayedColor = this.color.value;
+    this.changeColor$?.next(this.color);
   }
 
   hueSliderUnSubscribe() {
@@ -94,6 +128,7 @@ export class NelColorPickerDropdownComponent implements OnDestroy {
       }
       this.svpanelCursorTop = top + 'px';
       this.svpanelCursorLeft = left + 'px';
+      this.changeSvpanel(rect, left, top);
     });
     this.hueSliderThumbUp = fromEvent(document, 'mouseup').subscribe((event) => {
       this.svpanelUnSubscribe();
@@ -106,10 +141,25 @@ export class NelColorPickerDropdownComponent implements OnDestroy {
     const left = event.clientX - rect.left;
     this.svpanelCursorTop = top + 'px';
     this.svpanelCursorLeft = left + 'px';
+    this.changeSvpanel(rect, left, top);
   }
 
   svpanelUnSubscribe() {
     this.svpanelCursorMove?.unsubscribe();
     this.svpanelCursorUp?.unsubscribe();
+  }
+
+  changeSvpanel(rect: any, left: number, top: number) {
+    this.color.set({
+      saturation: (left / rect.width) * 100,
+      value: 100 - (top / rect.height) * 100,
+    });
+    this.displayedColor = this.color.value;
+    this.changeColor$?.next(this.color);
+  }
+
+  confirmValue() {
+    this.displayedColor = this.color.value;
+    this.selectedColor$?.next(this.color);
   }
 }
