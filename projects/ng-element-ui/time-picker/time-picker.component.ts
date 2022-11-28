@@ -32,7 +32,6 @@ export class NelTimePickerComponent implements OnDestroy {
   }
 
   open(): void {
-    console.log(1);
     if (this.isOpened) {
       return;
     }
