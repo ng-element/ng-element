@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NelDatePickerComponent } from './date-picker.component';
+import { NelDatePickerPanelComponent } from './date-picker-panel.component';
 
 @NgModule({
   declarations: [
-    NelDatePickerComponent
+    NelDatePickerComponent,
+    NelDatePickerPanelComponent
   ],
   exports: [
-    NelDatePickerComponent
+    NelDatePickerComponent,
+    NelDatePickerPanelComponent
   ],
   imports: [
     CommonModule
