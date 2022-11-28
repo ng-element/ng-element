@@ -1,0 +1,26 @@
+<div class="el-cascader-panel">
+  <div *ngFor="let menu of menuList; let index=index;" class="el-scrollbar el-cascader-menu" role="menu">
+    <div class="el-cascader-menu__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+      <ul class="el-scrollbar__view el-cascader-menu__list" style="">
+        <li *ngFor="let option of menu" role="menuitem" aria-haspopup="true" aria-owns="cascader-menu-1577-0"
+          aria-expanded="false" tabindex="-1" class="el-cascader-node" (click)="selectedOption(option, index)">
+          <span class="el-cascader-node__label">{{option.label}}</span>
+          <i *ngIf="option.children?.length > 0" class="el-icon arrow-right el-cascader-node__postfix">
+            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor"
+                d="M340.864 149.312a30.592 30.592 0 0 0 0 42.752L652.736 512 340.864 831.872a30.592 30.592 0 0 0 0 42.752 29.12 29.12 0 0 0 41.728 0L714.24 534.336a32 32 0 0 0 0-44.672L382.592 149.376a29.12 29.12 0 0 0-41.728 0z">
+              </path>
+            </svg>
+          </i>
+        </li>
+      </ul>
+    </div>
+    <div class="el-scrollbar__bar is-horizontal" style="display: none;">
+      <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+    </div>
+    <div class="el-scrollbar__bar is-vertical" style="display: none;">
+      <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+    </div>
+  </div>
+</div>
+<span class="el-popper__arrow" data-popper-arrow="" style="position: absolute; left: 35px;"></span>

@@ -11,28 +11,6 @@ import { AppService } from './../../../app.service';
   templateUrl: './demo.component.html',
   styleUrls: ['./demo.component.scss'],
   providers: [HighLightPipe],
-  animations: [
-    trigger('state', [
-      state('false', style({
-        opacity: 0,
-        display: 'none',
-      })),
-      state('true', style({
-        opacity: 1,
-        display: 'inline-block',
-      })),
-      transition('false <=> true', animate(`300ms ease-in-out`)),
-    ]),
-    trigger('expand', [
-      state('false', style({
-        height: 0,
-      })),
-      state('true', style({
-        height: '*',
-      })),
-      transition('* => *', animate(`250ms ease-in-out`)),
-    ]),
-  ],
   encapsulation: ViewEncapsulation.None,
 })
 export class DemoComponent implements OnInit {
