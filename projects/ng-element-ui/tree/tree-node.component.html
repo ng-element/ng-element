@@ -1,0 +1,17 @@
+<div *ngFor="let treeItem of data" class="el-tree-node is-expanded is-current is-focusable" role="treeitem" tabindex="0"
+  aria-expanded="true" aria-disabled="" aria-checked="false" draggable="false" data-key="1">
+  <div class="el-tree-node__content" style="padding-left: 0px;" (click)="toggle(treeItem)"
+    [style.padding-left]="18 * (leafLevel - 1) + 'px'">
+    <i class="el-icon el-tree-node__expand-icon" [class.expanded]="treeItem.expand"
+      [class.is-leaf]="!treeItem.children || treeItem.children.length === 0">
+      <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M384 192v640l384-320.064z"></path>
+      </svg>
+    </i>
+    <span class="el-tree-node__label">{{treeItem.label}}</span>
+  </div>
+  <div *ngIf="treeItem.init" class="el-tree-node__children" role="group" aria-expanded="true" style="overflow: hidden;"
+    [style.display]="treeItem.expand ? 'inherit' : 'none'">
+    <nel-tree-node [data]="treeItem.children" [leafLevel]="leafLevel + 1"></nel-tree-node>
+  </div>
+</div>
