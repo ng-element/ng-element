@@ -1,1 +1,44 @@
-upload...
+<div class="upload-demo">
+  <div class="el-upload el-upload--text" tabindex="0">
+    <ng-content></ng-content>
+    <input class="el-upload__input" name="file" multiple="" accept="" type="file">
+  </div>
+  <ng-container *ngIf="tip">
+    <ng-container *ngTemplateOutlet="tip"></ng-container>
+  </ng-container>
+  <ul class="el-upload-list el-upload-list--text">
+    <li *ngFor="let file of fileList; let index=index;" class="el-upload-list__item is-success" tabindex="0">
+      <div class="el-upload-list__item-info">、
+        <a class="el-upload-list__item-name">
+          <i class="el-icon el-icon--document">
+            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor"
+                d="M832 384H576V128H192v768h640V384zm-26.496-64L640 154.496V320h165.504zM160 64h480l256 256v608a32 32 0 0 1-32 32H160a32 32 0 0 1-32-32V96a32 32 0 0 1 32-32zm160 448h384v64H320v-64zm0-192h160v64H320v-64zm0 384h384v64H320v-64z">
+              </path>
+            </svg>
+          </i>
+          <span class="el-upload-list__item-file-name">{{file.name}}</span>
+        </a>
+      </div>
+      <label class="el-upload-list__item-status-label">
+        <i class="el-icon el-icon--upload-success el-icon--circle-check">
+          <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor"
+              d="M512 896a384 384 0 1 0 0-768 384 384 0 0 0 0 768zm0 64a448 448 0 1 1 0-896 448 448 0 0 1 0 896z">
+            </path>
+            <path fill="currentColor"
+              d="M745.344 361.344a32 32 0 0 1 45.312 45.312l-288 288a32 32 0 0 1-45.312 0l-160-160a32 32 0 1 1 45.312-45.312L480 626.752l265.344-265.408z">
+            </path>
+          </svg>
+        </i>
+      </label>
+      <i class="el-icon el-icon--close" (click)="remove(index)">
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor"
+            d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z">
+          </path>
+        </svg>
+      </i>
+    </li>
+  </ul>
+</div>

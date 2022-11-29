@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { NelUploadModule } from 'ng-element-ui/upload';
 import { NelDemoUploadBasicComponent } from './upload-demo-basic.component';
 
@@ -12,6 +13,7 @@ import { NelDemoUploadBasicComponent } from './upload-demo-basic.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     NelUploadModule
   ]
 })
