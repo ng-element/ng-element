@@ -32,7 +32,6 @@ export class NelCascaderComponent implements OnDestroy {
   }
 
   open(): void {
-    console.log(123);
     if (this.isOpened) {
       return;
     }

@@ -1,1 +1,72 @@
-transfer...
+<div class="el-transfer">
+  <div class="el-transfer-panel">
+    <p class="el-transfer-panel__header">
+      <label class="el-checkbox">
+        <span class="el-checkbox__input">
+          <input class="el-checkbox__original" type="checkbox" aria-hidden="false" value="false">
+          <span class="el-checkbox__inner"></span>
+        </span>
+        <span class="el-checkbox__label">List 1 <span>0/{{data.length}}</span>
+        </span>
+      </label>
+    </p>
+    <div class="el-transfer-panel__body">
+      <div class="el-checkbox-group el-transfer-panel__list" role="group" aria-label="checkbox-group"
+        id="el-id-1216-201">
+        <label *ngFor="let item of data" class="el-checkbox el-transfer-panel__item">
+          <span class="el-checkbox__input">
+            <input class="el-checkbox__original" type="checkbox" aria-hidden="false" value="1">
+            <span class="el-checkbox__inner"></span>
+          </span>
+          <span class="el-checkbox__label">
+            <span>{{item.label}}</span>
+          </span>
+        </label>
+      </div>
+      <p class="el-transfer-panel__empty" style="display: none;">No data</p>
+    </div>
+  </div>
+  <div class="el-transfer__buttons">
+    <button class="el-button el-button--primary is-disabled el-transfer__button" aria-disabled="true" disabled=""
+      type="button">
+      <span class="">
+        <i class="el-icon">
+          <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor"
+              d="M609.408 149.376 277.76 489.6a32 32 0 0 0 0 44.672l331.648 340.352a29.12 29.12 0 0 0 41.728 0 30.592 30.592 0 0 0 0-42.752L339.264 511.936l311.872-319.872a30.592 30.592 0 0 0 0-42.688 29.12 29.12 0 0 0-41.728 0z">
+            </path>
+          </svg>
+        </i>
+      </span>
+    </button>
+    <button class="el-button el-button--primary is-disabled el-transfer__button" aria-disabled="true" disabled=""
+      type="button">
+      <span class="">
+        <i class="el-icon">
+          <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor"
+              d="M340.864 149.312a30.592 30.592 0 0 0 0 42.752L652.736 512 340.864 831.872a30.592 30.592 0 0 0 0 42.752 29.12 29.12 0 0 0 41.728 0L714.24 534.336a32 32 0 0 0 0-44.672L382.592 149.376a29.12 29.12 0 0 0-41.728 0z">
+            </path>
+          </svg>
+        </i>
+      </span>
+    </button>
+  </div>
+  <div class="el-transfer-panel">
+    <p class="el-transfer-panel__header">
+      <label class="el-checkbox">
+        <span class="el-checkbox__input">
+          <input class="el-checkbox__original" type="checkbox" aria-hidden="false" value="false">
+          <span class="el-checkbox__inner"></span>
+        </span>
+        <span class="el-checkbox__label">List 2 <span>0/0</span>
+        </span>
+      </label>
+    </p>
+    <div class="el-transfer-panel__body">
+      <div class="el-checkbox-group el-transfer-panel__list" role="group" aria-label="checkbox-group"
+        style="display: none;"></div>
+      <p class="el-transfer-panel__empty">No data</p>
+    </div>
+  </div>
+</div>

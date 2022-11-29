@@ -19,6 +19,7 @@ export class NelDatePickerComponent implements OnDestroy {
   isOpened = false;
   overlayRef?: OverlayRef;
   outsideSub?: Subscription;
+  positionSub?: Subscription;
 
   constructor(
     private elementRef: ElementRef,
@@ -30,29 +31,48 @@ export class NelDatePickerComponent implements OnDestroy {
     if (this.outsideSub) {
       this.outsideSub.unsubscribe();
     }
+    if (this.positionSub) {
+      this.positionSub.unsubscribe();
+    }
   }
 
   open(): void {
-    console.log(123);
     if (this.isOpened) {
       return;
     }
     this.isOpened = true;
     const positionBottom: ConnectionPositionPair = {
-      originX: 'start',
+      originX: 'center',
       originY: 'bottom',
-      overlayX: 'start',
+      overlayX: 'center',
       overlayY: 'top',
+      offsetY: 10
+    };
+    const positionTop: ConnectionPositionPair = {
+      originX: 'center',
+      originY: 'top',
+      overlayX: 'center',
+      overlayY: 'bottom',
+      offsetY: -10
     };
     const positionStrategy = this.overlayPositionBuilder
       .flexibleConnectedTo(this.elementRef)
-      .withPositions([positionBottom]);
+      .withPositions([positionBottom, positionTop]);
     this.overlayRef = this.overlay.create({ positionStrategy });
     if (this.overlayRef) {
-      const dataPickerRef: ComponentRef<NelDatePickerPanelComponent>
+      const datePickerRef: ComponentRef<NelDatePickerPanelComponent>
         = this.overlayRef.attach(new ComponentPortal(NelDatePickerPanelComponent));
       this.outsideSub = this.overlayRef.outsidePointerEvents().subscribe(() => {
         this.close();
+      });
+      // 窗口大小变更时，监听位置变更
+      this.positionSub = positionStrategy.positionChanges.subscribe((pos) => {
+        console.log(pos);
+        if (pos.connectionPair.originY === 'bottom') {
+          datePickerRef.instance.changePosition('bottom');
+        } else if (pos.connectionPair.originY === 'top') {
+          datePickerRef.instance.changePosition('top');
+        }
       });
     }
   }

@@ -210,4 +210,5 @@
     </button>
   </div>
 </div>
-<span class="el-popper__arrow" data-popper-arrow="" style="position: absolute; top: 166px;"></span>
+<span class="el-popper__arrow" data-popper-arrow="" style="position: absolute; left: 50%;"
+  [style.top]="position === 'bottom'? '-5px' : 'inherit'" [style.bottom]="position === 'top' ? '-5px' : 'inherit'"></span>

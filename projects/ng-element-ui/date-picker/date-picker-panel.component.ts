@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
   selector: 'nel-date-picker-panel',
@@ -10,4 +10,16 @@ import { Component } from '@angular/core';
   }
 })
 
-export class NelDatePickerPanelComponent { }
+export class NelDatePickerPanelComponent {
+  position: string = 'bottom';
+
+  constructor(
+    private cdr: ChangeDetectorRef,
+  ) { }
+
+  changePosition(position: string) {
+    this.position = position;
+    this.cdr.markForCheck();
+    this.cdr.detectChanges();
+  }
+}
