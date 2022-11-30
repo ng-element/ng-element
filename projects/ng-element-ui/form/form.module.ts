@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NelFormComponent } from './form.component';
+import { NelFormItemComponent } from './form-item.component';
 
 @NgModule({
   declarations: [
-    NelFormComponent
+    NelFormComponent,
+    NelFormItemComponent
   ],
   exports: [
-    NelFormComponent
+    NelFormComponent,
+    NelFormItemComponent
   ],
   imports: [
     CommonModule

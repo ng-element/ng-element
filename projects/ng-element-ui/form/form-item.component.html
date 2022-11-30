@@ -1,0 +1,9 @@
+<div class="el-form-item asterisk-left" [class.is-error]="isError">
+  <label *ngIf="label" id="el-id-1383-38" for="el-id-1383-97" class="el-form-item__label" [style.width]="labelWidth">
+    {{label}}
+  </label>
+  <div class="el-form-item__content" [style.margin-left]="label ? 'inherit' : labelWidth">
+    <ng-content></ng-content>
+    <div *ngIf="isError" class="el-form-item__error">Please input correct email address</div>
+  </div>
+</div>
