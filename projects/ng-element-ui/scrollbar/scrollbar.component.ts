@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, ViewChild, ElementRef, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
-import ResizeObserver from 'resize-observer-polyfill';
 
 @Component({
   selector: 'nel-scrollbar',
