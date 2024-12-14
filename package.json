@@ -4,12 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "gulp buildDemoCmp && ng build --prod",
+    "build": "gulp buildDemoCmp && ng build --configuration production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "lib": "gulp buildReadme && ng build ng-element-ui --prod && gulp build",
-    "stats": "gulp buildDemoCmp && ng build --prod --stats-json",
+    "lib": "gulp buildReadme && ng build ng-element-ui --configuration production && gulp build",
+    "stats": "gulp buildDemoCmp && ng build --configuration production --stats-json",
     "report": "webpack-bundle-analyzer dist/ng-element/stats.json"
   },
   "private": true,
