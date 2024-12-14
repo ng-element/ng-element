@@ -5,21 +5,18 @@ import { NelTooltipDirective } from './tooltip.directive';
 import { NelTooltipComponent } from './tooltip.component';
 
 @NgModule({
-  declarations: [
-    NelTooltipComponent,
-    NelTooltipDirective
-  ],
-  exports: [
-    NelTooltipComponent,
-    NelTooltipDirective
-  ],
-  entryComponents: [
-    NelTooltipComponent
-  ],
-  imports: [
-    OverlayModule,
-    NelOutletModule
-  ]
+    declarations: [
+        NelTooltipComponent,
+        NelTooltipDirective
+    ],
+    exports: [
+        NelTooltipComponent,
+        NelTooltipDirective
+    ],
+    imports: [
+        OverlayModule,
+        NelOutletModule
+    ]
 })
 
 export class NelTooltipModule { }
