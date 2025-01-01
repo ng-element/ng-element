@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'nel-demo-form-basic',
@@ -21,11 +21,11 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 
 export class NelDemoFormBasicComponent {
-  activityForm: FormGroup;
+  activityForm: UntypedFormGroup;
 
   constructor() {
-    this.activityForm = new FormGroup({
-      name: new FormControl('', [
+    this.activityForm = new UntypedFormGroup({
+      name: new UntypedFormControl('', [
         Validators.required,
         Validators.maxLength(6)
       ])

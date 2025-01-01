@@ -15,14 +15,15 @@ export class NelBadgeComponent implements OnInit {
 
   value?: string | number;
   @Input() nelValue?: string | number;
-  @Input() nelMax?: number;
+  @Input() nelMax?: string | number;
   @Input() @InputBoolean() nelIsDot = false;
   @Input() nelType: 'primary' | 'success' | 'warning' | 'danger' | 'info' = 'primary';
   @Input() nelHidden = false;
 
   ngOnInit(): void {
     if (this.nelMax && typeof this.nelMax === 'number' && this.nelValue) {
-      if (this.nelValue > this.nelMax) {
+      var nelValueNum: number = +this.nelValue;
+      if (nelValueNum > this.nelMax) {
         this.value = this.nelMax + '+';
         return;
       }

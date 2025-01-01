@@ -95,7 +95,7 @@ export class NelInfiniteScrollDirective implements AfterViewInit, OnDestroy {
   handleScroll(): void {
     if (this.container.scrollHeight - this.container.clientHeight
       - this.container.scrollTop <= this.nelDistance) {
-      this.reachBottom$.next();
+      this.reachBottom$.next(true);
     }
   }
 }
