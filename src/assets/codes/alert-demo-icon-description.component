@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-alert-icon-description',
-  template: `
+    selector: 'nel-demo-alert-icon-description',
+    template: `
     <nel-alert [nelTitle]="'成功提示的文案'" [nelType]="'success'" [nelDescription]="'文字说明文字说明文字说明文字说明文字说明文字说明'"
       nelShowIcon>
     </nel-alert>
@@ -15,8 +15,8 @@ import { Component } from '@angular/core';
       nelShowIcon>
     </nel-alert>
   `,
-  styles: [
-    `
+    styles: [
+        `
       nel-alert:first-child {
         margin: 0;
       }
@@ -24,7 +24,8 @@ import { Component } from '@angular/core';
         margin: 20px 0 0;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoAlertIconDescriptionComponent { }

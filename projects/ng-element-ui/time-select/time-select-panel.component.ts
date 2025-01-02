@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-time-select-panel',
-  templateUrl: './time-select-panel.component.html',
-  host: {
-    'class': 'el-popper is-pure is-light el-select__popper',
-    'tabindex': '-1',
-    'role': 'tooltip'
-  }
+    selector: 'nel-time-select-panel',
+    templateUrl: './time-select-panel.component.html',
+    host: {
+        'class': 'el-popper is-pure is-light el-select__popper',
+        'tabindex': '-1',
+        'role': 'tooltip'
+    },
+    standalone: false
 })
 
 export class NelTimeSelectPanelComponent { }

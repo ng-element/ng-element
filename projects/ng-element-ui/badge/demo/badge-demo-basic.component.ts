@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-badge-basic',
-  template: `
+    selector: 'nel-demo-badge-basic',
+    template: `
     <nel-badge [nelValue]="12" class="item">
       <button nel-button [nelSize]="'small'">评论</button>
     </nel-badge>
@@ -16,14 +16,15 @@ import { Component } from '@angular/core';
       <button nel-button [nelSize]="'small'">回复</button>
     </nel-badge>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .item {
         margin-top: 10px;
         margin-right: 40px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoBadgeBasicComponent { }

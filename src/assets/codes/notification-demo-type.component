@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { NelNotificationService } from 'ng-element-ui/notification';
 
 @Component({
-  selector: 'nel-demo-notification-type',
-  template: `
+    selector: 'nel-demo-notification-type',
+    template: `
     <button nel-button nelPlain (click)="open1()">成功</button>
     <button nel-button nelPlain (click)="open2()">警告</button>
     <button nel-button nelPlain (click)="open3()">消息</button>
     <button nel-button nelPlain (click)="open4()">错误</button>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoNotificationTypeComponent {

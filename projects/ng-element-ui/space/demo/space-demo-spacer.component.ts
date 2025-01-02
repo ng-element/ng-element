@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-space-spacer',
-  template: `
+    selector: 'nel-demo-space-spacer',
+    template: `
     <div>
       <nel-space [nelSize]="size" [nelSpacer]="'|'">
         <ng-container *ngFor="let i of list">
@@ -28,7 +28,8 @@ import { Component } from '@angular/core';
         <nel-divider [nelDirection]="'vertical'"></nel-divider>
       </ng-template>
     </div>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoSpaceSpacerComponent {

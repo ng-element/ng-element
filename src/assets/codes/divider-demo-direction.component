@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-divider-direction',
-  template: `
+    selector: 'nel-demo-divider-direction',
+    template: `
     <div>
       <span>雨纷纷</span>
       <nel-divider [nelDirection]="'vertical'"></nel-divider>
@@ -10,7 +10,8 @@ import { Component } from '@angular/core';
       <nel-divider [nelDirection]="'vertical'"></nel-divider>
       <span>草木深</span>
     </div>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoDividerDirectionComponent { }

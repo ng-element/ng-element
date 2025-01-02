@@ -7,16 +7,18 @@ import { NelRadioButtonComponent } from './radio-button.component';
 import { NelRadioService } from './radio.service';
 
 @Component({
-  selector: 'nel-radio-group',
-  templateUrl: './radio-group.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    NelRadioService,
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => NelRadioGroupComponent),
-      multi: true
-    }]
+    selector: 'nel-radio-group',
+    templateUrl: './radio-group.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [
+        NelRadioService,
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelRadioGroupComponent),
+            multi: true
+        }
+    ],
+    standalone: false
 })
 
 export class NelRadioGroupComponent implements ControlValueAccessor {

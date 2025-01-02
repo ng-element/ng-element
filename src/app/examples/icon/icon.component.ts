@@ -1,13 +1,14 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-icon',
-  templateUrl: './icon.component.html',
-  styleUrls: ['./icon.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  host: {
-    class: 'article'
-  }
+    selector: 'app-icon',
+    templateUrl: './icon.component.html',
+    styleUrls: ['./icon.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    host: {
+        class: 'article'
+    },
+    standalone: false
 })
 
 export class IconComponent {

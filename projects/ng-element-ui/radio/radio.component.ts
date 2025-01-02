@@ -7,24 +7,25 @@ import { NelRadioService } from './radio.service';
 export type SizeType = 'medium' | 'small' | 'mini';
 
 @Component({
-  selector: '[nel-radio]',
-  templateUrl: './radio.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [{
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => NelRadioComponent),
-    multi: true
-  }],
-  host: {
-    '[class]': `'el-radio'`,
-    '[class.is-checked]': 'isChecked',
-    '[class.is-disabled]': 'nelDisabled',
-    '[class.is-bordered]': 'nelBorder',
-    '[class.el-radio--medium]': `nelSize == 'medium'`,
-    '[class.el-radio--small]': `nelSize == 'small'`,
-    '[class.el-radio--mini]': `nelSize == 'mini'`,
-    '(click)': 'onHostClick($event)'
-  }
+    selector: '[nel-radio]',
+    templateUrl: './radio.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [{
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelRadioComponent),
+            multi: true
+        }],
+    host: {
+        '[class]': `'el-radio'`,
+        '[class.is-checked]': 'isChecked',
+        '[class.is-disabled]': 'nelDisabled',
+        '[class.is-bordered]': 'nelBorder',
+        '[class.el-radio--medium]': `nelSize == 'medium'`,
+        '[class.el-radio--small]': `nelSize == 'small'`,
+        '[class.el-radio--mini]': `nelSize == 'mini'`,
+        '(click)': 'onHostClick($event)'
+    },
+    standalone: false
 })
 
 export class NelRadioComponent implements ControlValueAccessor {

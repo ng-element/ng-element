@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-switch-text',
-  template: `
+    selector: 'nel-demo-switch-text',
+    template: `
     <nel-switch [(ngModel)]="value1" [nelActiveText]="'按月付费'" [nelInactiveText]="'按年付费'"></nel-switch>
     <nel-switch
       style="display: block"
@@ -14,13 +14,14 @@ import { Component } from '@angular/core';
     >
     </nel-switch>
   `,
-  styles: [
-    `
+    styles: [
+        `
       :host ::ng-deep .el-switch {
         margin: 20px 20px 20px 0;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoSwitchTextComponent {

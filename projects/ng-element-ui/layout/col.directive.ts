@@ -4,11 +4,12 @@ import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 export type ColReactive = { span: number, offset: number };
 
 @Directive({
-  selector: '[nel-col]',
-  host: {
-    '[class]': 'getClass()',
-    '[style]': 'gutterStyle()'
-  }
+    selector: '[nel-col]',
+    host: {
+        '[class]': 'getClass()',
+        '[style]': 'gutterStyle()'
+    },
+    standalone: false
 })
 
 export class NelColDirective {

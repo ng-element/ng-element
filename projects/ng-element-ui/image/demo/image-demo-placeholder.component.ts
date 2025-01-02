@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-image-placeholder',
-  template: `
+    selector: 'nel-demo-image-placeholder',
+    template: `
     <div class="demo-image__placeholder">
       <div class="block">
         <span class="demonstration">默认</span>
@@ -20,8 +20,8 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .demo-image__placeholder .el-image {
         width: 300px;
         height: 200px;
@@ -67,7 +67,8 @@ import { Component } from '@angular/core';
         overflow: hidden;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoImagePlaceholderComponent {

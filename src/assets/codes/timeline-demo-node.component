@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-timeline-node',
-  template: `
+    selector: 'nel-demo-timeline-node',
+    template: `
     <nel-timeline>
       <nel-timeline-item
         *ngFor="let activity of activities"
@@ -14,7 +14,8 @@ import { Component } from '@angular/core';
         {{activity.content}}
       </nel-timeline-item>
     </nel-timeline>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoTimelineNodeComponent {

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-result-basic',
-  template: `
+    selector: 'nel-demo-result-basic',
+    template: `
     <div nel-row>
       <div nel-col [nelSm]="12" [nelLg]="6">
         <nel-result [nelIcon]="'success'" [nelTitle]="'成功提示'" [nelSubTitle]="'请根据提示进行操作'" [nelExtra]="extra1">
@@ -33,7 +33,8 @@ import { Component } from '@angular/core';
         </nel-result>
       </div>
     </div>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoResultBasicComponent { }

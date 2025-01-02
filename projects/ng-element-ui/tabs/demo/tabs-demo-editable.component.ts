@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-tabs-editable',
-  template: `
+    selector: 'nel-demo-tabs-editable',
+    template: `
     <nel-tabs [(nelSelectedIndex)]="selectedIndex" [nelType]="'card'" nelEditable (nelOnEdit)="handleTabsEdit($event)">
       <nel-tab-pane
         *ngFor="let item of editableTabs"
@@ -11,7 +11,8 @@ import { Component } from '@angular/core';
         {{item.content}}
       </nel-tab-pane>
     </nel-tabs>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoTabsEditableComponent {

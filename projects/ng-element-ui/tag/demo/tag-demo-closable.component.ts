@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-tag-closable',
-  template: `
+    selector: 'nel-demo-tag-closable',
+    template: `
     <nel-tag
       *ngFor="let tag of tags"
       nelClosable
@@ -10,13 +10,14 @@ import { Component } from '@angular/core';
       {{tag.name}}
     </nel-tag>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .el-tag+.el-tag {
         margin-left: 10px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoTagClosableComponent {

@@ -5,13 +5,14 @@ import { TriggerType, SizeType } from './dropdown.directive';
 import { NelDropdownService } from './dropdown.service';
 
 @Component({
-  selector: 'nel-dropdown-menu',
-  exportAs: 'nelDropdownMenu',
-  templateUrl: './dropdown-menu.component.html',
-  animations: [dropdownMotion],
-  providers: [
-    NelDropdownService
-  ]
+    selector: 'nel-dropdown-menu',
+    exportAs: 'nelDropdownMenu',
+    templateUrl: './dropdown-menu.component.html',
+    animations: [dropdownMotion],
+    providers: [
+        NelDropdownService
+    ],
+    standalone: false
 })
 
 export class NelDropdownMenuComponent implements OnDestroy {

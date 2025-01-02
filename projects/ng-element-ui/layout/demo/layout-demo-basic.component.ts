@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-layout-basic',
-  template: `
+    selector: 'nel-demo-layout-basic',
+    template: `
     <div nel-row>
       <div nel-col [nelSpan]="24">
         <div class="grid-content bg-purple-dark"></div>
@@ -62,7 +62,7 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .el-row {
       margin-bottom: 20px;
       &:last-child {
@@ -89,7 +89,8 @@ import { Component } from '@angular/core';
       padding: 10px 0;
       background-color: #f9fafc;
     }
-  `]
+  `],
+    standalone: false
 })
 
 export class NelDemoLayoutBasicComponent { }

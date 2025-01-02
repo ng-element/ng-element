@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-collapse-title',
-  template: `
+    selector: 'nel-demo-collapse-title',
+    template: `
     <nel-collapse>
       <nel-collapse-item [nelTitle]="titleTpl">
         <ng-template #titleTpl>
@@ -26,13 +26,14 @@ import { Component } from '@angular/core';
       </nel-collapse-item>
     </nel-collapse>
   `,
-  styles: [
-    `
+    styles: [
+        `
     :host ::ng-deep .el-collapse-item__header .header-icon {
       margin-left: 5px;
     }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoCollapseTitleComponent { }

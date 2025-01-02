@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-button-icon',
-  template: `
+    selector: 'nel-demo-button-icon',
+    template: `
   <button nel-button [nelType]="'primary'" [nelIcon]="'edit'"></button>
   <button nel-button [nelType]="'primary'" [nelIcon]="'share'"></button>
   <button nel-button [nelType]="'primary'" [nelIcon]="'delete'"></button>
@@ -10,7 +10,8 @@ import { Component } from '@angular/core';
   <button nel-button [nelType]="'primary'">
     上传<i class="el-icon-upload el-icon--right"></i>
   </button>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoButtonIconComponent { }

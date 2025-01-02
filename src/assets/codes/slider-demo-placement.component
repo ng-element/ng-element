@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-slider-placement',
-  template: `
+    selector: 'nel-demo-slider-placement',
+    template: `
     <div class="slider-demo-block">
       <nel-slider [(ngModel)]="value1"></nel-slider>
     </div>
@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
       <nel-slider [(ngModel)]="value3" placement="left"></nel-slider>
     </div>
   `,
-  styles: [`
+    styles: [`
     .slider-demo-block {
       display: flex;
       align-items: center;
@@ -24,7 +24,8 @@ import { Component } from '@angular/core';
     .slider-demo-block nel-slider {
       flex: 1;
     }
-  `]
+  `],
+    standalone: false
 })
 
 export class NelDemoSliderPlacementComponent {

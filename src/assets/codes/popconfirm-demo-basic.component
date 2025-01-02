@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-popconfirm-basic',
-  template: `
+    selector: 'nel-demo-popconfirm-basic',
+    template: `
     <div class="box">
       <div class="top">
         <button nel-button class="item" nel-popconfirm [nelPopconfirmTitle]="'Top Left 提示文字'" [nelPlacement]="'top-start'">上左</button>
@@ -26,8 +26,8 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .box {
         width: 400px;
       }
@@ -60,7 +60,8 @@ import { Component } from '@angular/core';
         padding: 8px 10px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoPopconfirmBasicComponent { }

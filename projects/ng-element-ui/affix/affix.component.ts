@@ -3,11 +3,12 @@ import { fromEvent, Subject, Subscription } from 'rxjs';
 import { getScrollContainer } from 'ng-element-ui/core/utils';
 
 @Component({
-  selector: 'nel-affix',
-  templateUrl: './affix.component.html',
-  host: {
-    '[class]': `'el-affix'`
-  }
+    selector: 'nel-affix',
+    templateUrl: './affix.component.html',
+    host: {
+        '[class]': `'el-affix'`
+    },
+    standalone: false
 })
 
 export class NelAffixComponent implements AfterViewInit, OnDestroy {

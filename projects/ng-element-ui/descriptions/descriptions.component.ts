@@ -11,11 +11,12 @@ export type ItemType = {
 };
 
 @Component({
-  selector: 'nel-descriptions',
-  templateUrl: './descriptions.component.html',
-  host: {
-    class: 'el-descriptions'
-  }
+    selector: 'nel-descriptions',
+    templateUrl: './descriptions.component.html',
+    host: {
+        class: 'el-descriptions'
+    },
+    standalone: false
 })
 
 export class NelDescriptionsComponent implements AfterContentInit {

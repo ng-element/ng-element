@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-container-basic',
-  template: `
+    selector: 'nel-demo-container-basic',
+    template: `
     <div class="common-layout">
       <nel-container>
         <nel-header>Header</nel-header>
@@ -57,8 +57,8 @@ import { Component } from '@angular/core';
       </nel-container>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       nel-header, nel-footer {
         background-color: #B3C0D1;
         color: #333;
@@ -98,7 +98,8 @@ import { Component } from '@angular/core';
         line-height: 320px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoContainerBasicComponent { }

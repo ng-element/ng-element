@@ -3,10 +3,11 @@ import { fromEvent, Subject, Subscription } from 'rxjs';
 import Color from './color';
 
 @Component({
-  selector: 'nel-color-picker-dropdown',
-  templateUrl: './color-picker-dropdown.component.html',
-  styleUrls: ['./color-picker-dropdown.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'nel-color-picker-dropdown',
+    templateUrl: './color-picker-dropdown.component.html',
+    styleUrls: ['./color-picker-dropdown.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 
 export class NelColorPickerDropdownComponent implements AfterViewInit, OnDestroy {

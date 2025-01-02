@@ -10,7 +10,8 @@ export type PlacementType = 'top' | 'top-start' | 'top-end' | 'bottom' | 'bottom
   | 'left-start' | 'left-end' | 'right' | 'right-start' | 'right-end';
 
 @Directive({
-  selector: '[nel-popconfirm]'
+    selector: '[nel-popconfirm]',
+    standalone: false
 })
 
 export class NelPopconfirmDirective {

@@ -6,7 +6,8 @@ export type TriggerType = 'click' | 'contextmenu' | 'hover';
 export type SizeType = 'medium' | 'small' | 'mini';
 
 @Directive({
-  selector: '[nel-dropdown]'
+    selector: '[nel-dropdown]',
+    standalone: false
 })
 
 export class NelDropdownDirective implements OnInit, OnDestroy {

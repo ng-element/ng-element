@@ -5,12 +5,13 @@ import { Subscription } from 'rxjs';
 import { NelCascaderPanelComponent } from './cascader-panel.component';
 
 @Component({
-  selector: 'nel-cascader',
-  templateUrl: './cascader.component.html',
-  host: {
-    class: 'el-cascader el-tooltip__trigger el-tooltip__trigger',
-    '(click)': 'open()'
-  }
+    selector: 'nel-cascader',
+    templateUrl: './cascader.component.html',
+    host: {
+        class: 'el-cascader el-tooltip__trigger el-tooltip__trigger',
+        '(click)': 'open()'
+    },
+    standalone: false
 })
 
 export class NelCascaderComponent implements OnDestroy {

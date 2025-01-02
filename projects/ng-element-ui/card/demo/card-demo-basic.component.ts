@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-card-basic',
-  template: `
+    selector: 'nel-demo-card-basic',
+    template: `
     <nel-card [nelHeader]="headerTpl">
       <ng-template #headerTpl>
         <div class="card-header">
@@ -15,8 +15,8 @@ import { Component } from '@angular/core';
       </div>
     </nel-card>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .card-header {
         display: flex;
         justify-content: space-between;
@@ -35,7 +35,8 @@ import { Component } from '@angular/core';
         width: 480px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoCardBasicComponent {

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-dropdown-trigger',
-  template: `
+    selector: 'nel-demo-dropdown-trigger',
+    template: `
     <div nel-row class="block-col-2">
       <div nel-col [nelSpan]="8">
         <span class="demonstration">hover 激活</span>
@@ -31,8 +31,8 @@ import { Component } from '@angular/core';
       <nel-dropdown-item [nelIcon]="'circle-check'">蚵仔煎</nel-dropdown-item>
     </nel-dropdown-menu>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .block-col-2 {
         margin: -24px;
       }
@@ -59,7 +59,8 @@ import { Component } from '@angular/core';
         color: #409eff;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoDropdownTriggerComponent { }

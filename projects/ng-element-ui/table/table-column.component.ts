@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'nel-table-column',
-  templateUrl: './table-column.component.html'
+    selector: 'nel-table-column',
+    templateUrl: './table-column.component.html',
+    standalone: false
 })
 
 export class NelTableColumnComponent {

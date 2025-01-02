@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-space-direction',
-  template: `
+    selector: 'nel-demo-space-direction',
+    template: `
     <nel-space [nelDirection]="'vertical'">
       <ng-container *ngFor="let i of list">
         <nel-card *nelSpaceItem class="box-card" style="width: 250px" [nelHeader]="header">
@@ -19,15 +19,16 @@ import { Component } from '@angular/core';
       </ng-container>
     </nel-space>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .card-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoSpaceDirectionComponent {

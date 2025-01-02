@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { NelNotificationService } from 'ng-element-ui/notification';
 
 @Component({
-  selector: 'nel-demo-notification-close',
-  template: `
+    selector: 'nel-demo-notification-close',
+    template: `
     <button nel-button nelPlain (click)="open()">隐藏关闭按钮</button>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoNotificationCloseComponent {

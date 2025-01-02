@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-layout-offset',
-  template: `
+    selector: 'nel-demo-layout-offset',
+    template: `
     <div nel-row [nelGutter]="20">
       <div nel-col [nelSpan]="6"><div class="grid-content bg-purple"></div></div>
       <div nel-col [nelSpan]="6" [nelOffset]="6"><div class="grid-content bg-purple"></div></div>
@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
       <div nel-col [nelSpan]="12" [nelOffset]="6"><div class="grid-content bg-purple"></div></div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .el-row {
       margin-bottom: 20px;
       &:last-child {
@@ -42,7 +42,8 @@ import { Component } from '@angular/core';
       padding: 10px 0;
       background-color: #f9fafc;
     }
-  `]
+  `],
+    standalone: false
 })
 
 export class NelDemoLayoutOffsetComponent { }

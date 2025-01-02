@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-select-basic',
-  template: `
+    selector: 'nel-demo-select-basic',
+    template: `
     <nel-select [ngModel]="option" (ngModelChange)="selected($event)">
       <nel-option *ngFor="let option of options" [label]="option.label" [value]="option.value"></nel-option>
     </nel-select>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoSelectBasicComponent {

@@ -3,8 +3,9 @@ import { CdkOverlayOrigin, ConnectionPositionPair } from '@angular/cdk/overlay';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'nel-select-dropdown',
-  templateUrl: './select-dropdown.component.html'
+    selector: 'nel-select-dropdown',
+    templateUrl: './select-dropdown.component.html',
+    standalone: false
 })
 
 export class NelSelectDropdownComponent {

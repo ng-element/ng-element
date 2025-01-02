@@ -9,16 +9,17 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 export type ColorFormat = 'hsl' | 'hsv' | 'hex' | 'rgb' | '';
 
 @Component({
-  selector: 'nel-color-picker',
-  templateUrl: './color-picker.component.html',
-  styleUrls: ['./color-picker.component.scss'],
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => NelColorPickerComponent),
-      multi: true
-    }
-  ],
+    selector: 'nel-color-picker',
+    templateUrl: './color-picker.component.html',
+    styleUrls: ['./color-picker.component.scss'],
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelColorPickerComponent),
+            multi: true
+        }
+    ],
+    standalone: false
 })
 
 export class NelColorPickerComponent implements OnDestroy, ControlValueAccessor {

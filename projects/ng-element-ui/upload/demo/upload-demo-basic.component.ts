@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-upload-basic',
-  template: `
+    selector: 'nel-demo-upload-basic',
+    template: `
     <nel-upload [tip]="tip" [(ngModel)]="fileList">
       <button class="el-button el-button--primary" aria-disabled="false" type="button">
         <span class="">Click to upload</span>
@@ -12,6 +12,7 @@ import { Component } from '@angular/core';
       </ng-template>
     </nel-upload>
   `,
+    standalone: false
 })
 
 export class NelDemoUploadBasicComponent {

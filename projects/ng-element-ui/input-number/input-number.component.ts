@@ -4,16 +4,17 @@ import { BooleanInput } from '@angular/cdk/coercion';
 import { InputBoolean } from 'ng-element-ui/core/utils';
 
 @Component({
-  selector: 'nel-input-number',
-  templateUrl: './input-number.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => NelInputNumberComponent),
-      multi: true
-    }
-  ]
+    selector: 'nel-input-number',
+    templateUrl: './input-number.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelInputNumberComponent),
+            multi: true
+        }
+    ],
+    standalone: false
 })
 
 export class NelInputNumberComponent implements ControlValueAccessor {

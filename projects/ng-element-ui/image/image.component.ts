@@ -9,12 +9,13 @@ import { debounceTime } from 'rxjs/operators';
 import { NelImageService } from './image.service';
 
 @Component({
-  selector: 'nel-image',
-  templateUrl: './image.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    class: 'el-image'
-  }
+    selector: 'nel-image',
+    templateUrl: './image.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        class: 'el-image'
+    },
+    standalone: false
 })
 
 export class NelImageComponent implements AfterViewInit, OnDestroy {

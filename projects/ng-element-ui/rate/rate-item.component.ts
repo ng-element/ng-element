@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'nel-rate-item',
-  templateUrl: './rate-item.component.html'
+    selector: 'nel-rate-item',
+    templateUrl: './rate-item.component.html',
+    standalone: false
 })
 
 export class NelRateItemComponent implements OnChanges {

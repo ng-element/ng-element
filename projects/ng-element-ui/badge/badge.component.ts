@@ -3,11 +3,12 @@ import { BooleanInput } from '@angular/cdk/coercion';
 import { InputBoolean } from 'ng-element-ui/core/utils';
 
 @Component({
-  selector: 'nel-badge',
-  templateUrl: './badge.component.html',
-  host: {
-    '[class]': `'el-badge'`
-  }
+    selector: 'nel-badge',
+    templateUrl: './badge.component.html',
+    host: {
+        '[class]': `'el-badge'`
+    },
+    standalone: false
 })
 
 export class NelBadgeComponent implements OnInit {

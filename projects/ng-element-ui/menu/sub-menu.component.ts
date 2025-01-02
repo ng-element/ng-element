@@ -1,8 +1,9 @@
 import { Component, ContentChildren, Input, TemplateRef, QueryList } from '@angular/core';
 
 @Component({
-  selector: 'nel-sub-menu',
-  templateUrl: './sub-menu.component.html'
+    selector: 'nel-sub-menu',
+    templateUrl: './sub-menu.component.html',
+    standalone: false
 })
 
 export class NelSubMenuComponent {

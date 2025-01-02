@@ -6,8 +6,9 @@ export type AlertType = 'success' | 'warning' | 'info' | 'error';
 export type EffectType = 'light' | 'dark';
 
 @Component({
-  selector: 'nel-alert',
-  templateUrl: './alert.component.html'
+    selector: 'nel-alert',
+    templateUrl: './alert.component.html',
+    standalone: false
 })
 
 export class NelAlertComponent {

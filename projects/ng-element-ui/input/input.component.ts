@@ -6,26 +6,27 @@ import { InputBoolean } from 'ng-element-ui/core/utils';
 export type SizeType = 'medium' | 'small' | 'mini' | null;
 
 @Component({
-  selector: 'nel-input',
-  templateUrl: './input.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => NelInputComponent),
-      multi: true
-    }
-  ],
-  host: {
-    class: 'el-input',
-    '[class.is-disabled]': 'nelDisabled',
-    '[class.el-input--suffix]': 'nelClearable',
-    '[class.el-input--medium]': `nelSize == 'medium'`,
-    '[class.el-input--small]': `nelSize == 'small'`,
-    '[class.el-input--mini]': `nelSize == 'mini'`,
-    '(mouseenter)': 'handleMouseEnter()',
-    '(mouseleave)': 'handleMouseLeave()'
-  }
+    selector: 'nel-input',
+    templateUrl: './input.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelInputComponent),
+            multi: true
+        }
+    ],
+    host: {
+        class: 'el-input',
+        '[class.is-disabled]': 'nelDisabled',
+        '[class.el-input--suffix]': 'nelClearable',
+        '[class.el-input--medium]': `nelSize == 'medium'`,
+        '[class.el-input--small]': `nelSize == 'small'`,
+        '[class.el-input--mini]': `nelSize == 'mini'`,
+        '(mouseenter)': 'handleMouseEnter()',
+        '(mouseleave)': 'handleMouseLeave()'
+    },
+    standalone: false
 })
 
 export class NelInputComponent implements ControlValueAccessor, OnChanges {

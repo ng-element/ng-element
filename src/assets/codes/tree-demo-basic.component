@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-tree-basic',
-  template: `
+    selector: 'nel-demo-tree-basic',
+    template: `
     <nel-tree [data]="data"></nel-tree>
   `,
+    standalone: false
 })
 
 export class NelDemoTreeBasicComponent {

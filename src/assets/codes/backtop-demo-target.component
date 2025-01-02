@@ -1,8 +1,8 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-backtop-target',
-  template: `
+    selector: 'nel-demo-backtop-target',
+    template: `
     Scroll down to see the bottom-right button.
     <div #scrollSection class="scrollContainer">
       <div class="scrollSection">
@@ -14,8 +14,8 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .scrollContainer {
         height: 300px;
         overflow: auto;
@@ -36,7 +36,8 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
         color: #1989fa;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoBacktopTargetComponent {

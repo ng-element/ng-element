@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-progress-dashboard',
-  template: `
+    selector: 'nel-demo-progress-dashboard',
+    template: `
     <nel-progress [nelType]="'dashboard'" [nelPercentage]="percentage" [nelColor]="colors"></nel-progress>
     <div>
       <nel-button-group>
@@ -10,7 +10,8 @@ import { Component } from '@angular/core';
         <button nel-button [nelIcon]="'plus'" (click)="increase()"></button>
       </nel-button-group>
     </div>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoProgressDashboardComponent {

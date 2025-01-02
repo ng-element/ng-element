@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-table-basic',
-  template: `
+    selector: 'nel-demo-table-basic',
+    template: `
     <nel-table [data]="tableData">
       <nel-table-column prop="date" label="Date"></nel-table-column>
       <nel-table-column prop="name" label="Name"></nel-table-column>
       <nel-table-column prop="address" label="Address"></nel-table-column>
     </nel-table>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoTableBasicComponent {

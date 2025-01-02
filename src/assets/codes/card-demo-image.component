@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-card-image',
-  template: `
+    selector: 'nel-demo-card-image',
+    template: `
     <div nel-row>
       <div nel-col *ngFor="let card of cardList; let index=index" [nelSpan]="8" [nelOffset]="index > 0 ? 2 : 0">
         <nel-card [nelBodyStyle]="{padding: '0px'}">
@@ -18,8 +18,8 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .time {
         font-size: 13px;
         color: #999;
@@ -43,7 +43,8 @@ import { Component } from '@angular/core';
         display: block;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoCardImageComponent {

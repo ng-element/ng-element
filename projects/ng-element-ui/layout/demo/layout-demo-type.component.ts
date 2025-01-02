@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-layout-type',
-  template: `
+    selector: 'nel-demo-layout-type',
+    template: `
     <div nel-row [nelType]="'flex'" class="row-bg">
       <div nel-col [nelSpan]="6"><div class="grid-content bg-purple"></div></div>
       <div nel-col [nelSpan]="6"><div class="grid-content bg-purple-light"></div></div>
@@ -29,7 +29,7 @@ import { Component } from '@angular/core';
       <div nel-col [nelSpan]="6"><div class="grid-content bg-purple"></div></div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .el-row {
       margin-bottom: 20px;
       &:last-child {
@@ -56,7 +56,8 @@ import { Component } from '@angular/core';
       padding: 10px 0;
       background-color: #f9fafc;
     }
-  `]
+  `],
+    standalone: false
 })
 
 export class NelDemoLayoutTypeComponent { }

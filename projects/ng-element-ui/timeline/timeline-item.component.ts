@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'nel-timeline-item',
-  templateUrl: './timeline-item.component.html',
-  host: {
-    class: 'el-timeline-item'
-  }
+    selector: 'nel-timeline-item',
+    templateUrl: './timeline-item.component.html',
+    host: {
+        class: 'el-timeline-item'
+    },
+    standalone: false
 })
 
 export class NelTimelineItemComponent {

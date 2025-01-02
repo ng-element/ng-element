@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-calendar-rang',
-  template: `
+    selector: 'nel-demo-calendar-rang',
+    template: `
     <nel-calendar [nelRange]="range"></nel-calendar>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoCalendarRangComponent {

@@ -1,8 +1,9 @@
 import { Component, Input, TemplateRef } from '@angular/core';
 
 @Component({
-  selector: 'nel-empty',
-  templateUrl: './empty.component.html'
+    selector: 'nel-empty',
+    templateUrl: './empty.component.html',
+    standalone: false
 })
 
 export class NelEmptyComponent {

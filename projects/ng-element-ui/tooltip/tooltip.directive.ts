@@ -8,7 +8,8 @@ export type PlacementType = 'top' | 'top-start' | 'top-end' | 'bottom' | 'bottom
 export type EffectType = 'dark' | 'light';
 
 @Directive({
-  selector: '[nel-tooltip]',
+    selector: '[nel-tooltip]',
+    standalone: false
 })
 
 export class NelTooltipDirective implements OnInit {

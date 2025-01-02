@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-dropdown-hide',
-  template: `
+    selector: 'nel-demo-dropdown-hide',
+    template: `
     <span nel-dropdown [nelHideOnClick]="false" [nelDropdownMenu]="menu" class="el-dropdown-link">
       下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
     </span>
@@ -14,14 +14,15 @@ import { Component } from '@angular/core';
       <nel-dropdown-item nelDivided>蚵仔煎</nel-dropdown-item>
     </nel-dropdown-menu>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .el-dropdown-link {
         cursor: pointer;
         color: #409eff;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoDropdownHideComponent { }

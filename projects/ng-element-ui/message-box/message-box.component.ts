@@ -5,9 +5,10 @@ import { messageBoxMotion } from 'ng-element-ui/core/animation';
 import { MessageBoxRef } from './message-box-ref';
 
 @Component({
-  selector: 'nel-message-box',
-  templateUrl: './message-box.component.html',
-  animations: [messageBoxMotion]
+    selector: 'nel-message-box',
+    templateUrl: './message-box.component.html',
+    animations: [messageBoxMotion],
+    standalone: false
 })
 
 export class NelMessageBoxComponent implements OnInit {

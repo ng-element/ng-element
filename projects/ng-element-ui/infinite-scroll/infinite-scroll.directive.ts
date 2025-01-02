@@ -4,7 +4,8 @@ import { Subscription, Subject, fromEvent } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 
 @Directive({
-  selector: '[nel-infinite-scroll]'
+    selector: '[nel-infinite-scroll]',
+    standalone: false
 })
 
 export class NelInfiniteScrollDirective implements AfterViewInit, OnDestroy {

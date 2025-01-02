@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-drawer-multi',
-  template: `
+    selector: 'nel-demo-drawer-multi',
+    template: `
     <button nel-button (click)="drawer = true" [nelType]="'primary'" style="margin-left: 16px;">
       点我打开
     </button>
@@ -21,7 +21,8 @@ import { Component } from '@angular/core';
         </nel-drawer>
       </div>
     </nel-drawer>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoDrawerMultiComponent {

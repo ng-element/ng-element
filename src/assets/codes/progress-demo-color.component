@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-progress-color',
-  template: `
+    selector: 'nel-demo-progress-color',
+    template: `
     <nel-progress [nelPercentage]="percentage" [nelColor]="customColor"></nel-progress>
     <nel-progress [nelPercentage]="percentage" [nelColor]="customColorMethod"></nel-progress>
     <nel-progress [nelPercentage]="percentage" [nelColor]="customColors"></nel-progress>
@@ -12,14 +12,15 @@ import { Component } from '@angular/core';
       <button nel-button [nelIcon]="'plus'" (click)="increase()"></button>
     </nel-button-group>
   `,
-  styles: [
-    `
+    styles: [
+        `
       :host ::ng-deep .el-progress--line {
         margin-bottom: 15px;
         width: 350px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoProgressColorComponent {

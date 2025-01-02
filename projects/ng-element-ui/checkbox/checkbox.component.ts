@@ -5,22 +5,23 @@ import { InputBoolean } from 'ng-element-ui/core/utils';
 import { NelCheckboxService } from './checkbox.service';
 
 @Component({
-  selector: '[nel-checkbox]',
-  templateUrl: './checkbox.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    class: 'el-checkbox',
-    '[class.is-checked]': 'isChecked',
-    '[class.is-disabled]': 'nelDisabled',
-    '(click)': 'onHostClick($event)'
-  },
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => NelCheckboxComponent),
-      multi: true
-    }
-  ]
+    selector: '[nel-checkbox]',
+    templateUrl: './checkbox.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        class: 'el-checkbox',
+        '[class.is-checked]': 'isChecked',
+        '[class.is-disabled]': 'nelDisabled',
+        '(click)': 'onHostClick($event)'
+    },
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelCheckboxComponent),
+            multi: true
+        }
+    ],
+    standalone: false
 })
 
 export class NelCheckboxComponent implements ControlValueAccessor {

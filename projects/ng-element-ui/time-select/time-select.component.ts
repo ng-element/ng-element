@@ -5,12 +5,13 @@ import { Subscription } from 'rxjs';
 import { NelTimeSelectPanelComponent } from './time-select-panel.component';
 
 @Component({
-  selector: 'nel-time-select',
-  templateUrl: './time-select.component.html',
-  host: {
-    'class': 'el-select',
-    '(click)': 'open()'
-  }
+    selector: 'nel-time-select',
+    templateUrl: './time-select.component.html',
+    host: {
+        'class': 'el-select',
+        '(click)': 'open()'
+    },
+    standalone: false
 })
 
 export class NelTimeSelectComponent implements OnDestroy {

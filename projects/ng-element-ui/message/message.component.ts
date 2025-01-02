@@ -5,9 +5,10 @@ import { messageMotion } from 'ng-element-ui/core/animation';
 import { MessageRef } from './message-ref';
 
 @Component({
-  selector: 'nel-message',
-  templateUrl: './message.component.html',
-  animations: [messageMotion]
+    selector: 'nel-message',
+    templateUrl: './message.component.html',
+    animations: [messageMotion],
+    standalone: false
 })
 
 export class NelMessageComponent implements OnInit, AfterViewInit, OnDestroy {

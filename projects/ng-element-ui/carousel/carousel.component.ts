@@ -5,9 +5,10 @@ import {
 import { NelCarouselItemComponent } from './carousel-item.component';
 
 @Component({
-  selector: 'nel-carousel',
-  templateUrl: './carousel.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'nel-carousel',
+    templateUrl: './carousel.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 
 export class NelCarouselComponent implements AfterViewInit, OnDestroy {

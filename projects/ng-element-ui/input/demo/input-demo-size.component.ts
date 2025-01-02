@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-input-size',
-  template: `
+    selector: 'nel-demo-input-size',
+    template: `
     <div class="demo-input-size">
       <nel-input
         [nelPlaceHolder]="'请输入内容'"
@@ -29,15 +29,16 @@ import { Component } from '@angular/core';
       </nel-input>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
     .el-input {
       width: 180px;
       vertical-align: top;
       margin: 0 10px 10px 0;
     }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoInputSizeComponent {

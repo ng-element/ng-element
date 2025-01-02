@@ -5,16 +5,17 @@ import { InputBoolean } from 'ng-element-ui/core/utils';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'nel-switch',
-  templateUrl: './switch.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => NelSwitchComponent),
-      multi: true
-    }
-  ]
+    selector: 'nel-switch',
+    templateUrl: './switch.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelSwitchComponent),
+            multi: true
+        }
+    ],
+    standalone: false
 })
 
 export class NelSwitchComponent implements ControlValueAccessor {

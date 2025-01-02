@@ -11,7 +11,8 @@ export type TriggerType = 'click' | 'focus' | 'hover' | 'manual';
 
 
 @Directive({
-  selector: '[nel-popover]',
+    selector: '[nel-popover]',
+    standalone: false
 })
 
 export class NelPopoverDirective implements OnInit, OnDestroy {

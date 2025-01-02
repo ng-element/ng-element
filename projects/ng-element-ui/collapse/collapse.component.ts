@@ -5,14 +5,15 @@ import { InputBoolean } from 'ng-element-ui/core/utils';
 import { NelCollapseItemComponent } from './collapse-item.component';
 
 @Component({
-  selector: 'nel-collapse',
-  templateUrl: './collapse.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [{
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => NelCollapseComponent),
-    multi: true
-  }]
+    selector: 'nel-collapse',
+    templateUrl: './collapse.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [{
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelCollapseComponent),
+            multi: true
+        }],
+    standalone: false
 })
 
 export class NelCollapseComponent implements ControlValueAccessor, AfterContentInit {

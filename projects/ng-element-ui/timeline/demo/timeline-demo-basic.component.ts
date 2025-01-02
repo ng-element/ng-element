@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-timeline-basic',
-  template: `
+    selector: 'nel-demo-timeline-basic',
+    template: `
     <div class="block">
       <nel-timeline>
         <nel-timeline-item
@@ -12,7 +12,8 @@ import { Component } from '@angular/core';
         </nel-timeline-item>
       </nel-timeline>
     </div>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoTimelineBasicComponent {

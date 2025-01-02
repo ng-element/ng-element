@@ -2,8 +2,9 @@ import { Component, EventEmitter } from '@angular/core';
 import { CdkOverlayOrigin, ConnectionPositionPair } from '@angular/cdk/overlay';
 
 @Component({
-  selector: 'nel-popconfirm',
-  templateUrl: './popconfirm.component.html'
+    selector: 'nel-popconfirm',
+    templateUrl: './popconfirm.component.html',
+    standalone: false
 })
 
 export class NelPopconfirmComponent {

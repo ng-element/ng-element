@@ -2,8 +2,9 @@ import { Component, AfterContentInit, ContentChildren, QueryList } from '@angula
 import { NelSubMenuComponent } from './sub-menu.component';
 
 @Component({
-  selector: 'nel-menu',
-  templateUrl: './menu.component.html'
+    selector: 'nel-menu',
+    templateUrl: './menu.component.html',
+    standalone: false
 })
 
 export class NelMenuComponent implements AfterContentInit {

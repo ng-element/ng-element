@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-avatar-fit',
-  template: `
+    selector: 'nel-demo-avatar-fit',
+    template: `
     <div class="demo-fit">
       <div class="block" *ngFor="let fit of fits">
           <span class="title">{{ fit }}</span>
@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .demo-fit {
         display: flex;
         text-align: center;
@@ -31,7 +31,8 @@ import { Component } from '@angular/core';
         color: #8492a6;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoAvatarFitComponent {

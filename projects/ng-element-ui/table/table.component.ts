@@ -2,8 +2,9 @@ import { Component, Input, AfterViewInit, AfterContentInit, ContentChildren, Que
 import { NelTableColumnComponent } from './table-column.component';
 
 @Component({
-  selector: 'nel-table',
-  templateUrl: './table.component.html'
+    selector: 'nel-table',
+    templateUrl: './table.component.html',
+    standalone: false
 })
 
 export class NelTableComponent implements AfterContentInit, AfterViewInit {

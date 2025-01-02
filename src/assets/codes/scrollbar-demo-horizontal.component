@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-scrollbar-horizontal',
-  template: `
+    selector: 'nel-demo-scrollbar-horizontal',
+    template: `
     <nel-scrollbar>
       <div class="flex-content">
         <p class="item" *ngFor="let item of list">{{ item.value }}</p>
       </div>
     </nel-scrollbar>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .flex-content {
         display: flex;
       }
@@ -29,7 +29,8 @@ import { Component, OnInit } from '@angular/core';
         color: #f56c6c;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoScrollbarHorizontalComponent implements OnInit {

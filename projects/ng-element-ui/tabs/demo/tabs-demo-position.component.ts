@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-tabs-position',
-  template: `
+    selector: 'nel-demo-tabs-position',
+    template: `
     <div style="margin-bottom: 30px;">
       <nel-radio-group [(ngModel)]="tabPosition">
         <label nel-radio-button [nelValue]="'top'">top</label>
@@ -17,7 +17,8 @@ import { Component } from '@angular/core';
       <nel-tab-pane [nelLabel]="'角色管理'">角色管理</nel-tab-pane>
       <nel-tab-pane [nelLabel]="'定时任务补偿'">定时任务补偿</nel-tab-pane>
     </nel-tabs>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoTabsPositionComponent {

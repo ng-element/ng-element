@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-slider-show-stops',
-  template: `
+    selector: 'nel-demo-slider-show-stops',
+    template: `
     <div class="slider-demo-block">
       <span class="demonstration">Breakpoints not displayed</span>
       <nel-slider [(ngModel)]="value1" [step]="10"></nel-slider>
@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
       <nel-slider [(ngModel)]="value2" [step]="10" [showStops]="true"></nel-slider>
     </div>
   `,
-  styles: [`
+    styles: [`
     .slider-demo-block {
       display: flex;
       align-items: center;
@@ -30,7 +30,8 @@ import { Component } from '@angular/core';
     .slider-demo-block .demonstration+nel-slider {
       flex: 0 0 70%;
     }
-  `]
+  `],
+    standalone: false
 })
 
 export class NelDemoSliderShowStopsComponent {

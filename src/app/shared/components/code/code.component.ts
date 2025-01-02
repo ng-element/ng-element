@@ -2,9 +2,10 @@ import { Component, Input } from '@angular/core';
 import { NelMessageService } from 'ng-element-ui/message';
 
 @Component({
-  selector: 'app-code',
-  templateUrl: './code.component.html',
-  styleUrls: ['./code.component.scss']
+    selector: 'app-code',
+    templateUrl: './code.component.html',
+    styleUrls: ['./code.component.scss'],
+    standalone: false
 })
 
 export class CodeComponent {

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-layout-reactive',
-  template: `
+    selector: 'nel-demo-layout-reactive',
+    template: `
     <div nel-row [nelGutter]="10">
       <div nel-col [nelXs]="8" [nelSm]="6" [nelMd]="4" [nelLg]="3" [nelXl]="1"><div class="grid-content bg-purple"></div></div>
       <div nel-col [nelXs]="4" [nelSm]="6" [nelMd]="8" [nelLg]="9" [nelXl]="11"><div class="grid-content bg-purple-light"></div></div>
@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <div nel-col [nelXs]="8" [nelSm]="6" [nelMd]="4" [nelLg]="3" [nelXl]="1"><div class="grid-content bg-purple-light"></div></div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .el-col {
       border-radius: 4px;
     }
@@ -27,7 +27,8 @@ import { Component } from '@angular/core';
       border-radius: 4px;
       min-height: 36px;
     }
-  `]
+  `],
+    standalone: false
 })
 
 export class NelDemoLayoutReactiveComponent { }

@@ -4,9 +4,10 @@ import { drawerMotion, drawerDialogMotion } from 'ng-element-ui/core/animation';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'nel-drawer',
-  templateUrl: './drawer.component.html',
-  animations: [drawerMotion, drawerDialogMotion]
+    selector: 'nel-drawer',
+    templateUrl: './drawer.component.html',
+    animations: [drawerMotion, drawerDialogMotion],
+    standalone: false
 })
 
 export class NelDrawerComponent {

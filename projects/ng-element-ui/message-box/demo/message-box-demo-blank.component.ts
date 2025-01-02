@@ -3,8 +3,8 @@ import { NelMessageBoxService } from 'ng-element-ui/message-box';
 import { NelMessageService } from 'ng-element-ui/message';
 
 @Component({
-  selector: 'nel-demo-message-box-blank',
-  template: `
+    selector: 'nel-demo-message-box-blank',
+    template: `
     <button nel-button [nelType]="'text'" (click)="open()">点击打开 Message Box</button>
     <ng-template #contentTpl>
       <div>请输入邮箱</div>
@@ -13,7 +13,8 @@ import { NelMessageService } from 'ng-element-ui/message';
       </div>
       <div>{{num}}</div>
     </ng-template>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoMessageBoxBlankComponent {

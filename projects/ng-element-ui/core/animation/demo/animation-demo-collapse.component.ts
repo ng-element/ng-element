@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { collapseMotion } from 'ng-element-ui/core/animation';
 
 @Component({
-  selector: 'nel-demo-animation-collapse',
-  template: `
+    selector: 'nel-demo-animation-collapse',
+    template: `
     <div>
       <button nel-button (click)="expanded = !expanded">Click Me</button>
 
@@ -12,8 +12,8 @@ import { collapseMotion } from 'ng-element-ui/core/animation';
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .transition-box {
         margin-bottom: 10px;
         width: 200px;
@@ -27,8 +27,9 @@ import { collapseMotion } from 'ng-element-ui/core/animation';
         box-sizing: border-box;
       }
     `
-  ],
-  animations: [collapseMotion]
+    ],
+    animations: [collapseMotion],
+    standalone: false
 })
 
 export class NelDemoAnimationCollapseComponent {

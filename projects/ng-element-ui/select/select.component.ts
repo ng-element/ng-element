@@ -6,15 +6,16 @@ import { NelSelectDropdownComponent } from './select-dropdown.component';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
-  selector: 'nel-select',
-  templateUrl: './select.component.html',
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => NelSelectComponent),
-      multi: true
-    }
-  ]
+    selector: 'nel-select',
+    templateUrl: './select.component.html',
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelSelectComponent),
+            multi: true
+        }
+    ],
+    standalone: false
 })
 
 export class NelSelectComponent implements ControlValueAccessor, AfterContentInit, OnDestroy {

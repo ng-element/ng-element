@@ -3,12 +3,13 @@ import { NelHeaderComponent } from './header.component';
 import { NelFooterComponent } from './footer.component';
 
 @Component({
-  selector: 'nel-container',
-  templateUrl: './container.component.html',
-  host: {
-    '[class.el-container]': 'true',
-    '[class.is-vertical]': 'vertical'
-  }
+    selector: 'nel-container',
+    templateUrl: './container.component.html',
+    host: {
+        '[class.el-container]': 'true',
+        '[class.is-vertical]': 'vertical'
+    },
+    standalone: false
 })
 
 export class NelContainerComponent implements AfterContentInit {

@@ -6,16 +6,17 @@ export type RowType = 'flex' | undefined;
 export type RowJustify = 'start' | 'end' | 'center' | 'space-around' | 'space-between';
 
 @Directive({
-  selector: '[nel-row]',
-  host: {
-    '[class.el-row]': `true`,
-    '[class.el-row--flex]': `nelType == 'flex'`,
-    '[class.is-justify-end]': `nelJustify == 'end'`,
-    '[class.is-justify-center]': `nelJustify == 'center'`,
-    '[class.is-justify-space-around]': `nelJustify == 'space-around'`,
-    '[class.is-justify-space-between]': `nelJustify == 'space-between'`,
-    '[style]': 'gutterStyle()'
-  }
+    selector: '[nel-row]',
+    host: {
+        '[class.el-row]': `true`,
+        '[class.el-row--flex]': `nelType == 'flex'`,
+        '[class.is-justify-end]': `nelJustify == 'end'`,
+        '[class.is-justify-center]': `nelJustify == 'center'`,
+        '[class.is-justify-space-around]': `nelJustify == 'space-around'`,
+        '[class.is-justify-space-between]': `nelJustify == 'space-between'`,
+        '[style]': 'gutterStyle()'
+    },
+    standalone: false
 })
 
 export class NelRowDirective implements AfterContentInit {

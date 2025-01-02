@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-slider-basic',
-  template: `
+    selector: 'nel-demo-slider-basic',
+    template: `
     <div class="slider-demo-block">
       <span class="demonstration">Default value</span>
       <nel-slider [(ngModel)]="value1"></nel-slider>
@@ -20,7 +20,7 @@ import { Component } from '@angular/core';
       <nel-slider [(ngModel)]="value4" [format]="format"></nel-slider>
     </div>
   `,
-  styles: [`
+    styles: [`
     .slider-demo-block {
       display: flex;
       align-items: center;
@@ -38,7 +38,8 @@ import { Component } from '@angular/core';
     .slider-demo-block .demonstration+nel-slider {
       flex: 0 0 70%;
     }
-  `]
+  `],
+    standalone: false
 })
 
 export class NelDemoSliderBasicComponent {

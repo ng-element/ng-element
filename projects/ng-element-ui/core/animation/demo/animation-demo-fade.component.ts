@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { fadeMotion } from 'ng-element-ui/core/animation';
 
 @Component({
-  selector: 'nel-demo-animation-fade',
-  template: `
+    selector: 'nel-demo-animation-fade',
+    template: `
     <div>
       <button nel-button (click)="show = !show">Click Me</button>
 
@@ -12,8 +12,8 @@ import { fadeMotion } from 'ng-element-ui/core/animation';
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .transition-box {
         margin-bottom: 10px;
         width: 200px;
@@ -27,8 +27,9 @@ import { fadeMotion } from 'ng-element-ui/core/animation';
         box-sizing: border-box;
       }
     `
-  ],
-  animations: [fadeMotion]
+    ],
+    animations: [fadeMotion],
+    standalone: false
 })
 
 export class NelDemoAnimationFadeComponent {

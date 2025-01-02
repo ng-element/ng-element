@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-tag-close',
-  template: `
+    selector: 'nel-demo-tag-close',
+    template: `
     <nel-tag
       *ngFor="let tag of dynamicTags"
       nelClosable
@@ -11,8 +11,8 @@ import { Component } from '@angular/core';
     </nel-tag>
     <button nel-button class="button-new-tag" [nelSize]="'small'" (click)="addTag()">+ New Tag</button>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .el-tag + .el-tag {
         margin-left: 10px;
       }
@@ -29,7 +29,8 @@ import { Component } from '@angular/core';
         vertical-align: bottom;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoTagCloseComponent {

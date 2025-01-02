@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-dropdown-size',
-  template: `
+    selector: 'nel-demo-dropdown-size',
+    template: `
     <div class="nel-dropdown">
       <div>
         <nel-button-group>
@@ -58,8 +58,8 @@ import { Component } from '@angular/core';
       <nel-dropdown-item>蚵仔煎</nel-dropdown-item>
     </nel-dropdown-menu>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .nel-dropdown {
         display: flex;
         align-items: center;
@@ -69,7 +69,8 @@ import { Component } from '@angular/core';
         margin-right: 20px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoDropdownSizeComponent { }

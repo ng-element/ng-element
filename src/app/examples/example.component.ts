@@ -5,8 +5,9 @@ import { filter } from 'rxjs/operators';
 import { RouterList } from './router';
 
 @Component({
-  selector: 'app-example',
-  templateUrl: './example.component.html'
+    selector: 'app-example',
+    templateUrl: './example.component.html',
+    standalone: false
 })
 
 export class ExampleComponent implements OnInit {

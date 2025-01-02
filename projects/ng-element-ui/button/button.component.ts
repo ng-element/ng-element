@@ -3,29 +3,30 @@ import { BooleanInput } from '@angular/cdk/coercion';
 import { InputBoolean } from 'ng-element-ui/core/utils';
 
 @Component({
-  selector: 'button[nel-button]',
-  template: `
+    selector: 'button[nel-button]',
+    template: `
     <i *ngIf="nelIcon" class="el-icon-{{nelIcon}}"></i>
     <i *ngIf="nelLoading" class="el-icon-loading"></i>
     <ng-content></ng-content>
   `,
-  host: {
-    '[class.el-button]': `true`,
-    '[class.el-button--primary]': `nelType === 'primary'`,
-    '[class.el-button--success]': `nelType === 'success'`,
-    '[class.el-button--info]': `nelType === 'info'`,
-    '[class.el-button--warning]': `nelType === 'warning'`,
-    '[class.el-button--danger]': `nelType === 'danger'`,
-    '[class.is-plain]': `nelPlain`,
-    '[class.is-round]': `nelRound`,
-    '[class.is-circle]': `nelCircle`,
-    '[class.is-disabled]': `nelDisabled`,
-    '[class.el-button--text]': `nelType === 'text'`,
-    '[class.is-loading]': `nelLoading`,
-    '[class.el-button--medium]': `nelSize === 'medium'`,
-    '[class.el-button--small]': `nelSize === 'small'`,
-    '[class.el-button--mini]': `nelSize === 'mini'`,
-  }
+    host: {
+        '[class.el-button]': `true`,
+        '[class.el-button--primary]': `nelType === 'primary'`,
+        '[class.el-button--success]': `nelType === 'success'`,
+        '[class.el-button--info]': `nelType === 'info'`,
+        '[class.el-button--warning]': `nelType === 'warning'`,
+        '[class.el-button--danger]': `nelType === 'danger'`,
+        '[class.is-plain]': `nelPlain`,
+        '[class.is-round]': `nelRound`,
+        '[class.is-circle]': `nelCircle`,
+        '[class.is-disabled]': `nelDisabled`,
+        '[class.el-button--text]': `nelType === 'text'`,
+        '[class.is-loading]': `nelLoading`,
+        '[class.el-button--medium]': `nelSize === 'medium'`,
+        '[class.el-button--small]': `nelSize === 'small'`,
+        '[class.el-button--mini]': `nelSize === 'mini'`,
+    },
+    standalone: false
 })
 
 export class NelButtonComponent implements AfterViewInit {

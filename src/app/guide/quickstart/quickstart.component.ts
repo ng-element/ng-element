@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-quickstart',
-  templateUrl: './quickstart.component.html',
-  styleUrls: ['./quickstart.component.scss']
+    selector: 'app-quickstart',
+    templateUrl: './quickstart.component.html',
+    styleUrls: ['./quickstart.component.scss'],
+    standalone: false
 })
 
 export class QuickstartComponent {

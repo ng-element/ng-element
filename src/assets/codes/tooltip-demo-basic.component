@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-tooltip-basic',
-  template: `
+    selector: 'nel-demo-tooltip-basic',
+    template: `
     <div class="box">
       <div class="top">
         <button nel-button class="item" nel-tooltip [nelContent]="'Top Left 提示文字'" [nelPlacement]="'top-start'">上左</button>
@@ -26,8 +26,8 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .box {
         width: 400px;
       }
@@ -60,7 +60,8 @@ import { Component } from '@angular/core';
         padding: 8px 10px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoTooltipBasicComponent { }

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-space-size',
-  template: `
+    selector: 'nel-demo-space-size',
+    template: `
     <nel-space [nelDirection]="'vertical'" [nelAlignment]="'start'" [nelSize]="30">
       <div *nelSpaceItem>
         <nel-radio-group [(ngModel)]="size">
@@ -30,15 +30,16 @@ import { Component } from '@angular/core';
       </nel-space>
     </nel-space>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .card-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoSpaceSizeComponent {

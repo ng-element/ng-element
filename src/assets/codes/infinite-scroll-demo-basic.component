@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-infinite-scroll-basic',
-  template: `
+    selector: 'nel-demo-infinite-scroll-basic',
+    template: `
     <ul class="infinite-list" nel-infinite-scroll (nelOnReachBottom)="add()" style="overflow:auto">
       <li *ngFor="let item of list" class="infinite-list-item">{{ item }}</li>
     </ul>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .infinite-list {
         height: 300px;
         padding: 0;
@@ -26,7 +26,8 @@ import { Component } from '@angular/core';
         color: #7dbcfc;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoInfiniteScrollBasicComponent {

@@ -1,8 +1,9 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'nel-avatar',
-  templateUrl: './avatar.component.html'
+    selector: 'nel-avatar',
+    templateUrl: './avatar.component.html',
+    standalone: false
 })
 
 export class NelAvatarComponent {

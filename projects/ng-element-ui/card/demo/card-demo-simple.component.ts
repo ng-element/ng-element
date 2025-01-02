@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-card-simple',
-  template: `
+    selector: 'nel-demo-card-simple',
+    template: `
     <nel-card>
       <div *ngFor="let item of list" class="text item">
         {{'列表内容 ' + item }}
       </div>
     </nel-card>
   `,
-  styles: [`
+    styles: [`
     .text {
       font-size: 14px;
     }
@@ -21,7 +21,8 @@ import { Component } from '@angular/core';
     .box-card {
       width: 480px;
     }
-  `]
+  `],
+    standalone: false
 })
 
 export class NelDemoCardSimpleComponent {

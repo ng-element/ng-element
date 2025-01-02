@@ -4,8 +4,9 @@ export type PositionType = 'left' | 'right' | 'center';
 export type DirectionType = 'horizontal' | 'vertical';
 
 @Component({
-  selector: 'nel-divider',
-  templateUrl: './divider.component.html'
+    selector: 'nel-divider',
+    templateUrl: './divider.component.html',
+    standalone: false
 })
 
 export class NelDividerComponent {

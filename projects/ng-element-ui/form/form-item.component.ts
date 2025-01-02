@@ -3,8 +3,9 @@ import { FormControlDirective, FormControlName, NgControl } from '@angular/forms
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'nel-form-item',
-  templateUrl: './form-item.component.html'
+    selector: 'nel-form-item',
+    templateUrl: './form-item.component.html',
+    standalone: false
 })
 
 export class NelFormItemComponent implements AfterContentInit, OnDestroy {

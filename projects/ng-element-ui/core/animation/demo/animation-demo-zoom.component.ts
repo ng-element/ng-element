@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { zoomMotion, zoomTopMotion, zoomBottomMotion } from 'ng-element-ui/core/animation';
 
 @Component({
-  selector: 'nel-demo-animation-zoom',
-  template: `
+    selector: 'nel-demo-animation-zoom',
+    template: `
     <div>
       <button nel-button (click)="show = !show">Click Me</button>
 
@@ -14,8 +14,8 @@ import { zoomMotion, zoomTopMotion, zoomBottomMotion } from 'ng-element-ui/core/
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .transition-box {
         margin-bottom: 10px;
         width: 200px;
@@ -29,8 +29,9 @@ import { zoomMotion, zoomTopMotion, zoomBottomMotion } from 'ng-element-ui/core/
         box-sizing: border-box;
       }
     `
-  ],
-  animations: [zoomMotion, zoomTopMotion, zoomBottomMotion]
+    ],
+    animations: [zoomMotion, zoomTopMotion, zoomBottomMotion],
+    standalone: false
 })
 
 export class NelDemoAnimationZoomComponent {

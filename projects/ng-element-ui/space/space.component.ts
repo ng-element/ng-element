@@ -4,17 +4,18 @@ import { InputBoolean } from 'ng-element-ui/core/utils';
 import { NelSpaceItemDirective } from './space.directive';
 
 @Component({
-  selector: 'nel-space',
-  templateUrl: './space.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    class: 'el-space',
-    '[class.el-space--horizontal]': `nelDirection == 'horizontal'`,
-    '[class.el-space--vertical]': `nelDirection == 'vertical'`,
-    '[style.align-items]': 'nelAlignment',
-    '[style.flex-wrap]': `nelWrap ? 'wrap' : ''`,
-    '[style.margin-bottom]': `nelSpacer ? '' : '-' + size`,
-  }
+    selector: 'nel-space',
+    templateUrl: './space.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        class: 'el-space',
+        '[class.el-space--horizontal]': `nelDirection == 'horizontal'`,
+        '[class.el-space--vertical]': `nelDirection == 'vertical'`,
+        '[style.align-items]': 'nelAlignment',
+        '[style.flex-wrap]': `nelWrap ? 'wrap' : ''`,
+        '[style.margin-bottom]': `nelSpacer ? '' : '-' + size`,
+    },
+    standalone: false
 })
 
 export class NelSpaceComponent {

@@ -3,15 +3,16 @@ import { ChangeDetectionStrategy, Component, Input, TemplateRef, ElementRef } fr
 export type ShadowType = 'always' | 'hover' | 'never';
 
 @Component({
-  selector: 'nel-card',
-  templateUrl: './card.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    '[class.is-always-shadow]': `nelShadow == 'always'`,
-    '[class.is-hover-shadow]': `nelShadow == 'hover'`,
-    '[class.is-never-shadow]': `nelShadow == 'never'`,
-    '[class.box-card]': `true`,
-  }
+    selector: 'nel-card',
+    templateUrl: './card.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        '[class.is-always-shadow]': `nelShadow == 'always'`,
+        '[class.is-hover-shadow]': `nelShadow == 'hover'`,
+        '[class.is-never-shadow]': `nelShadow == 'never'`,
+        '[class.box-card]': `true`,
+    },
+    standalone: false
 })
 
 export class NelCardComponent {

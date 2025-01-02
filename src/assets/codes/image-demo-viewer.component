@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NelImageService } from 'ng-element-ui/image';
 
 @Component({
-  selector: 'nel-demo-image-viewer',
-  template: `
+    selector: 'nel-demo-image-viewer',
+    template: `
     <div class="demo-image__preview">
       <nel-image
         style="width: 100px; height: 100px"
@@ -11,7 +11,8 @@ import { NelImageService } from 'ng-element-ui/image';
         [nelPreviewSrcList]="srcList">
       </nel-image>
     </div>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoImageViewerComponent {

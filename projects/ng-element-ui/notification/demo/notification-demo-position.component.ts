@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { NelNotificationService } from 'ng-element-ui/notification';
 
 @Component({
-  selector: 'nel-demo-notification-position',
-  template: `
+    selector: 'nel-demo-notification-position',
+    template: `
   <button nel-button nelPlain (click)="open1()">右上角</button>
   <button nel-button nelPlain (click)="open2()">右下角</button>
   <button nel-button nelPlain (click)="open3()">左下角</button>
   <button nel-button nelPlain (click)="open4()">左上角</button>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoNotificationPositionComponent {

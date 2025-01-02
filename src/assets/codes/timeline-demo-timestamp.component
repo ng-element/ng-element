@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-timeline-timestamp',
-  template: `
+    selector: 'nel-demo-timeline-timestamp',
+    template: `
     <div class="block">
       <nel-timeline>
         <nel-timeline-item [nelTimestamp]="'2018/4/12'" [nelPlacement]="'top'">
@@ -25,7 +25,8 @@ import { Component } from '@angular/core';
         </nel-timeline-item>
       </nel-timeline>
     </div>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoTimelineTimestampComponent { }

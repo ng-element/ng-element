@@ -3,18 +3,19 @@ import { Observable, Observer, Subscription, timer } from 'rxjs';
 import { NelMessageService } from 'ng-element-ui/message';
 
 @Component({
-  selector: 'nel-demo-switch-before',
-  template: `
+    selector: 'nel-demo-switch-before',
+    template: `
     <nel-switch [(ngModel)]="value1" [nelLoading]="loading1" [nelBeforeChange]="beforeChange1"></nel-switch>
     <nel-switch [(ngModel)]="value2" [nelLoading]="loading2" [nelBeforeChange]="beforeChange2"></nel-switch>
   `,
-  styles: [
-    `
+    styles: [
+        `
       :host ::ng-deep .el-switch {
         margin: 20px 20px 20px 0;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoSwitchBeforeComponent implements OnDestroy {

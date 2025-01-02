@@ -5,8 +5,9 @@ export type NelProgressType = ((percentage: number) => string | null);
 const defaultFormatter: NelProgressType = (p: number): string => `${p}%`;
 
 @Component({
-  selector: 'nel-progress',
-  templateUrl: './progress.component.html'
+    selector: 'nel-progress',
+    templateUrl: './progress.component.html',
+    standalone: false
 })
 
 export class NelProgressComponent implements OnInit {

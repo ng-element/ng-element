@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-button-basic',
-  template: `
+    selector: 'nel-demo-button-basic',
+    template: `
   <div nel-row>
     <button nel-button>默认按钮</button>
     <button nel-button [nelType]="'primary'">主要按钮</button>
@@ -36,8 +36,8 @@ import { Component } from '@angular/core';
     <button nel-button [nelType]="'danger'" [nelIcon]="'delete'" nelCircle></button>
   </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .el-row {
         margin-bottom: 20px;
         align-items: baseline;
@@ -47,7 +47,8 @@ import { Component } from '@angular/core';
         margin-bottom: 0;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoButtonBasicComponent { }

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-image-basic',
-  template: `
+    selector: 'nel-demo-image-basic',
+    template: `
     <div class="demo-image">
       <div class="block" *ngFor="let fit of fits">
         <span class="demonstration">{{ fit }}</span>
@@ -13,8 +13,8 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .demo-image .block {
         padding: 30px 0;
         text-align: center;
@@ -36,7 +36,8 @@ import { Component } from '@angular/core';
         border-right: none;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoImageBasicComponent {

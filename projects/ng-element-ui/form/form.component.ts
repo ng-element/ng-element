@@ -2,8 +2,9 @@ import { Component, AfterContentInit, Input, ContentChildren, QueryList } from '
 import { NelFormItemComponent } from './form-item.component';
 
 @Component({
-  selector: 'nel-form',
-  templateUrl: './form.component.html'
+    selector: 'nel-form',
+    templateUrl: './form.component.html',
+    standalone: false
 })
 
 export class NelFormComponent implements AfterContentInit {

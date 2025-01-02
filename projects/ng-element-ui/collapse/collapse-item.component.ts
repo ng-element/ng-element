@@ -5,10 +5,11 @@ import { InputBoolean } from 'ng-element-ui/core/utils';
 import { NelCollapseComponent } from './collapse.component';
 
 @Component({
-  selector: 'nel-collapse-item',
-  templateUrl: './collapse-item.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [collapseMotion]
+    selector: 'nel-collapse-item',
+    templateUrl: './collapse-item.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    animations: [collapseMotion],
+    standalone: false
 })
 
 export class NelCollapseItemComponent implements OnInit {

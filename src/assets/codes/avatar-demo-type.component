@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-avatar-type',
-  template: `
+    selector: 'nel-demo-avatar-type',
+    template: `
     <div class="demo-type">
       <div>
         <nel-avatar [nelIcon]="'user-solid'"></nel-avatar>
@@ -15,8 +15,8 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .demo-type {
         display: flex;
       }
@@ -30,7 +30,8 @@ import { Component } from '@angular/core';
         text-align: center;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoAvatarTypeComponent { }

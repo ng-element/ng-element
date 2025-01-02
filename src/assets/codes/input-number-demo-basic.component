@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-input-number-basic',
-  template: `
+    selector: 'nel-demo-input-number-basic',
+    template: `
     <nel-input-number [(ngModel)]="num" (ngModelChange)="handleChange($event)" [nelMin]="1" [nelMax]="10" label="描述文字"></nel-input-number>
   `,
-  styles: [
-    `
+    styles: [
+        `
     :host ::ng-deep .el-input-number {
       position: relative;
       display: inline-block;
@@ -14,7 +14,8 @@ import { Component } from '@angular/core';
       line-height: 38px;
     }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoInputNumberBasicComponent {

@@ -3,8 +3,9 @@ import { CdkOverlayOrigin, ConnectionPositionPair } from '@angular/cdk/overlay';
 import { TriggerType } from './popover.directive';
 
 @Component({
-  selector: 'nel-popover',
-  templateUrl: './popover.component.html'
+    selector: 'nel-popover',
+    templateUrl: './popover.component.html',
+    standalone: false
 })
 
 export class NelPopoverComponent {

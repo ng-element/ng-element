@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-carousel-card',
-  template: `
+    selector: 'nel-demo-carousel-card',
+    template: `
     <nel-carousel :interval="4000" [nelType]="'card'" [nelHeight]="'200px'">
       <nel-carousel-item *ngFor="let item of list">
         <h3 class="medium">{{ item }}</h3>
       </nel-carousel-item>
     </nel-carousel>
   `,
-  styles: [
-    `
+    styles: [
+        `
       :host ::ng-deep .el-carousel__item:nth-child(odd) {
           background-color: #d3dce6;
         }
@@ -27,7 +27,8 @@ import { Component } from '@angular/core';
           text-align: center;
         }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoCarouselCardComponent {

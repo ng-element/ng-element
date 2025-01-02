@@ -5,9 +5,10 @@ import { loadingMotion } from 'ng-element-ui/core/animation';
 import { LoadingRef } from './loading-ref';
 
 @Component({
-  selector: 'nel-loading-fullscreen',
-  templateUrl: './loading-fullscreen.component.html',
-  animations: [loadingMotion]
+    selector: 'nel-loading-fullscreen',
+    templateUrl: './loading-fullscreen.component.html',
+    animations: [loadingMotion],
+    standalone: false
 })
 
 export class NelLoadingFullscreenComponent implements OnInit {

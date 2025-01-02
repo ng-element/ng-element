@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-tag-effect',
-  template: `
+    selector: 'nel-demo-tag-effect',
+    template: `
     <div class="tag-group">
       <span class="tag-group__title">Dark</span>
       <nel-tag
@@ -22,8 +22,8 @@ import { Component } from '@angular/core';
       </nel-tag>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .tag-group {
         display: flex;
         align-items: center;
@@ -43,7 +43,8 @@ import { Component } from '@angular/core';
         margin-left: 10px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoTagEffectComponent {

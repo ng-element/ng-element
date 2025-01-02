@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-transfer-basic',
-  template: `
+    selector: 'nel-demo-transfer-basic',
+    template: `
     <nel-transfer [data]="data"></nel-transfer>
   `,
+    standalone: false
 })
 
 export class NelDemoTransferBasicComponent implements OnInit {

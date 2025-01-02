@@ -7,11 +7,12 @@ import { HighLightPipe } from '../../pipe';
 import { AppService } from './../../../app.service';
 
 @Component({
-  selector: 'app-demo',
-  templateUrl: './demo.component.html',
-  styleUrls: ['./demo.component.scss'],
-  providers: [HighLightPipe],
-  encapsulation: ViewEncapsulation.None,
+    selector: 'app-demo',
+    templateUrl: './demo.component.html',
+    styleUrls: ['./demo.component.scss'],
+    providers: [HighLightPipe],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class DemoComponent implements OnInit {
   @Input() codeUrl?: string;

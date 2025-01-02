@@ -3,8 +3,8 @@ import { Observable, Observer } from 'rxjs';
 import { NelDialogService } from 'ng-element-ui/dialog';
 
 @Component({
-  selector: 'nel-demo-drawer-content',
-  template: `
+    selector: 'nel-demo-drawer-content',
+    template: `
     <button nel-button [nelType]="'text'" (click)="table = true">打开嵌套表格的 Drawer</button>
     <button nel-button [nelType]="'text'" (click)="dialog = true">打开嵌套 Form 的 Drawer</button>
     <nel-drawer
@@ -33,8 +33,8 @@ import { NelDialogService } from 'ng-element-ui/dialog';
       </div>
     </nel-drawer>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .demo-drawer__content {
         display: flex;
         flex-direction: column;
@@ -53,7 +53,8 @@ import { NelDialogService } from 'ng-element-ui/dialog';
         flex: 1;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoDrawerContentComponent {

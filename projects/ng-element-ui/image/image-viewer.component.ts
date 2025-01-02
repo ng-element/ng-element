@@ -5,9 +5,10 @@ import {
 import { ImageRef } from './image-ref';
 
 @Component({
-  selector: 'nel-image-viewer',
-  templateUrl: './image-viewer.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'nel-image-viewer',
+    templateUrl: './image-viewer.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 
 export class NelImageViewerComponent implements OnInit, AfterViewInit {

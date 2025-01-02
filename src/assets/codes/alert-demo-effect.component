@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-alert-effect',
-  template: `
+    selector: 'nel-demo-alert-effect',
+    template: `
     <nel-alert [nelTitle]="'成功提示的文案'" [nelType]="'success'" [nelEffect]="'dark'"></nel-alert>
     <nel-alert [nelTitle]="'消息提示的文案'" [nelType]="'info'" [nelEffect]="'dark'"></nel-alert>
     <nel-alert [nelTitle]="'警告提示的文案'" [nelType]="'warning'" [nelEffect]="'dark'"></nel-alert>
     <nel-alert [nelTitle]="'错误提示的文案'" [nelType]="'error'" [nelEffect]="'dark'"></nel-alert>
   `,
-  styles: [
-    `
+    styles: [
+        `
       nel-alert:first-child {
         margin: 0;
       }
@@ -17,7 +17,8 @@ import { Component } from '@angular/core';
         margin: 20px 0 0;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoAlertEffectComponent { }

@@ -2,15 +2,16 @@ import { Component, forwardRef, Input, TemplateRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
-  selector: 'nel-upload',
-  templateUrl: './upload.component.html',
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => NelUploadComponent),
-      multi: true
-    }
-  ]
+    selector: 'nel-upload',
+    templateUrl: './upload.component.html',
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelUploadComponent),
+            multi: true
+        }
+    ],
+    standalone: false
 })
 
 export class NelUploadComponent implements ControlValueAccessor {

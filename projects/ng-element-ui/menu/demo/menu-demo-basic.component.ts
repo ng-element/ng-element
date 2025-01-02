@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-menu-basic',
-  template: `
+    selector: 'nel-demo-menu-basic',
+    template: `
     <nel-menu>
       <nel-sub-menu [title]="titleTpl">
         <ng-template #titleTpl>
@@ -60,6 +60,7 @@ import { Component } from '@angular/core';
       </nel-menu-item>
     </nel-menu>
   `,
+    standalone: false
 })
 
 export class NelDemoMenuBasicComponent { }

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-space-size-number',
-  template: `
+    selector: 'nel-demo-space-size-number',
+    template: `
     <div>
       <button (click)="reduce()" nel-button>递减</button>
       {{size}}
@@ -24,15 +24,16 @@ import { Component } from '@angular/core';
       </ng-container>
     </nel-space>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .card-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoSpaceSizeNumberComponent {

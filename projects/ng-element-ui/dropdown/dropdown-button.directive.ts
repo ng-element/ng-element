@@ -2,7 +2,8 @@ import { Directive, AfterViewInit, Renderer2, Host, Optional, ElementRef } from 
 import { NelButtonGroupComponent } from 'ng-element-ui/button';
 
 @Directive({
-  selector: '[nel-button][nel-dropdown]'
+    selector: '[nel-button][nel-dropdown]',
+    standalone: false
 })
 
 export class NelDropdownButtonDirective implements AfterViewInit {

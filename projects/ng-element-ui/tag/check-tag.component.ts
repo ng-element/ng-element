@@ -3,12 +3,13 @@ import { BooleanInput } from '@angular/cdk/coercion';
 import { InputBoolean } from 'ng-element-ui/core/utils';
 
 @Component({
-  selector: 'nel-check-tag',
-  templateUrl: './check-tag.component.html',
-  host: {
-    '[class]': `'el-check-tag'`,
-    '[class.is-checked]': 'nelChecked'
-  }
+    selector: 'nel-check-tag',
+    templateUrl: './check-tag.component.html',
+    host: {
+        '[class]': `'el-check-tag'`,
+        '[class.is-checked]': 'nelChecked'
+    },
+    standalone: false
 })
 
 export class NelCheckTagComponent {

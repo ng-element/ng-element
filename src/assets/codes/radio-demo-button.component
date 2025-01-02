@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-radio-button',
-  template: `
+    selector: 'nel-demo-radio-button',
+    template: `
     <div>
       <nel-radio-group [(ngModel)]="radio1">
         <label nel-radio-button [nelValue]="'上海'">上海</label>
@@ -35,7 +35,8 @@ import { Component } from '@angular/core';
         <label nel-radio-button [nelValue]="'深圳'">深圳</label>
       </nel-radio-group>
     </div>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoRadioButtonComponent {

@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-cascader-panel',
-  templateUrl: './cascader-panel.component.html',
-  host: {
-    'class': 'el-popper is-pure is-light el-cascader__dropdown',
-    'tabindex': '-1',
-    'aria-hidden': 'false',
-    'role': 'tooltip'
-  }
+    selector: 'nel-cascader-panel',
+    templateUrl: './cascader-panel.component.html',
+    host: {
+        'class': 'el-popper is-pure is-light el-cascader__dropdown',
+        'tabindex': '-1',
+        'aria-hidden': 'false',
+        'role': 'tooltip'
+    },
+    standalone: false
 })
 
 export class NelCascaderPanelComponent {

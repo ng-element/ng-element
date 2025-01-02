@@ -7,9 +7,10 @@ import { InputBoolean } from 'ng-element-ui/core/utils';
 import { NelTabPaneComponent } from './tab-pane.component';
 
 @Component({
-  selector: 'nel-tabs',
-  templateUrl: './tabs.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'nel-tabs',
+    templateUrl: './tabs.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 
 export class NelTabsComponent implements AfterContentInit, AfterContentChecked, AfterViewInit, OnChanges {

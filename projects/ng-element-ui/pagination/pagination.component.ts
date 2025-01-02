@@ -1,8 +1,9 @@
 import { Component, Input, Output, TemplateRef, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'nel-pagination',
-  templateUrl: './pagination.component.html'
+    selector: 'nel-pagination',
+    templateUrl: './pagination.component.html',
+    standalone: false
 })
 
 export class NelPaginationComponent implements OnInit {

@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { NelImageService } from 'ng-element-ui/image';
 
 @Component({
-  selector: 'nel-demo-image-service',
-  template: `
+    selector: 'nel-demo-image-service',
+    template: `
     <button nel-button (click)="preview()">查看图片</button>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoImageServiceComponent {

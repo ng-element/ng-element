@@ -3,8 +3,9 @@ import { fromEvent, Subscription } from 'rxjs';
 import ResizeObserver from 'resize-observer-polyfill';
 
 @Component({
-  selector: 'nel-scrollbar',
-  templateUrl: './scrollbar.component.html'
+    selector: 'nel-scrollbar',
+    templateUrl: './scrollbar.component.html',
+    standalone: false
 })
 
 export class NelScrollbarComponent implements AfterViewInit, OnDestroy {

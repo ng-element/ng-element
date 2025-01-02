@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-popover-confirm',
-  template: `
+    selector: 'nel-demo-popover-confirm',
+    template: `
   <button nel-button
     nel-popover
     [nelPopoverContent]="contentTpl"
@@ -18,7 +18,8 @@ import { Component } from '@angular/core';
       <button nel-button [nelType]="'primary'" [nelSize]="'mini'" (click)="visible = false">确定</button>
     </div>
   </ng-template>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoPopoverConfirmComponent {

@@ -2,13 +2,14 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-nav-bottom',
-  templateUrl: './nav-bottom.component.html',
-  styleUrls: ['./nav-bottom.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  host: {
-    class: 'footer-nav'
-  }
+    selector: 'app-nav-bottom',
+    templateUrl: './nav-bottom.component.html',
+    styleUrls: ['./nav-bottom.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    host: {
+        class: 'footer-nav'
+    },
+    standalone: false
 })
 
 export class NavBottomComponent implements OnInit {

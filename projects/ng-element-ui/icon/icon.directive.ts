@@ -2,10 +2,11 @@ import { Directive, ElementRef, Input, Renderer2, SimpleChanges, OnChanges } fro
 import { NelIconService } from './icon.service';
 
 @Directive({
-  selector: '[nel-icon]',
-  host: {
-    class: 'el-icon'
-  }
+    selector: '[nel-icon]',
+    host: {
+        class: 'el-icon'
+    },
+    standalone: false
 })
 
 export class NelIconDirective implements OnChanges {

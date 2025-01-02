@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-descriptions-size',
-  template: `
+    selector: 'nel-demo-descriptions-size',
+    template: `
     <nel-radio-group [(ngModel)]="size">
       <label nel-radio [nelValue]="">默认</label>
       <label nel-radio [nelValue]="'medium'">中等</label>
@@ -64,13 +64,14 @@ import { Component } from '@angular/core';
       <nel-descriptions-item [nelLabel]="'联系地址'">江苏省苏州市吴中区吴中大道 1188 号</nel-descriptions-item>
     </nel-descriptions>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .margin-top {
         margin-top: 20px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoDescriptionsSizeComponent {

@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-scrollbar-basic',
-  template: `
+    selector: 'nel-demo-scrollbar-basic',
+    template: `
     <nel-scrollbar [nelHeight]="'400px'">
       <p class="item" *ngFor="let item of list" v-for="item in 20">
         {{ item.value }}
       </p>
     </nel-scrollbar>
   `,
-  styles: [
-    `
+    styles: [
+        `
     :host ::ng-deep .item {
       display: flex;
       align-items: center;
@@ -23,7 +23,8 @@ import { Component, OnInit } from '@angular/core';
       color: #409eff;
     }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoScrollbarBasicComponent implements OnInit {

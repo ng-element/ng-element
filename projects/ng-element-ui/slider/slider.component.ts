@@ -4,14 +4,15 @@ import { fromEvent, Subscription } from 'rxjs';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
-  selector: 'nel-slider',
-  templateUrl: './slider.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [{
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => NelSliderComponent),
-    multi: true
-  }]
+    selector: 'nel-slider',
+    templateUrl: './slider.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [{
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelSliderComponent),
+            multi: true
+        }],
+    standalone: false
 })
 
 export class NelSliderComponent implements ControlValueAccessor, AfterViewInit, OnDestroy {

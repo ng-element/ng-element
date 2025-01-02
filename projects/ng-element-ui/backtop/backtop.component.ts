@@ -7,10 +7,11 @@ import { fromEvent, Subscription } from 'rxjs';
 import { fadeMotion } from 'ng-element-ui/core/animation';
 
 @Component({
-  selector: 'nel-backtop',
-  templateUrl: './backtop.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [fadeMotion]
+    selector: 'nel-backtop',
+    templateUrl: './backtop.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    animations: [fadeMotion],
+    standalone: false
 })
 
 export class NelBacktopComponent implements AfterViewInit, OnDestroy, OnChanges {

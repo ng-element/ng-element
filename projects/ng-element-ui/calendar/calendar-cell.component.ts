@@ -1,7 +1,8 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[nelDateCell]'
+    selector: '[nelDateCell]',
+    standalone: false
 })
 
 export class NelDateCellDirective { }

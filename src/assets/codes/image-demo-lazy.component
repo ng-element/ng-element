@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-image-lazy',
-  template: `
+    selector: 'nel-demo-image-lazy',
+    template: `
     <div class="demo-image__lazy">
       <nel-image *ngFor="let url of urls" [nelSrc]="url" nelLazy></nel-image>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .demo-image__lazy {
         height: 400px;
         overflow-y: auto;
@@ -20,7 +20,8 @@ import { Component } from '@angular/core';
         margin-bottom: 10px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoImageLazyComponent {

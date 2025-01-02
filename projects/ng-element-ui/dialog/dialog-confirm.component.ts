@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { DialogRef } from './dialog-ref';
 
 @Component({
-  selector: 'nel-dialog-confirm',
-  templateUrl: './dialog-confirm.component.html'
+    selector: 'nel-dialog-confirm',
+    templateUrl: './dialog-confirm.component.html',
+    standalone: false
 })
 
 export class NelDialogConfirmComponent implements OnInit {

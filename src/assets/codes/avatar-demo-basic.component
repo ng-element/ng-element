@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-avatar-basic',
-  template: `
+    selector: 'nel-demo-avatar-basic',
+    template: `
     <div nel-row class="demo-avatar demo-basic">
       <div nel-col [nelSpan]="12">
         <div class="sub-title">circle</div>
@@ -24,8 +24,8 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .demo-avatar.demo-basic {
         text-align: center;
       }
@@ -54,7 +54,8 @@ import { Component } from '@angular/core';
         flex: 1;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoAvatarBasicComponent {

@@ -2,14 +2,15 @@ import { Component, ViewChild, TemplateRef } from '@angular/core';
 import { NelMessageService } from 'ng-element-ui/message';
 
 @Component({
-  selector: 'nel-demo-message-basic',
-  template: `
+    selector: 'nel-demo-message-basic',
+    template: `
     <button nel-button nelPlain (click)="open()">打开消息提示</button>
     <button nel-button nelPlain (click)="openVn()">TemplateRef消息</button>
     <ng-template #tpl>
       <p>{{content}}</p>
     </ng-template>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoMessageBasicComponent {

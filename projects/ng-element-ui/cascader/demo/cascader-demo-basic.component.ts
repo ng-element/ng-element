@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-cascader-basic',
-  template: `
+    selector: 'nel-demo-cascader-basic',
+    template: `
     <nel-cascader [options]="options"></nel-cascader>
   `,
+    standalone: false
 })
 
 export class NelDemoCascaderBasicComponent {

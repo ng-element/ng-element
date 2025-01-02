@@ -7,9 +7,10 @@ import { InputBoolean } from 'ng-element-ui/core/utils';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'nel-dialog',
-  templateUrl: './dialog.component.html',
-  animations: [modalMotion]
+    selector: 'nel-dialog',
+    templateUrl: './dialog.component.html',
+    animations: [modalMotion],
+    standalone: false
 })
 
 export class NelDialogComponent {

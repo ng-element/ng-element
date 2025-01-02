@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-card-shadow',
-  template: `
+    selector: 'nel-demo-card-shadow',
+    template: `
   <div nel-row [nelGutter]="12">
     <div nel-col [nelSpan]="8">
       <nel-card [nelShadow]="'always'">
@@ -20,7 +20,8 @@ import { Component } from '@angular/core';
       </nel-card>
     </div>
   </div>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoCardShadowComponent { }

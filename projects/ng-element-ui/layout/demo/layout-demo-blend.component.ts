@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-layout-blend',
-  template: `
+    selector: 'nel-demo-layout-blend',
+    template: `
     <div nel-row [nelGutter]="20">
       <div nel-col [nelSpan]="16"><div class="grid-content bg-purple"></div></div>
       <div nel-col [nelSpan]="8"><div class="grid-content bg-purple"></div></div>
@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
       <div nel-col [nelSpan]="4"><div class="grid-content bg-purple"></div></div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .el-row {
       margin-bottom: 20px;
       &:last-child {
@@ -46,7 +46,8 @@ import { Component } from '@angular/core';
       padding: 10px 0;
       background-color: #f9fafc;
     }
-  `]
+  `],
+    standalone: false
 })
 
 export class NelDemoLayoutBlendComponent { }

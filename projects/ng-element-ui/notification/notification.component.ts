@@ -5,9 +5,10 @@ import { notificationMotion } from 'ng-element-ui/core/animation';
 import { NelNotificationRef, PositionType } from './notification-ref';
 
 @Component({
-  selector: 'nel-notification',
-  templateUrl: './notification.component.html',
-  animations: [notificationMotion]
+    selector: 'nel-notification',
+    templateUrl: './notification.component.html',
+    animations: [notificationMotion],
+    standalone: false
 })
 
 export class NelNotificationComponent implements OnInit, AfterViewInit, OnDestroy {

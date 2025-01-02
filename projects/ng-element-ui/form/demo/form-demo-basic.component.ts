@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'nel-demo-form-basic',
-  template: `
+    selector: 'nel-demo-form-basic',
+    template: `
     <nel-form [formGroup]="activityForm" [label-width]="'120px'">
       <nel-form-item label="Activity name">
         <div class="el-input">
@@ -17,7 +17,8 @@ import { FormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@
         <button nel-button>Cancel</button>
       </nel-form-item>
     </nel-form>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoFormBasicComponent {

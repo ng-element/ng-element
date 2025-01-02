@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-collapse-basic',
-  template: `
+    selector: 'nel-demo-collapse-basic',
+    template: `
     <nel-collapse  [(ngModel)]="accordion" (ngModelChange)="changeAccordion($event)">
       <nel-collapse-item [nelTitle]="'一致性 Consistency'" name="1">
         <div>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</div>
@@ -22,7 +22,8 @@ import { Component } from '@angular/core';
         <div>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</div>
       </nel-collapse-item>
     </nel-collapse>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoCollapseBasicComponent {

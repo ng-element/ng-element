@@ -1,16 +1,16 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-affix-target',
-  template: `
+    selector: 'nel-demo-affix-target',
+    template: `
     <div #containerEle class="affix-container">
       <nel-affix [nelTarget]="containerEle" [nelOffset]="80">
         <button nel-button [nelType]="'primary'">指定容器</button>
       </nel-affix>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .affix-container {
         text-align: center;
         height: 400px;
@@ -18,7 +18,8 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
         background: #ecf5ff;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoAffixTargetComponent {

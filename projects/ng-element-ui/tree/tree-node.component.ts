@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'nel-tree-node',
-  templateUrl: './tree-node.component.html'
+    selector: 'nel-tree-node',
+    templateUrl: './tree-node.component.html',
+    standalone: false
 })
 
 export class NelTreeNodeComponent {

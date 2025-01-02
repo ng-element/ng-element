@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-scrollbar-maxheight',
-  template: `
+    selector: 'nel-demo-scrollbar-maxheight',
+    template: `
     <button nel-button (click)="add()">添加元素</button>
     <button nel-button (click)="delete()">删除元素</button>
     <nel-scrollbar [nelMaxHeight]="'400px'">
       <p class="item" *ngFor="let item of list; let index=index">{{ index+1 }}</p>
     </nel-scrollbar>
   `,
-  styles: [
-    `
+    styles: [
+        `
     .el-button {
       margin-bottom: 20px;
     }
@@ -26,7 +26,8 @@ import { Component, OnInit } from '@angular/core';
       color: #409eff;
     }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoScrollbarMaxheightComponent implements OnInit {

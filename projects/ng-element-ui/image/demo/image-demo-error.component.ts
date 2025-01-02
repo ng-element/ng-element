@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-image-error',
-  template: `
+    selector: 'nel-demo-image-error',
+    template: `
     <div class="demo-image__error">
       <div class="block">
         <span class="demonstration">默认</span>
@@ -20,8 +20,8 @@ import { Component } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .demo-image__error .el-image {
         width: 300px;
         height: 200px;
@@ -66,7 +66,8 @@ import { Component } from '@angular/core';
         font-size: 30px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoImageErrorComponent { }

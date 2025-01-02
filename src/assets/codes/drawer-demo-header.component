@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-drawer-header',
-  template: `
+    selector: 'nel-demo-drawer-header',
+    template: `
     <button nel-button (click)="drawer = true" [nelType]="'primary'" style="margin-left: 16px;">
       点我打开
     </button>
@@ -13,7 +13,8 @@ import { Component } from '@angular/core';
       [nelWithHeader]="false">
       <span>我来啦!</span>
     </nel-drawer>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoDrawerHeaderComponent {

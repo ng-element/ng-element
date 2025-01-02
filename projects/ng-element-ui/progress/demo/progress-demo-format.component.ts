@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-progress-format',
-  template: `
+    selector: 'nel-demo-progress-format',
+    template: `
     <nel-progress [nelPercentage]="50" [nelFormat]="formatTpl1">
       <ng-template #formatTpl1>
         <button nel-button [nelType]="'text'">自定义内容</button>
@@ -25,8 +25,8 @@ import { Component } from '@angular/core';
       </ng-template>
     </nel-progress>
   `,
-  styles: [
-    `
+    styles: [
+        `
       :host ::ng-deep .el-progress--line {
         margin-bottom: 15px;
         width: 350px;
@@ -48,7 +48,8 @@ import { Component } from '@angular/core';
         font-size: 12px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoProgressFormatComponent { }

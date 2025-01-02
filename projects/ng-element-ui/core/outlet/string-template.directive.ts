@@ -5,7 +5,8 @@ export class StringTemplateContext {
 }
 
 @Directive({
-  selector: '[stringTemplate]',
+    selector: '[stringTemplate]',
+    standalone: false
 })
 export class NelStringTemplateDirective implements OnChanges, OnDestroy {
   private context = new StringTemplateContext();

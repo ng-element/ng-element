@@ -4,8 +4,9 @@ import { InputBoolean } from 'ng-element-ui/core/utils';
 import { NelDropdownService } from './dropdown.service';
 
 @Component({
-  selector: 'nel-dropdown-item',
-  templateUrl: './dropdown-item.component.html'
+    selector: 'nel-dropdown-item',
+    templateUrl: './dropdown-item.component.html',
+    standalone: false
 })
 
 export class NelDropdownItemComponent {

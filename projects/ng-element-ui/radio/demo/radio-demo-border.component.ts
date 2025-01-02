@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-radio-border',
-  template: `
+    selector: 'nel-demo-radio-border',
+    template: `
     <div>
       <label nel-radio [(ngModel)]="radio1" [nelValue]="'1'" nelBorder>备选项1</label>
       <label nel-radio [(ngModel)]="radio1" [nelValue]="'2'" nelBorder>备选项1</label>
@@ -19,7 +19,8 @@ import { Component } from '@angular/core';
       <label nel-radio [(ngModel)]="radio4" [nelValue]="'1'" nelBorder [nelSize]="'mini'" nelDisabled>备选项1</label>
       <label nel-radio [(ngModel)]="radio4" [nelValue]="'2'" nelBorder [nelSize]="'mini'" nelDisabled>备选项1</label>
     </div>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoRadioBorderComponent {

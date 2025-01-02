@@ -4,20 +4,21 @@ import { NelCheckboxComponent } from './checkbox.component';
 import { NelCheckboxService } from './checkbox.service';
 
 @Component({
-  selector: 'nel-checkbox-group',
-  templateUrl: './checkbox-group.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    NelCheckboxService,
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => NelCheckboxGroupComponent),
-      multi: true
-    }
-  ],
-  host: {
-    class: 'el-checkbox-group'
-  }
+    selector: 'nel-checkbox-group',
+    templateUrl: './checkbox-group.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [
+        NelCheckboxService,
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelCheckboxGroupComponent),
+            multi: true
+        }
+    ],
+    host: {
+        class: 'el-checkbox-group'
+    },
+    standalone: false
 })
 
 export class NelCheckboxGroupComponent implements ControlValueAccessor {

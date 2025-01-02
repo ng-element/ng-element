@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-skeleton-loading',
-  template: `
+    selector: 'nel-demo-skeleton-loading',
+    template: `
     <nel-space [nelDirection]="'vertical'" [nelAlignment]="'flex-start'">
       <div (click)="loading = !loading">
         <label style="margin-right: 16px;">切换 Loading {{loading}}</label>
@@ -39,8 +39,8 @@ import { Component } from '@angular/core';
       </nel-skeleton>
     </nel-space>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .time {
         font-size: 13px;
         color: #999;
@@ -64,7 +64,8 @@ import { Component } from '@angular/core';
         display: block;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoSkeletonLoadingComponent {

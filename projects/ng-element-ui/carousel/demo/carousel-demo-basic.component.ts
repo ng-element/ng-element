@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-carousel-basic',
-  template: `
+    selector: 'nel-demo-carousel-basic',
+    template: `
     <div class="block">
       <span class="demonstration">默认 Hover 指示器触发</span>
       <nel-carousel [nelHeight]="'150px'">
@@ -20,8 +20,8 @@ import { Component } from '@angular/core';
       </nel-carousel>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .block {
         padding: 30px;
         text-align: center;
@@ -58,7 +58,8 @@ import { Component } from '@angular/core';
         line-height: 150px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoCarouselBasicComponent {

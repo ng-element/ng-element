@@ -3,8 +3,8 @@ import { NelDialogService } from 'ng-element-ui/dialog';
 import { Observable, Observer } from 'rxjs';
 
 @Component({
-  selector: 'nel-demo-dialog-basic',
-  template: `
+    selector: 'nel-demo-dialog-basic',
+    template: `
     <button nel-button [nelType]="'text'" (click)="dialogVisible = true">
       点击打开 Dialog
     </button>
@@ -22,7 +22,8 @@ import { Observable, Observer } from 'rxjs';
         </span>
       </ng-template>
     </nel-dialog>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoDialogBasicComponent {

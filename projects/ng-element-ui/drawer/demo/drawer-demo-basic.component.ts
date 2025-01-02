@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-drawer-basic',
-  template: `
+    selector: 'nel-demo-drawer-basic',
+    template: `
     <nel-radio-group [(ngModel)]="direction">
       <label nel-radio [nelValue]="'ltr'">从左往右开</label>
       <label nel-radio [nelValue]="'rtl'">从右往左开</label>
@@ -21,7 +21,8 @@ import { Component } from '@angular/core';
       :before-close="handleClose" destroy-on-close>
       <span>我来啦!</span>
     </nel-drawer>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoDrawerBasicComponent {

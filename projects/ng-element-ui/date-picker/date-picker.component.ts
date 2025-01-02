@@ -5,13 +5,14 @@ import { ComponentPortal } from '@angular/cdk/portal';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'nel-date-picker',
-  templateUrl: './date-picker.component.html',
-  host: {
-    'class': 'el-input el-input--prefix el-input--suffix el-date-editor el-date-editor--date el-tooltip__trigger el-tooltip__trigger',
-    'role': 'combobox',
-    '(click)': 'open()'
-  }
+    selector: 'nel-date-picker',
+    templateUrl: './date-picker.component.html',
+    host: {
+        'class': 'el-input el-input--prefix el-input--suffix el-date-editor el-date-editor--date el-tooltip__trigger el-tooltip__trigger',
+        'role': 'combobox',
+        '(click)': 'open()'
+    },
+    standalone: false
 })
 
 export class NelDatePickerComponent implements OnDestroy {

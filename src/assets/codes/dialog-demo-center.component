@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-dialog-center',
-  template: `
+    selector: 'nel-demo-dialog-center',
+    template: `
     <button nel-button [nelType]="'text'" (click)="dialogVisible = true">
       点击打开 Dialog
     </button>
@@ -21,7 +21,8 @@ import { Component } from '@angular/core';
         </span>
       </ng-template>
     </nel-dialog>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoDialogCenterComponent {

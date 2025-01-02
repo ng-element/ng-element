@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-rate-basic',
-  template: `
+    selector: 'nel-demo-rate-basic',
+    template: `
     <div class="block">
       <span class="demonstration">默认不区分颜色</span>
       <nel-rate [(ngModel)]="value1"></nel-rate>
@@ -12,8 +12,8 @@ import { Component } from '@angular/core';
       <nel-rate [(ngModel)]="value2" [nelColors]="colors"></nel-rate>
     </div> -->
   `,
-  styles: [
-    `
+    styles: [
+        `
       .block {
         padding: 30px 0;
         text-align: center;
@@ -30,7 +30,8 @@ import { Component } from '@angular/core';
         margin-bottom: 20px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoRateBasicComponent {

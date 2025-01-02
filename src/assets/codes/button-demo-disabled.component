@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-button-disabled',
-  template: `
+    selector: 'nel-demo-button-disabled',
+    template: `
   <div nel-row>
     <button nel-button disabled>默认按钮</button>
     <button nel-button [nelType]="'primary'" disabled>主要按钮</button>
@@ -20,8 +20,8 @@ import { Component } from '@angular/core';
     <button nel-button [nelType]="'danger'" nelPlain disabled>危险按钮</button>
   </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .el-row {
         margin-bottom: 20px;
         align-items: baseline;
@@ -31,7 +31,8 @@ import { Component } from '@angular/core';
         margin-bottom: 0;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoButtonDisabledComponent { }

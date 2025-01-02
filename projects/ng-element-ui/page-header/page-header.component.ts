@@ -1,8 +1,9 @@
 import { Component, Input, Output, TemplateRef, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'nel-page-header',
-  templateUrl: './page-header.component.html'
+    selector: 'nel-page-header',
+    templateUrl: './page-header.component.html',
+    standalone: false
 })
 
 export class NelPageHeaderComponent {

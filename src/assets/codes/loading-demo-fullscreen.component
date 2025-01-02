@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NelLoadingService } from 'ng-element-ui/loading';
 
 @Component({
-  selector: 'nel-demo-loading-fullscreen',
-  template: `
+    selector: 'nel-demo-loading-fullscreen',
+    template: `
     <nel-loading [nelLoading]="fullscreenLoading" nelFullscreen>
       <button nel-button
         [nelType]="'primary'"
@@ -18,13 +18,14 @@ import { NelLoadingService } from 'ng-element-ui/loading';
       服务方式
     </button>
   `,
-  styles: [
-    `
+    styles: [
+        `
       nel-loading {
         margin-bottom: 10px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoLoadingFullscreenComponent {

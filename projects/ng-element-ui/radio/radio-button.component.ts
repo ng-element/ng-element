@@ -3,23 +3,24 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import { NelRadioService } from './radio.service';
 
 @Component({
-  selector: '[nel-radio-button]',
-  templateUrl: './radio-button.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [{
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => NelRadioButtonComponent),
-    multi: true
-  }],
-  host: {
-    '[class]': `'el-radio-button'`,
-    '[class.is-active]': 'isChecked',
-    '[class.is-disabled]': `isDisabled`,
-    '[class.el-radio-button--medium]': `size == 'medium'`,
-    '[class.el-radio-button--small]': `size == 'small'`,
-    '[class.el-radio-button--mini]': `size == 'mini'`,
-    '(click)': 'onHostClick($event)'
-  }
+    selector: '[nel-radio-button]',
+    templateUrl: './radio-button.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [{
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelRadioButtonComponent),
+            multi: true
+        }],
+    host: {
+        '[class]': `'el-radio-button'`,
+        '[class.is-active]': 'isChecked',
+        '[class.is-disabled]': `isDisabled`,
+        '[class.el-radio-button--medium]': `size == 'medium'`,
+        '[class.el-radio-button--small]': `size == 'small'`,
+        '[class.el-radio-button--mini]': `size == 'mini'`,
+        '(click)': 'onHostClick($event)'
+    },
+    standalone: false
 })
 
 export class NelRadioButtonComponent implements ControlValueAccessor {

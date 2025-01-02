@@ -6,16 +6,17 @@ import { NelDateCellDirective } from './calendar-cell.component';
 type NelCalendarDateTemplate = TemplateRef<{ $implicit: Date }>;
 
 @Component({
-  selector: 'nel-calendar',
-  templateUrl: './calendar.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => NelCalendarComponent),
-      multi: true
-    }
-  ]
+    selector: 'nel-calendar',
+    templateUrl: './calendar.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelCalendarComponent),
+            multi: true
+        }
+    ],
+    standalone: false
 })
 
 export class NelCalendarComponent implements ControlValueAccessor {

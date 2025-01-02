@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-popover-basic',
-  template: `
+    selector: 'nel-demo-popover-basic',
+    template: `
     <button nel-button
       nel-popover
       [nelPopoverPlacement]="'top-start'"
@@ -45,7 +45,8 @@ import { Component } from '@angular/core';
       [nelPopoverVisible]="visible"
     >手动激活
     </button>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoPopoverBasicComponent {

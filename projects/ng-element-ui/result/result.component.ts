@@ -1,8 +1,9 @@
 import { Component, Input, OnChanges, SimpleChanges, TemplateRef } from '@angular/core';
 
 @Component({
-  selector: 'nel-result',
-  templateUrl: './result.component.html'
+    selector: 'nel-result',
+    templateUrl: './result.component.html',
+    standalone: false
 })
 
 export class NelResultComponent implements OnChanges {

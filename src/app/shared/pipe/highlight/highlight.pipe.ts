@@ -15,7 +15,10 @@ import './angular-marked';
 
 declare var Prism: any;
 
-@Pipe({ name: 'highlightAuto' })
+@Pipe({
+    name: 'highlightAuto',
+    standalone: false
+})
 export class HighLightPipe implements PipeTransform {
   constructor(
     private sanitizer: DomSanitizer

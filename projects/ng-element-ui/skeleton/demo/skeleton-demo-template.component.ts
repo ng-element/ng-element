@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-skeleton-template',
-  template: `
+    selector: 'nel-demo-skeleton-template',
+    template: `
     <nel-skeleton style="width: 240px" [nelTemplate]="template">
       <ng-template #template>
         <nel-skeleton-item [nelVariant]="'image'" style="width: 240px; height: 240px;"></nel-skeleton-item>
@@ -17,7 +17,8 @@ import { Component } from '@angular/core';
         </div>
       </ng-template>
     </nel-skeleton>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoSkeletonTemplateComponent { }

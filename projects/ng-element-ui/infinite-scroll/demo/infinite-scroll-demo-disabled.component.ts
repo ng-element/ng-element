@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-infinite-scroll-disabled',
-  template: `
+    selector: 'nel-demo-infinite-scroll-disabled',
+    template: `
     <div class="infinite-list-wrapper" style="overflow:auto">
       <ul
         class="list"
@@ -15,8 +15,8 @@ import { Component, OnInit } from '@angular/core';
       <p *ngIf="noMore()">没有更多了</p>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .infinite-list-wrapper {
         height: 300px;
         text-align: center;
@@ -42,7 +42,8 @@ import { Component, OnInit } from '@angular/core';
         margin-top: 10px;
       }
     `
-  ]
+    ],
+    standalone: false
 })
 
 export class NelDemoInfiniteScrollDisabledComponent implements OnInit {

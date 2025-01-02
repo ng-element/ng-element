@@ -4,12 +4,13 @@ import { loadingMotion } from 'ng-element-ui/core/animation';
 import { InputBoolean } from 'ng-element-ui/core/utils';
 
 @Component({
-  selector: 'nel-loading',
-  templateUrl: './loading.component.html',
-  animations: [loadingMotion],
-  host: {
-    class: 'el-loading-parent--relative'
-  }
+    selector: 'nel-loading',
+    templateUrl: './loading.component.html',
+    animations: [loadingMotion],
+    host: {
+        class: 'el-loading-parent--relative'
+    },
+    standalone: false
 })
 
 export class NelLoadingComponent {

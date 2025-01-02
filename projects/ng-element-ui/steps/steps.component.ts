@@ -6,14 +6,15 @@ import { NelStepComponent } from './step.component';
 export type StatusType = 'wait' | 'process' | 'finish' | 'error' | 'success';
 
 @Component({
-  selector: 'nel-steps',
-  templateUrl: './steps.component.html',
-  host: {
-    class: 'el-steps',
-    '[class.el-steps--horizontal]': `!nelSimple && nelDirection == 'horizontal'`,
-    '[class.el-steps--vertical]': `!nelSimple && nelDirection == 'vertical'`,
-    '[class.el-steps--simple]': 'nelSimple',
-  }
+    selector: 'nel-steps',
+    templateUrl: './steps.component.html',
+    host: {
+        class: 'el-steps',
+        '[class.el-steps--horizontal]': `!nelSimple && nelDirection == 'horizontal'`,
+        '[class.el-steps--vertical]': `!nelSimple && nelDirection == 'vertical'`,
+        '[class.el-steps--simple]': 'nelSimple',
+    },
+    standalone: false
 })
 
 export class NelStepsComponent implements AfterContentInit {

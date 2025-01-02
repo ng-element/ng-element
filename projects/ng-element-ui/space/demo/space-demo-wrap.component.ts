@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'nel-demo-space-wrap',
-  template: `
+    selector: 'nel-demo-space-wrap',
+    template: `
     <nel-space nelWrap>
       <ng-container *ngFor="let i of list">
         <div *nelSpaceItem>
@@ -12,7 +12,8 @@ import { Component, OnInit } from '@angular/core';
         </div>
       </ng-container>
     </nel-space>
-  `
+  `,
+    standalone: false
 })
 
 export class NelDemoSpaceWrapComponent implements OnInit {

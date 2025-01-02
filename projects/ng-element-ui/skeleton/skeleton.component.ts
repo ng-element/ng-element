@@ -4,12 +4,13 @@ import { InputBoolean } from 'ng-element-ui/core/utils';
 import { Subject, Subscription } from 'rxjs';
 
 @Component({
-  selector: 'nel-skeleton',
-  templateUrl: './skeleton.component.html',
-  host: {
-    class: 'el-skeleton',
-    '[class.is-animated]': 'nelAnimated'
-  }
+    selector: 'nel-skeleton',
+    templateUrl: './skeleton.component.html',
+    host: {
+        class: 'el-skeleton',
+        '[class.is-animated]': 'nelAnimated'
+    },
+    standalone: false
 })
 
 export class NelSkeletonComponent implements OnDestroy {

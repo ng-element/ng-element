@@ -6,16 +6,17 @@ interface Colors {
 }
 
 @Component({
-  selector: 'nel-rate',
-  templateUrl: './rate.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => NelRateComponent),
-      multi: true
-    }
-  ]
+    selector: 'nel-rate',
+    templateUrl: './rate.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => NelRateComponent),
+            multi: true
+        }
+    ],
+    standalone: false
 })
 
 export class NelRateComponent implements ControlValueAccessor {
