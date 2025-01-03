@@ -1,8 +1,5 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "5f2ba477-ccfb-46d1-b8fd-0140f10f85bb"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -23,15 +20,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": {
-              "base": "dist/ng-element"
-            },
+            "outputPath": "dist/ng-element",
             "index": "src/index.html",
+            "browser": "src/main.ts",
             "polyfills": [
-              "src/polyfills.ts"
+              "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -45,20 +41,10 @@
               "projects/ng-element-ui/ng-element-ui.scss",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "browser": "src/main.ts"
+            "scripts": []
           },
           "configurations": {
             "production": {
-              "fileReplacements": [{
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.prod.ts"
-              }],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
               "budgets": [{
                   "type": "initial",
                   "maximumWarning": "500kb",
@@ -69,34 +55,41 @@
                   "maximumWarning": "4kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "buildTarget": "ng-element:build"
-          },
           "configurations": {
             "production": {
               "buildTarget": "ng-element:build:production"
+            },
+            "development": {
+              "buildTarget": "ng-element:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "buildTarget": "ng-element:build"
-          }
+          "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -105,31 +98,6 @@
               "src/styles.scss"
             ],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ng-element:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "ng-element:serve:production"
-            }
           }
         }
       }
@@ -143,36 +111,32 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ng-element-ui/tsconfig.lib.json",
             "project": "projects/ng-element-ui/ng-package.json"
           },
           "configurations": {
             "production": {
               "tsConfig": "projects/ng-element-ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-element-ui/tsconfig.lib.json"
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-element-ui/test.ts",
             "tsConfig": "projects/ng-element-ui/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-element-ui/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ng-element-ui/tsconfig.lib.json",
-              "projects/ng-element-ui/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
             ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

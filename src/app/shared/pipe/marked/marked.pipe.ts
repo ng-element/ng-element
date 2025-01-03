@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import marked from 'marked';
+import { marked } from 'marked';
 
 @Pipe({
-    name: 'marked',
-    standalone: false
+  name: 'marked',
+  standalone: false
 })
 export class MarkedPipe implements PipeTransform {
   transform(value: any): any {

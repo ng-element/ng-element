@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 // @import 'highlight.js/styles/stackoverflow-light.css';
-@import 'prismjs/themes/prism.css';
-@import './assets/styles/css-vars.scss';
+@use 'prismjs/themes/prism.css';
+@use './assets/styles/css-vars.scss';
 
 :not(pre)>code[class*="language-"],
 pre[class*="language-"] {
